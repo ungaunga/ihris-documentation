@@ -7,6 +7,7 @@ const fd = new events.EventEmitter();
 const host = 'https://wiki.ihris.org'; 
 const Entities = require('html-entities').AllHtmlEntities
 
+const images_url = 'https://wiki.ihris.org/wiki/File:Dhis_send.jpg'
 const entity = new Entities();
 const parent = require('path').resolve(__dirname, '..')
 const index = fs.createWriteStream(`${parent}/index.rst`, {flags: `a+`});

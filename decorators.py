@@ -106,31 +106,4 @@ def source_block_converter(match_group):
     return (match_group.group(1), match_group.group(2))
 
 if __name__ == '__main__':
-
-    stry = """
-# one
-# two
-#* two point one
-#* two point two
-# three
-#; three item one
-#: three def one
-# four
-#: four def one
-#: this looks like a continuation
-#: and is often used
-#: instead <br />of <nowiki><br /></nowiki>
-# five
-## five sub 1
-### five sub 1 sub 1
-## five sub 2
-"""
-    def convert_ol(doc):
-        '''
-        Converts all ordered lists
-        (?ms)^(#+.*?)\n(?!#)
-        '''
-        regex = r"(?ms)^(#+.*?)\n(?!#)"
-        return re.sub(regex, list_block_converter, doc, re.DOTALL)
-
-    print(convert_ol(stry))
+    pass

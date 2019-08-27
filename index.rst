@@ -1,38 +1,79 @@
 .. iHRIS Documentation
 
-iHRIS |version| documentation
+iHRIS |version| Documentation
 =============================
 
 .. toctree::
     :maxdepth: 1
     :caption: Getting Started
 
-    docs/countries/index
-    docs/french/index
+    docs/developer-resources/index
 
 .. toctree::
     :maxdepth: 1
     :caption: Country Implementations
-    :hidden:
 
     docs/countries/index
+
 
 .. toctree::
     :maxdepth: 1
     :caption: Language-Specific Resources
-    :hidden:
 
     docs/french/index
+    docs/spanish/index
+    docs/custom-reporting/index
+    docs/customizations/index
+    docs/fields/index
+    docs/forms/index
+    docs/ihris-appliance/index
+    docs/ihris-collect/index
+    docs/ihris-common/index
+    docs/ihris-manage/index
+    docs/ihris-plan/index
+    docs/ihris-qualify/index
+    docs/ihris-software/index
+    docs/ihris-train/index
+    docs/implementer-resources/index
+    docs/installation/index
+    docs/last-mile_initiative/index
+    docs/magic-data/index
+    docs/module-lists/index
+    docs/modules/index
+    docs/open-source/index
+    docs/project-team_resources/index
+    docs/reports/index
+    docs/resources/index
+    docs/roles/index
+    docs/sierra-leone/index
+    docs/software-development_process/index
+    docs/standardized-forms/index
+    docs/technical-overview/index
+    docs/translations/index
+    docs/use-cases/index
+    docs/web-service/index
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Interoperability
+
+    docs/interoperability/index
+    docs/openmrs/index
+    docs/sdmx-hd/index
+    docs/provider-registry/index
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Others
+
+    docs/archived-pages/index
+    docs/blueprints/index
+    docs/books/index
+    docs/needsreview/index
+    docs/pages-for_review/index
+    docs/review2013/index
+    docs/review-for_redundancy/index
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-	
-docs/french/index
-
-1. Name
-2. Jina
-  * Unatoka wapi
-  * Njombe
-  * Mtaa
-3. Ok. Una gari?

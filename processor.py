@@ -1,7 +1,10 @@
 import re
-
+import os
 from decorators import (heading, code_pre_block_converter, source_block_converter,
                     list_block_converter)
+
+from threading import Thread
+from utils import download_image
 
 class WikimediaRSTConventer():
     '''
@@ -15,6 +18,7 @@ class WikimediaRSTConventer():
     def __init__(self, doc_path='', doc_url = ''):
         self.doc_path = doc_path
         self.doc_url = doc_url
+        self.save_to = re.sub(r'(.*?)(docs-base)(.*?)', r'\1docs\3', doc_path)
 
     
     def process_document(self):
@@ -22,7 +26,7 @@ class WikimediaRSTConventer():
         Processes the entire document and writes a rST formatted document
         when it is done.
         '''
-        with open(f"{self.doc_path}_converted.rst", 'w') as conv:
+        with open(f"{self.save_to}", 'w') as conv:
             with open(self.doc_path) as data:
                 data = data.readlines()
                 # data = doc.read()
@@ -31,24 +35,17 @@ class WikimediaRSTConventer():
                     l = self.convert_h2(self.convert_h3(self.convert_h4(self.convert_h5(self.convert_h6(line)))))
                     l = self.convert_external_links(l)
                     l = self.convert_bold(l)
+                    l = self.convert_bold_italics(l)
+                    l = self.convert_italics(l)
+                    l = self.convert_image_attachments(l)
                     if prev_line.startswith('*'):
                         self.convert_ul(l)
                     prev_line = line
                     conv.write(l)
-                # self.convert_ol(doc)
-                # self.convert_ul(doc)
-                # self.convert_italics(doc)
-                # self.convert_bold(doc)
-                # self.convert_internal_links(doc)
-                # self.convert_external_links(doc)
-                # self.convert_image_attachments(doc)
-                # self.convert_media_attachments(doc)
-                # self.convert_code_blocks(doc)
-                # self.convert_tables(doc)
-        f = open(f'{self.doc_path}_converted.rst')
+        f = open(f'{self.save_to}')
         txt = f.read()
         f.close()
-        f = open(f'{self.doc_path}_converted.rst', 'w')
+        f = open(f'{self.save_to}', 'w')
         txt = self.convert_code_pre_blocks(txt)
         txt = self.convert_source_blocks(txt)
         txt = self.convert_ol(txt)
@@ -82,7 +79,8 @@ class WikimediaRSTConventer():
         level3 = r'^***\w'
 
     def convert_italics(self, doc):
-        pass
+        regex = r'(^|\s)([\']{2})(?!\')(.*?)\2'
+        return re.sub(regex, r' *\3*', doc)
     
     def convert_bold(self, doc):
         '''
@@ -90,8 +88,12 @@ class WikimediaRSTConventer():
         Markup for bold in wiki based pages is \'''
         Markup for rst is **
         '''
-        regex = r'([\']{3})(.*?)\1'
-        return re.sub(regex, r'**\2**', doc)
+        regex = r'(^|\s)([\']{3})(?!\')(.*?)\2'
+        return re.sub(regex, r' **\3**', doc)
+
+    def convert_bold_italics(self, doc):
+        regex = r'(^|\s)([\']{5})(?!\')(.*?)\2'
+        return re.sub(regex, r' **\3**', doc)
 
     def convert_code_pre_blocks(self, doc):
         '''
@@ -122,7 +124,13 @@ class WikimediaRSTConventer():
             :align: "top", "middle", "bottom", "left", "center", or "right"
             :target: URI or reference name
         '''
-        pass
+        regex = r'\[\[(?:Image|File):(.*?\.(?:png|jpg|gif|jpeg)).*?\]\]'
+        imgs = re.findall(regex, doc)
+        if not os.path.exists(f'{os.path.dirname(self.save_to)}/images'):
+            os.mkdir(f'{os.path.dirname(self.save_to)}/images')
+        if imgs:
+            download_image(file_name=imgs[0], save_to=f'{os.path.dirname(self.save_to)}/images')
+        return re.sub(regex, r'\n.. image:: images/\1\n    :align: center\n\n', doc)
 
     def convert_internal_links(self, doc):
         '''
@@ -184,5 +192,14 @@ class WikimediaRSTConventer():
         
 
 if __name__ == '__main__':
-    conv = WikimediaRSTConventer(doc_path='test.rst')
-    conv.process_document()
+    def processor(dirpath):
+        for entry in os.scandir(dirpath):
+            if entry.is_file() and entry.name != 'index.rst':
+                # print(f"processing {entry.path}")
+                conv = WikimediaRSTConventer(doc_path=entry.path)
+                print(f'saving to {conv.save_to}')
+                conv.process_document()
+            elif entry.is_dir():
+                processor(entry.path)
+
+    processor('docs-base')
