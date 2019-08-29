@@ -9,6 +9,7 @@ Use Case:PR-UI-3
  |success=A provider is successfully found in the system.
  |resources=
  |mss=
-#The user enters the applicable search criteria
-#The system searches for the corresponding health care professional and displays the result
+
+* The user enters the applicable search criteria
+* The system searches for the corresponding health care professional and displays the result
 }}

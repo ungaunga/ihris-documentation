@@ -1,7 +1,9 @@
 Help:Create a New Page
 ======================
 
-== How to Create a New Page on the Wiki ==
+
+How to Create a New Page on the Wiki
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 You need to set up an account before you can do anything. Everyone can set up an account at any time. Click "Log in/create account" in the upper right corner to get started.

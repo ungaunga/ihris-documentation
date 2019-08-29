@@ -1,6 +1,8 @@
 Blue Prints
 ===========
 
+
+
 * [[Competency Model]]
 * [[Customizing Reports]]
 * [[Dual Data Entry Procedure]]

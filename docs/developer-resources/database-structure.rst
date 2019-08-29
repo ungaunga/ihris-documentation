@@ -3,14 +3,16 @@ Database Structure
 
 iHRIS makes use of multiple tables in a relational database (MySQL) to store its data in.  This article describes several of the tables used by iHRIS, in particular the user table and the tables used for [[Form Storage -- Entry/Last Entry | audited form data changes]].
 
-'''Note: This document maybe out of date.'''
+ **Note: This document maybe out of date.** 
 
 
 The iHRIS Database is abstracted so the object structure can be handled by forms within the site.  All records saved for a site are an instance of I2CE_Form.  This defines all the fields used for that form.  The form and field names are saved in the form and field tables in the [[#Form Definitions|form definitions]] section below.  These are combined in the form_field table to map all the fields associated with a given form.
 
 The data for each form is saved as a record (see [[#Record Tables|Record Tables]]).  Each field is then saved in the entry and last_entry tables.  The entry table keeps a history of all changes and the last_entry table is a quick lookup for the current value.  So if you have an instance of a form with 2 fields there will be 1 row saved to the record table and 2 rows each in entry and last_entry.  There will always only be 2 rows in the last_entry table but the rows in the entry table will increase each time a change is made.
 
-== User Tables ==
+
+User Tables
+^^^^^^^^^^^
 The user tables can be in the same main database as the rest of the site, or they can be in a shared database so names and passwords
 can be reused.  The access table must be in the main database to give access for the site.
 {|border="1" cellspacing="0" cellpadding="5"
@@ -60,7 +62,9 @@ CREATE TABLE access (
 |-
 |}
 
-== Form Definitions ==
+
+Form Definitions
+^^^^^^^^^^^^^^^^
 These tables define the forms and fields associated with the site.
 {|border="1" cellspacing="0" cellpadding="5"
 !Table
@@ -104,7 +108,9 @@ CREATE TABLE form_field (
 </pre>
 |-
 |}
-== Record Tables ==
+
+Record Tables
+^^^^^^^^^^^^^
 The record tables store specific information saved for each form associated with the site.
 {|border="1" cellspacing="0" cellpadding="5"
 !Table
@@ -187,7 +193,9 @@ CREATE TABLE deleted_record (
 |-
 |}
 
-== Utility Tables ==
+
+Utility Tables
+^^^^^^^^^^^^^^
 {|border="1" cellspacing="0" cellpadding="5"
 !Table
 !Description
@@ -218,22 +226,30 @@ CREATE TABLE report_list (
 |-
 |}
 
-== Form Example ==
+
+Form Example
+^^^^^^^^^^^^
 
 This is an example of how two forms would be saved to the database.  The person form has a surname field and the demographic form has a birth_date field.  The person form would be saved first since it is the parent form.  Assuming no forms have ever been saved to the database the following would happen on saving.
 
-# Create the '''form''', '''field''' and '''form_field''' entries.
-## An entry is added to the '''form''' table with the ''name'' being "person."  This will automatically assign a form ''id'' of 1 since it's the first one.
-## An entry is added to the '''field''' table with the ''name'' being "surname."  This will automatically assign a field ''id'' of 1.
-## An entry is added to the '''form_field''' table with the ''form'' being 1 (for person) and the ''field'' being 1 (for surname).  This will automatically assign a form_field ''id'' of 1.
-## An entry is added to the '''form''' table with the ''name'' being "demographic."  This will automatically assign a form ''id'' of 2 since it's the first one.
-## An entry is added to the '''field''' table with the ''name'' being "birth_date."  This will automatically assign a field ''id'' of 2.
-## An entry is added to the '''form_field''' table with the ''form'' being 2 (for demographic) and the ''field'' being 2 (for birth_date).  This will automatically assign a form_field ''id'' of 2.
-# Create the person record.
-## A new record will be added to the '''record''' table.  The record ''id'' will be generated automatically (1) and the ''form'' will be set to 1.  There is no ''parent'' and the ''last_modified'' time will be set to the current time.
-## An entry will be added to the '''entry''' and '''last_entry''' tables.  The ''record'' will be set to 1 and the ''form_field'' will be set to 1 (the form_field id created above for person-surname).  The ''date'' will be the current time and ''who'' will be set to the user id making the change.  The ''string_value'' field will be set to the value for the surname.
-# Create the demographic record.
-## A new record will be added to the '''record''' table.  The record ''id'' will be generated automatically (2) and the ''form'' will be set to 2.  The ''parent'' will be set to 1 since this is a child form for the person record that was just created.  The ''last_modified'' time will be set to the current time.
-## An entry will be added to the '''entry''' and '''last_entry''' tables.  The ''record'' will be set to 2 and the ''form_field'' will be set to 2 (the form_field id created above for demographic-birth_date).  The ''date'' will be the current time and ''who'' will be set to the user id making the change.  The ''date_value'' field will be set to the value for the birth_date.
+
+* Create the **form** , **field**  and **form_field**  entries.
+
+  * An entry is added to the **form**  table with the *name*  being "person."  This will automatically assign a form *id*  of 1 since it's the first one.
+  * An entry is added to the **field**  table with the *name*  being "surname."  This will automatically assign a field *id*  of 1.
+  * An entry is added to the **form_field**  table with the *form*  being 1 (for person) and the *field*  being 1 (for surname).  This will automatically assign a form_field *id*  of 1.
+  * An entry is added to the **form**  table with the *name*  being "demographic."  This will automatically assign a form *id*  of 2 since it's the first one.
+  * An entry is added to the **field**  table with the *name*  being "birth_date."  This will automatically assign a field *id*  of 2.
+  * An entry is added to the **form_field**  table with the *form*  being 2 (for demographic) and the *field*  being 2 (for birth_date).  This will automatically assign a form_field *id*  of 2.
+
+* Create the person record.
+
+  * A new record will be added to the **record**  table.  The record *id*  will be generated automatically (1) and the *form*  will be set to 1.  There is no *parent*  and the *last_modified*  time will be set to the current time.
+  * An entry will be added to the **entry**  and **last_entry**  tables.  The *record*  will be set to 1 and the *form_field*  will be set to 1 (the form_field id created above for person-surname).  The *date*  will be the current time and *who*  will be set to the user id making the change.  The *string_value*  field will be set to the value for the surname.
+
+* Create the demographic record.
+
+  * A new record will be added to the **record**  table.  The record *id*  will be generated automatically (2) and the *form*  will be set to 2.  The *parent*  will be set to 1 since this is a child form for the person record that was just created.  The *last_modified*  time will be set to the current time.
+  * An entry will be added to the **entry**  and **last_entry**  tables.  The *record*  will be set to 2 and the *form_field*  will be set to 2 (the form_field id created above for demographic-birth_date).  The *date*  will be the current time and *who*  will be set to the user id making the change.  The *date_value*  field will be set to the value for the birth_date.
 
 [[Category:Developer Resources]]

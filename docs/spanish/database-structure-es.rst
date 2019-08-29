@@ -3,14 +3,16 @@ Database Structure - ES
 
 iHRIS utiliza varias tablas en una base de datos relacional (MySQL) para guardar sus datos. Este artículo describe varias de las tablas que utiliza iHRIS, en particular la tabla del usuario y las tablas que se utilizan para [[Form Storage -- Entry/Last Entry | cambios de datos de formularios auditados]].
 
-'''Nota: Este documento esta desactualizado y se ha marcado para revisión.'''
+ **Nota: Este documento esta desactualizado y se ha marcado para revisión.** 
 
 
 La base de datos de iHRIS se ha abstraído para que la estructura del objeto se pueda manejar con formularios dentro del sitio. Todos los registros que se guardan para un sitio son una instancia de un Formulario I2CE_Form. Esto define todos los campos que se utilizaron para ese formulario.  Los nombres de formularios y campos se guardan en el formulario y los campos de las tablas en la sección de [[#Form Definitions| definiciones de formularios]] a continuación. Estas se combinan en la tabla form_field para mapear los campos asociados con un formulario dado.
 
 Los datos para cada formulario se guardan como un registro (vea [[#Record Tables|Tablas de Registro]]).  Cada campo luego se guarda en las tablas de entry y last_entry.  La tabla entry guarda un historial de todos los cambios y la tabla de last_entry es una búsqueda rápida del valor actual. De modo que si tiene una instancia de un formulario con 2 campos, habrá 1 fila guardada en la tabla de registro y 2 filas en entry y last_entry.  Siempre habrá solamente 3 filas en la tabla last_entry pero las filas de la tabla de entrada aumentarán cada vez que se realice un cambio.
 
-== Tablas de Usuarios ==
+
+Tablas de Usuarios
+^^^^^^^^^^^^^^^^^^
 Las tablas de usuarios pueden estar en la misma base de datos principal que el resto del sitio, o pueden estar en una base de datos compartida para que los nombres y las contraseñas puedan utilizarse más de una vez. La tabla de acceso debe estar en la base de datos principal para permitir acceso al sitio.
 {|border="1" cellspacing="0" cellpadding="5"
 !Tabla
@@ -59,7 +61,9 @@ CREATE TABLE access (
 |-
 |}
 
-== Definiciones del Formulario ==
+
+Definiciones del Formulario
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Estas tablas definen los formularios y campos asociados con el sitio.
 {|border="1" cellspacing="0" cellpadding="5"
 !Tabla
@@ -103,7 +107,9 @@ CREATE TABLE form_field (
 </pre>
 |-
 |}
-== Tablas de Registro ==
+
+Tablas de Registro
+^^^^^^^^^^^^^^^^^^
 Las tablas de registro guardan información específica que se ha guardado para cada formulario asociado con el sitio.
 {|border="1" cellspacing="0" cellpadding="5"
 !Tabla
@@ -186,7 +192,9 @@ CREATE TABLE deleted_record (
 |-
 |}
 
-== Tablas de Utilidades ==
+
+Tablas de Utilidades
+^^^^^^^^^^^^^^^^^^^^
 {|border="1" cellspacing="0" cellpadding="5"
 !Tabla
 !Descripción
@@ -217,21 +225,29 @@ CREATE TABLE report_list (
 |-
 |}
 
-== Ejemplo de Formulario ==
+
+Ejemplo de Formulario
+^^^^^^^^^^^^^^^^^^^^^
 
 Este es un ejemplo de cómo se guardarían dos formularios en la base de datos. El formulario de persona tiene un campo para el surname (apellido) y el formulario demográfico tiene un campo de birth_date. El formulario de persona se guardaría primero ya que es el formulario primario. Asumiendo que nunca se ha guardado ningún formulario en la base de datos, lo siguiente ocurriría al guardarlo.
 
-# Cree las entradas para '''form''', '''field''' y '''form_field'''.
-## Se agregará una entrada a la tabla de '''form''' con el ''name'' para "person."  Esto asignará automáticamente una ''id'' de formulario de 1 ya que es el primero.
-## Se agregará una entrada a la tabla de '''field''' con el ''name'' para "surname."  Esto asignará automáticamente una ''id'' de campo de 1.
-## Se agregará una entrada a la tabla de '''form_field''' con el ''form'' de 1 (para persona) y el ''field'' 1 (para el apellido).  Esto asignará automáticamente una ''id'' para el form_field de 1.
-## Se agregará una entrada a la tabla de '''form''' con el ''name'' para "demographic."  Esto asignará automáticamente una ''id'' de formulario de 2 ya que es la primera.
-## Se agregará una entrada a la tabla de '''field''' con el ''name'' para "birth_date."  Esto asignará automáticamente una ''id'' de campo de 2.
-## Se agregará una entrada a la tabla de '''form_field''' con el ''form'' para 2 (para demographic)  y el ''field'' para 2 (para birth_date).  Esto asignará automáticamente una ''id'' para el form_field de 2.
-# Cree el registro de la persona.
-## Se agregará un nuevo registro a la tabla de '''record'''. La ''id'' de registro se generará automáticamente (1) y ''form'' se establecerá como 1.  No hay ''primary'' y la hora de ''last_modified'' se establecerá como la hora actual.
-## Se agregará una entrada a las tablas de '''entry''' y '''last_entry'''. El ''record'' se establecerá como 1 y el ''form_field'' se establecerá como 1 ( la id de form_field creada anteriormente para la persona-apellido). ''Date'' será la hora actual y ''who'' se establecerá como la id de usuario que está realizando el cambio.  El campo ''string_value'' se establecerá como el valor del apellido.
-# Cree el registro demográfico.
-## Se agregará un Nuevo registro a la tabla de '''record''' . La ''id'' del registro se generará automáticamente (2) y el ''form'' se establecerá como 2.  El ''primary'' se establecerá como 1 ya que este es un formulario secundario del registro de persona que se acaba de crear.  La hora de ''last_modified'' se establecerá como la hora actual.
-## Se agregará una entrada a las tablas '''entry''' y '''last_entry'''.  El ''record'' se establecerá como 2 y el ''form_field'' se establecerá como 2 (la id de form_field creada anteriormente para demographic-birth_date).  La ''date'' será la hora actual y ''who'' se establecerá como la id de usuario que está haciendo el cambio.  El campo ''date_value'' se establecerá al valor para birth_date.
+
+* Cree las entradas para **form** , **field**  y **form_field** .
+
+  * Se agregará una entrada a la tabla de **form**  con el *name*  para "person."  Esto asignará automáticamente una *id*  de formulario de 1 ya que es el primero.
+  * Se agregará una entrada a la tabla de **field**  con el *name*  para "surname."  Esto asignará automáticamente una *id*  de campo de 1.
+  * Se agregará una entrada a la tabla de **form_field**  con el *form*  de 1 (para persona) y el *field*  1 (para el apellido).  Esto asignará automáticamente una *id*  para el form_field de 1.
+  * Se agregará una entrada a la tabla de **form**  con el *name*  para "demographic."  Esto asignará automáticamente una *id*  de formulario de 2 ya que es la primera.
+  * Se agregará una entrada a la tabla de **field**  con el *name*  para "birth_date."  Esto asignará automáticamente una *id*  de campo de 2.
+  * Se agregará una entrada a la tabla de **form_field**  con el *form*  para 2 (para demographic)  y el *field*  para 2 (para birth_date).  Esto asignará automáticamente una *id*  para el form_field de 2.
+
+* Cree el registro de la persona.
+
+  * Se agregará un nuevo registro a la tabla de **record** . La *id*  de registro se generará automáticamente (1) y *form*  se establecerá como 1.  No hay *primary*  y la hora de *last_modified*  se establecerá como la hora actual.
+  * Se agregará una entrada a las tablas de **entry**  y **last_entry** . El *record*  se establecerá como 1 y el *form_field*  se establecerá como 1 ( la id de form_field creada anteriormente para la persona-apellido). *Date*  será la hora actual y *who*  se establecerá como la id de usuario que está realizando el cambio.  El campo *string_value*  se establecerá como el valor del apellido.
+
+* Cree el registro demográfico.
+
+  * Se agregará un Nuevo registro a la tabla de **record**  . La *id*  del registro se generará automáticamente (2) y el *form*  se establecerá como 2.  El *primary*  se establecerá como 1 ya que este es un formulario secundario del registro de persona que se acaba de crear.  La hora de *last_modified*  se establecerá como la hora actual.
+  * Se agregará una entrada a las tablas **entry**  y **last_entry** .  El *record*  se establecerá como 2 y el *form_field*  se establecerá como 2 (la id de form_field creada anteriormente para demographic-birth_date).  La *date*  será la hora actual y *who*  se establecerá como la id de usuario que está haciendo el cambio.  El campo *date_value*  se establecerá al valor para birth_date.
 [[Category:Technical Overview]][[Category:Spanish]]

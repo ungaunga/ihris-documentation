@@ -3,113 +3,189 @@ Linux (Ubuntu) Installation - Supporting Software - 11.10
 
 This document describes the needed installation and configuration of supporting software for iHRIS on Ubuntu 11.10, Oneiric Ocelot.
 {{otherversions|Linux (Ubuntu) Installation - Supporting Software}}
-== Getting Ready ==
+
+Getting Ready
+^^^^^^^^^^^^^
 
 Here are instructions for installing the supporting software for iHRIS on a Linux (Ubuntu) system.  If you need help installing Ubuntu you may want to take a look at
-these directions for installing a [http://www.howtoforge.com/perfect-server-ubuntu-10.04-lucid-lynx-ispconfig-2 Server] or a [http://www.howtoforge.com/the-perfect-desktop-ubuntu-10.04-lucid-lynx Desktop] system.  For a server setup, we recommend using a LTS (long term support) version of Ubuntu.
+these directions for installing a  `Server <http://www.howtoforge.com/perfect-server-ubuntu-10.04-lucid-lynx-ispconfig-2>`_  or a  `Desktop <http://www.howtoforge.com/the-perfect-desktop-ubuntu-10.04-lucid-lynx>`_  system.  For a server setup, we recommend using a LTS (long term support) version of Ubuntu.
 
-'''Note:'''  Unless specifically mentioned, all the commands below are run using a terminal.  You can start this in Ubuntu by going to Applications -> Accessories -> Terminal.  Any time a command begins with '''sudo''' it will prompt for your password because this will be run with administrative privileges.  When you run sudo multiple times, only the first time will ask for your password.
+ **Note:**   Unless specifically mentioned, all the commands below are run using a terminal.  You can start this in Ubuntu by going to Applications -> Accessories -> Terminal.  Any time a command begins with **sudo**  it will prompt for your password because this will be run with administrative privileges.  When you run sudo multiple times, only the first time will ask for your password.
 
-'''Note:'''  Some installation commands will prompt for inputs in the terminal window, usually with a blue background.  The mouse doesn't work to click on options here.  You can use Tab to move between options and the space bar to check or uncheck selections.
+ **Note:**   Some installation commands will prompt for inputs in the terminal window, usually with a blue background.  The mouse doesn't work to click on options here.  You can use Tab to move between options and the space bar to check or uncheck selections.
 
-'''Note:'''  Some commands will launch the '''gedit''' file editor.  Look at the [https://help.ubuntu.com/community/gedit documentation] if you need additional help.
+ **Note:**   Some commands will launch the **gedit**  file editor.  Look at the  `documentation <https://help.ubuntu.com/community/gedit>`_  if you need additional help.
 
-We begin by install a [http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29 Lamp] server
-(You can find more help [https://help.ubuntu.com/community/ApacheMySQLPHP here]):
-<source lang="bash">
-sudo tasksel install lamp-server
-</source>
+We begin by install a  `Lamp <http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29>`_  server
+(You can find more help  `here <https://help.ubuntu.com/community/ApacheMySQLPHP>`_ ):
+
+
+.. code-block:: bash
+
+    sudo tasksel install lamp-server
+    
+
 If you have never used mysql on your system, you will be asked to set the 'root' password for mysql.  We will refer to this password as XXXXX below.
 
-'''Important''': Make sure your email system is correctly configured.  Under a default Ubuntu installation, you can do this with one of two commands:
-<source lang="bash">
-sudo apt-get install postfix
-sudo dpkg-reconfigure postfix
-</source>
+ **Important** : Make sure your email system is correctly configured.  Under a default Ubuntu installation, you can do this with one of two commands:
 
-Follow the on-screen instructions to set up email on your system.  For additional help with installing Postfix, look at these [https://help.ubuntu.com/community/PostfixBasicSetupHowto instructions].  On Debian systems, the same commands can be used, but <tt>exim4</tt> is the default MTA instead of <tt>postfix</tt>
+
+.. code-block:: bash
+
+    sudo apt-get install postfix
+    sudo dpkg-reconfigure postfix
+    
+
+
+Follow the on-screen instructions to set up email on your system.  For additional help with installing Postfix, look at these  `instructions <https://help.ubuntu.com/community/PostfixBasicSetupHowto>`_ .  On Debian systems, the same commands can be used, but <tt>exim4</tt> is the default MTA instead of <tt>postfix</tt>
 
 If you are using another Linux distribution, make sure your system can send email properly before continuing.
 
-==Configuring MYSQL==
+
+Configuring MYSQL
+^^^^^^^^^^^^^^^^^
 Make sure you have in /etc/mysql/my.cnf the following values set:
-<source lang="bash">
-sudo gedit /etc/mysql/my.cnf
-</source>
-<source lang="ini">
-query_cache_limit       = 4M
-query_cache_size        = 64M
-</source>
+
+
+.. code-block:: bash
+
+    sudo gedit /etc/mysql/my.cnf
+    
+
+
+
+.. code-block:: ini
+
+    query_cache_limit       = 4M
+    query_cache_size        = 64M
+    
+
 It appears that they were reduced with Karmic.
 
 To configure MySQL so iHRIS can create needed functions:
-<source lang="bash">
-mysql -u root -p
-</source>
-Enter the password you set above (XXXXX) for MySQL.  You will now be able to send commands to MySQL and the prompt should always begin with 'mysql> '.  Type these commands:
-<source lang="mysql">
-SET GLOBAL log_bin_trust_function_creators = 1;
-exit
-</source>
 
-== Configuring PHP ==
+
+.. code-block:: bash
+
+    mysql -u root -p
+    
+
+Enter the password you set above (XXXXX) for MySQL.  You will now be able to send commands to MySQL and the prompt should always begin with 'mysql> '.  Type these commands:
+
+
+.. code-block:: mysql
+
+    SET GLOBAL log_bin_trust_function_creators = 1;
+    exit
+    
+
+
+
+Configuring PHP
+^^^^^^^^^^^^^^^
 
 Next, you'll need to increase the memory limit for PHP. You can do this by editing the /etc/php5/apache2/php.ini. 
-<source lang="bash">
-sudo gedit /etc/php5/apache2/php.ini
-</source>
+
+
+.. code-block:: bash
+
+    sudo gedit /etc/php5/apache2/php.ini
+    
+
 
 Change the following line:
-<source lang="ini">
-memory_limit = 32M
-</source>
-to:
-<source lang="ini">
-memory_limit = 128M
-</source>
 
-== Installing Pear and PECL Packages ==
+
+.. code-block:: ini
+
+    memory_limit = 32M
+    
+
+to:
+
+
+.. code-block:: ini
+
+    memory_limit = 128M
+    
+
+
+
+Installing Pear and PECL Packages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We need to install a few Pear and PECL packages for PHP.  For the Pear packages you can do:
-<source lang="bash">
-sudo apt-get install php-pear  php-mdb2 php-mdb2-driver-mysql  php5-gd php5-tidy php5-intl
-sudo pear install text_password console_getopt
-</source>
 
-==APC==
+
+.. code-block:: bash
+
+    sudo apt-get install php-pear  php-mdb2 php-mdb2-driver-mysql  php5-gd php5-tidy php5-intl
+    sudo pear install text_password console_getopt
+    
+
+
+
+APC
+^^^
 We need to install the APC module for PHP.
-<source lang='bash'>
-sudo apt-get install php-apc
-</source>
 
-During certain activities like installation and upgrades you may need more memory than APC uses by default.  We also want to turn of the ''slam defense.''  We need to edit the configuration file file for apc:
-<source lang="bash">
-sudo gedit /etc/php5/conf.d/apc.ini
-</source>
+
+.. code-block:: bash
+
+    sudo apt-get install php-apc
+    
+
+
+During certain activities like installation and upgrades you may need more memory than APC uses by default.  We also want to turn of the *slam defense.*   We need to edit the configuration file file for apc:
+
+
+.. code-block:: bash
+
+    sudo gedit /etc/php5/conf.d/apc.ini
+    
+
 It should look like this:
-<source lang="ini">
-extension=apc.so
-apc.write_lock=1
-apc.shm_size=100M
-apc.slam_defense=0
-</source>
-See [http://pecl.php.net/bugs/bug.php?id=16843 slam defense] and [http://t3.dotgnu.info/blog/php/user-cache-timebomb this].
+
+
+.. code-block:: ini
+
+    extension=apc.so
+    apc.write_lock=1
+    apc.shm_size=100M
+    apc.slam_defense=0
+    
+
+See  `slam defense <http://pecl.php.net/bugs/bug.php?id=16843>`_  and  `this <http://t3.dotgnu.info/blog/php/user-cache-timebomb>`_ .
 
 You'll need to restart Apache after making this change.
-<source lang="bash">
-sudo /etc/init.d/apache2 restart
-</source>
 
-==Configuring Apache Web Server==
+
+.. code-block:: bash
+
+    sudo /etc/init.d/apache2 restart
+    
+
+
+
+Configuring Apache Web Server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will see later we are using the apache rewrite module.  To enable the module:
-<source lang="bash">
-sudo a2enmod rewrite
-</source>
-Now we need to make sure we can use the ''.htaccess'' file.
-<source lang="bash">
-sudo gedit /etc/apache2/sites-available/default
-</source>
+
+
+.. code-block:: bash
+
+    sudo a2enmod rewrite
+    
+
+Now we need to make sure we can use the *.htaccess*  file.
+
+
+.. code-block:: bash
+
+    sudo gedit /etc/apache2/sites-available/default
+    
+
 Change:
 <source lang="apache">
 <Directory /var/www/>
@@ -135,7 +211,9 @@ Let us restart the Apache webserver using:
 sudo /etc/init.d/apache2 restart 
 </source>
 
-==Install Memcached==
+
+Install Memcached
+^^^^^^^^^^^^^^^^^
 
 With version 4.0.4 of iHRIS you can use memcached to improve performance 
 

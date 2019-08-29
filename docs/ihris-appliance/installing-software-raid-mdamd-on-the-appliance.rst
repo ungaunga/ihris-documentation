@@ -1,7 +1,9 @@
 Installing Software Raid (MDAMD) on the Appliance
 =================================================
 
-==Create a Bootable USB Drive==
+
+Create a Bootable USB Drive
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 First, you will need to download
  open.intrahealth.org/livecd.iso
 and burn it to a USB stick:
@@ -9,7 +11,9 @@ and burn it to a USB stick:
  [System]
  [Administration]
  [Startup Disk Creator]
-==Booting==
+
+Booting
+^^^^^^^
 No2 boot the appliance with the USB Disk inserted.  Note, you may have to go into the BIOS and select that the USB boots before the hard drives, or press [F10] right a system startup to get the boot menu.
 
 At the beginning of the boot is the boot menu ( GRUB boot loader) where you need to do:
@@ -17,14 +21,16 @@ At the beginning of the boot is the boot menu ( GRUB boot loader) where you need
  Select to Disable dmraid
  [Esc]
  Choose to install Ubuntu/iHRIS
-==Setting Up Partitions==
+
+Setting Up Partitions
+^^^^^^^^^^^^^^^^^^^^^
 Continue as usual until the partition disks screen
- [Ctrl]-[Alt]-[F1]  ''will take you to a prompt''
+ [Ctrl]-[Alt]-[F1]  *will take you to a prompt* 
 Here you do
  sudo apt-get install mdadm
 You will need to create partitions via fdisk.  If iHRIS has been installed on the appliance before, partitions may already exist.  In this case we will need to remove them first
  sudo fdisk /dev/sda
-  ''#(Optional: Removing existing partitions)''
+  *#(Optional: Removing existing partitions)* 
     p (print the partition table -- you should see something like the following but with different numbers)
          Device Boot      Start         End      Blocks   Id  System
         /dev/sda1   *           1       18662   149902483+  83  Linux
@@ -38,7 +44,7 @@ You will need to create partitions via fdisk.  If iHRIS has been installed on th
     d (delete partition)
     5 (select partition 1 to delete)
     
-  ''#Creating new partitions''
+  *#Creating new partitions* 
     n  (new partition)
     p  (primary)
     1 (partition 1)
@@ -62,7 +68,7 @@ You will need to create partitions via fdisk.  If iHRIS has been installed on th
     w  (write and exit)
 Now we need to repeat the creation of partitions for the second hard disk ( /dev/sdb ).  There shouldn't be any existing partitions here so we won't need to delete them first.
  sudo fdisk /dev/sdb
-  ''#Creating new partitions''
+  *#Creating new partitions* 
     n  (new partition)
     p  (primary)
     1 (partition 1)
@@ -93,13 +99,17 @@ and the partitions should be identical:
  /dev/sdb2 start 9243 end 9728 id 5 (extended)
  /dev/sdb5 start 9243 end 9728 id 82 (swap)
 
-==Assembling the Raid Array==
+
+Assembling the Raid Array
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Now assemble the software raid array
  sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sda1 /dev/sdb1
  sudo mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sda5 /dev/sdb5
 on success it should say "mdadm: array /dev/md0 started"
 
-==Selecting to Install on the RAID array==
+
+Selecting to Install on the RAID array
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To return to installed:
  [Alt]-[F7]
 From the partition manager thing, click "Back" and then "Forward" so that is will rescan the disks
@@ -110,32 +120,42 @@ From the partition manager thing, click "Back" and then "Forward" so that is wil
  Right click on /dev/md1 and create a new partition table
  Under /dev/md1 you should see "free space".  Right click and use as swap
  Click "Forward"
-==Boot Loader Options==
+
+Boot Loader Options
+^^^^^^^^^^^^^^^^^^^
 When you get to the "Ready to Install" Screen select:
  [Advanced]
  Make sure install boot loader is checked
  Choose '/dev/md0' under "Device for bot loader installation"
 
-==Installing the Boot loader on the Raid Array==
+
+Installing the Boot loader on the Raid Array
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Just before the installation is finished, it tries to install grub, the boot loader, onto the /dev/md0 our raid disk.  It may fail by saying:
  executing grub-install /dev/md0 failed.  This is a fatal error.
-There is a [https://bugs.edge.launchpad.net/ubuntu/+source/grub2/+bug/462171 bug report].  Luckily there is a [http://ubuntu-ky.ubuntuforums.org/showthread.php?p=9638149 workaround]:
+There is a  `bug report <https://bugs.edge.launchpad.net/ubuntu/+source/grub2/+bug/462171>`_ .  Luckily there is a  `workaround <http://ubuntu-ky.ubuntuforums.org/showthread.php?p=9638149>`_ :
  [Ctrl]-[Alt]-[F1]
  sudo parted /dev/sda set <partition_number> bios_grub on
  grub-install --modules=raid --no-floppy /dev/sda
  [Alt]-[F7]
 
 
-==Known Issue for Karmic==
+
+Known Issue for Karmic
+^^^^^^^^^^^^^^^^^^^^^^
 http://www.ubuntu.com/testing/karmic/beta?info=EXLINK
 with possible workaround http://www.brandonchecketts.com/archives/booting-from-a-software-raid-device-on-ubunto-karmic-910
 
-==Automatic boot on failure==
+
+Automatic boot on failure
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Optionally, and not recommended, you can have the Appliance continue to boot if one of the hard drive failse by editting this file /etc/initramfs-tools/conf.d/mdadm change "BOOT_DEGRADED=false" to "BOOT_DEGRADED=true"
 
 The reason that this is recommended is that we will have no way of knowing that one of the hard drives failed and then the second one may fail.
 
-==LCD Menu== 
+
+LCD Menu
+^^^^^^^^
  sudo usblcd spash /home/lcdmenu/bin/splash.txt
 
 
@@ -143,6 +163,8 @@ The reason that this is recommended is that we will have no way of knowing that 
 After rebooting, maybe modify /etc/fstab and set
   /dev/md0 to "relatime" instead of defaults
 
-==Background==
+
+Background
+^^^^^^^^^^
 https://help.ubuntu.com/community/Installation/SoftwareRAID#Formatting
 [[Category:iHRIS Appliance]]

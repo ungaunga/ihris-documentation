@@ -2,30 +2,46 @@ Upgrading From 3.1
 ==================
 
 These are directions for upgrading iHRIS Manage from version 3.1 under Ubuntu.  
-==First Steps==
-===Get The Source Code===
-You can either get the [[Linux (Ubuntu) Installation#Downloading the Software | released]] or the [[Using Bazaar to Contribute Code#Getting The Code | development code]].  Suppose that '''[base_path]''' is the directory which contains i2ce, common, manage etc.
 
-===Backup Database===
+First Steps
+^^^^^^^^^^^
+
+Get The Source Code
+~~~~~~~~~~~~~~~~~~~
+You can either get the [[Linux (Ubuntu) Installation#Downloading the Software | released]] or the [[Using Bazaar to Contribute Code#Getting The Code | development code]].  Suppose that **[base_path]**  is the directory which contains i2ce, common, manage etc.
+
+
+Backup Database
+~~~~~~~~~~~~~~~
 We should back up the database.  Go into phpmyadmin, select your database, click on operations, and copy the 
-database to a new name '''[database_name]'''.
+database to a new name **[database_name]** .
 
-===Logging===
+
+Logging
+~~~~~~~
 Open up a new terminal on the machine.  
  cd [base_path]/i2ce/tools
  php apache_tail.php 0
 
-==Main Configuration==
-Copy the existing site directory over to a new directory and update the '''config.values.php''' to:
-*set the ''$i2ce_site_database'' to '''[database_name]''', the name of the new database 
-*set  ''$i2ce_site_i2ce_path'' to '''[base_path]/i2ce''', the directory where the new version of I2CE is located
 
-If you have URL Rewriting turned on, you will want to update your '''.htaccess''' file.  Look for the line RewriteBase and change it 
+Main Configuration
+^^^^^^^^^^^^^^^^^^
+Copy the existing site directory over to a new directory and update the **config.values.php**  to:
+
+
+* set the *$i2ce_site_database*  to **[database_name]** , the name of the new database
+* set  *$i2ce_site_i2ce_path*  to **[base_path]/i2ce** , the directory where the new version of I2CE is located
+
+If you have URL Rewriting turned on, you will want to update your **.htaccess**  file.  Look for the line RewriteBase and change it 
 to the web directory you are using.
 
-==Site Configuration File==
-===Versions===
-We need to go through your site configuration (XML) file and look for any ''conflicts'' and any ''requirements'' with version info from 3.1 and update them to the new version.  For example, if you have something that looks like:
+
+Site Configuration File
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Versions
+~~~~~~~~
+We need to go through your site configuration (XML) file and look for any *conflicts*  and any *requirements*  with version info from 3.1 and update them to the new version.  For example, if you have something that looks like:
  <requirement name='ihris-manage'>
    <atLeast version='3.1'/>
    <lessThan version='3.2'/>
@@ -50,7 +66,9 @@ or:
  <version>4.0.0</version>
 as appropriate.
 
-===Modules===
+
+Modules
+~~~~~~~
 There were new modules created in the 3.2/4.0 code base for iHRIS Manage.  Here are modules that did not exist in 3.1 which you probably want to enable in 3.2 or 4.0:
  <enable name='PersonContact'/>
  <enable name='ihris-manage-PersonDemographic'/>
@@ -66,29 +84,51 @@ You may also want:
  <enable name="messageBox"/>
  <enable name="messageNotice"/>
  <enable name="localeSelector"/>
-==Changes to HTML Templates==
+
+Changes to HTML Templates
+^^^^^^^^^^^^^^^^^^^^^^^^^
 There have been some changes to template files to better support localization. 
 
-Some of these changes may be in the ''main.html'' and the ''welcome.html'' files in the site templates folder.
+Some of these changes may be in the *main.html*  and the *welcome.html*  files in the site templates folder.
 
-===Welcome Role===
+
+Welcome Role
+~~~~~~~~~~~~
 
 Change things like:
-<source lang="xml">
- Logout as <span name='welcome_role'/>
-</source>
-to:
-<source lang="xml">
- <span printf="'Log out as %s',ihris-common->getUserRole()" />
-</source>
 
-===Welcome Name===
-Change things like:
-<source lang="xml">
- Welcome, <span name='welcome_name'>,
-</source>
+
+.. code-block:: xml
+
+     Logout as <span name='welcome_role'/>
+    
+
 to:
-<source lang="xml">
- <span printf="'Welcome, %s',ihris-common->getUserNames()" />
-</source>
+
+
+.. code-block:: xml
+
+     <span printf="'Log out as %s',ihris-common->getUserRole()" />
+    
+
+
+
+Welcome Name
+~~~~~~~~~~~~
+Change things like:
+
+
+.. code-block:: xml
+
+     Welcome, <span name='welcome_name'>,
+    
+
+to:
+
+
+.. code-block:: xml
+
+     <span printf="'Welcome, %s',ihris-common->getUserNames()" />
+    
+
 [[Category:Archived Pages]]

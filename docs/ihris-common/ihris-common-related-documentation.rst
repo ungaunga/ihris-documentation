@@ -3,7 +3,7 @@ IHRIS Common-related documentation
 
 iHRIS Common is comprised of common page classes, template files and images for the iHRIS software.
 
-[https://launchpad.net/ihris-common Download the iHRIS Common source code from Launchpad].
+ `Download the iHRIS Common source code from Launchpad <https://launchpad.net/ihris-common>`_ .
 
 [[iHRIS Common Module List]]
 

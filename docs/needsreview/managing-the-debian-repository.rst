@@ -1,11 +1,11 @@
 Managing the Debian Repository
 ==============================
 
-Normally our local [http://open.intrahealth.org/debian/ Debian Repository] is managed by [[Continuous Integration|Continuum]] and the <tt>deploy-i2ce</tt> script.  This page covers the steps the <tt>deploy-i2ce</tt> takes as well how you can manage the repository by hand, in a pinch.
+Normally our local  `Debian Repository <http://open.intrahealth.org/debian/>`_  is managed by [[Continuous Integration|Continuum]] and the <tt>deploy-i2ce</tt> script.  This page covers the steps the <tt>deploy-i2ce</tt> takes as well how you can manage the repository by hand, in a pinch.
 
 = Automated Deployment =
 
-Continuum runs the packaging scripts once an hour and then publishes the results (PHPDocumentor-produced docmentation and Debian packages).  The documentation is pushed to a subdirectory of [http://open.intrahealth.org/ihris-docs/ /var/www/ihris-docs] using rsync.  The debian packages are pushed to [http://open.intrahealth.org/debian/ /var/www/debian] using rsync and then archive maintenance commands are run.
+Continuum runs the packaging scripts once an hour and then publishes the results (PHPDocumentor-produced docmentation and Debian packages).  The documentation is pushed to a subdirectory of  `/var/www/ihris-docs <http://open.intrahealth.org/ihris-docs/>`_  using rsync.  The debian packages are pushed to  `/var/www/debian <http://open.intrahealth.org/debian/>`_  using rsync and then archive maintenance commands are run.
 
 = Updating a manually-built package =
 You need to install the devscripts package:
@@ -20,5 +20,5 @@ The <tt>-all</tt> packages are not so straightforward.  [[Building Meta Packages
     $ sudo -u tomcat55 apt-ftparchive -q -q generate \
       /etc/apt/apt-ftparchive.conf
 
-'''Note:''' The <tt>manual</tt> subdirectory is used to avoid conflicts with the automated rsync process.
+ **Note:**  The <tt>manual</tt> subdirectory is used to avoid conflicts with the automated rsync process.
 [[Category:Project Team Resources]][[Category:NeedsReview]]

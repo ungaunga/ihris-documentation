@@ -9,30 +9,52 @@ where you would need to restart the webserver by
 you should now do
  sudo /etc/init.d/apache2 restart && sudo /etc/init.d/memcached restart
 
-==Installation on Intrepid==
-'''Warning:'''This is only a rough guide as I did not take good notes.  Please correct.
-===Install Memcached===
+
+Installation on Intrepid
+^^^^^^^^^^^^^^^^^^^^^^^^
+ **Warning:** This is only a rough guide as I did not take good notes.  Please correct.
+
+Install Memcached
+~~~~~~~~~~~~~~~~~
 First install memcached by opening a terminal and typing:
-<source lang="bash">
-sudo apt-get install memcached
-</source>
+
+
+.. code-block:: bash
+
+    sudo apt-get install memcached
+    
+
 
 Then make sure that memcached is enabled.  Look at /etc/default/memcached and make sure that it is set to be enabled.  You can edit it by typing:
-<source lang="bash">
-sudo gedit /etc/default/memcached
-</source>
+
+
+.. code-block:: bash
+
+    sudo gedit /etc/default/memcached
+    
+
 
 Then make sure the content is:
-<source lang="ini">
-ENABLE_MEMCACHED=yes
-</source>
+
+
+.. code-block:: ini
+
+    ENABLE_MEMCACHED=yes
+    
+
 
 If memcached wasn't enabled then after editing that file you'll need to restart it by typing:
-<source lang="bash">
-sudo /etc/init.d/memcached restart
-</source>
 
-===Install libmemcached2===
+
+.. code-block:: bash
+
+    sudo /etc/init.d/memcached restart
+    
+
+
+
+Install libmemcached2
+~~~~~~~~~~~~~~~~~~~~~
 We first need to install libmemcached2 before we can install the PECL module.  It is not a part of the regular software distribution channels 
 If you are using 32-bit Ubuntu
  cd /tmp
@@ -45,7 +67,9 @@ If you are using 64-bit ubuntu
  wget http://ppa.launchpad.net/libmemcached/ubuntu/pool/main/libm/libmemcached/libmemcached-dev_0.31-1intrepid1_amd64.deb 
  sudo dpkg -i libmemcached2_0.31-1intrepid1_amd64.deb libmemcached-dev_0.31-1intrepid1_amd64.deb
 
-===Install PECL memcached===
+
+Install PECL memcached
+~~~~~~~~~~~~~~~~~~~~~~
 Before we can install a PECL module, we need to install some stuff to compile the PECL modules development stuff 
  sudo apt-get install apache2-prefork-dev php5-dev
 
@@ -54,64 +78,110 @@ Now we can install the PECL memcached module.   The newer releases of pecl-memca
  wget http://pecl.php.net/get/memcached-1.0.1.tgz
  sudo pecl install memcached-1.0.1
 
-If this doesn't work, try version 1.0.0 from [http://pecl.php.net/package/memcached here]
+If this doesn't work, try version 1.0.0 from  `here <http://pecl.php.net/package/memcached>`_ 
 
-==Installation on Karmic==
 
-===Install Memcached===
+Installation on Karmic
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+Install Memcached
+~~~~~~~~~~~~~~~~~
 First install memcached by opening a terminal and typing:
-<source lang="bash">
-sudo apt-get install memcached
-</source>
+
+
+.. code-block:: bash
+
+    sudo apt-get install memcached
+    
+
 
 Then make sure that memcached is enabled.  Look at /etc/default/memcached and make sure that it is set to be enabled.  You can edit it by typing:
-<source lang="bash">
-sudo gedit /etc/default/memcached
-</source>
+
+
+.. code-block:: bash
+
+    sudo gedit /etc/default/memcached
+    
+
 
 Then make sure the content is:
-<source lang="ini">
-ENABLE_MEMCACHED=yes
-</source>
+
+
+.. code-block:: ini
+
+    ENABLE_MEMCACHED=yes
+    
+
 
 If memcached wasn't enabled then after editing that file you'll need to restart it by typing:
-<source lang="bash">
-sudo /etc/init.d/memcached restart
-</source>
 
 
-===Install PECL memcached Module===
+.. code-block:: bash
+
+    sudo /etc/init.d/memcached restart
+    
+
+
+
+
+Install PECL memcached Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Next we need to link memcached with PHP using the memcached PECL library.  First make sure the development packages are installed so PECL can compile memcached.  Type the following in a terminal:
-<source lang="bash">
-sudo apt-get install libmemcached2 libmemcached-dev apache2-prefork-dev php5-dev
-</source>
+
+
+.. code-block:: bash
+
+    sudo apt-get install libmemcached2 libmemcached-dev apache2-prefork-dev php5-dev
+    
+
 
 Now install memcached by typing:
-<source lang="bash">
-sudo pecl install memcached
-</source>
+
+
+.. code-block:: bash
+
+    sudo pecl install memcached
+    
+
 
 
 
 Now enable the module by creating and editing a config file for PHP.
 
-<source lang="bash">
-sudo gedit /etc/php5/conf.d/memcached.ini
-</source>
+
+
+.. code-block:: bash
+
+    sudo gedit /etc/php5/conf.d/memcached.ini
+    
+
 
 Save the following for that file:
-<source lang="ini">
-extension=memcached.so
-</source>
 
-===Restart Apache===
+
+.. code-block:: ini
+
+    extension=memcached.so
+    
+
+
+
+Restart Apache
+~~~~~~~~~~~~~~
 Now restart apache to enable the PHP memcached library by typing the following in a terminal:
 
-<source lang="bash">
-sudo /etc/init.d/apache2 restart
-</source>
 
-==Installation on Lucid or Meerkat==
+
+.. code-block:: bash
+
+    sudo /etc/init.d/apache2 restart
+    
+
+
+
+Installation on Lucid or Meerkat
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Simply do
  sudo apt-get install php5-memcached memcached
 [[Category:Installation]]

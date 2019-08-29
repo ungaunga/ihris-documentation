@@ -1,7 +1,9 @@
 Automatically Generated Integers - ES
 =====================================
 
-== Enteros Generados Automáticamente (INT_GENERATE) ==
+
+Enteros Generados Automáticamente (INT_GENERATE)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Los enteros generados automáticamente (ó INT_GENERATE) se utilizan cuando un formulario necesita utilizar un número incrementado para una ID, pero el operador de datos no puede saber cuál es el siguiente valor disponible es. El usuario puede marcar una casilla para incrementar al siguiente valor o si es necesario puede introducir el número si este lo sabe. Desde la versión 4.0.2 INT_GENERATE sólo se admite cuando el formulario utiliza el mecanismo de almacenamiento de formularios "entry". Utiliza la tabla field_sequence para llevar un registro del valor actual máximo para cada campo del formulario.
 

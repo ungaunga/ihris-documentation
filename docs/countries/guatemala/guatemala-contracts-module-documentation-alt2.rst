@@ -1,7 +1,9 @@
 Guatemala Contracts Module Documentation Alt2
 =============================================
 
-==Data Model==
+
+Data Model
+^^^^^^^^^^
 
 <graphviz border='frame' format='png'>
  digraph "Contract Module" {

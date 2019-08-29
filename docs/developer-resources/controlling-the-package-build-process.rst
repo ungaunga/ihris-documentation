@@ -1,32 +1,42 @@
 Controlling the package build process
 =====================================
 
-This page contains a brief overview of how to build Debian packages from the source for the iHRIS Suite.  The package building scripts are bootstrapped when the I2CE package is built.  The packaging scripts reside in [http://bazaar.launchpad.net/~intrahealth%2Binformatics/i2ce/trunk/files/head%3A/modules/PackageUtils modules/PackageUtils/].
+This page contains a brief overview of how to build Debian packages from the source for the iHRIS Suite.  The package building scripts are bootstrapped when the I2CE package is built.  The packaging scripts reside in  `modules/PackageUtils/ <http://bazaar.launchpad.net/~intrahealth%2Binformatics/i2ce/trunk/files/head%3A/modules/PackageUtils>`_ .
 
 = Goals of PackageUtils =
 
 The <tt>PackageUtils</tt> module was designed with a few goals in mind.  These are
+
+
 
 * One module, one package
 * Minimize configuration information
 * Ease of invocation
 * Compatibility with Launchpad's PPA service
 
-== One Module, One Package ==
+
+One Module, One Package
+^^^^^^^^^^^^^^^^^^^^^^^
 
 There is a one-to-one correspondence between modules and debian packages.  The package name corresponds to the name attribute of the I2CEConfiguration element in the XML file.  An “i2ce-” prefix is given to each generated package to reduce the changes of naming conflicts.  (The only exception to this is the I2CE package itself which is named simply “i2ce”.)   In this way, dependencies between packages mirror the dependencies between modules.
 
-== Minimize configuration information ==
+
+Minimize configuration information
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Another goal of the current design was to eliminate the need to maintain dozens of different configuration files for each module.  The information needed was (mostly) already found in the configuration file.
 
 For this reason, <tt>PackageUtils</tt> relies on a module's configuration for all of its information.  This information is put into some templates (which are found in the <tt>templates/</tt> subdirectory of the <tt>PackageUtils</tt> module) to produce a <tt>debian/</tt> directory that is used to build the entire package.  Source packages are also produced during the build process.  The source packages are needed so that Launchpad can build the packages using standard Debian tools.
 
-== Ease of invocation ==
+
+Ease of invocation
+^^^^^^^^^^^^^^^^^^
 
 The <tt>PackageUtils</tt> module (<tt>i2ce-package-utils</tt>) is set up so that it could be run from the root of a checkout of I2CE code (e.g. the results of <tt>bzr co lp:i2ce</tt> or <tt>bzr co lp:ihris-manage</tt>) and, from a single command, create packages for all modules in that source tree.
 
-== Compatibility with Launchpad's PPA service ==
+
+Compatibility with Launchpad's PPA service
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 During the build process, the modules are put into a conventional layout so that conventional tools (such as <tt>dpkg-source</tt> and <tt>debuild</tt>) can be used to manipulate the packages.
 
@@ -44,9 +54,9 @@ The site modules are handled seperately and must be built by hand.  So, if you w
 
 The resulting debian package (in <tt>pkgs/DEB/</tt>) must be [[Managing the Debian Repository|manually uploaded to the repository]].
 
-'''Note:''' there is a bug in the build process.  I designed it to follow all the paths for MODULES so it could be run in a top-level tree.  However, since the Demo site module includes a <tt>../../..</tt> path (which you should change to <tt>/usr/share/i2ce</tt> at the time of build), it will try to traverse those directories as well.  This behavior will be fixed, but, for now, you can safely break out of the build after it has built the demo package.
+ **Note:**  there is a bug in the build process.  I designed it to follow all the paths for MODULES so it could be run in a top-level tree.  However, since the Demo site module includes a <tt>../../..</tt> path (which you should change to <tt>/usr/share/i2ce</tt> at the time of build), it will try to traverse those directories as well.  This behavior will be fixed, but, for now, you can safely break out of the build after it has built the demo package.
 
-'''Note:''' At this point, build-i2ce will build all modules and there is no way to specify a single module to build.  Since I initially intended build-i2ce to be run automatically by [[Continuous Integration|Continuum]], this wasn't a concern.
+ **Note:**  At this point, build-i2ce will build all modules and there is no way to specify a single module to build.  Since I initially intended build-i2ce to be run automatically by [[Continuous Integration|Continuum]], this wasn't a concern.
 
 = Special Paths =
 
@@ -56,15 +66,15 @@ The two specified paths are <tt>BIN</tt> and <tt>CONF</tt>.  Files in the path s
 
 Additional modifications can be made here so that files under, say, <tt>PAGES</tt> are installed under <tt>/var/www/i2ce</tt>.
 
-'''FIXME:''' The path-mapping information in <tt>prepInstallPaths</tt> should probably be moved to a configuration file.
+ **FIXME:**  The path-mapping information in <tt>prepInstallPaths</tt> should probably be moved to a configuration file.
 
-'''FIXME:''' Files in <tt>/etc</tt> should be marked as configuration files.
+ **FIXME:**  Files in <tt>/etc</tt> should be marked as configuration files.
 
 = External Dependencies =
 
 The <tt>getExternalPackageName</tt> takes care of mapping external requirements to the corresponding Debian package names.
 
-'''FIXME:''' This dependency mapping information should probably be moved to a configuration file.
+ **FIXME:**  This dependency mapping information should probably be moved to a configuration file.
 
 = Deployment Configuration =
 

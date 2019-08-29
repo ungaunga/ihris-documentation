@@ -9,8 +9,9 @@ Use Case:PR-WS-2
  |success=An list of enterprise ids (EIDs) is returned to the requesting application
  |resources=[[Web Service:PR-WS-2]]
  |mss=
-#The actor submits a request with a given query parameters
-#The system returns a list of matching EIDs
+
+* The actor submits a request with a given query parameters
+* The system returns a list of matching EIDs
  |extensions=
 :2.a The system does not find the provider and returns an error code.
 :2.b The requested search parameters are invalid and returns an error code.

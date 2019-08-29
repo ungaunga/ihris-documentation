@@ -7,18 +7,22 @@ Web Service:PR-WS-6
  |applications=Interoperability Layer, Point-Of-Care, iHRIS
  |url=/ws/rest/v2/edit/provider
  |params=The following webservice should accept the following parameters:
-*${epid} The EPID of the provider. Required. 
-*${surname} The surname of the provider. Optional.
-*${nationality}  The nationality of the provider coded according to ISO-3166-1 alpha-3.  Optional.
-*${nid} The national id. Optional.
-*${passport} The passport number.  Optional.
-*${mutuelle} The mutuelle number. Optional.
-*${csr} The CSR number. Optional.
-*${respformat}  Describes response format. Optional. Default is 'http', can also be 'json.' 
+
+
+* ${epid} The EPID of the provider. Required.
+* ${surname} The surname of the provider. Optional.
+* ${nationality}  The nationality of the provider coded according to ISO-3166-1 alpha-3.  Optional.
+* ${nid} The national id. Optional.
+* ${passport} The passport number.  Optional.
+* ${mutuelle} The mutuelle number. Optional.
+* ${csr} The CSR number. Optional.
+* ${respformat}  Describes response format. Optional. Default is 'http', can also be 'json.'
  |example=?provder=m&reg_body=2
  |response=HTTP 200 - OK
-*If ${repsformat} is 'http' the HTTP response body will contain the epid as plain text. 
-*If ${respformat} is 'json' it will contain a JSON object with the single field 'epid.'
+
+
+* If ${repsformat} is 'http' the HTTP response body will contain the epid as plain text.
+* If ${respformat} is 'json' it will contain a JSON object with the single field 'epid.'
 further web-service actions to perform on the provider
   Example:
 {
@@ -32,7 +36,9 @@ further web-service actions to perform on the provider
     } 
 }
  |error=*HTTP 500 - Server Error - If the server encountered an error.
-*HTTP 400 - Bad Request - If the parameters are malformed.
+
+
+* HTTP 400 - Bad Request - If the parameters are malformed.
  |notes= 
 |resources=[[Use Case:PR-WS-6]]
 }}

@@ -7,15 +7,16 @@ UseCase:CM-1
  |actor=Training Manager? HR Manager?
  |preconditions=The user must be logged in to the system.
  |success=The new competency is saved and linked to any selected parent category, and it is available for selection in various use cases.
- |resources=[http://wiki.ihris.org/wiki/index.php/Competency_Model iHRIS Competency Model]
+ |resources= `iHRIS Competency Model <http://wiki.ihris.org/wiki/index.php/Competency_Model>`_ 
  |mss=#The user selects the option to update the competency model.
-#The system displays a list of competencies organized by category.
-#The user adds a new competency.
-#The user selects whether the item is a parent category.
-#The user enters the name of the item.
-#The user enters a definition for the competency.
-#The user saves the record 
-#The system makes the competency available for selection when adding competencies to a record.
+
+* The system displays a list of competencies organized by category.
+* The user adds a new competency.
+* The user selects whether the item is a parent category.
+* The user enters the name of the item.
+* The user enters a definition for the competency.
+* The user saves the record
+* The system makes the competency available for selection when adding competencies to a record.
  |extensions=
 :3.a The user selects an existing competency.
 :#The system opens the competency for editing.

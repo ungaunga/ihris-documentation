@@ -1,7 +1,7 @@
 IHRIS Plan Technical Documentation
 ==================================
 
-''This is sample documentation for iHRIS Plan when installed in a country setting. This documentation is current as of iHRIS Plan version 1.0 (August 15, 2008).''
+ *This is sample documentation for iHRIS Plan when installed in a country setting. This documentation is current as of iHRIS Plan version 1.0 (August 15, 2008).* 
 
 iHRIS Plan is built on the IntraHealth Informatics Core Engine (I2CE) with iHRIS Common (ihris-common) module version 3.1. The iHRIS Plan version is 1.0. Everything is written in PHP 5 and is installed in /var/lib/iHRIS/. Documentation is located at http://wiki.ihris.org/wiki/index.php/Capacity_Project's_iHRIS_Suite, and development and future release source code are at https://launchpad.net/ihris-plan or https://launchpad.net/ihris-suite for all the iHRIS software.
 
@@ -12,7 +12,9 @@ The site files for this installation are in /var/lib/iHRIS/sites/{site_name}. An
 If you have any problems with the iHRIS application or the server, email the ihris-developers list at ihris-developers@lists.intrahealth.org. Subscribe to the list or view the archives at http://lists.intrahealth.org/mailman/listinfo/ihris-developers/.
 
 
-== Backups ==
+
+Backups
+^^^^^^^
 
 There are two backup drives on the server. One is a 160GB internal drive mounted as /backup. The second is a 1TB external drive mounted as /external.
  
@@ -21,11 +23,17 @@ Every night the database is dumped to a file called /var/lib/iHRIS/backup/{Datab
 The backup directories should be checked regularly to make sure recent archive files are being created.
 
 
-== Restoring the Database ==
+
+Restoring the Database
+^^^^^^^^^^^^^^^^^^^^^^
 
 To restore the database from the backup, find the {DatabaseName}.sql file in the sync directory or one of the archives on the /external or /backup directories. It will be in the backup subdirectory of the archives or /backup/ihris-plan/sync/backup. Open a terminal, change to the directory with the .sql file you wish to restore and run the following command:
 
-<pre>mysql -u root -p {DatabaseName} < {DatabaseName}.sql</pre>
+
+.. code-block::
+
+    mysql -u root -p {DatabaseName} < {DatabaseName}.sql
+
 
 This will then ask for a password, which is given above in the MySQL section unless it has been changed. This will completely overwrite everything in the {DatabaseName} database, so make sure this is what you want to do. 
 

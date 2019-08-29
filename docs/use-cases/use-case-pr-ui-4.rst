@@ -9,10 +9,11 @@ Use Case:PR-UI-4
  |success=A provider is successfully is added to the system and made available to be searched
  |resources=
  |mss=
-#The administrator selects the health care professional to be deactivated
-#The system requires the confirmation of the health care professional deactivation.
-#The administrator confirms the deactivation of the health care professional
-#The system deactivates the health care professional
-#The system returns to the previous screen
+
+* The administrator selects the health care professional to be deactivated
+* The system requires the confirmation of the health care professional deactivation.
+* The administrator confirms the deactivation of the health care professional
+* The system deactivates the health care professional
+* The system returns to the previous screen
 
 }}

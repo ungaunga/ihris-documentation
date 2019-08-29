@@ -9,10 +9,11 @@ Use Case:PR-UI-2
  |success=A provider is successfully is edited in the system.
  |resources=
  |mss=
-#The administrator selects the health care professional record to be edited
-#The administrator edits the health care professional record data.
-#The system performs the necessary validations.
-#The system updates the health care professional data.
-#The system returns to the previous screen.
+
+* The administrator selects the health care professional record to be edited
+* The administrator edits the health care professional record data.
+* The system performs the necessary validations.
+* The system updates the health care professional data.
+* The system returns to the previous screen.
  |notes=Data fields should include these [[Provider Registry Requirements#Provider Attributes | provider attributes]]
 }}

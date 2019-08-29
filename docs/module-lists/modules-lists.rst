@@ -5,6 +5,8 @@ This article links to the various [[Module Structure | modules]] used by iHRIS. 
 
 You can find a list of the modules in the iHRIS software platform here:
 
+
+
 * [[iHRIS Module List]] a list of all modules.
 * [[I2CE Module List]] the modules in I2CE
 * [[iHRIS Common Module List]] the modules in iHRIS Common

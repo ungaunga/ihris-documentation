@@ -9,8 +9,9 @@ Use Case:PR-WS-1
  |success=An enterprise id (EID) is returned to the requesting application
  |resources=[[Web Service:PR-WS-1]]
  |mss=
-#The actor submits a request with a given ID type and ID number
-#The system returns the EID
+
+* The actor submits a request with a given ID type and ID number
+* The system returns the EID
  |extensions=
 :2.a The system does not find the provider and returns an error code.
 }}

@@ -3,7 +3,9 @@ Rwanda iHRIS FR Interactions
 
 
 
-==Transaction Diagram: With InfoMan==
+
+Transaction Diagram: With InfoMan
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 <graphviz border='frame' format='png'>
  digraph "iHRIS + Facility Registry for Rwanda" {

@@ -6,7 +6,9 @@ Welcome to IntraHealth Informatics Last Mile Initiative / Community Health Data 
 This page will have updates on all of the ongoing work being done for the SRA/IntraHealth Last Mile Initiative (hereinafter LMI) / Community Health Data Collection System (hereinafter CHDCS).
 
 
-== What is the Last Mile Initiative / Community Health Data Collection System ? ==
+
+What is the Last Mile Initiative / Community Health Data Collection System ?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The overall objective of the USAID Last Mile Initiative (LMI) is to expand rural poor communities’ access to telecommunications using sustainable and scalable approaches in order to improve livelihoods and access to development opportunities.  
 
@@ -38,66 +40,100 @@ The implementation plan included below contemplates a one year timeline for syst
 
 Implementation also will be supported via a partnership with Qualcomm who will provide financial support to cover all hardware and software costs as well as training and documentation.
 
-== Partners == 
 
-*IntraHealth International
-*SRA
-*Qualcomm - partnership has ended
+Partners
+^^^^^^^^
 
-== Contact Information ==
 
-*David Mason – Health Informatics Advisor - dmason@intrahealth.org – 919.313.3555
 
-*Vanessa Spann – Informatics Team Lead 
+* IntraHealth International
+* SRA
+* Qualcomm - partnership has ended
 
-*Mark A. Hershberger – Informatics Team Member – mhershberger@intrahealth.org – 717.271.1084
 
-*Laure Almairac and Jana Scislowicz – Program Support – lalmairac@intrahealth.org - 919.313.229
+Contact Information
+^^^^^^^^^^^^^^^^^^^
 
-== Activity Plan, Reports, and Updates ==
-* [[Activity Plan]] [[http://www.ihris.org/w//upload/LMI_Activity_Timeline_Rwanda_0608.pdf PDF Format]]
-* [[Weekly Updates]] 
+
+
+* David Mason – Health Informatics Advisor - dmason@intrahealth.org – 919.313.3555
+
+
+
+* Vanessa Spann – Informatics Team Lead
+
+
+
+* Mark A. Hershberger – Informatics Team Member – mhershberger@intrahealth.org – 717.271.1084
+
+
+
+* Laure Almairac and Jana Scislowicz – Program Support – lalmairac@intrahealth.org - 919.313.229
+
+
+Activity Plan, Reports, and Updates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+* [[Activity Plan]] [ `PDF Format <http://www.ihris.org/w//upload/LMI_Activity_Timeline_Rwanda_0608.pdf>`_ ]
+* [[Weekly Updates]]
 * [[Monthly Updates]]
 * [[Quarterly Reports]]
 
-== Technical Documentation ==
 
-[[Installation Documentation]] [[http://www.ihris.org/w//upload/Install.pdf pdf]]
+Technical Documentation
+^^^^^^^^^^^^^^^^^^^^^^^
 
-[[Developer Documentation]] [[http://www.ihris.org/w//upload/Developer.pdf pdf]]
+[[Installation Documentation]] [ `pdf <http://www.ihris.org/w//upload/Install.pdf>`_ ]
 
-[[Administrative Documentation]] [[http://www.ihris.org/w//upload/Admin.pdf pdf]]
+[[Developer Documentation]] [ `pdf <http://www.ihris.org/w//upload/Developer.pdf>`_ ]
 
-[[Community Health Worker User Documentation]] [[http://www.ihris.org/w//upload/CHW.pdf pdf]]
+[[Administrative Documentation]] [ `pdf <http://www.ihris.org/w//upload/Admin.pdf>`_ ]
 
-== Implementation ==
+[[Community Health Worker User Documentation]] [ `pdf <http://www.ihris.org/w//upload/CHW.pdf>`_ ]
 
-We will store data and forms in [http://www.openmrs.org/ OpenMRS].  OpenMRS provides analysis tools and can be integrated with Rwanda's [[TRACnet]] using [http://kettle.pentaho.org/ Kettle].  In-depth, custom reports can be generated using [http://www.eclipse.org/birt/phoenix/ BIRT] and the [http://openmrs-birt-oda.blogspot.com/2008/08/birt-oda-tutorial-screencast.html OpenMRS ODA plugin for BIRT].
+
+Implementation
+^^^^^^^^^^^^^^
+
+We will store data and forms in  `OpenMRS <http://www.openmrs.org/>`_ .  OpenMRS provides analysis tools and can be integrated with Rwanda's [[TRACnet]] using  `Kettle <http://kettle.pentaho.org/>`_ .  In-depth, custom reports can be generated using  `BIRT <http://www.eclipse.org/birt/phoenix/>`_  and the  `OpenMRS ODA plugin for BIRT <http://openmrs-birt-oda.blogspot.com/2008/08/birt-oda-tutorial-screencast.html>`_ .
 
 We will develop form presentation on capable handhelds.  This would enable health care workers to collect data via the fairly pervasive mobile network in Rwanda. Identifying and developing for specific handhelds with Qualcomm's help will be a high priority but a system which will work on a wide range of handhelds will be developed if time does not permit the acquisition of specific devices.
 
-(Diagrams of this possible pilot implementation: [http://wiki.ihris.org/wiki/index.php/Image:Lmi-platform.pdf PDF format] and [http://wiki.ihris.org/wiki/index.php/Image:Lmi-platform.svg Inkscape SVG source]
+(Diagrams of this possible pilot implementation:  `PDF format <http://wiki.ihris.org/wiki/index.php/Image:Lmi-platform.pdf>`_  and  `Inkscape SVG source <http://wiki.ihris.org/wiki/index.php/Image:Lmi-platform.svg>`_ 
 
-== Translation for Forms and Menus ==
 
-[https://translations.launchpad.net/rwanda-pilot/trunk/+pots/lmi-rwanda-pilot/rw/+translate Kinyarwanda translation interface]
+Translation for Forms and Menus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If network connectivity is good enough, you can [https://translations.launchpad.net/rwanda-pilot/trunk/+pots/lmi-rwanda-pilot/rw/+translate edit translations or view suggested translations] (from other Launchpad-hosted projects) online.  If you would rather use a desktop application, download and install [http://www.poedit.net/download.php Poedit] as well as the [http://launchpadlibrarian.net/17157504/lmi-rwanda-pilot_lmi-rwanda-pilot.pot .pot translations template].
+ `Kinyarwanda translation interface <https://translations.launchpad.net/rwanda-pilot/trunk/+pots/lmi-rwanda-pilot/rw/+translate>`_ 
+
+If network connectivity is good enough, you can  `edit translations or view suggested translations <https://translations.launchpad.net/rwanda-pilot/trunk/+pots/lmi-rwanda-pilot/rw/+translate>`_  (from other Launchpad-hosted projects) online.  If you would rather use a desktop application, download and install  `Poedit <http://www.poedit.net/download.php>`_  as well as the  `.pot translations template <http://launchpadlibrarian.net/17157504/lmi-rwanda-pilot_lmi-rwanda-pilot.pot>`_ .
 
 If you edit the translations offline, you'll need to upload the <tt>.po</tt> file produced to Launchpad or [mailto:mhershberger@intrahealth.org mail it to me.]
 
-For context, you can walk through the [http://open.intrahealth.org/lmi/ current screens] online.
+For context, you can walk through the  `current screens <http://open.intrahealth.org/lmi/>`_  online.
 
-== Original Paper Data Collection Forms ==
-*[[http://wiki.ihris.org/wiki/index.php/Image:Child_Register.pdf Children Register PDF Format]]
-*[[http://wiki.ihris.org/wiki/index.php/Image:Register_for_Women.pdf Women Register PDF Format]]
-*[[http://wiki.ihris.org/wiki/index.php/Image:Household_Form.pdf Household Form PDF Format]]
 
-== Use Cases ==
+Original Paper Data Collection Forms
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* [[System Use Cases]] [[http://www.ihris.org/w//upload/LMI_Use_Cases_071808.pdf PDF Format]]
 
-== Official Health Indicators ==
+* [ `Children Register PDF Format <http://wiki.ihris.org/wiki/index.php/Image:Child_Register.pdf>`_ ]
+* [ `Women Register PDF Format <http://wiki.ihris.org/wiki/index.php/Image:Register_for_Women.pdf>`_ ]
+* [ `Household Form PDF Format <http://wiki.ihris.org/wiki/index.php/Image:Household_Form.pdf>`_ ]
+
+
+Use Cases
+^^^^^^^^^
+
+
+
+* [[System Use Cases]] [ `PDF Format <http://www.ihris.org/w//upload/LMI_Use_Cases_071808.pdf>`_ ]
+
+
+Official Health Indicators
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1.	Number of infants less that 12 months of age completely vaccinated in the preceding month
 
@@ -129,7 +165,9 @@ For context, you can walk through the [http://open.intrahealth.org/lmi/ current 
 
 15.	Total number of deaths in the last month
 
-== Sustainability and Pilot Plan ==
+
+Sustainability and Pilot Plan
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 [[LMI Sustainability and Pilot Plan]]
 
@@ -137,17 +175,23 @@ For context, you can walk through the [http://open.intrahealth.org/lmi/ current 
 
 [[Media:LMI_Sustainability.pdf|Sustainability & Pilot Plan (PDF version)]]
 
-== Press Plan ==
+
+Press Plan
+^^^^^^^^^^
 
 Last Mile Initiative Rwanda
 IntraHealth International, SRA, Qualcomm
 DRAFT Media Plan as of 12 May 2008
 
-*Goal
+
+
+* Goal
 
 Utilize local and international media attention to support the project. Especially to increase access to community support resources including open source developers and user groups and potential local partners in the areas of health and telecommunications.
 
-*Stakeholders
+
+
+* Stakeholders
 
 Qualcomm
 
@@ -157,7 +201,9 @@ IntraHealth (IH)
 
 Rwanda Ministry of Health (MOH)
 
-*Activities
+
+
+* Activities
 
 Develop efficient control and approval system for public materials. Meet with Qualcomm, SRA and Rwanda Ministry of Health (MOH) to determine boundaries and requirements for communicating with the public. Identify required terminology and logos. Identify PR contact from each organization. PR contacts to provide approval for release of information and serve as point of contact for media.
 
@@ -179,8 +225,12 @@ Provide success stories and articles for newsletters including Wireless Reach’
 
 Include this project in brochures, video submissions and speaking points for executives.
 
-== Pictures ==
 
-*Ikigo Community Health Center [http://www.ihris.org/w//upload/CHW_0308.jpg]
-*Ikigo Community Health Workers [http://www.ihris.org/w//upload/Ikigo_Health_Center_0308.jpg]
+Pictures
+^^^^^^^^
+
+
+
+* Ikigo Community Health Center [http://www.ihris.org/w//upload/CHW_0308.jpg]
+* Ikigo Community Health Workers [http://www.ihris.org/w//upload/Ikigo_Health_Center_0308.jpg]
 [[Category:Last Mile Initiative]]

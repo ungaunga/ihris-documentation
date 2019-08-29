@@ -3,9 +3,11 @@ CapacityPlus's iHRIS Suite
 
 iHRIS open source software provides health sector leaders with tools to track, manage, and plan the health workforce. This wiki is where the project team documents the software, related procedures, and project plans. Anyone is invited to contribute. 
 
-If you have questions or want to contact iHRIS developers directly, please join our [https://groups.google.com/forum/#!forum/ihris iHRIS Global Community Google Group]. For more information about the iHRIS software, visit our [http://www.ihris.org www.ihris.org website].
+If you have questions or want to contact iHRIS developers directly, please join our  `iHRIS Global Community Google Group <https://groups.google.com/forum/#!forum/ihris>`_ . For more information about the iHRIS software, visit our  `www.ihris.org website <http://www.ihris.org>`_ .
 
 Select the type of documentation you need:
+
+
 
 * [[Developer Resources|Developer]] -- You are adding new features, writing new modules, modifying the source code, or creating software releases.
 * [[Implementer Resources|Implementer]] -- You are installing, customizing, maintaining, or writing reports for an implementation of the iHRIS software.
@@ -18,7 +20,11 @@ Select the type of documentation you need:
 * [[Important Topics]]
 
 
-== Administrative Information ==
+
+Administrative Information
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 * [[Project Communication]] -- How to get help or ask questions about the iHRIS software.
 * [[Documentation Wishlist]] -- This is a prioritized list of documentation needs, to which all users can contribute.
 * [[iHRIS Core Team]] -- Resources for IntraHealth/Capacity<i>Plus</i> team members and consultants.

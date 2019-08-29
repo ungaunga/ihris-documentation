@@ -5,7 +5,9 @@ Mapping the openMRS database to a health-care worker HR dataset.
 
 See [[Data Interoperability| here]] for general information about data interoperability with iHRIS.
 
-==Users and Roles in openMRS==
+
+Users and Roles in openMRS
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 A row in the 'users' table of openMRS often represents a health care
 worker.  One of the columns in this table is 'user_id'.
 
@@ -32,17 +34,23 @@ Nurse).  As this is certainly implementation dependent, one
 would need a map:
       'role' --> "job"
 
-===Child/Parent roles===
+
+Child/Parent roles
+~~~~~~~~~~~~~~~~~~
 What are these?
 
-=='user_property'==
+
+'user_property'
+^^^^^^^^^^^^^^^
 Users of openMRS can be assigned properties via the 'user_property'
 table which contains the columns:
       'property': varchar(100)
       'user_id': integer
       'value': varchar(255)
 
-=='person_attribute'==
+
+'person_attribute'
+^^^^^^^^^^^^^^^^^^
 Can a user have a person attribute?  What are some examples?
 
 [[Category:OpenMRS]][[Category:Blueprints]]
