@@ -6,7 +6,7 @@ IHRIS Software
     :maxdepth: 2
     :caption: IHRIS Software
 
-    capacityplus%27s-ihris-suite
+    capacityplus-ihris-suite
     code-downloads
     customizing-ihris
     development-timelines

@@ -16,7 +16,6 @@ Implementer Resources
     decentralized-ihris-data-policy
     deleting-records
     developing-an-hris-data-coding-scheme
-    frequently-asked-questions
     ihris-appliance
     ihris-regional-rollout
     implementer-resources

@@ -1,5 +1,5 @@
-French-language Resources
-=========================
+French
+======
 
 Ressources en français
 ^^^^^^^^^^^^^^^^^^^^^^

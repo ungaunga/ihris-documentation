@@ -7,18 +7,24 @@ iHRIS |version| Documentation
     :maxdepth: 1
     :caption: Getting Started
 
+    docs/getting-started/index
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Installation
+
     docs/developer-resources/index
 
 .. toctree::
     :maxdepth: 1
-    :caption: Country Implementations
+    :caption: Country Documentations
 
     docs/countries/index
 
 
 .. toctree::
     :maxdepth: 1
-    :caption: Language-Specific Resources
+    :caption: French and Spanish Translations
 
     docs/french/index
     docs/spanish/index

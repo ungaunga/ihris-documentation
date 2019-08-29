@@ -13,7 +13,6 @@ Resources
     knowledge-base
     list-of-ict-for-development-blogs
     peer-reviewed-journals
-    project-communication
     talks-and-presentations
     user-resources
     volunteer-resources
