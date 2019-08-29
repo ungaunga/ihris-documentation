@@ -1,5 +1,5 @@
-NMCN Installation
-=================
+NMCN Installation Instructions
+==============================
 
 This page contains installation instructions on installing iHRIS Qualify Nursing Midwifery Council of Nigeria Customizations
 {{otherversions|Linux (Ubuntu) Installation}} 

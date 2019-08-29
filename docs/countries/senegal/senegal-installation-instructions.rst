@@ -1,5 +1,5 @@
-Senegal Installation Instructions
-=================================
+Installation Instructions
+=========================
 
 This page contains installation instructions on installing iHRIS Manage Customizations for Senegal Ministry of Health
 

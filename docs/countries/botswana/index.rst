@@ -9,4 +9,4 @@ Botswana
     botswana-installation-instructions
     importing-data
 
-* `iHRIS Manage User's Manual (PDF) <https://wiki.ihris.org/mediawiki/upload/HRIS_Manage_User_Manual-Final.pdf>`_
+* `Download iHRIS Manage User's Manual (PDF) <https://wiki.ihris.org/mediawiki/upload/HRIS_Manage_User_Manual-Final.pdf>`_

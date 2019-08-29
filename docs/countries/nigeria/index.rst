@@ -7,5 +7,4 @@ Nigeria
     :caption: Nigeria
 
     mlscn-installation-instructions
-    nigeria
     nmcn-installation

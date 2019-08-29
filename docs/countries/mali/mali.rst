@@ -1,5 +1,0 @@
-Mali
-====
-
-* [[Mali Installation]]
-

@@ -18,8 +18,9 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'iHRIS'
-copyright = '2019, Sovello'
-author = 'Sovello'
+# copyright = '2019, Sovello'
+license = 'GNU GPL v3'
+# author = 'IntraHealth Informatics'
 
 
 # -- General configuration ---------------------------------------------------

@@ -12,7 +12,6 @@ Countries Implementations
     india/index
     kenya/index
     lesotho/index
-    india/index
     kenya/index
     lesotho/index
     malawi/index

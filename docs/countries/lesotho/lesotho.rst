@@ -1,5 +1,0 @@
-Lesotho
-=======
-
-* [[Lesotho MOHSW Installation]]
-
