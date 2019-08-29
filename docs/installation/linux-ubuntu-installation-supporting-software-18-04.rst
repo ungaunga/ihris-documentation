@@ -1,5 +1,5 @@
-Linux (Ubuntu) Installation - Supporting Software - 18.04
-=========================================================
+Installing Supporting Software (Ubuntu 18.04)
+=============================================
 
 This document describes the needed installation and configuration of supporting software for iHRIS on Ubuntu 16.04 LTS, Xenial Xerus.
  **This will only work with iHRIS 4.3 or greater**  (or additional local changes).  iHRIS 4.3 is currently available for testing and should not be used in production yet.

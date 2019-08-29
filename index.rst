@@ -13,22 +13,7 @@ iHRIS |version| Documentation
     :maxdepth: 1
     :caption: Installation
 
-    docs/developer-resources/index
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Country Documentations
-
-    docs/countries/index
-
-
-.. toctree::
-    :maxdepth: 1
-    :caption: French and Spanish Translations
-
-    docs/french/index
-    docs/spanish/index
-
+    docs/installation/index
 
 .. toctree::
     :maxdepth: 1
@@ -36,6 +21,7 @@ iHRIS |version| Documentation
 
     docs/custom-reporting/index
     docs/customizations/index
+    docs/developer-resources/index
     docs/fields/index
     docs/forms/index
     docs/ihris-appliance/index
@@ -47,7 +33,6 @@ iHRIS |version| Documentation
     docs/ihris-software/index
     docs/ihris-train/index
     docs/implementer-resources/index
-    docs/installation/index
     docs/last-mile_initiative/index
     docs/magic-data/index
     docs/module-lists/index
@@ -63,6 +48,19 @@ iHRIS |version| Documentation
     docs/translations/index
     docs/use-cases/index
     docs/web-service/index
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Country Documentations
+
+    docs/countries/index
+
+.. toctree::
+    :maxdepth: 1
+    :caption: French and Spanish Translations
+
+    docs/french/index
+    docs/spanish/index
 
 .. toctree::
     :maxdepth: 1

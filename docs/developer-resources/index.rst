@@ -89,7 +89,6 @@ Developer Resources
     linux-ubuntu-installation-4-1-8
     linux-ubuntu-installation-4-1-9
     linux-ubuntu-installation-4-3-0
-    linux-ubuntu-installation-4-3-3
     linux-ubuntu-installation-supporting-software-10-04
     linux-ubuntu-installation-supporting-software-10-10
     linux-ubuntu-installation-supporting-software-11-04
@@ -100,7 +99,6 @@ Developer Resources
     linux-ubuntu-installation-supporting-software-13-10
     linux-ubuntu-installation-supporting-software-14-04
     linux-ubuntu-installation-supporting-software-16-04
-    linux-ubuntu-installation-supporting-software-18-04
     linux-ubuntu-installation-supporting-software-for-ihris-4-3%2b-14-04
     geographic-restricted-users
     manageaccessfacility-limit-dropdown-list-fields-by-user
