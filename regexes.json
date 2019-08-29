@@ -1,10 +1,14 @@
 [
     {
-        "replace all categories": "\[\[Category.*?$",
+        "replace_all_categories_lines": "\[\[Category.*?$",
         "replacement": ""
     },
     {
         "triple_line_breaks": "\n{3,}",
         "replacement": "\n\n"
+    },
+    {
+        "upload_urls": "http://www.ihris.org/mediawiki/upload",
+        "replacement": "https://wiki.ihris.org/mediawiki/upload"
     }
 ]

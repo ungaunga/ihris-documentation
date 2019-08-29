@@ -73,8 +73,8 @@ You should see a message such as:
 
 .. code-block::
 
-     M  templates/lists.html
-     M  templates/view.html
+    M  templates/lists.html
+    M  templates/view.html
     All changes applied successfully.
     Now on revision 43.
     
