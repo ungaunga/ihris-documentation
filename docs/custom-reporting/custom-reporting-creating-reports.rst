@@ -77,4 +77,4 @@ The stale time for a report defaults to 10 minutes.  This can be over-ridden by 
 * /modules/CustomReports/times/stale
 * /modules/CustomReports/times/stale_by_report/XXXXX
 
-[[Category:Custom Reporting]][[Category:Review2013]]
+

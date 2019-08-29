@@ -255,4 +255,4 @@ The above would mean the name of the PrintedForm is sample_hire_letter and its p
 
 This piece of code should be inserted favorably below the link to update the information of a form. (view_form_name.html)
 
-[[Category:Standardized Forms]][[Category:Review2013]]
+

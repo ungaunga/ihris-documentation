@@ -90,4 +90,4 @@ in **<PACKAGE_DIR>**  will produce the French translations in the source tree fo
  **Note:**  under version 4.0.6 the defaults for translate_templates.php have been changed, so you may simply do:
  translate_templates.php  --locales=fr
 
-[[Category:Developer Resources]]
+

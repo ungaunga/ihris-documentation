@@ -31,4 +31,4 @@ The final steps are:
 
 * Gain stakeholder concurrence and approval or discontinuation of project.
 * Explain the development methodology that will be used to complete the project (such as an iterative development process) and agree on next steps.
-[[Category:Software Development Process]]
+

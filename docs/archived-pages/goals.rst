@@ -29,4 +29,4 @@ Later iterations
 * Enable users to input more data, if available, and generate more complex, robust and sophisticated projections by adding in other components of the WHO HRH Workforce Projection Model (Hall/Hornby version).
 * Provide guidance inside the software to help users with making credible assumptions where data are lacking.
 * Improve and build on the WHO HRH Workforce Projection Model.
-[[Category:Archived Pages]]
+

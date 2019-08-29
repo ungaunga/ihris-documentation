@@ -21,4 +21,4 @@ Ressources en français
 
 * `Administrateur iHRIS, Niveau 1 <http://www.hrhresourcecenter.org/elearning/>`_  - Ce cours fournit des instructions sur les compétences de base requises pour administrer et personnaliser les logiciels de gestion du système d’information des ressources humaines de CapacityPlus: iHRIS Manage et iHRIS Qualify.
 
-[[Category:French]]
+

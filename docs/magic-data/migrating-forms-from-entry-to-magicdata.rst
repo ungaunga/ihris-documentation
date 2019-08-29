@@ -89,4 +89,4 @@ Step 4: Check The Migration
 
 When you next access the site it will run the upgrade methods for any modules you have upgraded.  When it has finished you will see the old data under magic data at the path: /I2CE/formsData/migrate_data/MyUpgrade (or whatever path you used).  You'll also find the forms that are now stored in magic data under /I2CE/formsData/forms/.  You'll want to check to make sure any fields that were migrated successfully use the new ID for each mapped value.
 
-[[Category:Magic Data]]
+

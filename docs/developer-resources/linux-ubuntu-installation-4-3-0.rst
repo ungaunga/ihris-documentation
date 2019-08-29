@@ -48,4 +48,4 @@ Follow the [[iHRIS Train Installation - 4.3.0|iHRIS Train Installation]] instruc
 
 Follow the [[IHRIS Plan Installation - 1.0.4|iHRIS Plan Installation]] instructions for iHRIS Plan.  (You do not need to download the full iHRIS Suite above)
 
-[[Category:Developer Resources]]
+

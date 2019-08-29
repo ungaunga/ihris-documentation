@@ -510,4 +510,4 @@ Because the form relationships have changed:
 * New: the *position*  form links to the *facility_department*  form which in turn links to the *facility*  and *department*  forms.
 our form relationship used to define the staff reports need to be changed.  Rather than detailing these changes in this tutorial you may look at them  `here <http://bazaar.launchpad.net/~ihris%2Bzanzibar/ihris-manage-zanzibar/central-4.0/files/head%3A/modules/ZNZReports/Reports/StaffReports/>`_ 
 
-[[Category:Forms]][Category:iHRIS Manage]][[Category:Review2013]]
+

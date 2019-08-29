@@ -51,4 +51,4 @@ Leave Summary Report
 * If desired, filter by employee, leave type, other factors to be determined.
 * The report displays the employee name, the type of leave, the total amount of entitled leave, the amount of leave taken, the amount of leave scheduled, and the amount of leave remaining.
 
-[[Category:Blueprints]][[Category:iHRIS Manage]]
+

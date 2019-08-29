@@ -1926,4 +1926,4 @@ This describes version 4.1.6.0 of the module User (user)
 **Classes:  `modules/User/lib <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/User/lib>`_  <br/>[[Class: I2CE_Module_User (4.1.7) | I2CE_Module_User]], [[Class: I2CE_User (4.1.7) | I2CE_User]]
 **Modules:  `modules/User/modules <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/User/modules>`_  <br/>[[#RequestAccount-VerifyEmail |RequestAccount-VerifyEmail]], [[#UserAccess |UserAccess]], [[#UserAccess_DHIS |UserAccess_DHIS]], [[#UserAccess_LDAP |UserAccess_LDAP]], [[#UserAccess_LDAP_Hybrid |UserAccess_LDAP_Hybrid]], [[#UserAccess_Single |UserAccess_Single]]
 
-[[Category:Developer Resources]]
+

@@ -86,4 +86,4 @@ To define a sql function, you need to define:
 * The form field that the result of the SQL function should take values in.  For example, "STRING_LINE"
 
 
-[[Category:Custom Reporting]][[Category:Review2013]]
+

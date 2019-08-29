@@ -130,4 +130,4 @@ Acceso a la Página
 ~~~~~~~~~~~~~~~~~~
 Para la página de "Configure Modules", cada módulo crea una instancia de fábrica swiss por la instancia de la clase I2CE_Page_SwissConfig class.  
 
-[[Category:Magic Data]][[Category:Spanish]]
+

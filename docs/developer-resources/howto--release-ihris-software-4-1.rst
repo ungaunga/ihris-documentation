@@ -167,4 +167,4 @@ For Qualify, the pages you want are:
 * [[iHRIS Qualify Form Fields (versions)]]
 * `iHRIS Qualify Form Fields <http://www.ihris.org/mediawiki/index.php?title=IHRIS_Qualify_Form_Fields&redirect=no>`_
 
-[[Category:Developer Resources]]
+

@@ -167,4 +167,4 @@ Disclaimer
 ~~~~~~~~~~
 The file paths in this article are based on code at  `revision 20 in Launchpad <http://bazaar.launchpad.net/~ihris+botswana/ihris-botswana/4.1/files/20>`_ .
 
-[[Category:Botswana]]
+

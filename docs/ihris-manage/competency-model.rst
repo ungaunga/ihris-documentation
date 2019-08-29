@@ -91,4 +91,4 @@ Sources
 * Bangladesh NSDP HRIS includes a comprehensive competency model to assess competencies in training that has been field-tested.
 * CBT is JHPIEGO's competency model.
 * IntraHealth technical staff expertise.
-[[Category:Blueprints]][[Category:iHRIS Manage]]
+

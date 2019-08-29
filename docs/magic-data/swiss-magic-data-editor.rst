@@ -129,4 +129,4 @@ Page Access
 ~~~~~~~~~~~
 For the "Configure Modules" page, each module instantiates the a swiss factory by the an instance of the I2CE_Page_SwissConfig class.  
 
-[[Category:Magic Data]][[Category:Review2013]]
+

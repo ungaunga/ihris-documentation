@@ -176,4 +176,4 @@ http://localhost/qualify
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database (YYYYY that you set above).
 
-[[Category:Installation]][[Category:iHRIS Qualify]][[Category:Review2013]]
+

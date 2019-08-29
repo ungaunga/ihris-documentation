@@ -29,4 +29,4 @@ Each country has its own page for documentation specific to the iHRIS implementa
 * [[Uganda]]
 * [[Zimbabwe]]
 
-[[Category:Resources]]
+

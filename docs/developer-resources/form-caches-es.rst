@@ -81,4 +81,4 @@ en su perfil actualizará cada formulario en el perfil 'hourly_update' diez minu
 
 This page is a translation of [[Form Caches]].
 
-[[Category:Developer Resources]]
+

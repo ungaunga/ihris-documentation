@@ -12,4 +12,4 @@ While the forms themselves left something to be desired, the time spent working 
 The webforms rely on a <tt>page</tt> parameter to specify which template and control file to use.  The environment is set up, if a control file is found, the page handler function is called, and then the template is displayed.
 
 This offers a simplistic MVC model for doing web programming.
-[[Category:Last Mile Initiative]]
+

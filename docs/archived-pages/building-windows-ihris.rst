@@ -88,4 +88,4 @@ The default home page for the apache web server that will be running on the inst
 If you wish to change the home page provided, create the directory
   C:\Program Files\ihris-suite\althome
 and make sure that it contains *index.html* .  When you build the installer, it will use this web root.
-[[Category:Archived Pages]]
+

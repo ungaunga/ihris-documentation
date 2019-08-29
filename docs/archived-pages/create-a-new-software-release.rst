@@ -61,4 +61,4 @@ Create a Release
 Click on the series page and under Milestones and Releases click "Create milestone" if one hasn't already been created for this release.  Fill out the information and name the milestone the release version number (4.0.0).  Click "Release now" next to the milestone you just created.  Fill out the information and click "Create Release."  Now click on the release you just created.
 
 Here you can add the tar files we just created.  Click "Add download file" and browse to the relevant tar files you created earlier.  There should be two for each package.  Or three for I2CE if you create the iHRIS Suite tar file.  For the description give the version and list of packages included in the tar file.  (I2CE 4.0.0 release with textlayout for I2CE-full-4_0_0.tar.bz2.)  Make sure the File Content Type is Code Release Tarball.
-[[Category:Archived Pages]]
+

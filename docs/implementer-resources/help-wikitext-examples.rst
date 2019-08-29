@@ -917,5 +917,5 @@ itself: {{tl|H:title}}
 </pre>
 |}
 
-[[Category:Implementer Resources]]
+
 {{h:f|enname=Wikitext examples}}

@@ -9,4 +9,4 @@ Learn how to [[Exporting Standardized Data|export standardized cadre data from a
 
 In the decentralized iHRIS deployment, there exists one challenge on the options for data transfer from the peripheral sites to the central sites. [[Decentralized_iHRIS_Deployment:Options_for_Data_Transfer|This article]] details the way you can achieve the decentralized structure.
 
-[[Category:Developer Resources]][[Category:Implementer Resources]][[Category:Review2013]]
+

@@ -90,4 +90,4 @@ Once a form relationship has been defined, a report can built by selecting the d
 
 Currently, this data can be view through the web browser, exported to a CSV file, exported to a HTML file,  printed as PDF, and viewed with charting software.  There are plans to make available the data via other formats, such as the Indicator Exchange Format (IXF).  The various exports of the data are defined by subclassing I2CE_CustomReport_Display as appropriate.
 
-[[Category:Interoperability]]
+

@@ -20,4 +20,4 @@ Implement *static*  fuzzy methods with the *__callStatic()* :
 Closures
 ^^^^^^^^
 PHP 5.3 now supports closures and this can make the code more readable.
-[[Category:Archived Pages]]
+

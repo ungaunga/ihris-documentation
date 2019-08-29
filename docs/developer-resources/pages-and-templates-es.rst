@@ -212,4 +212,4 @@ Cualquier etiqueta de scripts que se encuentren en el cuerpo del código HTML se
 =Tareas y Roles=
 Las [[Tasks and Roles|Tareas y Roles]] se utilizan para limitar el acceso a las páginas y los datos mostrados en el DOM.
 
-[[Category:Developer Resources]]
+

@@ -450,4 +450,4 @@ To import the data:
 
 Once the data has been imported, it will create a new file on the desktop **lesotho_cleaned_CHAL.bad.''DATE_TIME''.csv**  which will contain a list of all the records it had problems with.
 
-[[Category:Lesotho]]
+

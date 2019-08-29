@@ -166,4 +166,4 @@ Enable Module
 ^^^^^^^^^^^^^
 Now you are finished and you only need to enable your new module in your and access the new page you created as well as add in the appropriate links.
 
-[[Category:Customizations]][[Category:Review2013]]
+

@@ -86,4 +86,4 @@ Para definir una función sql, se necesita definir:
 * El campo del formulario en el cual la función SQL deberá enviar los valores.  Por ejemplo, "STRING_LINE"
 
 
-[[Category:Custom Reporting]][[Category:Spanish]]
+

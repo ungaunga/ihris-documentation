@@ -19,4 +19,4 @@ Transaction Diagram: Simple
 
 
 
-[[Category:Rwanda]]
+

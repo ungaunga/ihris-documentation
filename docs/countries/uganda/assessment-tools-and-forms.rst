@@ -10,4 +10,4 @@ Assessment Tools and Forms
 * `MOH HRIS Pre-Training Evaluation Form (PDF) <http://www.ihris.org/mediawiki/upload/MoH_HRIS_Pre_Training_Evaluation.pdf>`_
 * `MOH HRIS Training Daily Assessment Form (PDF) <http://www.ihris.org/mediawiki/upload/MoH_HRIS_Training_Daily_Assessment_Form.pdf>`_
 * `MOH HRIS End-of-Training Evaluation Form (PDF) <http://www.ihris.org/mediawiki/upload/MoH_HRIS_End_of_Training_Evaluation.pdf>`_
-[[Category:Uganda]]
+

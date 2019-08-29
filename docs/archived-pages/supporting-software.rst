@@ -33,4 +33,4 @@ PHP 5
 ~~~~~
 
 PHP 5 is installed to run the iHRIS Plan software. See  `documentation <http://www.php.net/manual/en/>`_ .
-[[Category:Archived Pages]]
+

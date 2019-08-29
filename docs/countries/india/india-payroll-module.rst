@@ -97,4 +97,4 @@ Reports
 * * Used to download salary receipts for regular employees
 * Contract Employees Salary Receipts:
 * *Used to download salary receipts for contract employees
-[[Category:India]]
+

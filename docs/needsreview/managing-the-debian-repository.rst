@@ -21,4 +21,4 @@ The <tt>-all</tt> packages are not so straightforward.  [[Building Meta Packages
       /etc/apt/apt-ftparchive.conf
 
  **Note:**  The <tt>manual</tt> subdirectory is used to avoid conflicts with the automated rsync process.
-[[Category:Project Team Resources]][[Category:NeedsReview]]
+

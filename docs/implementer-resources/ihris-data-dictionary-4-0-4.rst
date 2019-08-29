@@ -694,4 +694,4 @@ iHRIS:Data Dictionary (4.0.4)
 
 <div class="noprint">{{IHRIS_Qualify_user_manual_index}} {{IHRIS_Manage_user_manual_index}}</div>
 
-[[Category:Implementer Resources]]
+

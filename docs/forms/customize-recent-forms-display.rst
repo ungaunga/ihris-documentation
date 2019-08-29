@@ -45,4 +45,4 @@ Any form you are displaying in recent changes will call the hook "recent_form_''
 
 You can query any information from the database to add to the display, but be aware that additional processing will slow down the display as your method will be called for each record being displayed.
 
-[[Category:Forms]][[Category:Review2013]]
+

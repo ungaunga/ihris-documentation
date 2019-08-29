@@ -29,4 +29,4 @@ On the target system
 * Install ihris-manage (<tt>aptitude install ihris-manage</tt>)
 
 (TODO: Figure out the keyring.  I would like to have one that "just works", but I want to do this the right way.)
-[[Category:Archived Pages]]
+

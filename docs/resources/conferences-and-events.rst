@@ -35,4 +35,4 @@ July 30 - August 1, 2014, Turku, Finland
 
 Papers due December 15, 2013 -  `Conference Website <http://ifipwg94.org/>`_ 
 
-[[Category:Resources]]
+

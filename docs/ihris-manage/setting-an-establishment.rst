@@ -62,4 +62,4 @@ Now you can choose to set the establishment for the job Enrolled Nurses with the
 
  **Note:**   When the system is determining the establishment associated for a particular position it checks to see if an establishment has been set for the pair (job, facility).  If there is no establishment found, it will check the (cadre,facility) or (job,facility_type).  Finally, it will check if the (cadre,facility_type) has an establishment.
 
-[[Category:Customizations]][[Category:iHRIS Manage]][[Category:Review2013]]
+

@@ -66,4 +66,4 @@ For example, in order to add the locale pt_BR (Brazilian Portuguese)  to the sys
  cd ../ihris-qualify **if you are using iHRIS Qualify** 
  php ../I2CE/tools/translate_templates.php  --locales=pt_BR
 
-[[Category:Developer Resources]]
+

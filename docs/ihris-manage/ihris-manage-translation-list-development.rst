@@ -5406,4 +5406,4 @@ Translate to:  `ar <https://translations.launchpad.net/ihris-manage/trunk/+pots/
 
 * Source Comments
 **   `modules/ManagePersonPosition/templates/en_US/salary_history_position.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.0-dev/annotate/head%3A/modules/ManagePersonPosition/templates/en_US/salary_history_position.html#L8>`_ 
-[[Category:Translations]][[Category:iHRIS Manage]]
+

@@ -173,4 +173,4 @@ Documentation of our HRIS strengthening process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We have some of this now but it was difficult to learn at first until these docs were put together *(Angie)* 
-[[Category:Archived Pages]]
+

@@ -123,4 +123,4 @@ This swiss node is used to define a SQL function in a relationship.  It has the 
 * choose the return type of the SQL function to be any of the (non-abstract) subclasses of I2CE_FormField.
 
  **Note:**   This functionality should probably be moved to be a sub-module of Forms.
-[[Category:Magic Data]][[Category:Review2013]]
+

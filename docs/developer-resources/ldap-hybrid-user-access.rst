@@ -85,4 +85,4 @@ Passwords
 ~~~~~~~~~
 We will use SHA and salted SSHA.  For a php implementation  `see this <http://www.php.net/manual/en/function.sha1.php#40226>`_  and  `this <http://www.openldap.org/faq/data/cache/347.html>`_ 
 
-[[Category:Developer Resources]]
+

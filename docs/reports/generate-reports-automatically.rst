@@ -157,4 +157,4 @@ Simply edit the file /var/lib/iHRIS/sites/mySite/cron/generate_reports_hourly.sh
 
 Don't forget to do "bzr commit cron/generate_reports_hourly.sh -m 'added open position report'"
 
-[[Category:Reports]][[Category:Review2013]]
+

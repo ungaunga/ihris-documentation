@@ -32,4 +32,4 @@ See  ` lines 511-525 <http://bazaar.launchpad.net/~intrahealth+informatics/ihris
 * **name: Required scalar node.  This is the name of the search as it appears on the search page.  In this case it is "Search Positions"
 * **description: Required scalar node.  These are the instructions that are shown with this search.  In this case it is "Locate any position in the system to review, print or update."
 
-[[Category:Custom Reporting]][[Category:Review2013]]
+

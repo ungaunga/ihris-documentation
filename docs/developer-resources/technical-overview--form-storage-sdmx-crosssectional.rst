@@ -39,4 +39,4 @@ It has the following structure:
 * ***codelist: Required scalar node: The name of the SDMX-HD code list which this attribute takes values in, in other words the value we wish to map from.
 * ***mapping_form: Optional scalar node. The name of the form which contains the mapping data between the SDMX-HD Code List and the list we wish to map to.  If the module **Lists-LinkTo-List**  is enabled and the value is not set then it defaults to *list_linkto_list_XXXX*   where XXXX is the form storage mechanism of the list.  If set, the form should subclass I2CE_ListLink_List.
 
-[[Category:Developer Resources]]
+

@@ -159,4 +159,4 @@ TrialDB is a customizable Web-based clinical trials database system used for the
  `50 Successful Open Source Projects That Are Changing Medicine <http://nursingassistantguides.com/2009/50-successful-open-source-projects-that-are-changing-medicine/>`_ 
 
  *This page was last updated 2013-01-30* 
-[[Category:Open Source]]
+

@@ -107,4 +107,4 @@ Simply edit the file /var/lib/iHRIS/sites/mySite/cron.archive_reports.sh and add
 
 Don't forget to do "bzr commit cron/archive_reports.sh -m 'added age distribution report'"
 
-[[Category:Reports]][[Category:Review2013]]
+

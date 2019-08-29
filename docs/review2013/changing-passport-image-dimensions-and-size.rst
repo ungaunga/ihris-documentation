@@ -51,4 +51,4 @@ Changing the dimensions
 ^^^^^^^^^^^^^^^^^^^^^^^
 In order to change the dimensions, you need to include a meta tag when defining the field. In it you specify the maximum width and maximum height for the passport photo. However if you don't need to affect the dimensions i.e. height and width you set the values for max_height and max_width equal to zero. Setting these values to zero only affects the size of the image and keeps the dimensions from the original image.
 
-[[Category:Customizations]][[Category:Review2013]]
+

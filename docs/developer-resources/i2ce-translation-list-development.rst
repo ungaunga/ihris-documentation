@@ -6834,4 +6834,4 @@ Translate to:  `ar <https://translations.launchpad.net/i2ce/trunk/+pots/custom-r
 * Source Comments
 **   `modules/CustomReports/modules/Export/templates/en_US/customReports_display_control_Export.html <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.0-dev/annotate/head%3A/modules/CustomReports/modules/Export/templates/en_US/customReports_display_control_Export.html#L24>`_ 
 
-[[Category:Developer Resources]]
+

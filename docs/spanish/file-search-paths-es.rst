@@ -57,4 +57,4 @@ Debido a la alta frecuencia con que se buscan archivos, una búsqueda exitosa te
 Por defecto, un archivo se considera obsoleto después de 60 segundos. El caché se puede desactivar al modificar los datos magic en /I2CE/fileSearch/stale_time (vea *I2CE/I2CE_Configuration.xml* ).
 
  **<span style='color:red'>Precaución:</span>** Si está desarrollando un módulo nuevo y agrega un archivo de plantilla, el sistema no lo archivará inmediatamente porque los resultados de la búsqueda de archivos se guardan en el caché. Usted puede esperar los 60 segundos o limpiar los resultados guardados en la memoria cache  `apc <http://pecl.php.net/package/APC>`_ .
-[[Category:Modules]][[Category: Spanish]]
+

@@ -241,4 +241,4 @@ Updating Customizations
 To update the customizations from launchpad, do:
  cd /var/lib/iHRIS/ghana/4.0
  bzr update
-[[Category:Ghana]]
+

@@ -115,4 +115,4 @@ Finishing Up
 ^^^^^^^^^^^^
 You are done, you just need to require the module you created where appropriate.  You can now add a field to a form with type STRING_CAP.
 
-[[Category:Developer Resources]]
+

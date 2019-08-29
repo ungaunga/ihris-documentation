@@ -32,4 +32,4 @@ As requirements gathering progresses, drill down into detail on the requirements
 * Begin an *issue list*  (or bug tracker) for tracking problems and questions that arise and may need to be addressed by stakeholders or in a later development cycle. The issue list is distinguished from the project control list in that a feature or solution has not been determined yet to address the issue; once that is determined, the issue is closed and the item is added to the project control list.
 * Create a well-organized project *knowledge base*  with all documentation, including other pieces that may be needed at this point (workflow diagram, database design, network design, prototype, user interface mockup, etc.) that is accessible to everyone working on the project.
 * Present the use cases and other relevant documentation to the working group or all stakeholders and receive sign-off to proceed with development.
-[[Category:Software Development Process]]
+

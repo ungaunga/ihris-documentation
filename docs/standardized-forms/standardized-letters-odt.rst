@@ -61,4 +61,4 @@ This module is in use in Botswana to generate a data verification form, based on
 * **lines 28-30: the display name, "Personnel Data Verification", that is shown for when this standard form is added to a page
 * **lines 31-33: the name of the template .odt file that is used to generate this standard form.  In this case it is "verify.odt."  The system will search any paths registered in the categoru "ODT_TEMPLATE" to find this form.
 * The open office[ ` template document <http://bazaar.launchpad.net/~ihris+botswana/ihris-manage/4.0/download/head:/verify.odt-20110511123858-wxc39k20ylvlfzur-23/Verify.odt>`_ ]
-[[Category:Standardized Forms]]
+

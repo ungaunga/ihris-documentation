@@ -35,4 +35,4 @@ At the moment, only the [[Form Storage -- Multi-Flat Table|Multi-Flat]] storage 
 
 Once the *form-storage*  module is enabled, an instance of *I2CE_Form*  has the method *isComponentized()*  to check if a form is componentized.   You can also check via *I2CE_FormStorage::isComponentized($form)* 
 
-[[Category:Developer Resources]]
+

@@ -12,4 +12,4 @@ Here is a sample cron-job entry to generate all reports every night at 2:00am.
     
 
 
-[[Category:Developer Resources]]
+

@@ -20,4 +20,4 @@ Esto crea un link interno a la nueva página. Haga click en el botón Save Page 
 
 Durante la edición, verá un link a Editing Help al final de la página junto a los botones de Save. Esto explica las pequeñas cantidades de código wiki que debe conocer. Aquí hay un link directo a esa página de ayuda: [[Help:Editing]].
 
-[[Category:Implementer Resources]]
+

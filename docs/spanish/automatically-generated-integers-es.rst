@@ -12,4 +12,4 @@ En la tabla field_sequence habrá una entrada con la id del campo del formulario
 Si quiere empezar en 1000 puede agregar la id del campo del formulario y 1000 a la tabla field_sequence. Sólo tiene que añadir algo a la tabla field_sequence si desea iniciar con un valor más alto que que los valores guardados actualmente. Por ejemplo, si ha importado datos que van desde 100 hasta 400, pero desea que los números generados inicien en 1000, entonces usted tendrá que agregar una fila a la tabla field_sequence. Pero si lo que desea es que el número siguiente sea 401 entonces no tiene que hacer nada.
 
 
-[[Category:Forms]][[Category:Spanish]]
+

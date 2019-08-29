@@ -160,4 +160,4 @@ Details
 * All sites are installed under /var/lib/iHRIS/sites/4.0, for example /var/lib/iRHIS/sites/4.0/ihris-manage-site-demo
 * There is no link (ln -s) under /var/www to the pages directory, instead the site is made available by /etc/apache2/conf.d/ihris-manage-site-demo.conf
 
-[[Category:Installation]][[Category:Review2013]]
+

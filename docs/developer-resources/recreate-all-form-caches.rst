@@ -17,4 +17,4 @@ If you've imported data multiple times, the form cache will include some of that
 * That should be it when it finishes redoing the form caches.
 * You can then wait for the reports to regenerate automatically or go to Create Reports -> Reports and click the generate link next to them all.
 
-[[Category:Developer Resources]]
+

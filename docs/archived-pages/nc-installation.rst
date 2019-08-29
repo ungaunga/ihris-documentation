@@ -350,4 +350,4 @@ Updating Customizations
 To update the customizations from launchpad, ensure that port 22 is open on the server and do:
  cd /var/lib/iHRIS/NC/4.0
  bzr update
-[[Category:Archived Pages]]
+

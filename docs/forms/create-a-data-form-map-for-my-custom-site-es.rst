@@ -60,4 +60,4 @@ Entonces se le pedirá que seleccione los formularios que quiere incluir en el m
 Cuando finalice debería tener un archivo en el directorio **/tmp**  .
 
 
-[[Category:Customizations]][[Category:Forms]][[Category:Spanish]]
+

@@ -81,4 +81,4 @@ Your screen should look like this:
 
 Now, change the line where it says "background" from "10" to "60" and click the "Set" button next to it.
 
-[[Category:Custom Reporting]][[Category:Review2013]]
+

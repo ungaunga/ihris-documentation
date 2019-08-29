@@ -497,4 +497,4 @@ Here are some IDEs
 * `bluefish <http://bluefish.openoffice.nl/features.html>`_  (sudo apt-get install bluefish)
 * eclipse
 
-[[Category:Customizations]][[Category:Launchpad]][[Category:iHRIS Manage]][[Category:Review2013]]
+

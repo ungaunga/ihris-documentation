@@ -269,4 +269,4 @@ resulta que la fábrica del módulo tomara su instancia, $module, del I2CE_Modul
 El método fuzzy solamente tendrá acceso a los métodos públicos y variables de la clase que llama(I2CE_Page en este ejemplo).  Incidentalmente, esto motiva el desarrollo de un buen API para la clase que llama.
 
 Como los otros componentes de un módulo (tales como archivos de plantillas), los métodos fuzzy se priorizan y solamente el de menor prioridad es llamado. Puede ver la documentación de las clases I2CE_Module y I2CE_ModuleFactory para mayor información.
-[[Category:Modules]][[Category:Spanish]]
+

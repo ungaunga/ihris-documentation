@@ -53,4 +53,4 @@ If you decide that each facility is maintained at the regional level.  This mean
 * At the regional level, the facility data is not componentized.  Since the facility and facility contact information is not subject to frequent changes and you do not need to keep track of the history, you would choose to use the (read-write) [[Form Storage -- Magic Data|magic data]] form storage mechanism in your data policy.
 * At the district level, the facility and facility contact data is exported from the region within two modules: *ihris-manage-taifeki-northern-region-facility*    and *ihris-manage-taifeki-northern-region-facility_contact.*   You would choose to use (read-only) [[Form Storage -- Magic Data|magic data]] form storage mechanism in your data policy.
 
-[[Category:Implementer Resources]]
+

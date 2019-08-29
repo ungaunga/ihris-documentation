@@ -265,4 +265,4 @@ Websites
 * Understanding Use Case Modeling: http://www.methodsandtools.com/archive/archive.php?id=24
 * Use Case Fundamentals: http://alistair.cockburn.us/index.php/Use_case_fundamentals
 * Use Case Tutorials: http://www.parlezuml.com/tutorials/usecases.htm
-[[Category:Use Cases]]
+

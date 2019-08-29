@@ -239,4 +239,4 @@ To install,  simply do
  sudo apt-get install php5-memcached memcached
 </source>
 
-[[Category:Developer Resources]]
+

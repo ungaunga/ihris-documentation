@@ -270,4 +270,4 @@ results that the module factory will takes its instance, $module, of the I2CE_Mo
 Fuzzy method will only have access to the public methods and variables of the calling class (I2CE_Page in this example).  Incidentally, this encourages the development of a good API for the calling class.
 
 Like the other components of a module (such as template files), fuzzy methods are prioritized and only the one of the lowest priority is called.  You can see the documentation for the classes I2CE_Module and I2CE_ModuleFactory for more information.
-[[Category:Modules]][[Category:Review2013]]
+

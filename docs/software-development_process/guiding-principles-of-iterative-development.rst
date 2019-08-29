@@ -30,4 +30,4 @@ Principles to Follow
 * Build on what was built before and produce a working product at each stage. Gather customer feedback at the end of each iteration. Plan for a release every 3-4 iterations.
 * Any difficulty in design, coding and testing a module should signal the need for redesign or re-coding.
 * Modifications should become easier to make as the iterations progress. If not, redesign is needed.
-[[Category:Software Development Process]]
+

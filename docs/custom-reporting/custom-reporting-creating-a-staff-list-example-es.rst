@@ -175,4 +175,4 @@ Paso 3: Crear la Visualización del Informe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Vaya a **Configure System**  y luego a **Report Views**  y elija crear una nueva visualización de informe basado en el informe "staff_report."  Simplemente seleccione los campos que quiere mostrar y habrá terminado.
 
-[[Category:Custom Reporting]][[Category:Spanish]]
+

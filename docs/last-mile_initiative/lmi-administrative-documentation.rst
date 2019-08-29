@@ -226,4 +226,4 @@ What privileges are required for various actions?
 
 
 This section covered under the [ `OpenMRS Public License <http://openmrs.org/wiki/License>`_ ]
-[[Category:Last Mile Initiative]]
+

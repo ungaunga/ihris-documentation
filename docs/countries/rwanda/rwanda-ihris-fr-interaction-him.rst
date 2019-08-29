@@ -21,4 +21,4 @@ Transaction Diagram: With OpenHIM
 
 </graphviz>
 
-[[Category:Rwanda]]
+

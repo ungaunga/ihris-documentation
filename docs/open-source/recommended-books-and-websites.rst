@@ -40,4 +40,4 @@ Miscellaneous
 
  *This page was last updated 2013-01-30. Please feel free to add resources to this page or suggest resources to our  `Global Community Google Group <https://groups.google.com/forum/#!forum/ihris>`_ .* 
 
-[[Category:Open Source]]
+

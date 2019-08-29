@@ -404,4 +404,4 @@ would result in:
 * Implemented the various interfaces
 * Added in support for localization of values
 
-[[Category:Developer Resources]]
+

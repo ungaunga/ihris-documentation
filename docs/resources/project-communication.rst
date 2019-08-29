@@ -38,4 +38,4 @@ To ask longer questions, especially those whose answers will help others, you ca
 * `iHRIS Manage Answers <https://answers.launchpad.net/ihris-manage>`_
 * `iHRIS Plan Answers <https://answers.launchpad.net/ihris-plan>`_
 * `iHRIS Qualify Answers <https://answers.launchpad.net/ihris-qualify>`_
-[[Category:Resources]]
+

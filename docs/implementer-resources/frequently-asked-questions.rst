@@ -213,4 +213,4 @@ If your question is not answered in the FAQ, the quickest way to get an answer i
 
 The iHRIS source code is hosted on Launchpad. If you have an account there, you may ask a question or search for previously answered questions in the  `Questions section for the iHRIS Suite on Launchpad <https://answers.launchpad.net/ihris-suite>`_ . Registering a Launchpad account is free and simple.
 
-[[Category:Implementer Resources]]
+

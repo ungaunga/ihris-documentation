@@ -29,4 +29,4 @@ This is a growing collection of blogs about ICT for development, global health a
 Tip: To keep up with blog posts, use an RSS (Really Simple Syndication) feed reader. This enables you to subscribe to the blog like a newspaper and read new articles from one web page or software program, without having to revisit each website separately. I recommend using  `Google Reader <http://www.google.com/reader/>`_  to subscribe to and organize your feeds ( `how to use Google Reader) <http://news.cnet.com/8301-17939_109-9745368-2.html>`_ , but there are  `many other options <http://blogspace.com/rss/readers>`_ . You can also read RSS feeds directly in Internet Explorer or  `Microsoft Outlook <http://thepaisano.wordpress.com/2008/05/29/how-to-add-rss-feeds-to-your-outlook/>`_ .
 
  *This page was last updated 2013-01-30* 
-[[Category:Resources]]
+

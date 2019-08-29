@@ -16,4 +16,4 @@ Here is a technical sketch of what needs to be done.
 * add in a way to mark a page as needing a "confirm" on save or not
 
 
-[[Category:Blueprints]]
+

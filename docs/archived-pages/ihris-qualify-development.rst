@@ -42,4 +42,4 @@ Lower priority tasks
 
 See other items on wishlist for lower-priority tasks ( `see bug tracker in Launchpad <https://bugs.launchpad.net/ihris-qualify/>`_ )
 
-[[Category:Archived Pages]]
+

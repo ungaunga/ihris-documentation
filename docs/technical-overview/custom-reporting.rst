@@ -33,4 +33,4 @@ Custom Reporting Tutorials
 * [[Configuring Report Generation Timing|Configure Report Generation Timing]]
 * [[Configuring iHRIS Dashboards]]
 
-[[Category:Customizations]][[Category:Technical Overview]]
+

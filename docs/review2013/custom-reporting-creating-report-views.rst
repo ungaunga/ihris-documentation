@@ -111,4 +111,4 @@ In this display, you can export all of your data to a file.  The file types are:
 
 Chart Display
 ~~~~~~~~~~~~~
-[[Category:Custom Reporting]][[Category:Review2013]]
+

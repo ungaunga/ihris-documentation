@@ -90,4 +90,4 @@ in **<PACKAGE_DIR>**  producirá las traducciones en Francés en el árbol fuent
  **Nota:**  bajo la versión 4.0.6 los ajustes por defecto para translate_templates.php se han cambiado, así que puede simplemente hacer:
  translate_templates.php  --locales=fr
 
-[[Category:Developer Resources]]
+

@@ -115,4 +115,4 @@ Para Terminar
 ^^^^^^^^^^^^^
 Ya terminó, solo necesita requerir el módulo que creó donde sea apropiado. Ahora puede agregar un formulario de campo con tipo STRING_CAP.
 
-[[Category:Fields]][[Category:Spanish]]
+

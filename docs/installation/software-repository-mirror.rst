@@ -181,4 +181,4 @@ First we refresh the list of available packages that apt-get knows about
 Now we can install package **XXXXX**  from our hard drive by:
  sudo apt-get -o Dir::Etc::sourceparts=nonexistent -o Dir::Etc::sourcelist=/media/ihris/ubuntuMirror/sources.list install **XXXXX** 
 
-[[Category:Installation]][[Category:Review2013]]
+

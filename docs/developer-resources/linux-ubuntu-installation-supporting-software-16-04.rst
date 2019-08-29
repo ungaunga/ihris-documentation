@@ -297,4 +297,4 @@ You'll need to restart Apache after making these changes.
 sudo service apache2 restart
 </source>
 
-[[Category:Developer Resources]]
+

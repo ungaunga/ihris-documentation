@@ -175,4 +175,4 @@ Estos son los estilos de límites proporcionados por *form-limits*  versión 3.2
 * *yes: No data array.
 * *no: No data array.
 
-[[Category:Forms]][[Category:Spanish]]
+

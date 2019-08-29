@@ -14,4 +14,4 @@ Puede ver una lista de los módulos en la plataforma de software de iHRIS aquí:
 * [[iHRIS Qualify Module List]] los módulos de iHRIS Qualify
 * [[TextLayout Tools Module List]] los módulos en Textlayout Tools
 
-[[Category:Module Lists]][[Category: Spanish]]
+

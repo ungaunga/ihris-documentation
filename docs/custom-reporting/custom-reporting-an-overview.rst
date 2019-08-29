@@ -26,4 +26,4 @@ In addition you may also limit access to a specific Report View $view by specify
  /modules/CustomReports/reportViews/$view/limit_report_to
 to be any valid [[Tasks and Roles#Permissions and the Permission Parser|permission]] string.
 
-[[Category:Custom Reporting]][[Category:Review2013]]
+

@@ -89,4 +89,4 @@ https://code.launchpad.net/~sagarb-4488/indian-ihris/iHRIS-DHIS
 * Once we have that information in DHIS we can generate reports in DHIS.
 Note: Some extra code (not necessary code) is there in DHIS-Dashboard module for DataElement and DataSet (Considering this might be useful in future)
 
-[[Category:India]]
+

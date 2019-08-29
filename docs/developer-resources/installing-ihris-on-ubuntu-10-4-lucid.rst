@@ -205,4 +205,4 @@ Ubuntu
 * Lucid  `source <https://launchpad.net/ubuntu/lucid/+source/php-apc>`_  is 3.1.3p1-2 -- It is no good here
 * Jaunty  `source <https://launchpad.net/ubuntu/jaunty/+source/php-apc>`_  php-apc 3.0.19-2  -- I think it is OK here.
 
-[[Category:Developer Resources]]
+

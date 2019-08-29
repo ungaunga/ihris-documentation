@@ -80,4 +80,4 @@ The <tt>getExternalPackageName</tt> takes care of mapping external requirements 
 
 <tt>PackageUtils</tt>’ contains two scripts: <tt>build-i2ce</tt> and <tt>deploy-i2ce</tt>.  <tt>build-i2ce</tt> handles the actual build process (described above) and then checks for the <tt>deploy-i2ce</tt> script and runs it.  As of this writing, the included <tt>deploy-i2ce</tt> is a shell script to publish the documentation produced by PHPDocumentor and the Debian packages.  See [[Managing the Debian Repository]] for more information.
 
-[[Category:Developer Resources]]
+

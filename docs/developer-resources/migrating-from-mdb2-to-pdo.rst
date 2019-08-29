@@ -297,4 +297,4 @@ Method and Field changes
 | <code>$db->getAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY)</code>
 |}
 
-[[Category:Developer Resources]]
+

@@ -31,4 +31,4 @@ Here is a collection of learning materials centered around iHRIS and HIS in gene
 * [[Media:i2ce.odp | The I2CE Framework]]  A brief overview of the I2CE Data Management Framework used by the iHRIS Suite of software. Describes basic on the module structure, magic data and what happens with a http request  (''Open Office Presentation'')
 * [[Media:use_cases.odp | Introduction to Use Cases]] An introduction on using use cases to guide system development.  Includes an explanation of the terminology. (''Open Office Presentation'')
 * [[Media:harnessing_his.odp | Harnessing HIS]] Harnessing iHRIS as one component of a Health Information System(HIS) in developing a culture of data uses.  Also discusses advantages and disadvantages of open source and proprietary solutions and gives example of such HIS components.   (''Open Office Presentation'')
-[[Category:Implementer Resources]]
+

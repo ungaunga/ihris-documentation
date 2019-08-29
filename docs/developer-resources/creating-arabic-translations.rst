@@ -12,4 +12,4 @@ Do not edit the English column.
 * [[Media:ihris-manage-translations-ar.xls | iHRIS Manage Arabic Translation Spreadsheet]]
 * [[Media:ihris-qualify-translations-ar.xls | iHRIS Qualify Arabic Translation Spreadsheet]]
 
-[[Category:Developer Resources]]
+

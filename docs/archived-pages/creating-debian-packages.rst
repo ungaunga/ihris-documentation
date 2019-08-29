@@ -269,4 +269,4 @@ README.Debian
 ~~~~~~~~~~~~~
 
 This contains any notes the packager may wish to include.  Don't just copy a <tt>README</tt> file as the packaging usually includes this.
-[[Category:Archived Pages]]
+

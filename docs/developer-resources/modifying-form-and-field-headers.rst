@@ -72,4 +72,4 @@ Step 4: Reload your site
 Now the form and field headers should be changed.
 
 
-[[Category:Developer Resources]]
+

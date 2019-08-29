@@ -77,4 +77,4 @@ El tiempo en que un reporte se vuelve obsoleto es por defecto 10 minutos.  Esto 
 * /modules/CustomReports/times/stale
 * /modules/CustomReports/times/stale_by_report/XXXXX
 
-[[Category:Custom Reporting]][[Category:Spanish]]
+

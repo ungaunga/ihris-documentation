@@ -15,4 +15,4 @@ These tutorials describe how to add new forms and fields to iHRIS.
 
 [[Adding Fields - ES]] - Spanish version of this page/Versión en español de esta página
 
-[[Category:Fields]][[Category:Review for Redundancy]]
+

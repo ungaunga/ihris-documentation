@@ -51,4 +51,4 @@ To create the database, use the following commands:
 
 5. You will be prompted to update the site.  Click “OK”.
 
-[[Category:Archived Pages]]
+

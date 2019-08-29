@@ -90,4 +90,4 @@ Para habilitar en módulo de tareas y roles, el cual permite editar tareas y rol
 * Seleccione el módulo "Roles and Tasks"
 * Haga click en "Update"
 
-[[Category:Custom Reporting]][[Category:Spanish]]
+

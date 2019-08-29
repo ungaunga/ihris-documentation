@@ -5,4 +5,4 @@ In iHRIS user information is by default stored in a table called "user."  We als
 
 This article collects together the various authentication modules that utilize the pluggable authentication available with version 4.0.3 of the iHRIS Suite.
 
-[[Category:Developer Resources]]
+

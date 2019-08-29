@@ -36,4 +36,4 @@ Translation Lists
 * [[iHRIS Qualify Translation List (Development) | iHRIS Qualify Translation List ]]
 * Master [[iHRIS Translation List (Development) |  Translation List ]]
 
-[[Category:Developer Resources]]
+

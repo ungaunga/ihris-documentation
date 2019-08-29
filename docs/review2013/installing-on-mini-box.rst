@@ -214,4 +214,4 @@ Please enter the following:
   someone@somwhere.org:  Email address for monitoring
   Yes: Start with degraded array
 
-[[Category:Installation]][[Category:iHRIS Appliance]][[Category:Review2013]]
+

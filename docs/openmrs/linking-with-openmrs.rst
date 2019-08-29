@@ -53,4 +53,4 @@ table which contains the columns:
 ^^^^^^^^^^^^^^^^^^
 Can a user have a person attribute?  What are some examples?
 
-[[Category:OpenMRS]][[Category:Blueprints]]
+

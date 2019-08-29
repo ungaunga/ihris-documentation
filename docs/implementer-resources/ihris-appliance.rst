@@ -13,4 +13,4 @@ The appliance is a small computer with no monitor, mouse, or keyboard but instea
 Technical [[Installing on Mini-Box|information]].
 
 <center><videoflash>6h79JeTiSQg</videoflash></center>
-[[Category:Implementer Resources]][[Category:iHRIS Appliance]]
+

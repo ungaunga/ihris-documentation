@@ -15,4 +15,4 @@ Hay varias páginas que describen cómo añadir nuevos formularios y campos a iH
 
 [[Adding Fields]]--English version of this page.
 
-[[Category:Fields]][[Category:Spanish]]
+

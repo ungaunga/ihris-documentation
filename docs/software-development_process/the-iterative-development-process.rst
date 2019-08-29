@@ -23,4 +23,4 @@ In theory, this is a good system for development, but it is not one that I have 
 The second issue is related. I have found it very difficult to get the development team to stick to a strict timeline while development is under way. Developers tend to want to keep working until it’s done and are reluctant to cut features for the sake of hitting a deadline. There is also a fair amount of fiddling and tweaking that happens, along with a reluctance to say that something is good enough to put out there for feedback, even though it’s not polished and pretty. So deadlines creep out and out and out, and stakeholders get restless because you’re not meeting with them when you told them you would.
 
 These are both management issues, and it takes time and experience to develop the project management skills required to address them.
-[[Category:Software Development Process]]
+

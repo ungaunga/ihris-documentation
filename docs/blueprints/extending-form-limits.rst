@@ -30,4 +30,4 @@ Extending Form Limits
 * *DB_YEAR::next_year() -- returns DATE_YEAR
 * *DB_YMD::next_year() -- returns DATE_YMD
 
-[[Category:Blueprints]]
+

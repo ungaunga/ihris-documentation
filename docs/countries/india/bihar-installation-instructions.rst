@@ -33,4 +33,4 @@ Create Database
 Edit config.values.php
 ^^^^^^^^^^^^^^^^^^^^^^
 
-[[Category:India]]
+

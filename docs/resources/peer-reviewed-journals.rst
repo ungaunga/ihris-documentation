@@ -54,4 +54,4 @@ Also consider:
 * African Journal of Reproductive Health
 * Global Public Health
 * Human Resource Development Quarterly
-[[Category:Resources]]
+

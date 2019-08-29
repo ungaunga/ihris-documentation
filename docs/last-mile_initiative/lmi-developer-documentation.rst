@@ -165,4 +165,4 @@ By following the above example, it should be possible to extend the form and add
 There is a great deal of information for developers on extending and modifying OpenMRS itself. A full reference to the OpenMRS API can be  `read on their developer resource page <http://resources.openmrs.org/doc>`_  and the API can  `also be downloaded as a zip file <http://resources.openmrs.org/doc.zip>`_ .
 
 Of particular note is the  `OpenMRS Developer How-to Guide <http://openmrs.org/wiki/Developer_How-To_Guide>`_  which will walk a developer step-by-step through setting up their environment to start working on OpenMRS.
-[[Category:Last Mile Initiative]]
+

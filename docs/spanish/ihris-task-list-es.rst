@@ -2244,4 +2244,4 @@ La tarea *users_can_edit_all*  se define en el módulo [[I2CE Module List (4.1.7
 *Descripción: Puede editar todos los usuarios en el sistema.
 *Puede realizar las siguientes sub-tareas: [[#users_can_edit | users_can_edit]]
 
-[[Category:Spanish]]
+

@@ -189,4 +189,4 @@ Here are samples of the files we edited above. **WARNING THESE ARE OUT OF DATE A
 <li> [[Media:htaccess.txt | /var/www/manage/.htaccess ]] </li>
 <li> [[Media:Config_values_php.txt | /var/www/manage/config.values.php]] </li>
 </ul>
-[[Category:Installation]][[Category:iHRIS Manage]][[Category:Review2013]]
+

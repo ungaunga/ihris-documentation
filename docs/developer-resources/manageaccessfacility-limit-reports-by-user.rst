@@ -35,4 +35,4 @@ When you're editing the report, you can select which field is linked to the Mana
 Now any user that is linked with a district will only see records from that district in any Staff List reports.  You will need to do the same thing with any other reports you want to limit by default.  If you also limit by region or facility you will need to make sure your report includes those forms or fields so you can link them to the **Region**  or **Facility**  in the Manage Access Facility module.
 
 
-[[Category:Developer Resources]]
+

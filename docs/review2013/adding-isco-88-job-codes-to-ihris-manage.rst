@@ -357,4 +357,4 @@ For each Major Group number *XX* , we will do:
  mkdir [BASE INSTALLATION PATH]/ihris-manage/modules/ManageJob/modules/isco_88/modules/isco_88_major_XX
 and put the generated configuration file in this directory.
 
-[[Category:Implementer Resources]][[Category:iHRIS Manage]][[Category:Review2013]]
+

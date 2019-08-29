@@ -101,4 +101,4 @@ Sources
 * Hareg training tracking database
 * Learning for Performance (IntraHealth)
 * CBT (JHPIEGO's competency model)
-[[Category:Blueprints]][[Category:iHRIS Manage]]
+

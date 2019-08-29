@@ -9,4 +9,4 @@ Installation Instructions
 
 Poor internet connect?  See creating a [[Software Repository Mirror]] for offline use.
 
-[[Category:Installation]][[Category:Implementer Resources]]
+

@@ -59,4 +59,4 @@ Para crear un PDF de su informe , ejecute este comando y reemplace REPORTVIEW co
     
 
 
-[[Category:Custom Reporting]][[Category:Spanish]]
+

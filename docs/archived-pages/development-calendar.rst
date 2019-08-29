@@ -123,4 +123,4 @@ October 2007 Goals
 * Post the iHRIS Qualify Code to Launchpad (Luke) -- *complete*
 * Post new feature requests on Launchpad for Manage and Qualify (Shannon) -- *complete*
 * Print and export report/record feature (Carl)  -- *complete*
-[[Category:Archived Pages]]
+

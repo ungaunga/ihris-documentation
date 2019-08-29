@@ -48,4 +48,4 @@ Siga las instrucciones [[iHRIS Qualify Installation - 4.1.8|iHRIS Qualify Instal
 
 Siga las instrucciones [[IHRIS Plan Installation - 1.0.4|iHRIS Plan Installation]] para iHRIS Plan.  (No es necesario que descargue la Suite iHRIS que está arriba)
 
-[[Category:Spanish]]
+

@@ -67,4 +67,4 @@ Other Documents
 * [[File:IHRIS_Collect.pdf]]
 * `HRIS Blog Entry <http://www.capacityproject.org/hris/blog/index.php/2009/09/ihris-collect/>`_
 
-[[Category:Blueprints]][[Category:iHRIS Collect]]
+

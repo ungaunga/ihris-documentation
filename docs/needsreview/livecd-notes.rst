@@ -202,4 +202,4 @@ To Do
 * make it boot  `faster <http://lichota.net/~krzysiek/projects/kubuntu/dapper-livecd-optimization/>`_
 * incorporate the wiki
 * make a usb version w/ reserved space for a permanent storage
-[[Category:Project Team Resources]][[Category:NeedsReview]]
+

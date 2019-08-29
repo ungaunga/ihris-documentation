@@ -48,4 +48,4 @@ Actualizar la Visualización del Informe
 
 En una visualización de informe para este informe, deberá de habilitar el campo de imagen. Ahora cuando visualice este informe podrá ver la imagen.
 
-[[Category:Custom Reporting]][[Category:Spanish]]
+

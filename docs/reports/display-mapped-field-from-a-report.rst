@@ -195,4 +195,4 @@ You can also define a second report to be used if one needs different limits.  I
 
 For this example, you would also need to create the **facility_selector_limited**  and **facility_selector_full**  reports.  In this example the limited report would be limited by any user module requirements, but the full report would not since not all forms and fields would need the limits depending on what data is being chosen.  Current data would need to be limited, but historical data may not.  If you don't need the full selection, you could also use the **facility_tree**  report that is defined in the iHRIS Manage Facility Tree module.
 
-[[Category:Fields]][[Category:Reports]][[Category:Review2013]]
+

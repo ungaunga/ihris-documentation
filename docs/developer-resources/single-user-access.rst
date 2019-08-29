@@ -55,4 +55,4 @@ Example
 The following would do an auto login of a guest user with the planner role
   Single://{"auto_login":1, "auto_login_user":guest ,"userrole": "planner", "userdetails" :{"lastname","Health Workforce Planner"}}
 
-[[Category:Developer Resources]]
+

@@ -480,4 +480,4 @@ Released July 30, 2011.
 **get rid of main and secondary display field constants in i2ce_list class
 **cleanup stuff leftover from 3.1 (Such as the listOptions, lookup mehtods and related methods. many of these are no longer references outside the defining class (e.g. getCompentnciesByType)) what about iHRIS_Search?
 
-[[Category:iHRIS Software]][[Category:Review2013]]
+

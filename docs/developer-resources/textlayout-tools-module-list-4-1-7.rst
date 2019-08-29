@@ -35,4 +35,4 @@ It is the top module of this package
 * *Hyphen_path:  `/dicts <http://bazaar.launchpad.net/~intrahealth+informatics/textlayout/4.1.7-release/files/head://dicts>`_  ,/usr/share/myspell/dicts
 * *Modules:  `/modules <http://bazaar.launchpad.net/~intrahealth+informatics/textlayout/4.1.7-release/files/head://modules>`_  <br/>[[#tcpdf |tcpdf]]
 
-[[Category:Developer Resources]]
+

@@ -11,4 +11,4 @@ Design Documents
 * [[SDMX-HD]]
 * [[Blue Prints|Older Blueprints]]
 
-[[Category:Developer Resources]]
+

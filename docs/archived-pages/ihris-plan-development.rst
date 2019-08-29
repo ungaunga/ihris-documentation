@@ -46,4 +46,4 @@ Possible development direction
 
 We may remove iHRIS Plan from the iHRIS suite as a standalone product and make it a module that can be included with iHRIS Manage/Qualify instead.
 
-[[Category:Archived Pages]]
+

@@ -99,4 +99,4 @@ The needed .dxf file with the dataValueSets is produced using an xslt. This XSLT
 
 <br> There is also a page that I setup that will handle multiple exports of iHRIS to DHIS. Here you can see where curl is used to connect to dhis2 and submit the data. The response from DHIS2 is processed and displayed on the web page. The PHP code is  `here <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-student-tracking/trunk/view/head:/modules/OrgUnits/lib/iHRIS_DHIS_DashboardSubmit.php>`_ . It reads in magic data to get the connection details to DHIS2 as well as define the report view and transform to use. You can see the magic data defined on lines 33-63 in the OrgUnits.xml file referenced above. A link to the page has been added to the  `index.html page <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-student-tracking/trunk/view/head:/templates/en_US/index.html>`_ .
 
-[[Category:Archived Pages]]
+

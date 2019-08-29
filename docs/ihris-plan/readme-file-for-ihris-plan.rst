@@ -130,4 +130,4 @@ Capacity''Plus'' is a USAID-funded global project focused on the health workforc
 
 Development of this software was made possible by the support of the American people through USAID. The contents are the responsibility of the user and do not reflect the views of USAID, the United States Government or IntraHealth International.
 
-[[Category:iHRIS Plan]]
+

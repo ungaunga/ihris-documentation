@@ -68,4 +68,4 @@ To-do's (would be nice)
 * Pre-configure training reports
 * Design a more complex competency model
 * Add a version of the module to Qualify
-[[Category:Archived Pages]]
+

@@ -25,4 +25,4 @@ Still, there are many other benefits that might not be apparent to those who are
 
 
 This is, simply put, freedom and access to tools which allow people all over the world to make their lives and the lives of others easier.
-[[Category:Open Source]]
+

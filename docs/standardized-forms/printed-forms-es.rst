@@ -255,4 +255,4 @@ Lo descrito arriba significaría que el nombre de PrintedForm es sample_hire_let
 
 Esta parte del código debe insertarse favorablemente bajo el link para actualizar la información de un formulario. (view_form_name.html)
 
-[[Category:Standardized Forms]][[Category:Spanish]]
+

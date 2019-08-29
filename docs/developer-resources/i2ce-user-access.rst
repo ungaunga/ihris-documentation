@@ -61,4 +61,4 @@ It uses the following tables in your database:
 
 In addition, the table **user_log**  keeps track of the user activity.
 
-[[Category:Developer Resources]]
+

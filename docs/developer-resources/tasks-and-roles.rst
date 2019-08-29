@@ -138,4 +138,4 @@ New Types
 ^^^^^^^^^
 A module can add in a [[Module Structure#Fuzzy Methods|fuzzy method]] of the form *hasPermision_$type*  to the *I2CE_PermissionParser*  class to enable a new permission type.  For example the 'forms' module does this by adding in a new permission type 'form.'
 
-[[Category:Developer Resources]]
+

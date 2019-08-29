@@ -48,4 +48,4 @@ Technical Documentation
 
 <br> We also have additional tutorials for [[Developer Resources|Developers]] or [[Implementer Resources|Implementers]].
 
-[[Category:iHRIS Software]][[Category:Developer Resources]]
+

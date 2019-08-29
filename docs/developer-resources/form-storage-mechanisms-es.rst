@@ -36,4 +36,4 @@ Por el momento, solamente el mecanismo de almacenamiento de [[Form Storage -- Mu
 
 Una vez que el módulo de *form-storage*  está activado, una instancia de *I2CE_Form*  tiene el método *isComponentized()*  para revisar si un formulario está componentizado. También se puede revisar por medio del *I2CE_FormStorage::isComponentized($form)* 
 
-[[Category:Developer Resources]]
+

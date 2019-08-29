@@ -12,4 +12,4 @@ Links to Books Referenced by Paul Jones at the Open Source Brownbag 1/16/08
  `Free Culture <http://www.free-culture.cc/>`_  or  `Download it for free <http://www.free-culture.cc/freecontent/>`_ 
 
  `Small is the New Big <http://sethgodin.typepad.com/seths_blog/2005/06/small_is_the_ne.html>`_  or  `Read Seth Godin's blog <http://sethgodin.typepad.com/>`_ 
-[[Category:Open Source]]
+

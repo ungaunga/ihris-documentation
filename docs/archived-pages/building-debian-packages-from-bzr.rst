@@ -37,4 +37,4 @@ Easily Build Your Own
 * You should now have a subdirectory named <tt>build-area</tt> with three .deb files in it.  Before installing them, you'll need to install the runtime dependencies: <tt>aptitude install dbcommon-config ucf libapache2-mod-php5 php-i18nv2 php-mdb2-driver-mysql php-text-password</tt>.  At this time, some are only available from the IntraHealth Debian repository above.
 * Install the Debian packages you created: <tt>sudo dpkg -i build-area/*.deb</tt>
 
-[[Category:Archived Pages]]
+

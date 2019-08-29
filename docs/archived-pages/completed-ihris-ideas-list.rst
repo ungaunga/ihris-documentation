@@ -21,4 +21,4 @@ Upgrade to PHP 5.3
 :'''Launchpad Blueprint''':  `blueprint <https://blueprints.launchpad.net/i2ce/+spec/php-5-3-upgrade>`_ 
 Take advantage of the new features available in PHP version 5.3 to [[iHRIS PHP 5.3 Clean Up]] clean up the code.
 
-[[Category:Archived Pages]]
+

@@ -68,4 +68,4 @@ The Manager's primary function would be to review reports, but data displayed in
 The Manager can also view records for employees in the department or office/facility, but cannot update the records, just as the Executive Manager can do for all records. The Manager should also be able to review job applications for open positions in his/her department or office/facility, just as the Executive Manager can do for all open positions.
 
 There may also be managers of *districts* , but this has not yet been finalized.
-[[Category:Blueprints]][[Category:iHRIS Manage]]
+

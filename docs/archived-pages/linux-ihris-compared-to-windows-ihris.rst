@@ -55,4 +55,4 @@ Linux servers are usually stored more securely as well, such as in a locked serv
 
 Linux servers are generally less prone to computer viruses than Windows computers. A Windows computer running iHRIS that is also connected to the Internet (via an email program, for example) is more vulnerable to hardware failure and data loss from a computer virus than a Linux server.
 
-[[Category:Archived Pages]]
+

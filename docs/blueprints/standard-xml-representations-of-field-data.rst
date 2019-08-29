@@ -304,4 +304,4 @@ If the currency form is 'currency' then <source lang='xml'><field type='CURRENCY
 
 
 
-[[Category:Blueprints]]
+

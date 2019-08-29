@@ -115,4 +115,4 @@ En esta visualización, se pueden exportar todos los datos a un archivo.  Los ti
 
 Gráfico
 ~~~~~~~
-[[Category:Custom Reporting]][[Category:Spanish]]
+

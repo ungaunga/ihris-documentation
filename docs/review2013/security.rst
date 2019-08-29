@@ -9,4 +9,4 @@ This article collects together the various [[Pluggable Authentication|user authe
 
 Sometimes instead of restricting users by action, you may want to restrict by record-level data, specifically [[Configuring Restricted Access by Facility or Geography|by the facility or geographical location]] where the person works.  
 
-[[Category:Developer Resources]][[Category:Implementer Resources]][[Category:Review2013]]
+

@@ -80,4 +80,4 @@ will cause all forms in the 'nightly_update' profile to be update at 1:30am. Put
   10     *     *     *     *         /usr/bin/php /var/www/ihris-manage/index.php --page=/CachedForms/cache --get=profile=hourly_update
 in your profile will update every form in the 'hourly_update' profile at ten minutes past the hour.
 
-[[Category:Developer Resources]]
+

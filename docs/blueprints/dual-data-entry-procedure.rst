@@ -90,4 +90,4 @@ The dual data entry procedure is identical for iHRIS Manage and iHRIS Qualify. T
 
 * `Full Use Case Model - iHRIS Manage <http://www.capacityproject.org/hris/suite/UseCaseReport-iHRISManage.htm>`_
 * `Full Use Case Model - iHRIS Qualify <http://www.capacityproject.org/hris/suite/UseCaseReport_iHRISQualify.htm>`_
-[[Category:Blueprints]]
+

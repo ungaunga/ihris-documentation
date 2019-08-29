@@ -167,4 +167,4 @@ After rebooting, maybe modify /etc/fstab and set
 Background
 ^^^^^^^^^^
 https://help.ubuntu.com/community/Installation/SoftwareRAID#Formatting
-[[Category:iHRIS Appliance]]
+

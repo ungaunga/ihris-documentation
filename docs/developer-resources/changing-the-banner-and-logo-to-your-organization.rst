@@ -47,4 +47,4 @@ desktop *my_picture.jpg*  then you would do:
  sudo mkdir -p /var/lib/iHRIS/sites/manage/images/photos
  sudo cp ~/Desktop/my_picture.jpg /var/lib/iHRIS/sites/manage/images/photos/loggedin_photo.jpg
 
-[[Category:Developer Resources]]
+

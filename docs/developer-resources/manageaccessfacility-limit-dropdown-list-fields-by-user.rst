@@ -28,4 +28,4 @@ In the meta section of the field you wish to limit, you should add the following
 
 The important part is the meta/add_limit_module section.  This is where you would add the same value for other fields you wish to restrict.  The meta/display/default value should include all allowable forms that can be assigned to a user.  In this case it is:  **facility+location:county:district:[region]:country** .
 
-[[Category:Developer Resources]]
+

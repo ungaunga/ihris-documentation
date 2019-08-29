@@ -8,4 +8,4 @@ Guatemala
 * [[Guatemala Forms and Fields]]
 * `Notes <http://notes.ihris.org/p/Guatemala>`_
 
-[[Category:Guatemala]]
+

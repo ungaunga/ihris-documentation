@@ -9278,4 +9278,4 @@ Translate to:  `ar <https://translations.launchpad.net/ihris-common/trunk/+pots/
 * Source Comments
 **   `modules/Geography/modules/iso-country/configs/en_US/ISO_Country.xml <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.0-dev/annotate/head%3A/modules/Geography/modules/iso-country/configs/en_US/ISO_Country.xml#L19>`_ 
 
-[[Category:Translations]][[Category:iHRIS Common]]
+

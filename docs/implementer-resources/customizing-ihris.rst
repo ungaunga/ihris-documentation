@@ -36,4 +36,4 @@ These tutorials show how to customize display of various elements within iHRIS.
 Information on [[Customizing iHRIS Manage]], [[Installing a Custom Site from Launchpad]] and [[Managing A Site In Launchpad]] -- Note: These tutorials are for an older version of iHRIS (4.0).
 
 
-[[Category:iHRIS Software]][[Category:Implementer Resources]]
+

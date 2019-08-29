@@ -130,4 +130,4 @@ The following resources may be useful when creating an HRIS coding scheme:
 * `International Standard Classification of Occupations (ISCO) Website <http://www.ilo.org/public/english/bureau/stat/isco/index.htm>`_
 * `British National Health Service Information Center – Health Workforce <http://www.ic.nhs.uk/statistics-and-data-collections/workforce>`_
 * `United States Bureau of Labor Statistics Standard Occupational Classification – Healthcare Practitioners <http://www.bls.gov/soc/soc_j0a0.htm>`_
-[[Category:Implementer Resources]]
+

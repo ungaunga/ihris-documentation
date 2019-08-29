@@ -40,4 +40,4 @@ For #2 above, can we add a custom report showing how many staff have NOT attende
 For the reports, limit by district as this is often asked.
 
 For #3 above, possibly show person how to run report of nurses in the country, then ask person to choose how they want to "drill down" - maybe give them the options of age, gender, district.
-[[Category:Archived Pages]]
+

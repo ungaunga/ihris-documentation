@@ -16,4 +16,4 @@ Blue Prints
 * [[Organizational Charts]]
 
 This list is redundant with the [[Design Documents]] list. Evaluate these and archive older ones; then combine with [[Design Documents]].
-[[Category:Blueprints]][[Category:Review for Redundancy]]
+

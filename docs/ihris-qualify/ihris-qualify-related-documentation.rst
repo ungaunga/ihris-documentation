@@ -11,4 +11,4 @@ iHRIS Qualify is a health worker training, licensing, and certification tracking
 
 [[iHRIS Qualify Translation List (Development)]]
 
-[[Category:iHRIS Qualify]]
+

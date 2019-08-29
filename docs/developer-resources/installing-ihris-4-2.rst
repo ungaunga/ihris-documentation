@@ -163,4 +163,4 @@ Then, you will have to set the password for the *iHRIS user*  that will be admin
 
 Once the installation has finished, you can visit the site by entering the address  <code>http://localhost/iHRIS/ihris-manage-site-demo</code> on the browser.
 
-[[Category:Developer Resources]]
+

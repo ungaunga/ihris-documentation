@@ -31,4 +31,4 @@ There is magic data storage mechanism based on SysV I2CE_MagicDataStorageSysV.  
 
 To clear manually from the command line the shared memory segments
  ipcs -m | grep www-data | awk '{print "ipcrm -m "$2}' | sudo bash
-[[Category:Magic Data]][[Category:Review2013]]
+

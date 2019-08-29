@@ -57,4 +57,4 @@ For developers who are creating software releases or packages, we are currently 
 
 [[Translations]] describes the process for translating the iHRIS software and enabling translations.
 
-[[Category:Developer Resources]]
+

@@ -188,4 +188,4 @@ There are some others such as specifying the port that mysql and apache are list
 
 * /apacheport  -- Defaults to 8081
 * /mysqlport -- Defaults to 8082
-[[Category:Archived Pages]]
+

@@ -32,4 +32,4 @@ Vea  ` lines 511-525 <http://bazaar.launchpad.net/~intrahealth+informatics/ihris
 * **name: Requiere nodo escalar.  Éste es el nombre de la búsqueda a como aparece en la página de búsqueda.  En este caso es en "Search Positions"
 * **description: Requiere nodo escalar.  estas son las instrucciones que aparecen en esta búsqueda.  En éste caso es en "Locate any position in the system to review, print or update."
 
-[[Category:Custom Reporting]][[Category:Spanish]]
+

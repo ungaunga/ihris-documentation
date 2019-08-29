@@ -77,4 +77,4 @@ Synchronization will be handled by a replaying a transaction log of changes.
 
 --[[User:MarkAHershberger|MarkAHershberger]] 13:06, 26 November 2007 (EST)
 
-[[Category:Blueprints]]
+

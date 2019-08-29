@@ -44,4 +44,4 @@ The use cases for customizing reports are the same for iHRIS Manage and iHRIS Qu
 
 * `Full Use Case Model - iHRIS Manage <http://www.capacityproject.org/hris/suite/UseCaseReport-iHRISManage.htm>`_
 * `Full Use Case Model - iHRIS Qualify <http://www.capacityproject.org/hris/suite/UseCaseReport_iHRISQualify.htm>`_
-[[Category:Blueprints]]
+

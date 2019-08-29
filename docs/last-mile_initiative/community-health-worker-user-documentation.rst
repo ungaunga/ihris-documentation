@@ -25,4 +25,4 @@ Input for the forms is entirely up to the phone being used and how it inputs dat
 Saving Data
 ^^^^^^^^^^^
 The CHWDCS saves data instantly upon entry into each screen. There is no Save button to worry about. If incorrect data is entered the only way to correct it at this point is to log into the OpenMRS system as an administrator and correct the problem. It is also possible to enter more than one encounter for a person and remove the incorrect encounter in OpenMRS at a later time. This may be the best path to take as it mean the volunteer can simply continue with the person and not worry about calling an administrator to correct a problem immediately.
-[[Category:Last Mile Initiative]]
+

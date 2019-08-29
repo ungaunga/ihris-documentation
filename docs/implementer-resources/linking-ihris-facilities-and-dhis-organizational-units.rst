@@ -132,4 +132,4 @@ You can see an example of this  `here <http://bazaar.launchpad.net/~intrahealth+
 If your site does not include either of these html templates, you should not need to make any changes.
 
 
-[[Category:Implementer Resources]]
+

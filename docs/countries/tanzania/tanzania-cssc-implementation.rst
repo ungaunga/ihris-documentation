@@ -54,4 +54,4 @@ Documentation
 
 
 * [[Installing the CSSC zonal deployment]]
-[[Category:Tanzania]]
+

@@ -97,4 +97,4 @@ Starting server update
 ~~~~~~~~~~~~~~~~~~~~~~
 You can update the site by browsing to http://10.171.5.9/ihris
 
-[[Category:Botswana]]
+

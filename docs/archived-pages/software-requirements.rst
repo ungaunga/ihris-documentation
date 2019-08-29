@@ -23,4 +23,4 @@ Optional:
 * `Tidy from PECL <http://pecl.php.net/package/tidy>`_  (included by default for Ubuntu but not Windows)
 * `GD Php Library  <http://www.libgd.org>`_
 
-[[Category:Archived Pages]]
+

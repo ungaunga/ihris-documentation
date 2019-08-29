@@ -1,7 +1,7 @@
 Training and Support
 ====================
 
-[[Category:Archived Pages]]
+
 
  *The purpose of this page is to collect ideas for a program of training and technical support in using the iHRIS Suite. This program could be extend to teach basic concepts of managing HR information systems, HR information architecture (devising a job structure, standardizing, etc.), managing data and ensuring data quality, using data effectively, and working with Open Source software. All ideas are welcome.* 
 

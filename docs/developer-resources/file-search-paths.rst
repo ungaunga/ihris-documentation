@@ -58,4 +58,4 @@ By default, a file is considered to be stale after 60 seconds.  The cache can be
 
  **<span style='color:red'>Caution:</span>** If you are developing a new module and add in a template file, the system won't file that file immediately because the file search results are cached.  You can either wait the 60 seconds or clear the results stored in the  `apc <http://pecl.php.net/package/APC>`_  memory cache.
 
-[[Category:Developer Resources]]
+

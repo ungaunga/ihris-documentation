@@ -250,4 +250,4 @@ Este es un ejemplo de cómo se guardarían dos formularios en la base de datos. 
 
   * Se agregará un Nuevo registro a la tabla de **record**  . La *id*  del registro se generará automáticamente (2) y el *form*  se establecerá como 2.  El *primary*  se establecerá como 1 ya que este es un formulario secundario del registro de persona que se acaba de crear.  La hora de *last_modified*  se establecerá como la hora actual.
   * Se agregará una entrada a las tablas **entry**  y **last_entry** .  El *record*  se establecerá como 2 y el *form_field*  se establecerá como 2 (la id de form_field creada anteriormente para demographic-birth_date).  La *date*  será la hora actual y *who*  se establecerá como la id de usuario que está haciendo el cambio.  El campo *date_value*  se establecerá al valor para birth_date.
-[[Category:Technical Overview]][[Category:Spanish]]
+

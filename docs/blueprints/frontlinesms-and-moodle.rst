@@ -91,4 +91,4 @@ Related Moodle Plugins
 * http://www.moodletxt.co.uk/download.php  **WARNING:**  NOT OPEN SOURCE
 * http://www.pageonejanettxt.com/products/moodlemobile GPL V2
 * http://www.clickatell.com/developers/scripts.php  I think the plugin is very out of date
-[[Category:Blueprints]]
+

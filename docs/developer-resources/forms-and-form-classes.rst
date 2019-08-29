@@ -79,4 +79,4 @@ In addition we will enable storage to specified database tables to allow the adm
 
 We also allow storage in Magic Data.  This is primarily intended for list data that a administrator wishes to maintain centrally in a module and then ship out to regional offices.  In addition, the lists stored in Magic Data will be localizable.
 
-[[Category:Developer Resources]]
+

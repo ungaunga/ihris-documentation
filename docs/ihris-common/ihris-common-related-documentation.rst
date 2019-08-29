@@ -8,4 +8,4 @@ iHRIS Common is comprised of common page classes, template files and images for 
 [[iHRIS Common Module List]]
 
 [[iHRIS Common Translation List (Development)]]
-[[Category:iHRIS Common]]
+

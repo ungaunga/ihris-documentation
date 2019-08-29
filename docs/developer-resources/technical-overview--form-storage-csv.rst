@@ -56,4 +56,4 @@ This has the structure:
 
 * closeCSV: defaults to false.  If true, we close the CSV file between access.  Otherwise, we allow PHP to handle closing the file resource at the end of the script's call.
 
-[[Category:Developer Resources]]
+

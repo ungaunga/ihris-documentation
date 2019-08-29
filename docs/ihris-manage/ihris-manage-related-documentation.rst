@@ -25,4 +25,4 @@ Tutorials Specific to iHRIS Manage
 
 Information on [[Customizing iHRIS Manage]], [[Installing a Custom Site from Launchpad]] and [[Managing A Site In Launchpad]] -- Note: These tutorials are for an older version of iHRIS (4.0).
 
-[[Category:iHRIS Manage]]
+

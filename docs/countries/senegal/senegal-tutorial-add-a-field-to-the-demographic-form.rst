@@ -208,4 +208,4 @@ In the section where modules are enabled, add the following line:
 
 Now when you access the site it should update and your new field will now appear on the demographic form.
 
-[[Category:Senegal]]
+

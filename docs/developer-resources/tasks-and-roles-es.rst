@@ -124,4 +124,4 @@ Nuevos Tipos
 ^^^^^^^^^^^^
 Un módulo puede agregar un [[Module Structure#Fuzzy Methods|método fuzzy]] del formulario  *hasPermision_$type*  a la clase *I2CE_PermissionParser*  para permitir un Nuevo tipo de permiso, Por ejemplo el módulo de 'forms' hace esto añadiendo un nuevo 'form.' de tipo de permiso
 
-[[Category:Developer Resources]]
+

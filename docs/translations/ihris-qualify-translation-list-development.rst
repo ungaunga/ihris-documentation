@@ -4385,4 +4385,4 @@ Translate to:  `ar <https://translations.launchpad.net/ihris-qualify/trunk/+pots
 **   `templates/en_US/button_confirm_tr.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-qualify/4.0-dev/annotate/head%3A/templates/en_US/button_confirm_tr.html#L8>`_ 
 **   `templates/en_US/button_confirm_tr_grad.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-qualify/4.0-dev/annotate/head%3A/templates/en_US/button_confirm_tr_grad.html#L8>`_ 
 **   `templates/en_US/button_confirm_fac_inst.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-qualify/4.0-dev/annotate/head%3A/templates/en_US/button_confirm_fac_inst.html#L7>`_ 
-[[Category:Translations]][[Category:iHRIS Qualify]]
+

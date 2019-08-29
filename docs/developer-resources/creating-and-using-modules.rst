@@ -70,4 +70,4 @@ The following hooks are enabled so far
 * <b>post_template_process_display</b> has an argument  array('template'=>I2CE_Template: the template, 'user'=>I2CE_User : the user).  It is called in I2CE_Template's display() methods just before the DOM is dumped to out as HTML.
 * <b>post_configure</b> takes no arguments.   It is called at the end of all the configuration files loading.
 
-[[Category:Developer Resources]]
+

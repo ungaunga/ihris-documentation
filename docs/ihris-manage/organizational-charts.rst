@@ -19,4 +19,4 @@ Proposed Requirements
 * Discontinued positions should not appear in the chart.
 * Each box is clickable to display the full position information.
 * The chart should be printable and, preferably, exportable to an image or another format.
-[[Category:Blueprints]][[Category:iHRIS Manage]]
+

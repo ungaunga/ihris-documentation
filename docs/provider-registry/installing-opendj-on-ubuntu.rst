@@ -356,4 +356,4 @@ After it finishes open it and then go to *File -> Connect*  or simply click the 
 If it works OK, we should see this screen.
 [[image:Logged_in.png|center|Sample Data loaded on server]]
 
-[[Category:Provider Registry]]
+

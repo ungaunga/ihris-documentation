@@ -233,4 +233,4 @@ Pictures
 
 * Ikigo Community Health Center [http://www.ihris.org/w//upload/CHW_0308.jpg]
 * Ikigo Community Health Workers [http://www.ihris.org/w//upload/Ikigo_Health_Center_0308.jpg]
-[[Category:Last Mile Initiative]]
+

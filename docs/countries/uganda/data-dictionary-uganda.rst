@@ -2051,4 +2051,4 @@ Data Dictionary - Uganda
   |type=value (Recurrence Frequency)
   |used=iHRIS Manage
 }}
-[[Category:Uganda]]
+

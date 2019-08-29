@@ -495,4 +495,4 @@ It is clear that a system such as this can be a great success if a number of fac
 
 
 Addendum: Rwandatel mobile coverage map - 2007 [[http://wiki.ihris.org/wiki/upload/RURA_coverage_Regional_boundaries.xls]]
-[[Category:Last Mile Initiative]]
+

@@ -77,4 +77,4 @@ Miscellaneous
 * [[iHRIS and HRIS Marketing Resources]]
 * [[Peer-Reviewed Journals]]
 * [[List of ICT for Development Blogs]]
-[[Category: Resources]]
+

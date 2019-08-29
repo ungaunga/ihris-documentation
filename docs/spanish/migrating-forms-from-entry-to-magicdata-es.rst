@@ -89,4 +89,4 @@ Paso 4: Revisar la Migración
 
 Cuando entre al sitio de nuevo ejecutará los métodos de actualización para cualquier módulo que haya actualizado. Cuando haya terminado verá los datos anteriores bajo los datos magic en la ruta: /I2CE/formsData/migrate_data/MyUpgrade (o la ruta que haya utilizado). También encontrará que los formularios ahora están guardados en datos magic bajo /I2CE/formsData/forms/.  Es recomendable que revise que todos los campos que hayan migrado utilicen la nueva ID para cada valor mapeado de manera correcta.
 
-[[Category:Spanish]][[Category:Magic Data]]
+

@@ -177,4 +177,4 @@ Step 3: Create the Report View
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Go to **Configure System**  and then **Report Views**  and choose to create a new report view based on the report "staff_report."   Just select the fields you want to display and you are done.
 
-[[Category:Custom Reporting]][[Category:iHRIS Manage]][[Category:Review2013]]
+

@@ -7,4 +7,4 @@ Got questions? Check our [[Frequently Asked Questions]] list or [[Project Commun
 
 [[Form Lists]] -- Forms and fields used in iHRIS Manage and Qualify, for [[Custom Reporting|customizing reports]]
 
-[[Category:Resources]]
+

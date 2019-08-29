@@ -302,4 +302,4 @@ Press 1 to enter another zinc/ORS administration date. Press 2 to skip to the ne
 
 
  *question: this could be huge, a lot of medicine can be administered over time. do we care more about how many times a child has taken it as compared to their age or are dates important?* 
-[[Category:Last Mile Initiative]]
+

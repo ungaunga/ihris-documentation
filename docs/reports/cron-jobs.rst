@@ -150,4 +150,4 @@ You can also configure the cronjob to run certain cronjobs at certain times if y
     0 17 1 * * (cd SITE_DIRECTORY/pages; php index.php --page=/admin/cron --silent=true --type=monthly --nocheck=1)
     
 
-[[Category:Reports]]
+

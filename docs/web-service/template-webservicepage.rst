@@ -18,4 +18,4 @@ __NOEDITSECTION__
  |resources{{#ifeq:{{{resources|+}}}|{{{resources|-}}}||resources_dummy}}={{{resources}}} 
 }}
 
-[[Category:Web Service]]
+

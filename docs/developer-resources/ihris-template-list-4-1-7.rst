@@ -3661,4 +3661,4 @@ view_user_statistics_person_row.html
 This  template is loaded with the following priorites:
 *From the module [[iHRIS Common Module List (4.1.7)#UserStatistics | UserStatistics]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/UserStatistics/templates/en_US/view_user_statistics_person_row.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/UserStatistics/templates/en_US/view_user_statistics_person_row.html>`_ 
 
-[[Category:Developer Resources]]
+

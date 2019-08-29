@@ -60,4 +60,4 @@ Once a list has been standardized, each of the regional offices’ databases wil
 
 Using this sort of Step Solution will be a bit time consuming, so the more lists that can be defined and standardized before the regional deployment, the better.
 
-[[Category:Implementer Resources]]
+

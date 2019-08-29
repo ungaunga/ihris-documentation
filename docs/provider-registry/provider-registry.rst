@@ -16,4 +16,4 @@ Provider Registry
 
 Note from Carl: Merge with [[Design Documents]]
 
-[[Category:Provider Registry]]
+

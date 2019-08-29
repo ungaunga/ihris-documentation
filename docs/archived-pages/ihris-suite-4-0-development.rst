@@ -1,7 +1,7 @@
 IHRIS Suite 4.0 Development
 ===========================
 
-[[Category:Archived Pages]]
+
 
 Version 4.0.0
 ^^^^^^^^^^^^^

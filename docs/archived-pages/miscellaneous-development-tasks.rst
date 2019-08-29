@@ -70,4 +70,4 @@ Kenya Customizations
 * Review code provided by Kenya development team and make recommendations for hosting/support
 * Create host site for Kenya code on project website/Launchpad (including documentation and demo site)
 * Communicate with Kenya development team to strengthen collaboration going forward
-[[Category:Archived Pages]]
+

@@ -44,4 +44,4 @@ To restore from a manually copied database, go to the Operations tab for the {Da
 You can also restore from the {DatabaseName}.sql file using PHP MyAdmin. If you have the file on your machine, go to the Import tab, browse to the file and click Go. This won't work if the file is very large, though. You can also create a manual backup to save to your local computer using the Export tab. There are many options for the format there, but you'll need to choose SQL if you wish to export the table structure. The file exported here can also be used to import to the database.
 
 
-[[Category:iHRIS Plan]]
+

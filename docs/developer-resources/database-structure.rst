@@ -252,4 +252,4 @@ This is an example of how two forms would be saved to the database.  The person 
   * A new record will be added to the **record**  table.  The record *id*  will be generated automatically (2) and the *form*  will be set to 2.  The *parent*  will be set to 1 since this is a child form for the person record that was just created.  The *last_modified*  time will be set to the current time.
   * An entry will be added to the **entry**  and **last_entry**  tables.  The *record*  will be set to 2 and the *form_field*  will be set to 2 (the form_field id created above for demographic-birth_date).  The *date*  will be the current time and *who*  will be set to the user id making the change.  The *date_value*  field will be set to the value for the birth_date.
 
-[[Category:Developer Resources]]
+

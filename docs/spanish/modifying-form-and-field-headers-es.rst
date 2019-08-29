@@ -208,4 +208,4 @@ Paso 4: Recargue su sitio
 Ahora los encabezados de formularios y campos deberían estar cambiados.
 
 
-[[Category:Fields]][[Category:Spanish]]
+

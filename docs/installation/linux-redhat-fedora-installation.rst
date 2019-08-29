@@ -323,4 +323,4 @@ Here are samples of the files we edited above:
 <li> [[Media:htaccess.txt | /var/www/manage/.htaccess ]] </li>
 <li> [[Media:Config_values_php.txt | /var/www/manage/config.values.php]] </li>
 </ul>
-[[Category:Installation]][[Category:Review2013]]
+

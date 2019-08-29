@@ -20,4 +20,4 @@ It has the following structure:
 * *$fieldName: optional parent node
 * **populate: optional scalar node.  if set, it is the php code used to get the db-value of the field for the current id.  the current id can be accessed as $id
 
-[[Category:Developer Resources]]
+

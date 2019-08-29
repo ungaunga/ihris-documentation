@@ -294,4 +294,4 @@ Updating Customizations
 To update the customizations from launchpad, ensure that port 22 is open on the server and do:
  cd /var/lib/iHRIS/site/SL-sample
  bzr update
-[[Category:Sierra Leone]]
+

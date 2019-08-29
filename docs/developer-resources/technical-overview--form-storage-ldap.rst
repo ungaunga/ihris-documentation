@@ -46,4 +46,4 @@ It has the following structure:
 * **#*printf: child scalar node.  the printf substitution string
 * **#*printf_args: required parent node.  ordered children have keys integers and values the attributes whose value we wish to substitute into the printf string
 
-[[Category:Developer Resources]]
+

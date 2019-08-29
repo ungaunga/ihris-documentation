@@ -31,4 +31,4 @@ Hay un mecanismo de almacenamiento de datos basado en SysV I2CE_MagicDataStorage
 
 Para limpiar los segmentos de memoria compartidos manualmente desde la línea de comando
  ipcs -m | grep www-data | awk '{print "ipcrm -m "$2}' | sudo bash
-[[Category:Magic Data]][[Category:Spanish]]
+

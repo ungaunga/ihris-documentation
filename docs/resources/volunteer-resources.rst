@@ -9,4 +9,4 @@ Got questions? Check our [[Frequently Asked Questions]] list or [[Project Commun
 
 [[Translations]] page lists all of the current translations for the iHRIS software and provides instructions for submitting translations.
 
-[[Category:Resources]]
+

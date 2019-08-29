@@ -23,4 +23,4 @@ Supporting software can also be found here:
 * `iHRIS Common <https://code.launchpad.net/ihris-common>`_
 * `I2CE <https://code.launchpad.net/i2ce>`_
 
-[[Category:iHRIS Software]][[Category:Developer Resources]]
+

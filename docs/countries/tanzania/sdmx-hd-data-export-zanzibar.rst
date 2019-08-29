@@ -212,4 +212,4 @@ peer-to-peer collaboration between two or perhaps more systems. In our case iHRI
 
 Provided we don't have major headaches with incompatible facility lists (Kenya for example has many more than Zanzibar - 7877) we will get the data exchange working and hopefully improve a bit of process along the way.
 
-[[Category:Tanzania]]
+

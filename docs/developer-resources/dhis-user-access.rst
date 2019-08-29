@@ -72,4 +72,4 @@ It uses the following tables in your database:
 
 In addition, the table **user_log_dhis**  keeps track of the user activity.
 
-[[Category:Developer Resources]]
+

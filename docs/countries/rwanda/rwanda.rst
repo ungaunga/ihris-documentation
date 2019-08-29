@@ -10,4 +10,4 @@ To be updated: Put Rwanda resources here.
 * [[Rwanda iHRIS FR Interactions]]
 * `iHRIS User Manual (PDF) <http://www.ihris.org/mediawiki/upload/MoH_iHRIS_User_Manual.pdf>`_
 
-[[Category:Rwanda]]
+

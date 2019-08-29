@@ -21,4 +21,4 @@ The page [[I2CE Module List]] has multiple versions:
 * [[ I2CE Module List (Development) | Development Version]]
 
 
-[[Category:Developer Resources]]
+

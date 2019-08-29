@@ -284,4 +284,4 @@ Use Cases Wiki
 :'''Mentor''': TBD
 The iHRIS Project was built using  `use cases <http://en.wikipedia.org/wiki/Use_case>`_ , but we would like a more open model to work on updates and customizations to our systems.  This would be a module for a wiki (whichever seems best) that will allow easier editing of use cases so this work can be shared.  It will make it easier for people making customizations to modify use cases for their purposes.
 
-[[Category:Blueprints]]
+

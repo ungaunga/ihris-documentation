@@ -403,4 +403,4 @@ resultaría en:
 * Implementamos las varias interfaces
 * Agregamos soporte para localización de valores
 
-[[Category:Developer Resources]]
+

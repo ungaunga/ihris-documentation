@@ -119,4 +119,4 @@ Additional documentation will be added as it is completed to the  `Capacity iHRI
 
 Code changes and development are hosted at  `Launchpad <http://launchpad.net/ihris-suite/>`_ . You can also ask questions and report bugs at this location.
 
-[[Category:Developer Resources]]
+

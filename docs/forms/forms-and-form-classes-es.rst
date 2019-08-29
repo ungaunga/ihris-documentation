@@ -77,4 +77,4 @@ A partir de esta versión estamos múltiples mecanismos de almacenamiento para u
 Además activaremos el almacenamiento para tablas de bases de datos específicas para permitir al administrador que incorpore fácilmente Fuentes de datos externas en la utilidad de los Informes Personalizados. Esto será de sólo lectura o de lectura y escritura según el usuario especificado.
 
 También permitimos el almacenamiento en Datos Magic. Esto tiene la función principal de enumerar datos que un administrador desea mantener centralizados en un módulo y luego enviar a oficinas regionales. Además, las listas almacenadas en Datos Magic serán localizables.
-[[Category:Forms]][[Category:Classes]][[Category:Spanish]]
+

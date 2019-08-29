@@ -26,4 +26,4 @@ In addition you may also limit acce View $view by specifying:ss to a specific Re
  /modules/CustomReports/reportViews/$view/limit_report_to
 to be any valid [[Tasks and Roles#Permissions and the Permission Parser|permission]] string.
 
-[[Category:Custom Reporting]][[Category:Spanish]]
+

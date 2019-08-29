@@ -79,4 +79,4 @@ Training
 * `I-TECH <http://www.go2itech.org/>`_
 
  *This page was last updated 2013-01-30* 
-[[Category:Implementer Resources]]
+

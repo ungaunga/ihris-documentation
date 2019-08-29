@@ -20,4 +20,4 @@ This creates an internal link to the new page. Click the Save Page button and th
 
 While editing, you will see a link to Editing Help at the very bottom of the screen next to the Save buttons. This explains the very small amount of wiki code you need to know. Here is a direct link to that help page: [[Help:Editing]].
 
-[[Category:Implementer Resources]]
+

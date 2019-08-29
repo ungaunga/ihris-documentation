@@ -94,4 +94,4 @@ In case we need to change any configuration parameters, we can edit all from one
 
      sudo pico /var/lib/apacheds-2.0.0-M11/default/conf/config.ldif
 
-[[Category:Provider Registry]]
+

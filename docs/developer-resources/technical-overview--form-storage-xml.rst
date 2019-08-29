@@ -39,4 +39,4 @@ It has the following structure:
 * **attribute: Optional scalar node.  The name of the attribute which contains the parent.  If neither 'query' nor this is set, there is not data.  'query' takes precendence
 * **eval: Optional scalar node.  If set it is a code php code which modifies the id, stored in the $val variable.  For example '$val = strtoupper($val);'
 
-[[Category:Developer Resources]]
+

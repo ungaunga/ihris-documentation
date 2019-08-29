@@ -91,4 +91,4 @@ http://localhost/MLSCN
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database.
 
-[[Category:Nigeria]]
+

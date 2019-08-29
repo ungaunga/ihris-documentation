@@ -48,4 +48,4 @@ Update the Report View
 
 In a report view for this report, you should enable the image field.  Now when you view this report you will see the image displayed.
 
-[[Category:Custom Reporting]][[Category:Review2013]]
+

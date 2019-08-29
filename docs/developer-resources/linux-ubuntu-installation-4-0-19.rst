@@ -48,4 +48,4 @@ Follow the [[iHRIS Manage Installation - 4.0.19|iHRIS Manage Installation]] inst
 
 Follow the [[iHRIS Qualify Installation - 4.0.19|iHRIS Qualify Installation]] instructions for iHRIS Qualify.
 
-[[Category:Developer Resources]]
+

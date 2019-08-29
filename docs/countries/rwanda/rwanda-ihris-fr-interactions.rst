@@ -24,4 +24,4 @@ Transaction Diagram: With InfoMan
 </graphviz>
 
 
-[[Category:Rwanda]]
+

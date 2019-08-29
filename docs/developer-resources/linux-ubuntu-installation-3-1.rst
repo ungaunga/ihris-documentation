@@ -287,4 +287,4 @@ Here are samples of the files we edited above:
 <li> [[Media:Config_values_php.txt | /var/www/manage/config.values.php]] </li>
 </ul>
 
-[[Category:Developer Resources]]
+

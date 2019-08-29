@@ -353,4 +353,4 @@ Preserving Deletions
 ^^^^^^^^^^^^^^^^^^^^
 All records that are deleted are automatically stored in the database in the *form_history*  table with the deletion time and all the data stored as a json encoded string.
 
-[[Category:Developer Resources]][[Category:Implementer Resources]][[Category:Review2013]]
+

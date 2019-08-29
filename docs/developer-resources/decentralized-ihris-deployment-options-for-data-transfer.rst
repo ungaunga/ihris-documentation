@@ -43,4 +43,4 @@ Launchpad customizations will only be for the two sites, the peripheral site (re
 Each peripheral site installs the same customizations (the regional customizations) ad sets the variables based on their preferences including the database names and the passwords and the module configurations.
 
 There are not going to be specific customizations for each regional (peripheral site) in the country.
-[[Category:Developer Resources]]
+

@@ -62,4 +62,4 @@ Instead, what you should do is to leave XXXXX as the password in the site config
 * Click "mail_server_params"
 * Change the value of "password" from "XXXX" to the correct password and click the "Set" button
 
-[[Category:Implementer Resources]][[Category:iHRIS Software]][[Category:Review2013]]
+

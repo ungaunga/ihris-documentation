@@ -117,4 +117,4 @@ Extract SDMX-HD.v1.0 sample1/DSD.xml from  `here <http://groups.google.com/group
 sample meta data export
 ~~~~~~~~~~~~~~~~~~~~~~~
 Extract /SDMX-HD.v1.0 sample1/MSD.xml from  `here <http://groups.google.com/group/sdmx_hd/web/WHO_SDMX_HD.zip?_done=%2Fgroup%2Fsdmx_hd%3F>`_ 
-[[Category:SDMX-HD]][[Blueprints]]
+

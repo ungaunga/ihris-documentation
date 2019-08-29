@@ -95,4 +95,4 @@ The system should be able to produce a variety of reports based on the data ente
 In addition, the system should generate a workforce plan template similar to the one in the Dewdney model that includes data from the projections.
 
 Once another year of actual data has been collected, that can be entered into the system and compared to the original projection to analyze the accuracy of the projection and make adjustments. *See [[Questions for Discussion]] #13.* 
-[[Category:iHRIS Plan]]
+

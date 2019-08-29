@@ -1,7 +1,7 @@
 Open Implementation
 ===================
 
-[[Category:Archived Pages]]
+
 
 We don't provide just software but rather a program of technical assistance and expertise to ensure that the technology is transferred effectively and serves the ability of decision makers to use data to lead and manage. Our participatory approach results in systems that are appropriate for the context in which they are used and sustainable after we leave. With a solid, sustainable, technological foundation, we can work with local partners to ensure the success of the various strengthening activities with an *Open Implementation* 
 

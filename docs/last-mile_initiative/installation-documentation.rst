@@ -121,4 +121,4 @@ Debian
 ~~~~~~
 
 Similar steps work on Debian but some changes may be needed.  The contents of /etc/default/tomcat5.5 differ slightly and tomcat-users.xml is in /var/lib/tomcat.5.5 instead of /etc/tomcat55.  Also, see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=402229
-[[Category:Last Mile Initiative]]
+

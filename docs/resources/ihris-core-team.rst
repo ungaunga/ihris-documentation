@@ -62,4 +62,4 @@ Uncategorized Resources
 * `iHRIS Manage Workflow Map Problem Areas (JPG) <http://wiki.ihris.org/wiki/File:HRHIS_workflow_map_Problems.jpg>`_
 
 
-[[Category:Resources]]
+

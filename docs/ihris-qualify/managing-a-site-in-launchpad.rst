@@ -149,4 +149,4 @@ If you are working on multiple machines or with multiple people, you may want to
  cd /var/lib/iHRIS/sites/qualify
  bzr update
 
-[[Category:iHRIS Qualify]][[Category:Customizations]][[Category:Launchpad]][[Category:Review2013]]
+

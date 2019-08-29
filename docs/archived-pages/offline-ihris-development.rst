@@ -23,4 +23,4 @@ To do’s
 
 
 * Enable synchronization of data with server-based installations of iHRIS
-[[Category:Archived Pages]]
+

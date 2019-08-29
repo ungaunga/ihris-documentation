@@ -47,4 +47,4 @@ Follow the [[iHRIS Qualify Installation - 4.0.22|iHRIS Qualify Installation]] in
 
 Follow the [[IHRIS Plan Installation - 1.0.4|iHRIS Plan Installation]] instructions for iHRIS Plan.  (You do not need to download the full iHRIS Suite above)
 
-[[Category:Developer Resources]]
+

@@ -207,4 +207,4 @@ To allocate credits to an account login to Rapidpro as an administrator,you will
 
 
 
-[[Category:Interoperability]]
+

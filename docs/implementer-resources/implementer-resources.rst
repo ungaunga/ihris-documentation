@@ -69,4 +69,4 @@ Other Resources
 
 We also provide several tutorials for [[Developer Resources|developers modifying the iHRIS code.]]
 
-[[Category:Implementer Resources]]
+

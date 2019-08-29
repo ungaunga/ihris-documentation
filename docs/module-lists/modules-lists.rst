@@ -14,4 +14,4 @@ You can find a list of the modules in the iHRIS software platform here:
 * [[iHRIS Qualify Module List]] the modules in iHRIS Qualify
 * [[TextLayout Tools Module List]] the modules in Textlayout Tools
 
-[[Category:Module Lists]]
+
