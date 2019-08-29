@@ -1,5 +1,5 @@
-Lesotho MOHSW Installation
-==========================
+Installation Instructions
+=========================
 
 This page contains installation instructions on installing iHRIS Lesotho Customizations
 {{otherversions|Linux (Ubuntu) Installation}} 

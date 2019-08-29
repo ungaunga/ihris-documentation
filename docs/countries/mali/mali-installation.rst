@@ -1,5 +1,5 @@
-Mali Installation
-=================
+Installation Instructions
+=========================
 
 This page contains installation instructions on installing iHRIS Manage Mali Customizations
 {{otherversions|Linux (Ubuntu) Installation}} 
