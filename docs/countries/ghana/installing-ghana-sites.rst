@@ -23,11 +23,9 @@ Getting Ready
 
 Assuming that you are installing version  `4.0.19 <http://wiki.ihris.org/wiki/Linux_%28Ubuntu%29_Installation_-_4.0.19>`_ , you should follow the procedures on the page up to downloading the software.
 
-
 Downloading the Software
 ^^^^^^^^^^^^^^^^^^^^^^^^
 To download the software you enter these commands:
-
 
 .. code-block:: bash
 
@@ -37,11 +35,8 @@ To download the software you enter these commands:
     sudo tar -xjf ihris-suite-4.0.19.tar.bz2
     
 
-
-
 Downloading the Ghana Sites Customizations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 .. code-block:: bash
 
@@ -54,8 +49,6 @@ Downloading the Ghana Sites Customizations
     bzr bind lp:~ihris+ghana/ihris-manage-ghana/combined-sites
     
 
-
-
 National (Central) Site setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -63,14 +56,12 @@ Database Setup
 ~~~~~~~~~~~~~~
 To create the needed database you can do:
 
-
 .. code-block:: bash
 
     mysql -u root -p
     
 
 Enter the password you set above (XXXXX) for MySQL.  You will now be able to send commands to MySQL and the prompt should always begin with 'mysql> '.  Type these commands:
-
 
 .. code-block:: mysql
 
@@ -85,12 +76,10 @@ Substitute PASS with something appropriate.  We'll refer to this password as YYY
 If you are having trouble creating routines see  `this <http://www.ispirer.com/wiki/sqlways/troubleshooting-guide/mysql/import/binary-logging>`_ .
 For security, make sure the password you choose is different than the root password for MySQL.  Let us refer to this password as YYYYY.
 
-
 Setting the Password
 ~~~~~~~~~~~~~~~~~~~~
 
 Now we need to set the password **PASS**  in the main configuration file.  Run the commands:
-
 
 .. code-block:: bash
 
@@ -100,7 +89,6 @@ Now we need to set the password **PASS**  in the main configuration file.  Run t
     
 
 and change:
-
 
 .. code-block:: php
 
@@ -112,7 +100,6 @@ and change:
 
 to:
 
-
 .. code-block:: php
 
     /**
@@ -123,19 +110,15 @@ to:
 
 Save and Quit.  Here PASS is what you chose above.
 
-
 Making the Site Available
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We make iHRIS Manage site available via the webserver:
 
-
 .. code-block:: bash
 
     sudo ln -s /var/lib/iHRIS/ghana/4.0/sites/national/pages /var/www/ghananational
     
-
-
 
 Finishing Up
 ~~~~~~~~~~~~
@@ -145,7 +128,6 @@ http://localhost/ghananational
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database ('''YYYY''' that you set above).
 
-
 Regional Site setup
 ^^^^^^^^^^^^^^^^^^^
 
@@ -153,14 +135,12 @@ Database Setup
 ~~~~~~~~~~~~~~
 To create the needed database you can do:
 
-
 .. code-block:: bash
 
     mysql -u root -p
     
 
 Enter the password you set above (XXXXX) for MySQL.  You will now be able to send commands to MySQL and the prompt should always begin with 'mysql> '.  Type these commands:
-
 
 .. code-block:: mysql
 
@@ -175,12 +155,10 @@ Substitute PASS with something appropriate.  We'll refer to this password as YYY
 If you are having trouble creating routines see  `this <http://www.ispirer.com/wiki/sqlways/troubleshooting-guide/mysql/import/binary-logging>`_ .
 For security, make sure the password you choose is different than the root password for MySQL.  Let us refer to this password as YYYYY.
 
-
 Setting the Password
 ~~~~~~~~~~~~~~~~~~~~
 
 Now we need to set the password **PASS**  in the main configuration file.  Run the commands:
-
 
 .. code-block:: bash
 
@@ -190,7 +168,6 @@ Now we need to set the password **PASS**  in the main configuration file.  Run t
     
 
 and change:
-
 
 .. code-block:: php
 
@@ -202,7 +179,6 @@ and change:
 
 to:
 
-
 .. code-block:: php
 
     /**
@@ -213,19 +189,15 @@ to:
 
 Save and Quit.  Here PASS is what you chose above.
 
-
 Making the Site Available
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We make iHRIS Manage site available via the webserver:
 
-
 .. code-block:: bash
 
     sudo ln -s /var/lib/iHRIS/ghana/4.0/sites/regional/pages /var/www/ghanaregional
     
-
-
 
 Finishing Up
 ~~~~~~~~~~~~
@@ -234,7 +206,6 @@ Now we are ready to begin the site installation.  Simply browse to:
 http://localhost/ghanaregional
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database ('''YYYY''' that you set above).
-
 
 Updating Customizations
 ^^^^^^^^^^^^^^^^^^^^^^^

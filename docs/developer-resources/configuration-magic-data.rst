@@ -10,7 +10,6 @@ Magic Data is a rooted tree structure with benefits.  If you wish you may think 
 
 There are two parts two parts to magic data.  The magic data node class, defined in *I2CE/lib/I2CE_MagicDataNode*  and the storage mechanisms for magic data.  You may use magic data without using a storage mechanism, in which case the magic data saved does on persist across sessions.  By default uses the following storage mechanisms for Magic Data:
 
-
 * Database:  The data is stored into a table in the database.  In I2CE, this is set to be the *config*  table.
 * APC: The data is stored in to a memory cache provided by  `apc <http://pecl.php.net/package/APC>`_  which persists across apaches session.
 
@@ -27,7 +26,6 @@ A parent node can have as many children as it wants.  Each child of a parent nod
 With the exception of the root node, every magic data node has a name.  For a name, any numeric value is allowed.  Any non-empty string is valid as long as it does not start with '=' does not contain a '/' and is not '.' or '..'.  However, it is best if you limit the strings to contain the following characters only:
  _-+.0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-
 Absolute Paths
 ^^^^^^^^^^^^^^
 Magic Data nodes can be referenced by their path which is a concatenation of their names by '/.'
@@ -38,11 +36,9 @@ If the root node has a child with name 'some', it is referenced by the path '/so
 
 If some is a parent node with a child with name 'thing', then that child is referenced by the path '/some/thing'
 
-
 Relative Paths
 ^^^^^^^^^^^^^^
 Paths can also be relative.  In the example above, if you were at the node '/some' then could reference the other nodes by:
-
 
 * './' references '/some'
 * '../' references '/'
@@ -55,13 +51,11 @@ The <configurationGroup> node is optional. If it is present it has to have the a
 
 All magic data is relative to the path defined by the this configurationGroup. There are three options:
 
-
 * The attribute path is not present. In the following example, the magic data is stored under /modules/mercury_javascript_path.
  Example:
   <configurationGroup name='mercury_javascript_popup'>
     <span style='color:red'>SOME STUFF GOES HERE</span>
  </configurationGroup>
-
 
 * The attribute path is present. In the following example, the magic data is stored under /some/other/place.
  Example:
@@ -69,16 +63,13 @@ All magic data is relative to the path defined by the this configurationGroup. T
    <span style='color:red'>SOME STUFF GOES HERE</span>
  </configurationGroup> 
 
-
 * The module is 'I2CE'. The magic data is stored relative to /I2CE
 
 In the remainder of this section we will describe <span style='color:red'>WHAT STUFF GOES THERE</span> which are [[#<configurationGroup>|<configurationGroup>]] and [[#<configuration>|<configurations>]] tags.
 
-
 <configurationGroup>
 ^^^^^^^^^^^^^^^^^^^^
 A <configurationGroup> can several subtags in this order::
-
 
 * An optional <displayName>. A name displayed in the module configuration for this grouping of data
 * An optional <description>. A description of the functionality of the grouping.
@@ -86,22 +77,18 @@ A <configurationGroup> can several subtags in this order::
 * Any number (including zero) of [[#<status>|<status>]] tags.
 * Any number (including zero) of <configurationGroup> or [[#<configuration>|<configuration>]] tags.
 
-
 <configuration>
 ^^^^^^^^^^^^^^^
 A <configuration> can several subtags in this order::
-
 
 * An optional <displayName>. A name displayed in the module configuration for this grouping of data
 * An optional <description>. A description of the functionality of the grouping.
 * An optional [[#<version>|<version>]] tag.
 * Any number (including zero) of [[#<value>|<value>]] tags.
 
-
 Attributes
 ^^^^^^^^^^
 There are several attributes that both a [[#<configuration>|<configuration>]] and a [[#<configurationGroup>|<configurationGroup>]] may have:
-
 
 * name: This is a required attribute.  Every child <configuration> or <configurationGruop> of a <configurationGroup> should have a distinct name.  If the path attribute is not set, it is also says that this configuration node should apply to the magic data node with the given name and which is a child magic data node of the parent configurationGroup node.
 * path: This is optional. It may be an absolute or relative path in magic data and describes the magic data at which this value should be stored at.   If it is a relative path, it is relative to the magic data path of its parent node.
@@ -109,10 +96,8 @@ There are several attributes that both a [[#<configuration>|<configuration>]] an
 * config: This is optional.  If set, it sets the I2CE_Swiss object used to display the data in the configure modules menu.
 A <configuration> may also have the following attributes:
 
-
 * type: Defaults to 'string' and describes the type of data that is being set by the <value> tags of this node.
 * values: Defaults to 'single' and describes if the data being set by this node should be an array of values or a single value based on what is stored in the <values> node
-
 
 <value>
 ^^^^^^^
@@ -120,13 +105,10 @@ The <value> tag is a sub-tag of a [[#<configuration>|<configuration>]] tag.  It 
 
 Some common types and values are:
 
-
 * type='string' values='single':  The magic data node is a scalar type with value the contents of the single <value> tag.
 * type='string' values='many':  The magic data node is a parent type.  The magic data node has a child node of scalar type for each <value> tag.
 * type='delimited': The magic data node is a parent type.  The value tags are expected to be of the form <value>'key':'value'</value> in which case a child magic data node is created of scalar type with name 'key' and value 'value'
 * type='boolean':  The values in the <value> tag are interpreted as booleans:  F,f,False,false,0, etc. are stored in magic data is 0.  Otherwise the value stored is 1.
-
-
 
 <version>
 ^^^^^^^^^
@@ -150,7 +132,6 @@ The same magic data can be accessed by multiple modules configuration files.  Su
   </configuration>
  </configurationGroup>
 
-
 On site intialization, since moduleA requires moduleB, the value is first set to valB is first set by moduleB.  It is then overwritten to be the value valA by moduleA.   Similarly, after initialization, the value of '/some/data2' is 'valA2'
 
 Suppose that version of moduleB is increased to version 1.1 but there are no other changes to the configuration file.  This will cause the configuration file to be reprocessed.  The *configurator*  will remember that has already processed all the data up to and including version 1.0.  Thus it will not re-read the or overwrite what is already stored in magic data.
@@ -171,13 +152,11 @@ Suppose now that moduleB  wants to change the value it stores at /some/data to b
  </configurationGroup>
 Now the value at /some/data will be updated to be 'newValB' and we will add in the value 'The new stuff' at '/some/other_data.'  The value at '/some/data2' remains unchanged and is 'valA2.'
 
-
 <status>
 ^^^^^^^^
 A status tag consists of key value pairs:
  <status>key:value</status>
 Although you can use anything for the key (as long as it does not have a ':' in it!), the keys which have meaning are:
-
 
 * version: Functions just like [[#<version>|<version>]]
 * overwrite: The value can be either true of false.  Defaults to false.  If true the magic data will be overwritten even if the version has not.
@@ -189,12 +168,10 @@ Although you can use anything for the key (as long as it does not have a ':' in 
 * required: The value can be either true of false.  Defaults to true.  It says the the resulting values at the <configuration> node must be set
 * showIndex: The value can be either true of false.  Defaults to true.  In which case we show the index in the module configuration menu
 
-
 The values of the status keys are inherited as you go down a node.
 
 =Using Magic Data in PHP=
 Each node of magic data is an instance of the class **I2CE_MagicDataNode** .  The "public variables" of a node are its child nodes which is done by making use of the *__get()*  method.  I2CE_MagicDataNode implements the RecusriveIterator, ArrayAccess, SeekableIterator, and Countable Interfaces.
-
 
 I2CE has a root magic data instance which can be retrieved by:
  $config=I2CE::getConfig();
@@ -235,7 +212,6 @@ Suppose $data is a magic data node, with a children named 'my_list' and 'amount'
 |-
 |}
 </center>
-
 
 Refined Access
 ^^^^^^^^^^^^^^
@@ -284,11 +260,9 @@ If a node has scalar type, you can get its value by *getValue()* .  If you call 
 
 If a node has parent or indeterminate type, calling *getValue()*  returns the node itself.  If you call *getAsArray()*  on it it will return a nested array.  The keys at each depth are the child node's names.   The values are either an array or a sting, depending on if that child is scalar or not.
 
-
 Checking Existence and Type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You can use the following method to see if a Magic Data node, exists and what its type is:
-
 
 * '''pathExists('''$path''')'''
 * '''is_scalar('''$path=null''')'''
@@ -318,10 +292,8 @@ You may do something like:
  }
 Two other useful functions are
 
-
 * **getAsArray(** $path=null''')''' which return the node and all of its children (recursively) as an array
 * **setIfIsSet(** &$var,$path,$as_array=false''')''' which will check to see if $path exists.  If it does not, it returns false.  If it does, it returns true and calls either getValue() or getAsArray() on the node referred to by the path.
-
 
 Child Names and Iterators
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -374,7 +346,6 @@ which would result in:
  The node named modules under / is a parent node.  It has children modA,modB.
  The node named color under / is a scalar node with value red.
 
-
 As a magic data node is an iterator, we can do things like:
  foreach ($config as $key=>$node) {
    if ($node instanceof I2CE_MagicDataNode) {
@@ -398,10 +369,8 @@ would result in:
 
 =Changes from 3.1=
 
-
 * Removed the __ from method calls.
 * Relaxed the rules for the names of Magic Data nodes.
 * Implemented the various interfaces
 * Added in support for localization of values
-
 

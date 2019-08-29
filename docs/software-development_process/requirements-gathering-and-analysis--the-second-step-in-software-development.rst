@@ -9,8 +9,6 @@ Remember that this is only the first and most intensive stage of requirements ga
 
 These are the general goals for the first couple of requirements meetings:
 
-
-
 * Create a'' context diagram,'' which is usually a rough drawing of the system and its context, based on previous goal-setting with the stakeholders.
 * Define *actors*  and their goals. Actors are the primary users of the system. Ask what specific activities are each actor trying to achieve?
 * List initial *use cases*  in brief narrative. Ask how each actor will achieve each goal, but don’t try to get too detailed at this point.
@@ -19,10 +17,7 @@ These are the general goals for the first couple of requirements meetings:
 * Identify *nonfunctional requirements*  (based on the givens, high-level goals and others subsequently identified). These requirements won’t be captured in the use cases but are important to document. They might include security, technology, system integration, localization, reliability and similar requirements.
 * Identify *working group members*  from the stakeholder group to call upon for testing and feedback as development progresses.
 
-
 As requirements gathering progresses, drill down into detail on the requirements and document them thoroughly. The following goals may be accomplished in subsequent meetings or through a virtual collaborative space where stakeholders and members of the development team can post, read and comment on documentation.
-
-
 
 * Write the initial set of *high-priority use cases*  in full form.
 * Document *functional requirements* , or inner operations of the system (calculations, technical details, data manipulation and processing, others) that will satisfy the use cases.

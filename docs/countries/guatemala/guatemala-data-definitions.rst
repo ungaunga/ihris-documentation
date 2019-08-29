@@ -3,7 +3,6 @@ Guatemala Data Definitions
 
 This is the way Guatemala Data is organized.
 
-
 .. code-block::
 
     [17:29:33] Sovello Hildebrand Mgani: hello Ricardo, i think we need a new branch on Launchpad for Guatemala
@@ -247,5 +246,4 @@ This is the way Guatemala Data is organized.
     
 
 Cheers
-
 

@@ -3,7 +3,6 @@ DHIS User Access
 
 The is an authentication mechanism which authenticates users against the DHIS2 style authentication mechansim
 
-
 This user access mechansim  is implemented by the [[Class: I2CE_UserAccess_DHIS | I2CE_UserAccess_DHIS]] class.
 
 Configuration
@@ -11,11 +10,9 @@ Configuration
 
 To use the default user authentication, you need to enable the module and set an initialization string.
 
-
 Enabling the Module
 ~~~~~~~~~~~~~~~~~~~
 To enable, just make sure you have:
-
 
 .. code-block:: xml
 
@@ -25,13 +22,10 @@ To enable, just make sure you have:
      </requirement>
     
 
-
-
 Initialization String
 ~~~~~~~~~~~~~~~~~~~~~
 
 The initialization string is sent to I2CE::initialize() in the index.php as the fourth argument, *$user_access_init* .  This string must be prefixed with the '''DHIS://''.  What follows take any of the following formats:
-
 
 * null:  The is the default value and means that we use the default tables (below) within the current database
 * a non JSON-encoded string:  For example 'dhis.' Then this is the name of the database that the *users*  and *usersinfo*   tables reside in.
@@ -46,12 +40,10 @@ For example:
  DHIS://dhis_database_name
 would be a minimal initialization string needed to authenticate against.
 
-
 Database Structure
 ^^^^^^^^^^^^^^^^^^
 
 It uses the following tables in your database:
-
 
 * access_dhis.  The table which associates a user's id to its role.  It has the following columns:
 * *user: int(11)
@@ -61,8 +53,6 @@ It uses the following tables in your database:
 * *username: varchar(20)
 * *password: varchar(50)
 
-
-
 * userinfo  The details all user's known to DHIS and the iHRIS Suite.  It has the following columns:
 * *id: int(11)
 * *firstname: varchar
@@ -71,5 +61,4 @@ It uses the following tables in your database:
 * *phone: varchar
 
 In addition, the table **user_log_dhis**  keeps track of the user activity.
-
 

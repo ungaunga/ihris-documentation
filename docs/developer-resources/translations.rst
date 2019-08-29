@@ -7,15 +7,11 @@ Our core iHRIS developers identify strings of English text that need to be trans
 
 To get started, go to one of the following sites:
 
-
 * `Our hosting site, Launchpad <https://translations.launchpad.net/ihris-suite>`_ : First, set up an account-–it’s free and quick. Then, click the Translations tab. Next, select the languages you are proficient in by clicking the Select Languages link on the right side. Click any project name in the list, such as iHRIS Manage, and then select the language. You will see a list of strings that need translation. Enter your translation and then check the box beside “Someone should review this translation.”
-
-
 
 * `Translatewiki <http://translatewiki.net/wiki/Translating:IHRIS>`_ : a platform that brings together a dedicated community of translators with free and open source software projects. To join, click Start Translating. You will be guided through the process of becoming a Translatewiki translator. Once iHRIS content has been translated, Translatewiki staff integrate the changes into the iHRIS source code on Launchpad.
 
 As iHRIS is translated into multiple languages, more organizations in more countries will be able to implement and use the software. When translation into a new language reaches 70-80% completion, it will automatically be included in the next release of the iHRIS software as a language option.
-
 
 Tutorials
 ^^^^^^^^^
@@ -25,15 +21,12 @@ Tutorials
 
 [[Change Source Text For Translation]]
 
-
 Translation Lists
 ^^^^^^^^^^^^^^^^^
-
 
 * [[I2CE Translation List (Development) | I2CE Translation List ]]
 * [[iHRIS Common Translation List (Development) | iHRIS Common Translation List ]]
 * [[iHRIS Manage Translation List (Development) | iHRIS Manage Translation List ]]
 * [[iHRIS Qualify Translation List (Development) | iHRIS Qualify Translation List ]]
 * Master [[iHRIS Translation List (Development) |  Translation List ]]
-
 

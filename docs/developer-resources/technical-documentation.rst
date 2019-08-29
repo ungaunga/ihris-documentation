@@ -1,8 +1,6 @@
 Technical Documentation
 =======================
 
-
-
 * [[Introduction and Overview]]
 * [[Database Structure]]
 * [[Module Structure]]
@@ -47,5 +45,4 @@ Technical Documentation
 * * [[User Triggers]]
 
 <br> We also have additional tutorials for [[Developer Resources|Developers]] or [[Implementer Resources|Implementers]].
-
 

@@ -18,7 +18,6 @@ A few things to note when creating a report to be used for field tree views:
 * Any fields used for creating the display of the form need to be included, e,g, the position display includes the code field.
 * To limit the values for selection based on user roles (for example using the ManageAccessFacility module) then the report definition needs to include the appropriate links to the module limits when being created.
 
-
 Facility Tree Module
 ^^^^^^^^^^^^^^^^^^^^
 The facility tree report can be used for any field mapped to the facility form.  The module does this for the position facility field.  The default display for this field is set to **facility+location:county:district:[region]:country** .  This tells iHRIS to build a tree view for this field so the user can select country, district, county and then the facility so the list isn't so large.  The region must also be included, but is hidden by including it in brackets so it won't be shown in the list, but is required so iHRIS knows which country the district is in.
@@ -28,8 +27,6 @@ To replace this with a report query we need to set the display_report meta infor
  **Note: Don't forget to include version number if you're updating an existing module.** 
 
 Here is the example from the Facility Tree module:
-
-
 
 .. code-block:: xml
 
@@ -43,12 +40,9 @@ Here is the example from the Facility Tree module:
         </configurationGroup>
     
 
-
 First we set the report to be used to be **facility_tree** .  Then we need to define what the form alias is in the relationship if it is different based on the display data.  The display uses **facility+location**  to link to the county (or district) forms.  The report won't have this so we set the map meta data to link the **facility+location**  information from the display the **primary_form**  of the report.  The others (county, district, region and country) already match the names used in the report.
 
 The report view will also sort based on the default sort of the forms included.  This means the districts will be sorted by region first since that is the default sort for districts.  We can change this just for this field by adding the following to a module (this is already in the Facility Tree module):
-
-
 
 .. code-block:: xml
 
@@ -59,13 +53,9 @@ The report view will also sort based on the default sort of the forms included. 
         </configurationGroup>
     
 
-
-
 Facility Tree Report
 ~~~~~~~~~~~~~~~~~~~~
 The report must also be defined.  The Facility Tree module defines the relationship **facilty_tree**  and the report **facility_tree** .  Refer to the  `module <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1-dev/view/head:/modules/ManageFacilityTree/ManageFacilityTree.xml>`_  for the specifics of this report.
-
-
 
 Position Tree Module
 ^^^^^^^^^^^^^^^^^^^^
@@ -76,8 +66,6 @@ To replace this with a report query we need to set the display_report meta infor
  **Note: Don't forget to include version number if you're updating an existing module.** 
 
 Here is the example from the Position Tree module:
-
-
 
 .. code-block:: xml
 
@@ -92,12 +80,9 @@ Here is the example from the Position Tree module:
         </configurationGroup>
     
 
-
 First we set the report to be used to be **position_tree** .  Then we need to define what the form alias is in the relationship if it is different based on the display data.  The display has the **position**  form, but since this is the primary form in the report it needs to be mapped to **primary_form** .  The display also uses **facility+location**  to link to the county (or district) forms.  The report won't have this so we set the map meta data to link the **facility+location**  information from the display the **facility**  of the report.  The others (county, district, region and country) already match the names used in the report.
 
 The report view will also sort based on the default sort of the forms included.  This means the districts will be sorted by region first since that is the default sort for districts.  We can change this just for this field by adding the following to a module (this is already in the Position Tree module):
-
-
 
 .. code-block:: xml
 
@@ -108,8 +93,6 @@ The report view will also sort based on the default sort of the forms included. 
         </configurationGroup>
     
 
-
-
 Position Tree Report
 ~~~~~~~~~~~~~~~~~~~~
 The report must also be defined.  The Position Tree module defines the relationship **position_tree**  and the report **position_tree** .  Refer to the  `module <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1-dev/view/head:/modules/ManagePositionTree/ManagePositionTree.xml>`_  for the specifics of this report.
@@ -119,8 +102,6 @@ The report must also be defined.  The Position Tree module defines the relations
 If you don't want to have a tree view, you can also use a report selector for the mapped field selection.  This will allow the user to select the value for the field from a report instead of from the default drop down or tree view.  This option won't be used if the field is a limit in another report.  The report displays will be limited based on any module limits that are linked for the report.  Any limits will also be displayed for easier selection by the user.  
 
 First you need to update the field meta data to show which report should be used:
-
-
 
 .. code-block:: xml
 
@@ -170,29 +151,21 @@ First you need to update the field meta data to show which report should be used
         </configurationGroup> <!-- end facility_field -->
     
 
-
 Note that you can define multiple reportSelect reports to be used.  See below for how to select which report.  You also need to enable reportSelect in the meta display information.  And finally you need to define how the field will be displayed once selected.  You will need to define this for each reportSelect type you have.  In this example, **default**  and **full** .
 
 To enable the report selection you need to modify the template to tell the form span to use the report selector:
-
-
 
 .. code-block:: html4strict
 
     <span type="form" name="position:facility" showhead="default" display="reportSelect"></span>
     
 
-
 You can also define a second report to be used if one needs different limits.  Instead of the **default**  report as defined, you can use the report defined as **full** .
-
-
 
 .. code-block:: html4strict
 
     <span type="form" name="position:facility" showhead="default" display="reportSelect" show="full"></span>
     
 
-
 For this example, you would also need to create the **facility_selector_limited**  and **facility_selector_full**  reports.  In this example the limited report would be limited by any user module requirements, but the full report would not since not all forms and fields would need the limits depending on what data is being chosen.  Current data would need to be limited, but historical data may not.  If you don't need the full selection, you could also use the **facility_tree**  report that is defined in the iHRIS Manage Facility Tree module.
-
 

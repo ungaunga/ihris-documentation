@@ -7,12 +7,9 @@ Starting with the 4.1.6 release of iHRIS you will now have the ability to genera
 
 Below we present the types of pages made available and the magic data options need to configure them.  This magic data should live under /I2CE/page/$pageName  or /modules/$moduleName/page/$pageName.  
 
-
-
 I2CE_PageFormAuto
 ^^^^^^^^^^^^^^^^^
 This is the simplest page used to edit a single form which is not a child form of another form.  The magic data used to define this page is as follows:
-
 
 * class: required scalar node with value 'I2CE_PageFormAuto/
 * style: optional scalar node.  See [[Pages_and_Templates#Page_Styles | page styles]] for more information.  Recommended value is 'shell'.
@@ -47,13 +44,9 @@ An minimal example to create a page to edit the person form would look like:
     )
     
 
-
-
 I2CE_PageFormAutoView
 ^^^^^^^^^^^^^^^^^^^^^
 This is a page used to view a form and optionally any child forms.  The page will be compiled automatically from its configuration without requiring the creation of template files in the module. The magic data used to define this page is as follows:
-
-
 
 * style: optional scalar node.  See [[Page and Templates#Page Styles | page styles] for more information. Recommended value is 'shell'
 * class: required scalar node.  Value is 'I2CE_PageViewChildren'
@@ -100,11 +93,9 @@ This is a page used to view a form and optionally any child forms.  The page wil
 * ******text: scalar node used in the link display
 * ******task: scalar node for the task required to see this link
 
-
 I2CE_PageFormParent
 ^^^^^^^^^^^^^^^^^^^
 This is a page used to edit the child form of a parent form.  The magic data used to define this page is as follows:
-
 
 * class: required scalar node.  Value is 'I2CE_PageFormParent'
 * style: optional scalar node.  See [[Page and Templates#Page Styles | page styles] for more information. Recommended value is 'shell'
@@ -126,11 +117,9 @@ This is a page used to edit the child form of a parent form.  The magic data use
 * *****attributes: Optional parent node. Keys are names of attributes that we want to set for displaying this node
 * ******showhead: Optional scalar node. Specifies the header to display for this form field. Defaults to 'default'
 
-
 I2CE_PageViewChildren
 ^^^^^^^^^^^^^^^^^^^^^
 This is a page used to view a form any optionally any child forms.  The magic data used to define this page is as follows:
-
 
 * class: required scalar node.  Value is 'I2CE_PageViewChildren'
 * style: optional scalar node.  See [[Page and Templates#Page Styles | page styles] for more information. Recommended value is 'shell'
@@ -152,7 +141,4 @@ This is a page used to view a form any optionally any child forms.  The magic da
 * **children:optional parent node.
 * ***disabled. Optional scalar node. If set and evaluates to true, then we do not use the auto generation to display this page. Instead we would fall back to using .html template methods.
 * ***fields: TO BE CONTINUED
-
-
-
 

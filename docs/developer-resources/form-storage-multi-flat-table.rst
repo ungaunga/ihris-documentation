@@ -9,13 +9,11 @@ For example, you may have several regions each running an instance of iHRIS Mana
 
 For the data such as jobs or geographic locations, which should be centrally maintained, we encourage you to use the [[Form Storage -- Magic Data|magic data]] form storage mechanisms.
 
-
 Specifying Multi-Flat Storage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To specify that the form $form has a Multi-Flat table storage mechanism set by setting
  /modules/forms/forms/$form/storage
 to have value '''multi_flat.''
-
 
 Form Options
 ^^^^^^^^^^^^
@@ -24,7 +22,6 @@ The multi-flat storage mechanism is defined so that, by default, it can read in 
 The options specifying a *Multi-Flat*  table storage for $form are stored at:
  /modules/forms/forms/$form/storage_options/multi_flat
 It has the following structure (which is identical to those for [[Form Storage -- Flat Table|flat]] storage):
-
 
 * table: Optional scalar node. The table to use, e.g. *hippo_person* .  You are responsible for back-tics if required.  The same table name will be used across the multiple databases, with each database representing an individual component).  If it is not set, it determines the table name from the table_prefix set in the [[Form Storage -- Multi-Flat Table#Global Options|global options]].
 * id: Optional parent node.  The data defining how to associate an id per row of this table.  If it is not set, we use simply the column 'id'.
@@ -46,8 +43,6 @@ It has the following structure (which is identical to those for [[Form Storage -
 * *col: Optional scalar node.  Specifies a "column" of the table to be used as the modified time.  Column should have type datetime. You are responsible for back-tics.
 * *function: Optional scalar node.  Optional scalar node.  Optional scalar node.  Specifies a SQL function  whose result (of type datetime) will as the value for the modified time. 'col' takes precedence.
 
-
-
 Form Options Example
 ~~~~~~~~~~~~~~~~~~~~
 To read in the cached *hippo_person*  tables for the person forms from the four different regions in the [[#Global Options Example|example below]] we would set:
@@ -59,13 +54,11 @@ This can be done in a configuration.xml file by:
 
 In this case, if a person form had the id "person|12" and was in the Northern region, the id would become "person|12@north"
 
-
 Global Options
 ^^^^^^^^^^^^^^
 There are global options for specifying a the mapping between components and databases
  /modules/forms/storage_options/multi_flat
 This has the structure:
-
 
 * table_prefix: Optional scalar node.  The value pre-pended to a form name to give the table name where the data is stored.  If not set it is 'hippo_', the prefix used for the caching of  form data to flat tables.
 * components: Required parent node. It's child nodes are the names of each of the components (e.g. Regions) you will be reading from.
@@ -73,11 +66,9 @@ This has the structure:
 * **database: Required scalar node. It's value is the database where the tables for the $component are stored.
 * **table_prefix: Optional scalar node. It's value is the prefix pre-pended to the form name to get the table.  If it is not set, it uses the value stored at /modules/forms/storage_options/multi_flat/table_prefix (which defaults to 'hippo_')
 
-
 Global Options Example
 ~~~~~~~~~~~~~~~~~~~~~~
 For example you might have the following:
-
 
 * components
 * *north =>
@@ -103,6 +94,4 @@ You can set this in a configuration.xml file by:
     <value>database:WesternRegionDatabase</value>
   </configuration>
  </configurationGroup>
-
-
 

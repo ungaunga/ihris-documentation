@@ -5,7 +5,6 @@ No project should be undertaken without a good vision. Without a vision, how do 
 
 The following is a list of goals to accomplish during the visioning meeting(s). While these goals were developed for visioning software and system development projects, they probably can apply to many other types of projects as well.
 
-
 * Identify a *purpose* , a shared understanding of the problem that the system should solve; ask why are we creating this system?
 * Identify *givens* : constraints, boundaries and standards within which we have to work.
 * Identify high-level *goals* ; ask what will this system be like when it successfully appears in the world?
@@ -13,10 +12,7 @@ The following is a list of goals to accomplish during the visioning meeting(s). 
 * Create a *vision statement*  that captures the purpose, givens, goals and stakeholders.
 * Create supporting documents as warranted (cost-benefit analysis, risk assessment, success criteria, business model, etc.). This may be done outside of the visioning meeting.
 
-
 Once the vision has been defined, it is time to ask and answer some key questions (perhaps in a follow-up meeting):
-
-
 
 * Based on time constraints and high-level goals, should we develop in-house or investigate another solution (such as off-the-shelf software)?
 * Do we have the resources to support and maintain this system (IT, data operations, other)? Will we need to hire or provide training?
@@ -24,10 +20,7 @@ Once the vision has been defined, it is time to ask and answer some key question
 * Who is the development team? What resources are missing?
 * Most importantly of all, based on the costs and resource needs identified, do we want to undertake this project? Does the vision we have defined justify the investment we will need to make to achieve it?
 
-
 The final steps are:
-
-
 
 * Gain stakeholder concurrence and approval or discontinuation of project.
 * Explain the development methodology that will be used to complete the project (such as an iterative development process) and agree on next steps.

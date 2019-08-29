@@ -7,7 +7,6 @@ Una página es la pieza básica que maneja cada solicitud URL. Es la unidad func
 
 Una plantilla se utiliza para acceder a los elementos HTML de una página. Se basa en el  `PHP Document Object Model <http://php.net/manual/en/book.dom.php>`_ . 
 
-
 =Páginas=
 Las páginas pueden establecerse para que vivan directamente bajo la base URL de la página, o bajo un módulo y todas las solicitudes se delegan en la clase de página apropiada por el [[#Wrangler|wrangler]].  
 
@@ -15,18 +14,15 @@ La lógica de una página se maneja por la [[#Page Classes|clase de una página]
 
 Las variables GET y POST variables son (por defecto) [[#Variable Conversion|pre-procesadas]] por la clase de la página.  Todas las páginas por defecto utilizan un [[#Templates|templating]] que actúa como envoltura para el  `Document Object Model <http://en.wikipedia.org/wiki/Document_Object_Model>`_  (DOM).  También hay un sistema basado en permisos de [[#Tasks and Roles|task and role]]  incluido.
 
-
 También hay, por abuso de lenguaje, páginas para el PHP CLI. En este artículo sólo vamos a describir las páginas que URL Pide.
 
 Clases de Páginas
 ^^^^^^^^^^^^^^^^^
 Todas las solicitudes son finalmente delegadas por el wrangler a una subclase de I2CE_Page. Esta clase se encarga de toda la lógica de negocio de la página. Debe determinar la acción apropiada a desarrollar en función de si se trata de una solicitud de POST o GET. Varias páginas se pueden manejar por una clase de página. En la construcción, la página pasa una serie de arreglos de argumentos que se definen por [[#Page Styles|page style]] y *[[#Converting a URL to a Page|request remainder]].*    Uno puede opcionalmente sobrescribir lo que se envía como el arreglo de las variables POST y GET.
 
-
 Lógica de la Página
 ^^^^^^^^^^^^^^^^^^^
 He aquí un resumen de la lógica de la página subyacente por defecto:
-
 
 * Las variables POST y GOT son (por lo general) [[#Variable Conversion|pre-processed]].
 * El conjunto de argumentos son producidos por el wrangler ya que procesa el [[#Page Styles|estilo]] de la página.
@@ -45,16 +41,13 @@ He aquí un resumen de la lógica de la página subyacente por defecto:
 * **Cualquier declaración echo, print_r, etc. se adjuntan al final del DOM de la plantilla.   Estos echo's, etc. solamente deben estar presente para propósitos de debugging y no en el código de producción.
 * **A menos que la página solicito suprimir el resultado, la plantilla muestra su resultado(HTML) .  <br/>Este es la única declaración echo que <span style='color:tomato>debe</span> utilizarse en un sitio de producción para mostrar html.
 
-
 El Método de action()
 ^^^^^^^^^^^^^^^^^^^^^
 Una sub-clase de I2CE_Page generalmente debe implementar toda su lógica al sobrescribir el método *action()*  .
 
-
 Conversión de Variables
 ^^^^^^^^^^^^^^^^^^^^^^^
 Las variables POST y GET, a menos que se les solicite específicamente no hacerlo, son pre-procesadas. Además de las variables POST y GET , las variables de SOLICITUD son creadas, que son (generalmente) cualquier variable que existe como POST o GET. Hay algunas cosas que ocurren (generalmente):
-
 
 * Si la variable GET 'req_query' existe, se adjunta el valor y se guarda como variables de SOLICITUD
 * Cualquier nombre de variables con ':' se procesan para definir arreglos de multi-dimensión. Por ejemplo:
@@ -70,7 +63,6 @@ se convierte en:
     )
  )
 
-
 * Si una variable se llama 'i2ce_json' es *json_decode()*  y se fusiona de nuevo con las variables.
 
 =Wrangler=
@@ -82,7 +74,6 @@ Convertir un URL en Página
 Las páginas pueden vivir directamente en el URL de base o bajo un módulo. El wrangler procesa el URL con el método *I2CE_Wrangler->processPath()*  y regresa un *page name* , el *page name*  del módulo se registra y un *request remainder* .  El modulo bajo el que se registra un *page name*  no es a menudo no el que proporciona la *page class* .  Definamos la lógica para el ejemplo:
  <nowiki>http://my.site.org/manage/some/thing/is/here</nowiki>
 
-
 * Si no hay nada después del URL de base, entonces el modulo es 'I2CE' y el *page name*  es 'home'.  <br/>  No hay *request remainder* . <br/>  Este no es el caso en el ejemplo de arriba.
 * Si 'some' se registra como *page name*  dado por 'I2CE', entonces el modulo es 'I2CE' y el *page name*  es 'some'.  <br/>  El *request remainder*  es entonces  *thing/is/here.*  <br/>  *some*  se considera un *page name*  registrado bajo 'I2CE' si el [[Configuration (Magic) Data|magic data path]] */I2CE/page/some*  existe.
 * De lo contrario el modulo es 'some' y las siguientes reglas aplican:
@@ -92,11 +83,9 @@ Una vez que la ruta se ha procesado, verificamos que la página que regresó exi
 
 El modulo registrado, el *page name* , y el *request remainder*  de llamado a todos puede verse a través de I2CE_Pages's API.
 
-
 Estilos de Página
 ^^^^^^^^^^^^^^^^^
 Una vez que tenemos un módulo válido y el nombre de la página asociada a un URL, comenzamos a procesar los estilos de la página. Un estilo de la página puede estar formado por tres componentes:
-
 
 * Otro estilo de página de la que esta hereda las propiedades
 * Una clase de página para asociarse a una página
@@ -105,12 +94,9 @@ Una vez que tenemos un módulo válido y el nombre de la página asociada a un U
 =Plantillas=
 A cada instancia de página se le asigna una plantilla que es una instancia de I2CE_TemplateMeister, y por lo general una instancia de la sub-clase I2CE_Template.
 
-
 La plantilla es esencialmente una clase contenedora para un objeto DOMDocument con algunos útiles métodos de conveniencia incluidos. Si bien la funcionalidad adicional proporcionada por el I2CE_TemplateMeister y I2CE_Template es inicialmente muy limitada, se aumenta en gran medida mediante el uso de [[Module Structure#Fuzzy Methods|fuzzy methods]].
 
 La página mostrará el DOM contenido en la plantilla como html una vez que la página ha terminado de procesar.  
-
-
 
 Template Data
 ^^^^^^^^^^^^^
@@ -130,7 +116,6 @@ Display Data
 ~~~~~~~~~~~~
 Display data son datos de plantilla en la categoría 'DISPLAY' que pueden establecerse con los métodos inmediatos setDisplayData() y setDisplayDataImmediate() y proporcionar una forma conveniente de manipular los archivos de plantillas cargados. La plantilla buscará cualquier DOMElements con el atributo de nombre establecido y los procesará de acuerdo a su nombre de la etiqueta y los datos de la plantilla, si los hay, almacenados en el atributo de nombre. Aquí hay una lista de las etiquetas de uso general que se procesan y sus reglas:
 
-
 * div,  pre, span, textarea: el valor de los datos de plantilla se anexa al siguiente contenido del elemento
 * input: If the template data is an array, is is considered to be an array or attribute=>value pairs which are set on the element.  <br/> If it is scalar valued, is is processed according to the value of the attribute type as follows::::
 * *input: the attribute value is set to the value of the template data
@@ -144,7 +129,6 @@ Display data son datos de plantilla en la categoría 'DISPLAY' que pueden establ
 * meta: If the template data is a scalar the content attribute is set
 * If the element has the attribute ifset with (case insensitive) value 'true' or 't' or '1' and the template data is not set, then it is removed.
 * If the element has the attribute ifset with (case insensitive) value other than 'true' or 't' or '1' and the template data is set, then it not removed.
-
 
 Options
 ~~~~~~~
@@ -163,7 +147,6 @@ Módulo de Atributos
 
 Los elementos DOM con el tipo de atributo establecido como 'module' y el atributo 'name' se procesan de acuerdo a ciertas reglas. El valor del atributo nombre es el nombre de un módulo. Se reconocen los siguientes atributos:
 
-
 * ifenabled: can be t, true, !t or !true.  Si es verdadero y el módulo no está activo, o si es falso y el módulo está activo entonces se elimina el nodo.
 * if: Trata de llamar la función del módulo con el calor del atributo 'if.'  Si el módulo regresa (something which casts to) falso el nodo se elimina.  Prefijar el valor con un ! causa la conducta opuesta.
 * call:  El valor se utiliza como el valor de un método a llamar en la clase del módulo.
@@ -173,7 +156,6 @@ Suponga que tenemos
  $module->someMethod($node,$template,$args)
 donde $node es el nodo  <nowiki><span></nowiki> ,  $template es el objeto de la plantilla y el argumento es el arreglo de los argumentos $args = ($arg1,..,$argN)
 donde [argM] se convierte en $argM de acuerdo a las siguientes reglas:
-
 
 * si [argM] empieza con un $ entonces se refiere a los datos de la plantilla y las siguientes reglas aplican:
 * *La cadena tiene el formulario $abcd. El valor de $argM se convierte en el nombre de la plantilla con el nombre 'abcd.'
@@ -191,19 +173,15 @@ donde [argM] se convierte en $argM de acuerdo a las siguientes reglas:
 * *de lo contrario si es del formulario wxyz->abcd(, entonces se interpreta como otro método de llamado de $sub_module as:<br/> $sub_module->abcd($subargs)<br/> donde los sub-args se procesan (recursivamente) de acuerdo a las mismas reglas y limitado por el siguiente cierre)
 y $sub_module es la instancia de la clase del módulo asociado con wxyz
 
-
 * de lo contrario se interpreta como cadena
 
 Los argumentos se separan por espacios o comas
-
 
 Etiquetas
 ^^^^^^^^^
 Como los "special cases" de las funciones de los módulos, seguidas de los atributos se escanean y procesan:
 
-
 * printf attribute: Adjunta al nodo los resultados de sustitución printf de la cadena con los argumentos especificados.  También esta consiente del local y puede utilizar formas plurales.  <br/> printf="'this is something %s',$data'
-
 
 Scripts
 ^^^^^^^
@@ -211,5 +189,4 @@ Cualquier etiqueta de scripts que se encuentren en el cuerpo del código HTML se
 
 =Tareas y Roles=
 Las [[Tasks and Roles|Tareas y Roles]] se utilizan para limitar el acceso a las páginas y los datos mostrados en el DOM.
-
 

@@ -3,37 +3,24 @@ India Payroll Module
 
 This page details the India Payroll Module
 
-
 Use Case Narrative
 ^^^^^^^^^^^^^^^^^^
 
 The Payroll module should allow users to do the following:
 
-
-
 * Set salary breakdown for each employee depending on the terms of employment. India has Contractual and REgular employees
-
-
 
 * Calculate Monthly Salary for each employee based on the salary breakdown and the number of working and leave days for each employee in a given month
 
-
-
 * Print Salary Receipts (Slips) for each employee individually and in bulky
 
-
-
 * Export monthly salary report for all employees for submission to the state salary department
-
-
 
 Configuration and Use
 ^^^^^^^^^^^^^^^^^^^^^
 
-
 Configuration
 ~~~~~~~~~~~~~
-
 
 * You will need to set the working days for each month in a given year.
 * * Click **Payroll Functions**  then **Set Monthly Working Days**
@@ -43,21 +30,17 @@ Configuration
 * **You should see **Set Salary Breakdown**  and clicking on this link should open up a form where you fill out the breakdown and save. This is to be set once until there is a change in the salary structure, otherwise you can go back and edit what is already set.
 * * A cron job runs a script to set the month for the payments for each employee. (Depending on when salaries are processed, this can be set to run at any time of the month.
 
-
 Use
 ~~~
 
-
 * After the script has finished, open **Payroll Functions**  then **Set Monthly Salary** . A report opens up where you have to set the total leave days an employee has taken for this month and the number of days an employee has worked in the month.
 * Once that's all set, you can now download the salary receipt (slip) for individual employee ('''Print Salary Slips''') or in bulk ('''Regular Employees Salary Receipts''' and **Contract Employees Salary Receipts** )
-
 
 Forms, Pages and Reports
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Forms
 ~~~~~
-
 
 * working_days: [class: iHRIS_Bihar_WorkingDaysList]
 * * List form for capturing working days in a month in a given year. The number of working days is used to calculate the average daily salary for an employee
@@ -69,10 +52,8 @@ Forms
 * position_type [class: Bihar_PositionType]
 * * this extends I2CE_SimpleList to add a field for capturing salary receipt template
 
-
 Pages
 ~~~~~
-
 
 * salarybreakdown: page for setting salary breakdown from class iHRIS_PageFormSalarybreakdown
 * * the module class iHRIS_Module_Payroll is responsible for setting required fields and doing validations
@@ -88,10 +69,8 @@ Pages
 
 <small>[URL only]: only accessible internally by the system</small>
 
-
 Reports
 ~~~~~~~
-
 
 * Regular Employees Salary Receipts
 * * Used to download salary receipts for regular employees

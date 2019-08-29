@@ -6,7 +6,6 @@ Ubuntu 10.4 and 10.10 come with PHP 5.3 so there a few a few issues that need to
 SEE: 
 http://pecl.php.net/bugs/bug.php?id=16814 for a discussion of the issue.  It is not clear what the correct resolution is, but we try to offer some suggestions here.  
 
-
 Do I Have The Problem?
 ^^^^^^^^^^^^^^^^^^^^^^
 You can tell if you are affected by this issue if you see the something like the following under apache_tail
@@ -76,14 +75,11 @@ You can tell if you are affected by this issue if you see the something like the
     
     
 
-
-
 Simple Install
 ^^^^^^^^^^^^^^
 
 Command Line
 ~~~~~~~~~~~~
-
 
 .. code-block:: bash
 
@@ -92,40 +88,32 @@ Command Line
     sudo apt-get install php5-apc
     
 
-
-
 GUI
 ~~~
 Go to "System"->"Administration"->"Synaptic Package Manager"->"Settings"->"Repositories"->"Other Software"->"Add..."
 
-
 * Add the following APT Line For Maverick Meerkat (10.10) :
  deb http://ppa.launchpad.net/chris-lea/php-pecl-extras/ubuntu maverick main 
-
 
 * Add the following APT Line For For Lucid Lynx (10.04)
  deb http://ppa.launchpad.net/chris-lea/php-pecl-extras/ubuntu lucid main 
 
 Now "Close" and "Reload" and you can install the php5-apc package.
 
-
 Manual Install
 ^^^^^^^^^^^^^^
 
 To compile pecl packages yourself you'll need these packages installed.  They may already be installed.
-
 
 .. code-block:: bash
 
     sudo apt-get install php5-dev apache2-prefork-dev
     
 
-
 The version of APC that ships with 10.4 and 10.10 causes problems.  You'll need to downgrade it for it to work.  When it asks if you want to use the spin locks type in yes.  Run the following commands in a terminal:
 
 For Lucid (10.04)
 ~~~~~~~~~~~~~~~~~
-
 
 .. code-block:: bash
 
@@ -137,11 +125,9 @@ For Lucid (10.04)
 
 You may also want to try the steps for Meerkat (below)
 
-
 For Meerkat (10.10)
 ~~~~~~~~~~~~~~~~~~~
 This seems to work as of Dec 20, 2010.
-
 
 .. code-block:: bash
 
@@ -149,18 +135,14 @@ This seems to work as of Dec 20, 2010.
     sudo pecl install APC
     
 
-
 Now you need to set the configuration options for APC.  Create or edit the ini file by typing:
-
 
 .. code-block:: bash
 
     sudo gedit /etc/php5/conf.d/apc.ini
     
 
-
 The contents should be:
-
 
 .. code-block:: ini
 
@@ -170,22 +152,16 @@ The contents should be:
     apc.slam_defense=0
     
 
-
-
 Restart
 ^^^^^^^
 
 Now restart apache and memcached (if you're using it) and try to access your site again.
-
 
 .. code-block:: bash
 
     sudo /etc/init.d/apache2 restart
     sudo /etc/init.d/memcached restart
     
-
-
-
 
 Version Stuff
 ^^^^^^^^^^^^^
@@ -194,15 +170,12 @@ Updated Dec 20, 2010:
 PECL
 ~~~~
 
-
 * `Stable <http://pecl.php.net/package/APC>`_  is 3.1.6 Released Nov 20, 2010 -- I think it is OK here
 
 Ubuntu
 ~~~~~~
 
-
 * Meerkat  `source <https://launchpad.net/ubuntu/maverick/+source/php-apc>`_  is 3.1.3p1-2  -- It is no good here
 * Lucid  `source <https://launchpad.net/ubuntu/lucid/+source/php-apc>`_  is 3.1.3p1-2 -- It is no good here
 * Jaunty  `source <https://launchpad.net/ubuntu/jaunty/+source/php-apc>`_  php-apc 3.0.19-2  -- I think it is OK here.
-
 

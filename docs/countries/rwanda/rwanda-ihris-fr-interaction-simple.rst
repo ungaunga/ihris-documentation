@@ -1,7 +1,6 @@
 Rwanda iHRIS FR Interaction Simple
 ==================================
 
-
 Transaction Diagram: Simple
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -11,12 +10,8 @@ Transaction Diagram: Simple
    ihris [label="iHRIS\n(Care Services Finder)" shape=box]
    fr [label="Facility Registry\n(Care Services Directory)" shape=box]
 
-
    ihris->fr [label="getModificationsRequest"]
 
 }
 </graphviz>
-
-
-
 

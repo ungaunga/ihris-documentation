@@ -7,16 +7,13 @@ In this tutorial, we will look at adding a new fields to the person form to iHRI
 
  **<span style='color:red'>Warning:</span>**   In this tutorial we will be modifying the Demo site of *ihris-manage*  directly.  This is not the recommended method for doing this in a production environment.  
 
-
 Pre-Requisites
 ^^^^^^^^^^^^^^
 It is recommended to read over the following articles and to refer to them as you read through this tutorial:
 
-
 * [[Module Structure]]
 * [[Configuration (Magic) Data ]]
 * [[Forms and Form Classes]]
-
 
 Directories
 ^^^^^^^^^^^
@@ -27,11 +24,9 @@ If you have installed Windows iHRIS Manage you will be working under the directo
 ;<Base Dir>:C:\Program Files\ihris-suite
 ;<Site Dir>:C:\Program Files\ihris-suite\sites\ihris-manage
 
-
 Creating a New Module
 ^^^^^^^^^^^^^^^^^^^^^
 The looking at:
-
 
 * **<SITE DIR>** /iHRIS-Manage-Demo.xml for Linux
 * **<SITE DIR>** /iHRIS-Manage-Demo.xml for Windows
@@ -60,7 +55,6 @@ the following contents:
  </I2CEConfiguration>
 This is (almost) the minimal amount of things we need to do create a new module.  Right now, there is no functionality, but we have said that the module *DemoPerson*  requires the module *Person,*  which is incidentally a sub-module of ihris-common.  We also set the priority for the module, so that we know that the template files we will create will take precedence over anything in the modules ihris-manage or ihris-common.
 
-
 Forms and Form Classes and Inheritance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 There are really two parts to defining a "form", a form and a form class.  The forms are referenced by their *shortname,*  for example *person.*  The second is referenced by the name of a PHP class, for example, *iHRIS_Person* .  
@@ -78,10 +72,8 @@ Now if we look at the configuration file **<BASE DIR>** /ihris-manage/iHRIS-Mana
 
 If we look further in the this file, we will see the *<configurationGroup name='iHRIS_ManagePerson'>*  node which defines the *iHRIS_ManagePerson*  class.   Here you will notice two things:
 
-
 * iHRIS_ManagePerson extends iHRIS_Person, so it has all of the same fields of iHRIS_Person
 * iHRIS_ManagePerson adds in the field named *password*  with type 'STRING_PASS' but that this field is not saved to the database
-
 
 Adding the Fields to Magic Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -149,16 +141,13 @@ The <span style='color:tomato'>tomato</span> colored text are comments which you
 
 The <span style='color:olive'>olive</span> colored text can be removed before release, but it is useful for development purposes.  It ensures that any changes that you make to the configuration file will be updated.
 
-
 Customizing the Template Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In the previous step, we enabled the two fields to be saved to the database.   We now need to edit the user interface to show the fields where appropriate.  There are three areas we need to add these fields:
 
-
 * [[#Displaying the Favorites|Displaying]] a person's record shows their favorite animal and color
 * [[#Editing the Favorites|Editing]] a person's record lets you update favorite animal and color
 * [[#Add to the Database Lists|Add]] a place in the *Administer Database*  page to and in the allowed colors
-
 
 Displaying the Favorites
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -174,7 +163,6 @@ To display the favorite animal and color of a person after their nationality, op
 and add the following to lines just after it:
  <nowiki><span type="form" name="person:fav_color" showhead="default" ></span></nowiki>
  <nowiki><span type="form" name="person:fav_animal" showhead="default" class="even"></span></nowiki>
-
 
 Editing the Favorites
 ~~~~~~~~~~~~~~~~~~~~~
@@ -192,7 +180,6 @@ and add the following:
  <nowiki><span type="form" name="fav_color" showhead="default"></span></nowiki>
  <nowiki><span type="form" name="fav_animal" showhead="default"></span></nowiki>
 just after it.
-
 
 Add to the Database Lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,7 +202,6 @@ You will notice, that we have a *task*  attribute in the <nowiki><li></nowiki> t
 Creating Edit Favorite Color Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We need to create a template called 'view_list_fav_color.html' in our templates directory which will contain:
-
 
 .. code-block:: xml
 
@@ -241,8 +227,6 @@ We need to create a template called 'view_list_fav_color.html' in our templates 
             
     </div> <!-- list_display -->
     
-
-
 
 Setting the Edit Database List Favorite Color Task (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -293,7 +277,6 @@ Insert the following code into **<SITE DIR>** /modules/DemoPerson/DemoPerson.xml
    </configuration>
  </configurationGroup>
 
-
 Enabling the Module
 ^^^^^^^^^^^^^^^^^^^
 Now that we have everything good to go, we just need to enabled the 'DemoPerson' module in the site.  Open up the file:
@@ -306,16 +289,12 @@ and add in the following:
 
 in the <metadata> section after the requirement for *ihris-manage.*  Also, ensure you have:
 
-
 .. code-block:: xml
 
        <path name='modules'>
           <value>./modules</value>
        </path>
     
-
-
-
 
 Changing The Favorite Animal Header
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -340,8 +319,5 @@ and in the defintiion of field 'fav_animal' we have:
          <value>default:Favorite Mammal</value>              </span>
       </configuration>
 
-
-
 <center>'''Happy Debugging'''</center>
-
 

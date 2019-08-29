@@ -6,7 +6,6 @@ This page contains installation instructions on installing iHRIS Manage Customiz
 Getting Ready
 ^^^^^^^^^^^^^
 
-
 First you should install Ubuntu and all the supporting software required by iHRIS by following the [[Linux (Ubuntu) Installation - Supporting Software]] instructions.
 
  **Note:**  Installing on ext4 filesystem?  see  `this <http://ubuntuforums.org/showthread.php?t=1313834>`_ 
@@ -17,20 +16,15 @@ First you should install Ubuntu and all the supporting software required by iHRI
 
  **Note:**   Some commands will launch the **gedit**  file editor.  Look at the  `documentation <https://help.ubuntu.com/community/gedit>`_  if you need additional help.
 
-
 Download iHRIS Source Code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 Download India and Bihar Customizations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 Create Database
 ^^^^^^^^^^^^^^^
 
-
 Edit config.values.php
 ^^^^^^^^^^^^^^^^^^^^^^
-
 

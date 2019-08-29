@@ -3,14 +3,11 @@ Defining Forms
 
 This page describes how to define and customize forms and fields in iHRIS by defining them in [[Configuration (Magic) Data|magic data]].    Before reading this article, please read the [[Forms and Form Classes|overview]] of forms and fields to become acquainted with the iHRIS data model. 
 
-
-
 Forms
 ^^^^^
 Forms are the basic way to group data.  A form $form, such as 'person', is stored under:
  /modules/forms/forms/$form
 which contains the following children:
-
 
 * class: Required.  The class which implements the logic, such as validation, for the form.  Example is 'iHRIS_Person'.
 * displayName: Optional.  An end-user name for this form.  For example 'person' might have a display name 'Person'
@@ -48,11 +45,9 @@ The nodes in child forms data allow you to specify different groupings for child
  ]
 The limits are specified according to [[Limiting Forms|this]] structure.  The 'order' is a list of the fields to sort by.  In the above we sort first by 'start_date' and then by 'end_date.'  If we wanted to sort by a field in descending order we would prefix a -.
 
-
 Componentized Forms
 ^^^^^^^^^^^^^^^^^^^
 If you are setting up an aggregating instance of iHRIS Manage (or Qualify) some of your forms will be componentized.  This means that the data for each of these forms is being managed by distinct localities (e.g. regions or districts or even departments) and you wish to aggregate this de-centralized data.  Whether or not a form is localized is determined the [[Form Storage Mechanisms|form storage mechanism]] being used.  If a form is componentized, then any id's that reference that form are appended with an '@' and the name of the component.
-
 
 Form Classes
 ^^^^^^^^^^^^
@@ -61,10 +56,8 @@ A form class $formClass is defined under:
 
 It has sub-nodes:
 
-
 * fields: Optional.  Contains information about the fields provided by this class
 * extends: Required.  Which class this form class extends.  This needs to be either I2CE_Form or a subclass of it.
-
 
 Dynamic Creation
 ~~~~~~~~~~~~~~~~
@@ -72,25 +65,21 @@ If there is no file *$formClass.php*  then the class is created dynamically as:
  class $formClass extends $extendClass {}
 where $extendClass is the value under the 'extends' node.
 
-
 Lists
 ~~~~~
 The form class I2CE_List is a special form which allows you to deal easily with lists of data.  Any mapped field should take values in a form whose implementing class is a subclass of I2CE_List.
 
 I2CE_List has a subclass I2CE_SimpleList whose only field is 'name'.  Examples of simple lists are:
 
-
 * gender
 * marital_status
 * language
-
 
 Magic Data for Lists
 ~~~~~~~~~~~~~~~~~~~~
 A list is defined by its magic data in a form class, $listClass.  Under the magic data node:
  /modules/forms/formClasses/$listClass/meta
 as follows:
-
 
 * list: An optional parent node.  Each child node is a named "display" for this list  which can be referenced in .html templale files.
 * *default: Optional parent node.  When displaying a field, if no display is specified, the data under the node "default" is used to determine the display.
@@ -104,9 +93,7 @@ as follows:
 * *$display1: Optional parent node.  Structure is the same as the "default" above.
 * *$display2: Optional parent node.  Structure is the same as the "default" above.
 
-
 Fields
 ^^^^^^
 Information on [[Form Fields]]
-
 

@@ -9,7 +9,6 @@ You may need to review [[Decentralized iHRIS Data Policy|the decentralized data 
 
 There is also a sister review [[Exporting Standardized Data|here]] describing the process of exporting standardized data lists into modules and a bit of [[Exporting Standardized Data#Managing Decentralized iHRIS with Launchpad|managing decentralized iHRIS with Launchpad]].
 
-
 Background
 ^^^^^^^^^^
 The need to have a decentralized iHRIS structure comes from the point that, personnel data needs to be reported to the central government (the ministry of health in this case) for planning and decision making including to meet the needs in deployment, tracking personnel movement and decisions of the type and quantity of training.
@@ -17,7 +16,6 @@ The need to have a decentralized iHRIS structure comes from the point that, pers
 Paper work has been very slow and inaccurate. Human Resource Information Systems in this case should be able to address these issues.
 
 As different Health Facilities and different administrative levels have different data needs, the Human Resource Information Systems for Health have to meet these different administrative needs at same time contributing to the goal of improved efficiency and productivity in dealing with Human Resource for Health issues.
-
 
 Source Code Organization
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -30,8 +28,6 @@ The way the source codes are organized will help meet the different administrati
 The following is the directory layout for the complete decentralized iHRIS Manage for deployment in a particular country. You can read about the general directory structure of iHRIS Suite  `here <http://wiki.ihris.org/wiki/Tutorial:_Customizing_iHRIS_Manage#iHRIS_Package_Directory_Structure>`_ .
 
  *This directory structure is going to be under **/var/lib/iHRIS/ilolo/dev/**  * 
-
-
 
 * <span style="color:blue">'''css'''</span>: this directory holds system wide customized cascading style sheets. If at all it is the theme that has changed or there are special text effects that apply apart from the default iHRIS Manage CSS, those edited files should be saved in this directory.
 * <span style="color:blue">'''images'''</span>: this holds all the images including Logo,  `favorite icon <http://en.wikipedia.org/wiki/Favicon>`_  (''favicon'') or images displayed in PDF Reports should all be saved here.
@@ -52,7 +48,6 @@ The following is the directory layout for the complete decentralized iHRIS Manag
 * <span style="color:blue">'''templates'''</span>: all the templates (''.html'') files in different locales that apply system wide should be saved in this directory. *e.g. the welcome.html*
 * <span style="color:blue">'''tools'''</span>: this is an optional directory which contains tools like import scripts if any*
 
-
 Data Policies
 ^^^^^^^^^^^^^
 The Data policy defines how different data forms are going to be handled at the two sites.  `Form Storage Mechanisms <http://wiki.ihris.org/wiki/Technical_Overview:_Form_Storage_Mechanisms>`_  control how data editing at the central and local sites should be carried out.
@@ -61,7 +56,6 @@ In this regard therefore, it is obvious that the central site should not be able
 Central site data policy
 ~~~~~~~~~~~~~~~~~~~~~~~~
 A sample configuration of the form storage mechanism module for the central site. **CentralFormStorage.xml** 
-
 
 .. code-block:: xml
 
@@ -116,11 +110,9 @@ A sample configuration of the form storage mechanism module for the central site
     </I2CEConfiguration
     
 
-
 Local site data policy
 ~~~~~~~~~~~~~~~~~~~~~~
 A sample configuration of the form storage mechanism module for the local site. **LocalFormStorage.xml** 
-
 
 .. code-block:: xml
 
@@ -170,8 +162,6 @@ General site configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 The is the module that contains all of the requirements, html templates, etc. which are common to the national and regional sites. In particular, it requires the module **regions**  (''assuming the name of the regions standard list is **regions**  '') **iHRIS-Manage-ILOLO.xml** 
 
-
-
 .. code-block:: xml
 
      <?xml version="1.0"?>
@@ -207,14 +197,10 @@ The is the module that contains all of the requirements, html templates, etc. wh
      </I2CEConfiguration>
     
 
-
-
 Central site configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 This has to require the ihris-manage-ILOLO and the ihris-manage-central-form-storage modules
  **iHRIS-Manage-CENTRAL.xml** 
-
-
 
 .. code-block:: xml
 
@@ -265,11 +251,9 @@ This has to require the ihris-manage-ILOLO and the ihris-manage-central-form-sto
     </I2CEConfiguration>
     
 
-
 Local site configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
 This has to require the ihris-manage-ILOLO and the ihris-manage-local-form-storage modules **iHRIS-Manage-LOCAL.xml** 
-
 
 .. code-block:: xml
 
@@ -319,6 +303,4 @@ This has to require the ihris-manage-ILOLO and the ihris-manage-local-form-stora
       </configurationGroup>
     </I2CEConfiguration>
     
-
-
 

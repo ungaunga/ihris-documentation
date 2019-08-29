@@ -27,14 +27,12 @@ In order to extend the forms, you must add new fields and concepts to the forms 
 
 For this example, we'll assume you want to add the household insurance indicators from the the second page of the LMI household form.
 
-
 Extending OpenMRS Forms
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Adding fields to an existing form is straight-forward.  In  `the Rwanda Pilot <https://launchpad.net/rwanda-pilot>`_ , the <tt>bin/setup-openmrs-for-pilot</tt> script reads in csv files in the <tt>data</tt> directory. (Currently, these CSV files are set up to be editted in  `Org-Mode <http://orgmode.org>`_  tables, so they must be bar delimited).
 
 For our example, <tt>data/lmi-household-form.csv</tt> contains the following lines before adding the insurance indicators:
-
 
 .. code-block::
 
@@ -45,9 +43,7 @@ For our example, <tt>data/lmi-household-form.csv</tt> contains the following lin
     | OLD TREATED NETS | Per Household Question: "Older than 6 months"        | Concept | Boolean  |
     </nowiki>
 
-
 There are two insurance indicators, MEMBERS COVERED and INSURANCE TYPE, that we want to add to the OpenMRS form.  We add the following two lines to the file:
-
 
 .. code-block::
 
@@ -56,10 +52,7 @@ There are two insurance indicators, MEMBERS COVERED and INSURANCE TYPE, that we 
     | INSURANCE TYPE   | Per Household Question: "Type of Insurance"          | Concept | Text     |
     </nowiki>
 
-
 Any form can be updated without running the whole setup script by using the following PHP snippet:
-
-
 
 .. code-block:: php
 
@@ -70,38 +63,29 @@ Any form can be updated without running the whole setup script by using the foll
     $o->import_form("LMI Household Form", "The form for the household", $csvfile);
     
 
-
 The <code>import_form</code> method will look up the form by name and create it if it doesn't exist.  It then reads the header of the file and then reads each line of the file.  For each line, it finds or creates an OpenMRS concept with that name and finds or adds that field to the form.
 
 Since the <code>import_form</code> method looks for existing forms, concepts, and fields before creating them, it is safe to run the import repeatedly to add more fields as neccessary to the OpenMRS form.
-
 
 Extending HTML/PHP forms
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Extending the HTML forms is not as simple right now.  For our example, we'll need to update the control file for the first page of the household form, create a control file for the the insurance indicators, and create a template file for the insurance indicators.  (For more information on how the Rwanda Web forms are set up and why, see [[LMI Webforms]].)
 
-
 Updating the form's control file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The control file for the the first page of the Household indicators is named <tt>control/malaria_nets.inc.php</tt>.  To send the user to the new form page after successfully completing, the <tt>$arg['goto_page']</tt> variable must be changed to point to the new page:
-
-
 
 .. code-block:: php
 
     $arg['goto_page'] = "insurance";
     
 
-
-
 Creating a new form template file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A template file is is named <tt>public_html/templates/''pagename''.tpl</tt> and provides the body of the web page.  The LMI forms are called and then placed in a wrapper.  All they need to do is provide a title and the body of the page using the Smarty templating engine:
-
-
 
 .. code-block:: smarty
 
@@ -123,16 +107,12 @@ A template file is is named <tt>public_html/templates/''pagename''.tpl</tt> and 
     <br/>
     
 
-
 Note that the names of the fields we defined in the CSV above are given here with the prefix <code>f_</code> and spaces replaced with an underbar.  Also note that translatable strings are wrapped with <code>{t}...{/t}</code> to inform Smarty that a translation may be available.
-
 
 Creating a new form control file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A control file is is named <tt>control/''pagename''.inc.php</tt> and expected to define a <code>page_handler()</code> function.  Since the new page form is just adding observations to an existing encounter, the control page is pretty simple:
-
-
 
 .. code-block:: php
 
@@ -150,16 +130,11 @@ A control file is is named <tt>control/''pagename''.inc.php</tt> and expected to
     }
     
 
-
 After checking that the control file was called with POST data, the current encounter is retrieved and then the <code>store_enc_values()</code> function is called to add observations to the OpenMRS form database.
 
 ----
 
 By following the above example, it should be possible to extend the form and add any needed indicator.
-
-
-
-
 
 = OpenMRS Developer Resources =
 There is a great deal of information for developers on extending and modifying OpenMRS itself. A full reference to the OpenMRS API can be  `read on their developer resource page <http://resources.openmrs.org/doc>`_  and the API can  `also be downloaded as a zip file <http://resources.openmrs.org/doc.zip>`_ .

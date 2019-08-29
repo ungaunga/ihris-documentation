@@ -3,13 +3,11 @@ Custom Reporting -- Creating Report Views
 
 This document applies to the iHRIS Suite version 4.0. For version 3.1, the methods are similar although not identical.
 
-
 Intended Users
 ^^^^^^^^^^^^^^
 The report view were intended to be as simple as possible to create and view for the end user.
 
 You may wish to review the [[Custom Reporting -- An Overview#Tasks | tasks]] for custom reporting.
-
 
 Creating and Editing A Report View
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -17,7 +15,6 @@ Creating and Editing A Report View
 Click on "Configure System" on the home page.  Then, under "Manage Reports" click on "Report Views."   Now you can choose either to edit an existing Report View or Create a New View.
 
 To create a new Report View, you need to select the [[Custom Reporting -- Creating Reports|Report]] on which this view is based off of.  You will also be prompted to name this report and provide a description.  
-
 
 Choosing Fields
 ~~~~~~~~~~~~~~~
@@ -27,11 +24,9 @@ Ordering Fields
 ~~~~~~~~~~~~~~~
 You can choose the order in which the fields are listed by dragging and dropping the different fields.
 
-
 Setting The Default Display
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You can set the default display for a Report View as follows:
-
 
 * Display the intended Report View
 * Choose any limiting options you wish
@@ -43,7 +38,6 @@ You can clear the default view from the Edit Report Views Page.
 Adding Related Report Views
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You may wish to create a quick "Jump" from one report view to another that will be shown at the bottom of the HTML Display.  You can do so when editing the Report View.
-
 
 Aggregating Data
 ^^^^^^^^^^^^^^^^
@@ -58,7 +52,6 @@ Here, you have a report view with the fields Job, Cadre, Facility, Facility Type
 
 The Filled Positions is selected to aggregate as "Total."   If "Total was not selected, the report would look something like:
 
-
 * ER Nurse, Nurse, Rushonga Hospital, Hospital, position|23213, 5
 * ER Nurse, Nurse, Rushonga Hospital, Hospital, position|24324, 5
 * ER Nurse, Nurse, Rushonga Hospital, Hospital, position|22344, 5
@@ -67,10 +60,8 @@ The Filled Positions is selected to aggregate as "Total."   If "Total was not se
 
 What the "Total" on the "Filled Position" column does is to group the data together based on the other columns and count how many positions there are.  So the report looks something like:
 
-
 * ER Nurse, Nurse, Rushonga Hospital, Hospital, 3, 5
 * ER Nurse, Nurse, Marjoram Hospital, Hospital, 2, 2
-
 
 Displaying A Report View
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,7 +82,6 @@ Sorting By Fields
 -----------------
 You can choose the sorting order by clicking on the headers for each of the columns (fields).  Clicking once makes it ascending order, twice is descending order, and a third time turns off the sort for that field.  You can also click on the header of a second column.  This will allow you to sort by two columns.  For example you could sort by Department, then Surname, then First Name.
 
-
 Print(PDF) Display
 ~~~~~~~~~~~~~~~~~~
 In this display you can choose to view your report as a PDF file.  You can choose paper size and orientation.
@@ -99,11 +89,9 @@ In this display you can choose to view your report as a PDF file.  You can choos
 To customize the colors and graphics, margins, spacing, you should modify the magic (configuration) data at:
  /modules/CustomReports/displays/PDF/display_options
 
-
 Export Display
 ~~~~~~~~~~~~~~
 In this display, you can export all of your data to a file.  The file types are:
-
 
 * 'html': exports the data into an html table
 * 'csv': a  `comma separated values <http://en.wikipedia.org/wiki/Comma-separated_values>`_  file.  this is suitable for import in to Excel or a database.

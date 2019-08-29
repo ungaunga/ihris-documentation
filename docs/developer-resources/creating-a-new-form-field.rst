@@ -5,14 +5,12 @@ This tutorial applies to version 4.0 of the iHRIS Suite.
 
 In this tutorial, we will create new form field data type.  This form field will be a one line string which is capitalized.  The capitalization will be enforced on the server-side as well as the client-side via java-script.  We will wrap all of this into a module, **CapField**  so that it can be shared easily.
 
-
 Creating the Module
 ^^^^^^^^^^^^^^^^^^^
 In one of your module directories (e.g. your site's modules directory) do the following:
  mkdir CapField
  gedit CapField/CapField.xml
 and add in the following lines:
-
 
 .. code-block:: xml
 
@@ -45,15 +43,12 @@ and add in the following lines:
     <I2CEConfiguration>
     
 
-
-
 I2CE_FormField_STRING_CAP
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 We need to create a PHP class to handle the client-side validation of our capitalized field. The field we want has input which is a one line string, so we will subclass the existing one.  We do this as follows:
  mkdir CapField/lib
  gedit CapField/lib/I2CE_FormField_STRING_CAP.php
 and add in the following:
-
 
 .. code-block:: php
 
@@ -102,17 +97,11 @@ and add in the following:
     }
     
 
-
-
-
-
 Javascript
 ~~~~~~~~~~
 In the processDOMEditable() function we added some javascript for the onblur check.  iHRIS uses version 1.2 of the  `mootools <http://mootools.net/>`_  javascript library.  Mootools has a handy  `capitalization <http://mootools.net/docs/core/Native/String#String:capitalize>`_  function that we incorporated into our form field so that on a "blur" event the input element will capitalize.
 
-
 Finishing Up
 ^^^^^^^^^^^^
 You are done, you just need to require the module you created where appropriate.  You can now add a field to a form with type STRING_CAP.
-
 

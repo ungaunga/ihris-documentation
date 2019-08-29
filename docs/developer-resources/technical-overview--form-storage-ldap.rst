@@ -1,7 +1,6 @@
 Technical Overview: Form Storage -- LDAP
 ========================================
 
-
 Form Storage Options
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -10,8 +9,6 @@ The options specifying a LDAP storage for $form are stored at:
 It is generally assumed that entryUUID will serve as ID of the form and that child forms correspond to child nodes in LDAP.
 
 It has the following structure:
-
-
 
 * connect: required parent node which contains connection information to the ldap server
 * *port: Optional scalar node. The port to connect to.  Defaults to 389.
@@ -45,5 +42,4 @@ It has the following structure:
 * **#parent node with child node 'printf'
 * **#*printf: child scalar node.  the printf substitution string
 * **#*printf_args: required parent node.  ordered children have keys integers and values the attributes whose value we wish to substitute into the printf string
-
 

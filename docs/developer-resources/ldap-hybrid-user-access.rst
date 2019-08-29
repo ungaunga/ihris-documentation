@@ -10,11 +10,9 @@ Configuration
 
 To use the default user authentication, you need to enable the module and set an initialization string.
 
-
 Enabling the Module
 ~~~~~~~~~~~~~~~~~~~
 To enable, just make sure you have:
-
 
 .. code-block:: xml
 
@@ -24,13 +22,10 @@ To enable, just make sure you have:
      </requirement>
     
 
-
-
 Initialization String
 ~~~~~~~~~~~~~~~~~~~~~
 
 The initialization string is sent to I2CE::initialize() in the index.php as the fourth argument, *$user_access_init* .  This string must be prefixed with the '''LDAP://''.  What follows take any of the following formats:
-
 
 * null:  The is the default value and means that we use the default DN (distinguished name) for querying and authenticating users
 * a JSON encoded string: The data to  is a JSON enocode string of optional configuration value for the user access.  The JSON encoded data has the following keys:
@@ -77,12 +72,10 @@ For example:
 would be a minimal initialization string needed to authenticate against.  For the examples below, you would use:
   LDAP_DB://{"dn": "dc=moh,dc=example,dc=org"}
 
-
 LDAP Directory Structure
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Passwords
 ~~~~~~~~~
 We will use SHA and salted SSHA.  For a php implementation  `see this <http://www.php.net/manual/en/function.sha1.php#40226>`_  and  `this <http://www.openldap.org/faq/data/cache/347.html>`_ 
-
 

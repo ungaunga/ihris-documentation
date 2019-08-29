@@ -5,12 +5,9 @@ In the (upcoming) 4.2 release of iHRIS, you can now send alerts to users.  As an
 
 You can also send alerts manually in your PHP code (or using an external script if desired) to send alerts.  If you want to send alerts based on regular triggers, see the [[User Triggers]] page for more information on configuring that.
 
-
 Enable the Module
 ^^^^^^^^^^^^^^^^^
 You will need to enable the UserAlerts module.  You can do this from the **Configure System**  page under **Configure Modules** .  It will be under iHRIS Common.  You can also add the requirement to your site configuration as follows:
-
-
 
 .. code-block:: xml
 
@@ -20,20 +17,14 @@ You will need to enable the UserAlerts module.  You can do this from the **Confi
     </requirement>
     
 
-
 Advanced users can also enable the modules from a terminal by running the following command from your pages directory:
-
-
 
 .. code-block:: bash
 
     php index.php --update=1 --enable=UserAlerts
     
 
-
 You will need to restart memcached and your server after doing this from the command line to refresh the APC.
-
-
 
 .. code-block:: bash
 
@@ -41,14 +32,10 @@ You will need to restart memcached and your server after doing this from the com
     sudo service apache2 restart
     
 
-
-
 Sending Alerts
 ^^^^^^^^^^^^^^
 
 To send an alert, you can use the following code fragment:
-
-
 
 .. code-block:: php
 
@@ -62,14 +49,11 @@ To send an alert, you can use the following code fragment:
     }
     
 
-
 For the alert type, you can current use either **notice**  or **problem** .  Problems will be highlighted in red and notices are just displayed.
-
 
 Viewing and Acknowledging Alerts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If a user has any alerts, a link will appear in the top header of the page.  If any haven't been acknowledged, then this will have a red background.  The user can click the alert link to view all pending as well as old alerts.  Once an alert is seen, the user should acknowledge the alert so it will stop being red on every page.  The user can also review any old alerts.  All alerts are displayed based on the time send with the most recent at the top.  Pending alerts are shown with the oldest at the top.
-
 
 Advanced Customizations
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -97,8 +81,6 @@ You can change any values in magic data (from your module configuration) under /
 
 This is how the default options are configured in the module if you want to change them in your site or custom module:
 
-
-
 .. code-block:: xml
 
         <configurationGroup name="alert_settings" path="/modules/UserAlerts/display">
@@ -122,6 +104,4 @@ This is how the default options are configured in the module if you want to chan
           </configuration>
         </configurationGroup>
     
-
-
 

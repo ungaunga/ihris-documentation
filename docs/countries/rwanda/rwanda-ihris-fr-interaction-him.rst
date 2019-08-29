@@ -1,8 +1,6 @@
 Rwanda iHRIS FR Interaction HIM
 ===============================
 
-
-
 Transaction Diagram: With OpenHIM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -18,7 +16,5 @@ Transaction Diagram: With OpenHIM
 
 }
 
-
 </graphviz>
-
 

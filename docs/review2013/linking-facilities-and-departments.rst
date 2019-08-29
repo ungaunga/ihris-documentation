@@ -5,11 +5,9 @@ In iHRIS Manage, the module *ihris-manage-PersonPosition*  defines the **positio
 
 This tutorial applies to iHRIS Manage 4.0, although the concepts involved can be applied to iHRIS Qualify as well.  Please refer to these articles:
 
-
 * [[Defining Forms]]
 * [[Forms and Form Classes]]
 for background information on forms.  You can see these changes in the  `Zanzibar-position <http://bazaar.launchpad.net/~ihris%2Bzanzibar/ihris-manage-zanzibar/central-4.0/files/head%3A/modules/ZNZPosition/>`_  module.
-
 
 Overview
 ^^^^^^^^
@@ -21,29 +19,24 @@ To the *department*  form, we could add a required field *facility*  which links
 
 There are a few issues with this option:
 
-
 * Suppose you have to hospitals, *Central Hospital*  and *Coastal Hospital* .  Each would presumably have a department such as *Emergency.*   In this option, you would have to create an Emergency Department for each of the Hospitals.  It would then make it difficult to run a report such as "list all employees in all facilities which work in the emergency department"  because it really is "list all employees in all facilities which work in a department with the name *Emergency.* "   In particular, since we are entering "Emergency" multiple times, there is an increased potential for a spelling mistake which would affect data quality.
 * At least for the moment, there is no built in way to first select a facility and then select a department within a form.
 
 Due to these weaknesses, we will not implement Option A in this tutorial.
-
 
 Option B
 ~~~~~~~~
 We could create a new list form **facility_department**  which contains two required fields, *facility*  and *department*  which map the for lists of the same name.   Then in the position form, we no longer link to the list *facility*  or *department*  but to the list *facility_department.*  
 This has the following advantages over Option A:
 
-
 * We only have to enter the department *Emergency*  once as we can associate it to many facilities via the *facility_department*  form
 * As facility_department is a tiered list (first select a facility, and the select a department) we can use in the built in display methods when selecting the department in the position.
 
 We will implement option B in this tutorial.
 
-
 Creating the module
 ^^^^^^^^^^^^^^^^^^^
 We will encapsulate all of our customizations into a module *my-position*  in order to:
-
 
 * encapsulate the customizations conceptually
 * ease maintenance
@@ -51,7 +44,6 @@ We will encapsulate all of our customizations into a module *my-position*  in or
 You may wish to review the [[Module Structure]] before continuing.
 
 In your site directory, create a sub-directory 'modules' if it does not already exist and make sure you have an appropriate:
-
 
 .. code-block:: xml
 
@@ -63,7 +55,6 @@ In your site directory, create a sub-directory 'modules' if it does not already 
 in your site configuration file.
 
 Within the modules directory, create a new directory called *my_position.*   Within the *my_position*  directory, and create the file *my_position.xml*  and add the following:
-
 
 .. code-block:: xml
 
@@ -95,8 +86,6 @@ Within the modules directory, create a new directory called *my_position.*   Wit
      </I2CEConfiguration>
     
 
-
-
 Turning off the existing fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Let us first look at the changes to "turn off" the facility and department fields in the position form.  
@@ -106,7 +95,6 @@ The position form is implemented by the class *iHRIS_Position*  in the *ihris-ma
 Magic Data/Configuration Changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We will create a new form class *My_Position*  which extends the *iHRIS_Position*  form class and set the *position*  form to use this class:
-
 
 .. code-block:: xml
 
@@ -152,17 +140,13 @@ We will create a new form class *My_Position*  which extends the *iHRIS_Position
      </configurationGroup>
     
 
-
-
 Template File Changes
 ~~~~~~~~~~~~~~~~~~~~~
 Create a directory called 'templates' in the 'my_position' directory and copy these files:
 
-
 * templates/en_US/lists_form_position.html
 * templates/en_US/view_position.html
 from the ihris-manage-PersonPosition module into the this directory.  On the new copy lists_form_position.html remove the lines:
-
 
 .. code-block:: xml
 
@@ -172,7 +156,6 @@ from the ihris-manage-PersonPosition module into the this directory.  On the new
 
 On the new copy of *view_position.html*  remove the lines:
 
-
 .. code-block:: xml
 
       <span type="form" name="position:facility" showhead="default" class="even"></span>
@@ -180,7 +163,6 @@ On the new copy of *view_position.html*  remove the lines:
     
 
 and the line:
-
 
 .. code-block:: xml
 
@@ -191,8 +173,6 @@ and the line:
       </li>
     
 
-
-
 Creating the facility_department
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We will create a new form *facility_department*  which is implemented by the form class *My_Facility_Department*  which contains the mapped fields facility and department.
@@ -202,7 +182,6 @@ Magic Data/Configuration Changes
 All of these changes are in the *my_position.xml*  file.
 
 First, we need to create the form class 'My_Facility_Department'.  To do this, we add in the following under the configurationGroup named 'formClasses':
-
 
 .. code-block:: xml
 
@@ -260,9 +239,7 @@ First, we need to create the form class 'My_Facility_Department'.  To do this, w
     </configurationGroup>
     
 
-
 Next, let us add in the 'facility_department' form.  To do this, we add in the following under the configurationGroup named 'forms':
-
 
 .. code-block:: xml
 
@@ -288,7 +265,6 @@ Next, let us add in the 'facility_department' form.  To do this, we add in the f
     
 
 Next, we need to add in the 'facility_department' as a mapped field to the 'My_Position' class.  To do this, we add in the following:
-
 
 .. code-block:: xml
 
@@ -322,7 +298,6 @@ under the *fields*  node for *My_Position* .
 
 Finally, we want to create a 'task' that deals with editing and viewing the 'facility_department' list.  We will want to make sure that the edit task implies the view task.  We will also want to add these tasks to the the edit/view organization list task. To do so, we add in the following:
 
-
 .. code-block:: xml
 
         <configurationGroup name='tasks' path='/I2CE/tasks/task_description'>
@@ -348,12 +323,9 @@ Finally, we want to create a 'task' that deals with editing and viewing the 'fac
         </configurationGroup>
     
 
-
-
 Template File Changes
 ~~~~~~~~~~~~~~~~~~~~~
 In your copy of the view_postion.html file, add the following:
-
 
 .. code-block:: xml
 
@@ -362,7 +334,6 @@ In your copy of the view_postion.html file, add the following:
     
 
 and:
-
 
 .. code-block:: xml
 
@@ -379,7 +350,6 @@ where you deleted the similar lines above.
 
 In your copy of the file list_form_position.html add in the the following line:
 
-
 .. code-block:: xml
 
      <span type="form" name="facility_department" showhead="default"></span>
@@ -391,7 +361,6 @@ Templates for facility_department
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We need to create two templates to view and edit the facility_department form.  We will put these in the 'my_postion/templates' directory.
 Create the file 'lists_form_facility_department.html' and add the following:
-
 
 .. code-block:: xml
 
@@ -408,7 +377,6 @@ Create the file 'lists_form_facility_department.html' and add the following:
     
 
 Now create the file 'view_list_facility_department.html' and add the following:
-
 
 .. code-block:: xml
 
@@ -438,12 +406,9 @@ Now create the file 'view_list_facility_department.html' and add the following:
     </div> <!-- list_display -->
     
 
-
-
 The Facility Departments class
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When a field maps to the facility_department form we want the display to be first the facility and then the department.  In order to do this, we need to create the My_Facility_Department class as a file.  To do so, first create the directory 'lib' in the 'my_position' directory.  In this new directory, create a file 'My_Facility_Department.php' and add the contents:
-
 
 .. code-block:: php
 
@@ -463,7 +428,6 @@ When a field maps to the facility_department form we want the display to be firs
     
 
 (In an upcoming step, we shall remove this step and allow you to specify it in magic data.)
-
 
 Edit Database List Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -488,7 +452,6 @@ to:
  <li task='can_edit_database_list_position'><a href="lists?type=position&amp;field=facility_department">Positions (by Facility/Department)</a></li>
 </source>
 
-
 Enabling the Module
 ^^^^^^^^^^^^^^^^^^^
 You can now enable your module by adding the following:
@@ -500,14 +463,11 @@ You can now enable your module by adding the following:
 </source>
 to your site configuration file.
 
-
 Reporting and Form Relationship
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Because the form relationships have changed:
 
-
 * Old: the *position*  form links to the *facility*  and *department*  forms.
 * New: the *position*  form links to the *facility_department*  form which in turn links to the *facility*  and *department*  forms.
 our form relationship used to define the staff reports need to be changed.  Rather than detailing these changes in this tutorial you may look at them  `here <http://bazaar.launchpad.net/~ihris%2Bzanzibar/ihris-manage-zanzibar/central-4.0/files/head%3A/modules/ZNZReports/Reports/StaffReports/>`_ 
-
 

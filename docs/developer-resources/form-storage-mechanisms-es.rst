@@ -10,7 +10,6 @@ Una vez que se escribe un mecanismo de almacenamiento, los datos de ese formular
 
 Los mecanismos de almacenamiento que están disponibles actualmente son:
 
-
 * [[Form Storage -- Entry/Last Entry|entry]]: Un mecanismo de almacenamiento vertical de base de datos que mantiene un historial de cuándo y quien cambio los campos individuales (elementos de datos). Este es el mecanismo de almacenamiento por defecto y el mecanismo de almacenamiento que fue utilizado en la versión anterior a la 3.2.
 * [[Form Storage -- Flat Table|flat]]: Un mecanismo de almacenamiento horizontal de base de datos, donde una fila de una tabla corresponde a una instancia de un formulario. Las columnas o cualquier función SQL de la table se utilizan para definir los campos.
 * [[Form Storage -- Multi-Flat Table|multi_flat]]: Un mecanismo de almacenamiento horizontal de base de datos similar al anterior pero que combina varias tablas estructuradas idénticamente. Se diseñó principalmente para la colación de datos.
@@ -22,9 +21,6 @@ Los mecanismos de almacenamiento que están disponibles actualmente son:
 * [[Form Storage -- SDMX CrossSectional |SDMX Cross Sectional]]: Un mecanismo de almacenamiento para llenar y obtener registros en base a Datos Cross Seccionales SDMX.
 * [[Form Storage -- LDAP |LDAP]]: Un mecanismo de almacenamiento para llenar y obtener registros en base a un servidor LDAP
 
-
-
-
 Agregar Mecanismos de Almacenamiento
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Usted puede estar en una situación en la que necesita agregar de diferentes instancias de iHRIS Manage (o Qualify).  Puede marcar un mecanismo de almacenamiento específico , $storage_mechanism, como agregado por ajuste:
@@ -33,7 +29,5 @@ a **1.**  Then each form $form that uses that storage mechanism, will be [[Defin
 
 Por el momento, solamente el mecanismo de almacenamiento de [[Form Storage -- Multi-Flat Table|Multi-Flat]] es un mecanismo de almacenamiento que permite agregar.
 
-
 Una vez que el módulo de *form-storage*  está activado, una instancia de *I2CE_Form*  tiene el método *isComponentized()*  para revisar si un formulario está componentizado. También se puede revisar por medio del *I2CE_FormStorage::isComponentized($form)* 
-
 

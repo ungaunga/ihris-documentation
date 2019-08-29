@@ -5,11 +5,9 @@ This page describes the various steps needed to translate a module in the iHRIS 
 
 There are several steps to this process:
 
-
 * Extract translatable text in a .pot file
 * Perform the actual translations of English source text in Launchpad.  These are exported to the bzr branch.
 * Translate the .xml and .html files based on the translations stored in the bzr branch in lauchpad.
-
 
 Creating Translation Templates (.pot file)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -39,13 +37,9 @@ The usage as of version 4.0.0:
    [--overwrite-configs=T/F] set to true to always overwrite the translated
      config.xml
 
-
-
 Translating Text
 ^^^^^^^^^^^^^^^^
 We utilize launchpad.net and translatewiki.net to manage the translations.  See the list of [[Translations | iHRIS Core Translations]]
-
-
 
 translate_templates.php
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -80,7 +74,6 @@ Usage for Version 4.0.4
      top-level module to those that are real subdirectories of top-level's given directory
      Defaults to T.
 
-
 Translation from .po files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 As languages become completely translated, we will maintain the .po files in the source code.  In this case you do not need to download the launchpad exports. This is the case, for example, with French.   Translation now is easier as you do not need to wait on downloading from launchpad:
@@ -89,5 +82,4 @@ in **<PACKAGE_DIR>**  will produce the French translations in the source tree fo
 
  **Note:**  under version 4.0.6 the defaults for translate_templates.php have been changed, so you may simply do:
  translate_templates.php  --locales=fr
-
 

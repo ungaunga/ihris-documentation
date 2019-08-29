@@ -8,7 +8,6 @@ You may wish to see instructions on how to install [[Installing the Debian Packa
 
  *Warning:*  See [[Installing iHRIS on Ubuntu 10.4 (Lucid)|Installing iHRIS on Ubuntu 10.4 or 10.10]] after completing these instructions to get iHRIS working on the latest release of Ubuntu.
 
-
 <center>'''Need help?'''  Try our [[Project Communication]]</center>
 
 Getting Ready
@@ -26,7 +25,6 @@ these directions for installing a  `Server <http://www.howtoforge.com/perfect-se
 We begin by install a  `Lamp <http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29>`_  server
 (You can find more help  `here <https://help.ubuntu.com/community/ApacheMySQLPHP>`_ ):
 
-
 .. code-block:: bash
 
     sudo tasksel install lamp-server
@@ -36,30 +34,24 @@ If you have never used mysql on your system, you will be asked to set the 'root'
 
  **Important** : Make sure your email system is correctly configured.  Under a default Ubuntu installation, you can do this with one of two commands:
 
-
 .. code-block:: bash
 
     sudo apt-get install postfix
     sudo dpkg-reconfigure postfix
     
 
-
 Follow the on-screen instructions to set up email on your system.  For additional help with installing Postfix, look at these  `instructions <https://help.ubuntu.com/community/PostfixBasicSetupHowto>`_ .  On Debian systems, the same commands can be used, but <tt>exim4</tt> is the default MTA instead of <tt>postfix</tt>
 
 If you are using another Linux distribution, make sure your system can send email properly before continuing.
-
 
 Configuring MYSQL
 ^^^^^^^^^^^^^^^^^
 Make sure you have in /etc/mysql/my.cnf the following values set:
 
-
 .. code-block:: bash
 
     sudo gedit /etc/mysql/my.cnf
     
-
-
 
 .. code-block:: ini
 
@@ -69,21 +61,17 @@ Make sure you have in /etc/mysql/my.cnf the following values set:
 
 It appears that they were reduced with Karmic
 
-
 Configuring PHP
 ^^^^^^^^^^^^^^^
 
 Next, you'll need to increase the memory limit for PHP. You can do this by editing the /etc/php5/apache2/php.ini. 
-
 
 .. code-block:: bash
 
     sudo gedit /etc/php5/apache2/php.ini
     
 
-
 Change the following line:
-
 
 .. code-block:: ini
 
@@ -92,26 +80,21 @@ Change the following line:
 
 to:
 
-
 .. code-block:: ini
 
     memory_limit = 128M
     
-
-
 
 Installing Pear and PECL Packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We need to install a few Pear and PECL packages for PHP.  For the Pear packages you can do:
 
-
 .. code-block:: bash
 
     sudo apt-get install php-pear  php-mdb2 php-mdb2-driver-mysql 
     sudo pear install text_password console_getopt
     
-
 
 APC
 ~~~
@@ -121,7 +104,6 @@ APC in Ubuntu Lucid (10.04) and Meerkat (10.10)
 -----------------------------------------------
 In Lucid and Meerkat, the default version is not behaving well.
 
-
 .. code-block:: bash
 
     sudo add-apt-repository ppa:chris-lea/php-pecl-extras
@@ -129,22 +111,17 @@ In Lucid and Meerkat, the default version is not behaving well.
     sudo apt-get install php5-apc
     
 
-
-
 APC in Earlier Versions of Ubuntu
 ---------------------------------
-
 
 .. code-block:: bash
 
     sudo apt-get install php-apc
     
 
-
 APC all version of Ubuntu
 -------------------------
 During certain activities like installation and upgrades you may need more memory than APC uses by default.  We also want to turn of the *slam defense.*   We need to edit the configuration file file for apc:
-
 
 .. code-block:: bash
 
@@ -152,7 +129,6 @@ During certain activities like installation and upgrades you may need more memor
     
 
 It should look like this:
-
 
 .. code-block:: ini
 
@@ -166,18 +142,14 @@ See  `slam defense <http://pecl.php.net/bugs/bug.php?id=16843>`_  and  `this <ht
 
 You'll need to restart Apache after making this change.
 
-
 .. code-block:: bash
 
     sudo /etc/init.d/apache2 restart
     
 
-
-
 Tidy and GD
 ~~~~~~~~~~~
 There are two optional packages you may wish to install:
-
 
 .. code-block:: bash
 
@@ -186,13 +158,11 @@ There are two optional packages you may wish to install:
 
 which are used to for inserting images into PDF output of reports and for exporting XML files in a nicely formatted manner
 
-
 FileInfo
 ~~~~~~~~
  **Note:**  If you're running Ubuntu 10.4 (Lucid Lynx) or later then you do not need to install Fileinfo.
 
 The pecl package *FileInfo*  is used to verify the validity of file types used for uploading (e.g. for uploaded images or documents)
-
 
 .. code-block:: bash
 
@@ -202,13 +172,10 @@ The pecl package *FileInfo*  is used to verify the validity of file types used f
     echo extension=fileinfo.so | sudo tee /etc/php5/apache2/conf.d/fileinfo.ini
     
 
-
-
 Configuring Apache Web Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will see later we are using the apache rewrite module.  To enable the module:
-
 
 .. code-block:: bash
 
@@ -244,7 +211,6 @@ Let us restart the Apache webserver using:
 sudo /etc/init.d/apache2 restart 
 </source>
 
-
 Downloading the Software
 ^^^^^^^^^^^^^^^^^^^^^^^^
 To download the software you enter these commands:
@@ -254,7 +220,6 @@ cd /var/lib/iHRIS/lib/4.0.15
 sudo wget http://launchpad.net/ihris-manage/4.0/4.0.15/+download/ihris-manage-full-4.0.15.tar.bz2
 sudo tar -xjf ihris-manage-full-4.0.15.tar.bz2
 </source>
-
 
 Database Setup
 ^^^^^^^^^^^^^^
@@ -296,7 +261,6 @@ do this, click on  the 'Privileges' link and select 'Add a new User'. Then fill 
 
 For security, make sure the password you choose is different than the root password for MySQL.  Let us refer to this password as YYYYY.
 
-
 Creating a Site Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -305,7 +269,6 @@ We are going to start by modifying the *BLANK*  site for iHRIS Manage.  If you w
 sudo mkdir -p /var/lib/iHRIS/sites
 sudo cp -R /var/lib/iHRIS/lib/4.0.15/ihris-manage/sites/blank /var/lib/iHRIS/sites/manage
 </source>
-
 
 Set Email Address (Optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -327,7 +290,6 @@ to:
   <value>my_email@somewhere.com</value>
 </configuration>
 </source>
-
 
 Making the Site Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -374,7 +336,6 @@ to:
 </source>
 You may now save and quit.
 
-
 Finishing Up
 ^^^^^^^^^^^^
 Now we are ready to begin the site installation.  Simply browse to:
@@ -382,7 +343,6 @@ Now we are ready to begin the site installation.  Simply browse to:
 http://localhost/manage
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database (YYYYY that you set above).
-
 
 Files
 ^^^^^
@@ -393,5 +353,4 @@ Here are samples of the files we edited above. **WARNING THESE ARE OUT OF DATE A
 <li> [[Media:htaccess.txt | /var/www/manage/.htaccess ]] </li>
 <li> [[Media:Config_values_php.txt | /var/www/manage/config.values.php]] </li>
 </ul>
-
 

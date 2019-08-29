@@ -3,7 +3,6 @@ LMI Sustainability and Pilot Plan
 
  **Last Mile Initiative&nbsp;Community Health Data Collection Sustainability and Pilot Plan** 
 
-
 Introduction
 ^^^^^^^^^^^^
 The Last Mile Initiative Community Health Data Collection project was
@@ -15,7 +14,6 @@ Rwanda. Due to unforeseen political and funding issues that pilot was
 not performed and the development process was altered to accommodate
 the lack of hardware available to test with.
 
-
 Development
 ^^^^^^^^^^^
 One success of the work done on LMI has been that the public health
@@ -25,7 +23,6 @@ and the health indicators the forms are based on. Unfortunately for
 our development this caused a great deal of dynamic flow to the
 indicators and forms which in turn, required us to redo the database
 and forms.
-
 
 OpenMRS
 ~~~~~~~
@@ -37,7 +34,6 @@ system has been under development for many years and has a very robust
 community which continually improves it. The community is very engaged
 and helpful, providing a good source for support not only in
 development, but in usage of the system as well.
-
 
 Indicators
 ~~~~~~~~~~
@@ -54,7 +50,6 @@ well as the availability of developer time in changing the database
 schema and front-end forms. The rate of change that happened during
 our work was unexpected.&nbsp;&nbsp; &nbsp;
 
-
 Example: Adding an Indicator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If, for example a new indicator was added the database would have to
@@ -70,7 +65,6 @@ someone who is fairly comfortable doing so. However, translating that
 form to Kinyrwandan (or another language if taken to another country)
 would, of course, require some expertise.
 
-
 Rapid Development
 ~~~~~~~~~~~~~~~~~
 One aspect which we felt we could increase the amount of time and
@@ -83,7 +77,6 @@ allows for easier form creation. This layer, created in PHP, is
 open-source and has been given to the OpenMRS community on behalf of
 the Last Mile Initiative project. The code for this layer can be found
 on the Launchpad site set up for all of our work.
-
 
 Scalability
 ~~~~~~~~~~~
@@ -98,7 +91,6 @@ location which provides stable and strong bandwidth is a concern which
 is related to scalability and is one which would benefit from
 revisiting from time to time were the system in use. Please refer to
 the Pilot section of this document for more on server support issues.
-
 
 Transparency
 ^^^^^^^^^^^^
@@ -126,7 +118,6 @@ very frustrating to those on the ground.In order to ensure the
 transparency of this project we have taken a few important steps to
 make our work as accessible as possible.
 
-
 Licensing
 ~~~~~~~~~
 All of the work we have done on this project has been licensed under
@@ -137,7 +128,6 @@ the code - as long as it is under the same license and includes the
 original copyright holders information.In addition to our work's
 license, the OpenMRS codebase is also licensed under the GPL making
 the two fully compatible.
-
 
 Community
 ~~~~~~~~~
@@ -167,7 +157,6 @@ who desire to see it solved, a community is far easier to build. This
 is especially true if there are enough points of entry (or tools to
 make it easier).
 
-
 Launchpad
 ~~~~~~~~~
 One tool we have utilized in the development stage has been
@@ -180,7 +169,6 @@ Canonical who are the main sponsors of the Ubuntu linux project so it
 is geared toward the creation of open source work. This is important
 as it gives us one place to point people to for getting the code -
 even as we work on it.
-
 
 Wiki
 ~~~~
@@ -199,16 +187,13 @@ Mediawiki[#FOOTNOTE-7 7] server which is the same wiki software used
 recognizable wiki and many people already know the editing options
 because of its popularity.
 
-
 Hardware
 ^^^^^^^^
 This particular project has a strong reliance on numerous, inexpensive hardware. For a country like Rwanda was important to look for hardware which is readily available in-country but still was capable of displaying readable information and accept data input in a manner which was efficient for the volunteers. While there was much discussion about hardware during this project, no single model was ever identified.This is quite important for this project for development. At this time our development focused on least-common denominator hardware and thus is a web-based front-end. However, as explored below, the platform selection can allow for far more interesting interaction. What must be clear for any future implementation is whether *available*  hardware is more important than the development concerns. At this time Rwanda is very limited in the models of phones available. As we were working closely with Qualcomm we tended to focus on the phones available through Rwandatel (the CDMA driven network), however if MTN (the GSM carrier) were looked at the models available would be vastly superior.
 
-
 Costs
 ~~~~~
 Mobile phone costs in Rwanda tend to run similar to their exact counterparts in Europe, keeping in mind that they are utilizing much older models than Europe currently has available. Pricing for phones ranges from as low as $40(US) to $500(US) with the $500 model being a smart-phone with a full keyboard (though this model is normally not readily available).Considering just the original pilot plan for working with two different health clinics in Rwanda we would have been working with between 20 and 60 volunteers if it had been fully rolled out. While that would have covered quite a few villages (3 to 6 volunteers per village) it still would have been very small in comparison to the number of clinics and villages throughout the country. The costs for phones to accomplish that would be quite high.
-
 
 Available Platforms
 ~~~~~~~~~~~~~~~~~~~
@@ -231,7 +216,6 @@ on OpenMRS usage. Intrahealth has contributed to discussions on the
 development of OpenROSA with the Last Mile Initiative as the prime
 example of the needs we had for the toolkit.
 
-
 Lifecycle
 ~~~~~~~~~
 One consideration when thinking of hardware is the life-cycle of a
@@ -245,7 +229,6 @@ should be funds available to purchase one replacement. The choice of
 three to one being based on the fact that for each small village there
 would be up to three volunteers working at one particular time.
 
-
 Mobile Network
 ^^^^^^^^^^^^^^
 During the development cycle of this project most of our focus was on
@@ -253,7 +236,6 @@ Rwandatel due to our relationship with Qualcomm who are the makers of
 the CDMA network technology which Rwandatel uses.&nbsp; Most of the
 information below is based on this focus and could be quite different
 if MTN, or even both networks were considered for roll-out.
-
 
 Carriers
 ~~~~~~~~
@@ -278,7 +260,6 @@ African based company which provides mobile coverage in many countries
 throughout Africa. In fact, in most countries in which it has a
 presence, it tends to be the leading provider.
 
-
 Coverage
 ~~~~~~~~
 Coverage in Rwanda is quite good for both mobile networks. However,
@@ -298,7 +279,6 @@ presence but are scheduled to be rolled out over the next few years in
 Rwanda. Having these two high-bandwidth technologies could be very
 important for developing high-end and very useful applications as the
 better the bandwidth, the more interesting exchange of data can occur.
-
 
 Partnerships
 ~~~~~~~~~~~~
@@ -322,12 +302,9 @@ services which were referred to previously. Again, in a country where
 hosting can be very unstable, we determined that Rwandatel would
 provide the most stable offering.
 
-
 Costs
 ~~~~~
 For mobile network access the costs certainly do depend on any partnerships which could be formed with the two main companies working in Rwanda. However, to get an idea of what kind of costs would be associated with normal usage, both companies work at roughly the same price breakdown:
-
-
 
 {| class="prettytable"
 | Time Period
@@ -353,7 +330,6 @@ for Rwandatel in terms of donating the airtime, especially when
 coupled with the important nature of the work for the welfare of the
 country.
 
-
 Pilot
 ^^^^^
 The pilot for the Community Health Data Collection system was
@@ -378,7 +354,6 @@ Health.Nonetheless, the following information details some of the
 ideas and plans which were being drafted to run the pilot program
 which was to have started in December 2008.
 
-
 Ministry of Health
 ~~~~~~~~~~~~~~~~~~
 The Ministry of Health is a vital partner for any health-related
@@ -402,7 +377,6 @@ from the Permanent Secretary. Once done all other issues tend to be
 more easily resolved. This can also be a huge thing to leverage when
 dealing with other local organizations like the mobile phone carriers.
 
-
 Volunteers
 ~~~~~~~~~~
 The Volunteers are truly the heart of the whole process. The handling
@@ -423,7 +397,6 @@ problems or issues, and making sure that the data being entered by
 his/her volunteers is accurate. The volunteer coordinators should be
 quite useful in any future pilot.
 
-
 Training
 ~~~~~~~~
 The training for using the system would best be performed in the
@@ -440,7 +413,6 @@ on the data once it is in the system in order to correct any input
 errors or to see any health trends that might need immediate
 attention.
 
-
 Support Structure
 ~~~~~~~~~~~~~~~~~
 For the most part, the reliance on the volunteer coordinators is vital
@@ -451,7 +423,6 @@ US. However, as these staff work with the Twubakane project a task
 sharing/payment plan would need to be figured out before the work
 could begin to avoid confusion on who pays for which tasks and which
 people.
-
 
 Hardware Costs
 ~~~~~~~~~~~~~~
@@ -464,7 +435,6 @@ laptop would range from $600(US) to $1700(US), and the server would
 range from $2000(US) to $3500(US) depending on what is available
 in-country at the time.
 
-
 Personnel
 ~~~~~~~~~
 The personnel would consist of the Volunteer (the numbers would range
@@ -475,12 +445,9 @@ administrator, and one local project manager. The last three people
 could be shared with the Twubakane project which would bring their
 costs down considerably.
 
-
 Conclusions
 ^^^^^^^^^^^
 It is clear that a system such as this can be a great success if a number of factors are present. However, these factors must all align well to accomplish the task of making the data collection a more efficient process for the community health workers. The factors at play in this project are: Mobile phone coverage in-country, willing donations from the mobile phone carriers, enough mobile hardware to accomodate all of the volunteers, a strong financial partner to cover the hardware and pilot costs, strong support from the Ministry of Health (or similar institution).With all of these things present, and a schedule which allows for flexible development and training, there could be some positive results of utilizing the mobile networks which are growing so rapidly across Africa. There are a few questions which have to be raised at the same time however. First is the question on whether a small laptop with a mobile network card would not be more efficient in this case. Second is the necessity of having the hardware come from the *currently*  available phones in-country when they may not be good enough for the task at hand given the poor selections.Without being able to test the system and test some of the questions presented here it is hard to have definitive answers. However, what has happened is still a step forward for thinking about efficiency in data collection in such a poor resourced area.We can certainly be particularly proud of the efforts we have contributed to OpenMRS and proud of the reactions we are receiving from their community to our work. We can also be proud of the fact that this work is already useful in the design for a new, very similar project which will be launching in Senegal very soon.These are very interesting times in Africa with mobile networking and are likely to be times that redefine many regions on the continent because of these technologies. If we did nothing more than ask questions for others to think about, we have contributed greatly to this revolution of information.
-
-
 
 * http://openmrs.org/wiki/OpenMRS
 * http://www.fsf.org/licensing/licenses/gpl.html
@@ -491,8 +458,6 @@ It is clear that a system such as this can be a great success if a number of fac
 * http://www.mediawiki.org/wiki/MediaWiki
 * http://www.openrosa.org/
 * http://wiki.ihris.org/wiki/upload/RURA_coverage_Regional_boundaries.xls
-
-
 
 Addendum: Rwandatel mobile coverage map - 2007 [[http://wiki.ihris.org/wiki/upload/RURA_coverage_Regional_boundaries.xls]]
 

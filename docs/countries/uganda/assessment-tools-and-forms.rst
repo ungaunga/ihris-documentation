@@ -1,8 +1,6 @@
 Assessment Tools and Forms
 ==========================
 
-
-
 * `Training Database (iHRIS Train) Individual Data Collection Form (PDF) <http://www.ihris.org/mediawiki/upload/HRIS_Train_Data_collection_form_Individual_v01.pdf>`_
 * `Individual HRIS Skills Evaluation Form (PDF) <http://www.ihris.org/mediawiki/upload/MoH_HRIS_Individual_Skills_Evaluation_Form.pdf>`_
 * `MOH HRIS Training Program (PDF) <http://www.ihris.org/mediawiki/upload/MoH_HRIS_Training_Program.pdf>`_

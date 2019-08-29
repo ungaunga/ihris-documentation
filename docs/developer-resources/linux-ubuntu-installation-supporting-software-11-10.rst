@@ -19,7 +19,6 @@ these directions for installing a  `Server <http://www.howtoforge.com/perfect-se
 We begin by install a  `Lamp <http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29>`_  server
 (You can find more help  `here <https://help.ubuntu.com/community/ApacheMySQLPHP>`_ ):
 
-
 .. code-block:: bash
 
     sudo tasksel install lamp-server
@@ -29,30 +28,24 @@ If you have never used mysql on your system, you will be asked to set the 'root'
 
  **Important** : Make sure your email system is correctly configured.  Under a default Ubuntu installation, you can do this with one of two commands:
 
-
 .. code-block:: bash
 
     sudo apt-get install postfix
     sudo dpkg-reconfigure postfix
     
 
-
 Follow the on-screen instructions to set up email on your system.  For additional help with installing Postfix, look at these  `instructions <https://help.ubuntu.com/community/PostfixBasicSetupHowto>`_ .  On Debian systems, the same commands can be used, but <tt>exim4</tt> is the default MTA instead of <tt>postfix</tt>
 
 If you are using another Linux distribution, make sure your system can send email properly before continuing.
-
 
 Configuring MYSQL
 ^^^^^^^^^^^^^^^^^
 Make sure you have in /etc/mysql/my.cnf the following values set:
 
-
 .. code-block:: bash
 
     sudo gedit /etc/mysql/my.cnf
     
-
-
 
 .. code-block:: ini
 
@@ -64,7 +57,6 @@ It appears that they were reduced with Karmic.
 
 To configure MySQL so iHRIS can create needed functions:
 
-
 .. code-block:: bash
 
     mysql -u root -p
@@ -72,29 +64,23 @@ To configure MySQL so iHRIS can create needed functions:
 
 Enter the password you set above (XXXXX) for MySQL.  You will now be able to send commands to MySQL and the prompt should always begin with 'mysql> '.  Type these commands:
 
-
 .. code-block:: mysql
 
     SET GLOBAL log_bin_trust_function_creators = 1;
     exit
     
 
-
-
 Configuring PHP
 ^^^^^^^^^^^^^^^
 
 Next, you'll need to increase the memory limit for PHP. You can do this by editing the /etc/php5/apache2/php.ini. 
-
 
 .. code-block:: bash
 
     sudo gedit /etc/php5/apache2/php.ini
     
 
-
 Change the following line:
-
 
 .. code-block:: ini
 
@@ -103,19 +89,15 @@ Change the following line:
 
 to:
 
-
 .. code-block:: ini
 
     memory_limit = 128M
     
 
-
-
 Installing Pear and PECL Packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We need to install a few Pear and PECL packages for PHP.  For the Pear packages you can do:
-
 
 .. code-block:: bash
 
@@ -123,21 +105,16 @@ We need to install a few Pear and PECL packages for PHP.  For the Pear packages 
     sudo pear install text_password console_getopt
     
 
-
-
 APC
 ^^^
 We need to install the APC module for PHP.
-
 
 .. code-block:: bash
 
     sudo apt-get install php-apc
     
 
-
 During certain activities like installation and upgrades you may need more memory than APC uses by default.  We also want to turn of the *slam defense.*   We need to edit the configuration file file for apc:
-
 
 .. code-block:: bash
 
@@ -145,7 +122,6 @@ During certain activities like installation and upgrades you may need more memor
     
 
 It should look like this:
-
 
 .. code-block:: ini
 
@@ -159,19 +135,15 @@ See  `slam defense <http://pecl.php.net/bugs/bug.php?id=16843>`_  and  `this <ht
 
 You'll need to restart Apache after making this change.
 
-
 .. code-block:: bash
 
     sudo /etc/init.d/apache2 restart
     
 
-
-
 Configuring Apache Web Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will see later we are using the apache rewrite module.  To enable the module:
-
 
 .. code-block:: bash
 
@@ -179,7 +151,6 @@ You will see later we are using the apache rewrite module.  To enable the module
     
 
 Now we need to make sure we can use the *.htaccess*  file.
-
 
 .. code-block:: bash
 
@@ -211,7 +182,6 @@ Let us restart the Apache webserver using:
 sudo /etc/init.d/apache2 restart 
 </source>
 
-
 Install Memcached
 ^^^^^^^^^^^^^^^^^
 
@@ -227,5 +197,4 @@ To install,  simply do
 <source lang='bash'>
  sudo apt-get install php5-memcached memcached
 </source>
-
 

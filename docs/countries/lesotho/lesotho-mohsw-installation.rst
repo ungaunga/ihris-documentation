@@ -6,7 +6,6 @@ This page contains installation instructions on installing iHRIS Lesotho Customi
 
  *Warning:*  See [[Installing iHRIS on Ubuntu 10.4 (Lucid)]] after completing these instructions to get iHRIS working on the latest release of Ubuntu.
 
-
 <center>'''Need help?'''  Try our [[Project Communication]]</center>
 
 Getting Ready
@@ -24,7 +23,6 @@ these directions for installing a  `Server <http://www.howtoforge.com/perfect-se
 We begin by install a  `Lamp <http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29>`_  server
 (You can find more help  `here <https://help.ubuntu.com/community/ApacheMySQLPHP>`_ ):
 
-
 .. code-block:: bash
 
     sudo tasksel install lamp-server
@@ -34,30 +32,24 @@ If you have never used mysql on your system, you will be asked to set the 'root'
 
  **Important** : Make sure your email system is correctly configured.  Under a default Ubuntu installation, you can do this with one of two commands:
 
-
 .. code-block:: bash
 
     sudo apt-get install postfix
     sudo dpkg-reconfigure postfix
     
 
-
 Follow the on-screen instructions to set up email on your system.  For additional help with installing Postfix, look at these  `instructions <https://help.ubuntu.com/community/PostfixBasicSetupHowto>`_ .  On Debian systems, the same commands can be used, but <tt>exim4</tt> is the default MTA instead of <tt>postfix</tt>
 
 If you are using another Linux distribution, make sure your system can send email properly before continuing.
-
 
 Configuring MYSQL
 ^^^^^^^^^^^^^^^^^
 Make sure you have in /etc/mysql/my.cnf the following values set:
 
-
 .. code-block:: bash
 
     sudo gedit /etc/mysql/my.cnf
     
-
-
 
 .. code-block:: ini
 
@@ -67,21 +59,17 @@ Make sure you have in /etc/mysql/my.cnf the following values set:
 
 It appears that they were reduced with Karmic
 
-
 Configuring PHP
 ^^^^^^^^^^^^^^^
 
 Next, you'll need to increase the memory limit for PHP. You can do this by editing the /etc/php5/apache2/php.ini. 
-
 
 .. code-block:: bash
 
     sudo gedit /etc/php5/apache2/php.ini
     
 
-
 Change the following line:
-
 
 .. code-block:: ini
 
@@ -90,19 +78,15 @@ Change the following line:
 
 to:
 
-
 .. code-block:: ini
 
     memory_limit = 128M
     
 
-
-
 Installing Pear and PECL Packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We need to install a few Pear and PECL packages for PHP.  For the Pear packages you can do:
-
 
 .. code-block:: bash
 
@@ -110,20 +94,14 @@ We need to install a few Pear and PECL packages for PHP.  For the Pear packages 
     sudo pear install text_password console_getopt
     
 
-
 During certain activities like installation and upgrades you may need more memory than APC uses by default.  The php-apc package should have installed a file in /etc/php5/conf.d/apc.ini.  Edit this file:
-
-
 
 .. code-block:: bash
 
     sudo gedit /etc/php5/conf.d/apc.ini
     
 
-
 Then add the following lines:
-
-
 
 .. code-block:: ini
 
@@ -135,15 +113,12 @@ See  `slam defense <http://pecl.php.net/bugs/bug.php?id=16843>`_  and  `this <ht
 
 You'll need to restart Apache after making this change.
 
-
 .. code-block:: bash
 
     sudo /etc/init.d/apache2 restart
     
 
-
 There are two optional packages you may wish to install:
-
 
 .. code-block:: bash
 
@@ -152,13 +127,11 @@ There are two optional packages you may wish to install:
 
 which are used to for inserting images into PDF output of reports and for exporting XML files in a nicely formatted manner
 
-
 FileInfo
 ~~~~~~~~
  **Note:**  If you're running Ubuntu 10.4 (Lucid Lynx) then you do not need to install Fileinfo.
 
 The pecl package *FileInfo*  is used to verify the validity of file types used for uploading (e.g. for uploaded images or documents)
-
 
 .. code-block:: bash
 
@@ -168,20 +141,16 @@ The pecl package *FileInfo*  is used to verify the validity of file types used f
 
 If this doesn't work, you can also try:
 
-
 .. code-block:: bash
 
     sudo pear install pecl/Fileinfo
     echo extension=fileinfo.so | sudo tee /etc/php5/apache2/conf.d/fileinfo.ini
     
 
-
-
 Configuring Apache Web Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will see later we are using the apache rewrite module.  To enable the module:
-
 
 .. code-block:: bash
 
@@ -189,7 +158,6 @@ You will see later we are using the apache rewrite module.  To enable the module
     
 
 Now we need to make sure we can use the *.htaccess*  file.
-
 
 .. code-block:: bash
 
@@ -221,12 +189,10 @@ Let us restart the Apache webserver using:
 sudo /etc/init.d/apache2 restart 
 </source>
 
-
 Ubunutu 10.4 Lucid
 ^^^^^^^^^^^^^^^^^^
 
 If you are using Lucid 10.4 Ubuntu, make sure that you following these [[Installing iHRIS on Ubuntu 10.4 (Lucid) | **important instructions** ]]
-
 
 Downloading the Main iHRIS Manage Software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -237,7 +203,6 @@ cd /var/lib/iHRIS/lib/4.0.7
 sudo wget http://launchpad.net/ihris-manage/4.0/4.0.6/+download/ihris-manage-full-4_0_7.tar.bz2
 sudo tar -xjf ihris-manage-full-4_0_7.tar.bz2
 </source>
-
 
 Downloading the Lesotho Customizations of iHRIS Manage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -251,7 +216,6 @@ bzr branch lp:ihris-manage-lesotho 4.0
 cd /var/lib/iHRIS/lesotho/4.0
 bzr bind lp:ihris-manage-lesotho
 </source>
-
 
 MOHSW Site
 ^^^^^^^^^^
@@ -274,7 +238,6 @@ Substitute PASS with something appropriate.  We'll refer to this password as YYY
 
 If you are having trouble creating routines see  `this <http://www.ispirer.com/wiki/sqlways/troubleshooting-guide/mysql/import/binary-logging>`_ .
 For security, make sure the password you choose is different than the root password for MySQL.  Let us refer to this password as YYYYY.
-
 
 Setting the Password
 ~~~~~~~~~~~~~~~~~~~~
@@ -301,7 +264,6 @@ $i2ce_site_dsn = 'mysql://ihris:PASS@localhost/manage_lesotho_mohsw_4_0' ;
 </source>
 Save and Quit.  Here PASS is what you chose above.
 
-
 Making the Site Available
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -310,7 +272,6 @@ We make iHRIS Manage site available via the webserver:
 sudo ln -s /var/lib/iHRIS/lesotho/4.0/sites/MOHSW/pages /var/www/ihris-MOHSW
 </source>
 
-
 Finishing Up
 ~~~~~~~~~~~~
 Now we are ready to begin the site installation.  Simply browse to:
@@ -318,8 +279,6 @@ Now we are ready to begin the site installation.  Simply browse to:
 http://localhost/ihris-MOHSW
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database ('''YYYY''' that you set above).
-
-
 
 CHAL Site
 ^^^^^^^^^
@@ -342,7 +301,6 @@ Substitute PASS with something appropriate.  We'll refer to this password as YYY
 
 In version 4.0.1 of iHRIS we create mysql functions.  If you are having trouble creating routines see  `this <http://www.ispirer.com/wiki/sqlways/troubleshooting-guide/mysql/import/binary-logging>`_ .
 For security, make sure the password you choose is different than the root password for MySQL.  Let us refer to this password as YYYYY.
-
 
 Setting the Password
 ~~~~~~~~~~~~~~~~~~~~
@@ -369,7 +327,6 @@ $i2ce_site_dsn = 'mysql://ihris:PASS@localhost/manage_lesotho_chal_4_0' ;
 </source>
 Save and Quit.  Here PASS is what you chose above.
 
-
 Making the Site Available
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -377,7 +334,6 @@ We make iHRIS Manage site available via the webserver:
 <source lang="bash">
 sudo ln -s /var/lib/iHRIS/lesotho/4.0/sites/CHAL/pages /var/www/ihris-CHAL
 </source>
-
 
 Finishing Up
 ~~~~~~~~~~~~
@@ -387,13 +343,11 @@ http://localhost/ihris-CHAL
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database ('''YYYY''' that you set above).
 
-
 Updating Customizations
 ^^^^^^^^^^^^^^^^^^^^^^^
 To update the customizations from launchpad, ensure that port 22 is open on the server and do:
  cd /var/lib/iHRIS/lesotho/4.0
  bzr update
-
 
 Importing Data
 ^^^^^^^^^^^^^^
@@ -412,7 +366,6 @@ You need to save the cleaned data from Rosaline for the MOHSW on the desktop und
 To import the data:
  cd /var/lib/iHRIS/lesotho/4.0/tools
  php import_clean.php
-
 
 * It will ask you if you want to run in test mode. You can answer **N** .
 * It will ask you if the first column of the **lesotho_cleaned.csv**  file is a comment.  You can answer **N**
@@ -440,7 +393,6 @@ To import the data:
  cd /var/lib/iHRIS/lesotho/4.0/tools
  php import_CHAL.php
 
-
 * It will ask you if you want to run in test mode. You can answer **N** .
 * It will ask you if the first column of the **lesotho_cleaned_CHAL.csv**  file is a comment.  You can answer **N**
 * You can expect the script to take about an hour to run.  You need to keep an eye on it as it will ask you occasionally if you wish to create some missing standardized data such as sub-programme.
@@ -449,5 +401,4 @@ To import the data:
  http://localhost/ihris-CHAL/clear_cache.php
 
 Once the data has been imported, it will create a new file on the desktop **lesotho_cleaned_CHAL.bad.''DATE_TIME''.csv**  which will contain a list of all the records it had problems with.
-
 

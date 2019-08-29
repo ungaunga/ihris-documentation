@@ -9,7 +9,6 @@ The second decision is how formal or informal the development process should be.
 
 Here are the general steps in each iteration of development:
 
-
 * Planning: Before starting the iteration, sit down with the development team and ask these questions: What have we learned from the previous iteration? Have the vision, goals and/or scope of this project changed? What feature subset will be coded in this iteration?
 * Design and develop in order to produce a working end product.
 * Test and correct bugs; this phase can overlap the previous phase.

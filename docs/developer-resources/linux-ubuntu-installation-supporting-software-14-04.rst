@@ -19,7 +19,6 @@ these directions for installing a  `Server <http://www.howtoforge.com/perfect-se
 We begin by install a  `Lamp <http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29>`_  server
 (You can find more help  `here <https://help.ubuntu.com/community/ApacheMySQLPHP>`_ ):
 
-
 .. code-block:: bash
 
     sudo tasksel install lamp-server
@@ -29,30 +28,24 @@ If you have never used mysql on your system, you will be asked to set the 'root'
 
  **Important** : Make sure your email system is correctly configured.  Under a default Ubuntu installation, you can do this with one of two commands:
 
-
 .. code-block:: bash
 
     sudo apt-get install postfix
     sudo dpkg-reconfigure postfix
     
 
-
 Follow the on-screen instructions to set up email on your system.  For additional help with installing Postfix, look at these  `instructions <https://help.ubuntu.com/community/PostfixBasicSetupHowto>`_ .  On Debian systems, the same commands can be used, but <tt>exim4</tt> is the default MTA instead of <tt>postfix</tt>
 
 If you are using another Linux distribution, make sure your system can send email properly before continuing.
-
 
 Configuring MYSQL
 ^^^^^^^^^^^^^^^^^
 Make sure you have in /etc/mysql/my.cnf the following values set:
 
-
 .. code-block:: bash
 
     sudo gedit /etc/mysql/my.cnf
     
-
-
 
 .. code-block:: ini
 
@@ -64,7 +57,6 @@ It appears that they were reduced with Karmic.
 
 To configure MySQL so iHRIS can create needed functions:
 
-
 .. code-block:: bash
 
     mysql -u root -p
@@ -72,20 +64,16 @@ To configure MySQL so iHRIS can create needed functions:
 
 Enter the password you set above (XXXXX) for MySQL.  You will now be able to send commands to MySQL and the prompt should always begin with 'mysql> '.  Type these commands:
 
-
 .. code-block:: mysql
 
     SET GLOBAL log_bin_trust_function_creators = 1;
     exit
     
 
-
-
 Installing Pear and PECL Packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We need to install a few Pear and PECL packages for PHP.  For the Pear packages you can do:
-
 
 .. code-block:: bash
 
@@ -95,7 +83,6 @@ We need to install a few Pear and PECL packages for PHP.  For the Pear packages 
 
 If the command for installing text_password, does not work for you <br> Download and Install the  `package <http://www.ubuntuupdates.org/package/core/precise/universe/base/php-text-password>`_  manually as follows:
 
-
 .. code-block:: bash
 
     cd /tmp
@@ -104,18 +91,14 @@ If the command for installing text_password, does not work for you <br> Download
 
 Installed the deb
 
-
 .. code-block:: bash
 
     sudo dpkg -i php-text-password_1.1.1-1_all.deb 
     
 
-
-
 UUID
 ^^^^
 We need to install the UUID module for PHP.  We need to install from PECL.  This can be done by first installing the php5-dev pageckage and the uuid packges.
-
 
 .. code-block:: bash
 
@@ -123,7 +106,6 @@ We need to install the UUID module for PHP.  We need to install from PECL.  This
     
 
 Now install UUID from PECL:
-
 
 .. code-block:: bash
 
@@ -134,7 +116,6 @@ It will ask a few questions and you can just press enter to take the default ans
 
 We'll also need to create the ini file to load UUID into PHP.
 
-
 .. code-block:: bash
 
     sudo gedit /etc/php5/mods-available/uuid.ini
@@ -142,16 +123,12 @@ We'll also need to create the ini file to load UUID into PHP.
 
 It should look like this:
 
-
 .. code-block:: ini
 
     extension=uuid.so
     
 
-
 We'll also need to enable this for Apache and CLI by creating 2 symlinks for the uuid file:
-
-
 
 .. code-block:: bash
 
@@ -159,13 +136,9 @@ We'll also need to enable this for Apache and CLI by creating 2 symlinks for the
     sudo ln -s /etc/php5/mods-available/uuid.ini /etc/php5/cli/conf.d/30-uuid.ini
     
 
-
-
-
 APCu
 ^^^^
 We need to install the APCu module for PHP.  There are unfortunately some issues with php5-apcu, so we need to install from PECL.  
-
 
 .. code-block:: bash
 
@@ -175,7 +148,6 @@ We need to install the APCu module for PHP.  There are unfortunately some issues
 It will ask a few questions and you can just press enter to take the default answers.<br>
 
 If pecl install apcu-4.0.4 does not work for you <br> Remove any existing php5-apcu
-
 
 .. code-block:: bash
 
@@ -220,7 +192,6 @@ You'll need to restart Apache after making this change.
 sudo /etc/init.d/apache2 restart
 </source>
 
-
 Debian Squeeze
 ~~~~~~~~~~~~~~
 If you are using Debian Squeeze, then the value of *apc.shm_size*  should be:
@@ -251,14 +222,12 @@ For a development system you should modify revalidate_freq from 60 to 2:
 opcache.revalidate_freq=2
 </source>
 
-
 Configuring Apache Web Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Changed Document Root
 ~~~~~~~~~~~~~~~~~~~~~
 In Ubuntu 14.04, the default document root has changed from **/var/www**  to **/var/www/html**  so when installing any iHRIS applications you will need to use the new directory to place the symlinks.  If you are upgrading you may or may not need to update these depending on if you replaced the Apache configuration files during the upgrade.
-
 
 Enable Rewrite Module
 ~~~~~~~~~~~~~~~~~~~~~
@@ -292,14 +261,12 @@ to:
 </source>
 Save and quit.
 
-
 Restart Apache
 ~~~~~~~~~~~~~~
 Let us restart the Apache webserver using:
 <source lang="bash">
 sudo service apache2 restart 
 </source>
-
 
 Install Memcached
 ^^^^^^^^^^^^^^^^^
@@ -316,5 +283,4 @@ To install,  simply do
 <source lang='bash'>
  sudo apt-get install php5-memcached memcached
 </source>
-
 

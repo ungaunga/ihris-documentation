@@ -5,11 +5,9 @@ The is an authentication mechanism which authenticates users against a single us
 
 This user access mechanism  is implemented by the [[Class: I2CE UserAccess Single | I2CE_UserAccess_Single]] class.
 
-
 Enabling the Module
 ^^^^^^^^^^^^^^^^^^^
 To enable, just make sure you have:
-
 
 .. code-block:: xml
 
@@ -19,18 +17,13 @@ To enable, just make sure you have:
      </requirement>
     
 
-
-
 Initialization String
 ^^^^^^^^^^^^^^^^^^^^^
 
 The initialization string is sent to I2CE::initialize() in the index.php as the fourth argument, *$user_access_init* .  This string must be prefixed with the '''Single://''.  What follows take any of the following formats:
 
-
 * null:  The is the default value and means that we use the defaults below
 * a JSON encoded string: The data to  is a JSON enocode string of optional configuration value for the user access.  The JSON encoded data has the following keys:
-
-
 
 * *admin_user: The username for an administrative account. If not set, it uses 'i2ce_admin'
 * *admin_pass: It is the password for an administrative account with username 'admin_user'. T  If this value is not set, it is the same password used for the database connection.
@@ -48,11 +41,8 @@ The initialization string is sent to I2CE::initialize() in the index.php as the 
 * **firstname: (Empty)
 * **lasttname: (Empty)
 
-
-
 Example
 ^^^^^^^
 The following would do an auto login of a guest user with the planner role
   Single://{"auto_login":1, "auto_login_user":guest ,"userrole": "planner", "userdetails" :{"lastname","Health Workforce Planner"}}
-
 

@@ -7,13 +7,11 @@ action.html
 ^^^^^^^^^^^
 This  template is loaded with the following priorites:
 
-
 * From the module [[iHRIS Common Module List (4.1.7)#ihris-common | ihris-common]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 100.<br/> It is located at  `common/templates/en_US/action.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/templates/en_US/action.html>`_
 
 action_students_add.html
 ^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
-
 
 * From the module [[iHRIS Common Module List (4.1.7)#training-course | training-course]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/TrainingCourse/templates/en_US/action_students_add.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/TrainingCourse/templates/en_US/action_students_add.html>`_
 
@@ -21,13 +19,11 @@ action_students_error.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
 
-
 * From the module [[iHRIS Common Module List (4.1.7)#training-course | training-course]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/TrainingCourse/templates/en_US/action_students_error.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/TrainingCourse/templates/en_US/action_students_error.html>`_
 
 action_students_remove.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
-
 
 * From the module [[iHRIS Common Module List (4.1.7)#training-course | training-course]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/TrainingCourse/templates/en_US/action_students_remove.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/TrainingCourse/templates/en_US/action_students_remove.html>`_
 
@@ -35,13 +31,11 @@ add_confirmation.html
 ^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
 
-
 * From the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-confirmation | ihris-manage-confirmation]] in the package <span style='color:DarkGreen'>iHRIS Manage</span> it is loaded with priority 350.<br/> It is located at  `manage/modules/Confirmation/templates/en_US/add_confirmation.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1.7-release/annotate/head:/modules/Confirmation/templates/en_US/add_confirmation.html>`_
 
 add_person_contact_emergency.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
-
 
 * From the module [[iHRIS Common Module List (4.1.7)#PersonContact | PersonContact]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/Person/modules/Contact/templates/en_US/add_person_contact_emergency.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/Person/modules/Contact/templates/en_US/add_person_contact_emergency.html>`_
 
@@ -49,13 +43,11 @@ add_person_contact_other.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
 
-
 * From the module [[iHRIS Common Module List (4.1.7)#PersonContact | PersonContact]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/Person/modules/Contact/templates/en_US/add_person_contact_other.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/Person/modules/Contact/templates/en_US/add_person_contact_other.html>`_
 
 add_person_contact_personal.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
-
 
 * From the module [[iHRIS Common Module List (4.1.7)#PersonContact | PersonContact]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/Person/modules/Contact/templates/en_US/add_person_contact_personal.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/Person/modules/Contact/templates/en_US/add_person_contact_personal.html>`_
 
@@ -63,13 +55,11 @@ add_person_contact_work.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
 
-
 * From the module [[iHRIS Common Module List (4.1.7)#PersonContact | PersonContact]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/Person/modules/Contact/templates/en_US/add_person_contact_work.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/Person/modules/Contact/templates/en_US/add_person_contact_work.html>`_
 
 applicant_review.html
 ^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
-
 
 * From the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-Application | ihris-manage-Application]] in the package <span style='color:DarkGreen'>iHRIS Manage</span> it is loaded with priority 225.<br/> It is located at  `manage/modules/ManageApplication/templates/en_US/applicant_review.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1.7-release/annotate/head:/modules/ManageApplication/templates/en_US/applicant_review.html>`_
 
@@ -77,13 +67,11 @@ applicant_review_list.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
 
-
 * From the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-Application | ihris-manage-Application]] in the package <span style='color:DarkGreen'>iHRIS Manage</span> it is loaded with priority 225.<br/> It is located at  `manage/modules/ManageApplication/templates/en_US/applicant_review_list.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1.7-release/annotate/head:/modules/ManageApplication/templates/en_US/applicant_review_list.html>`_
 
 applicant_review_list_entry.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
-
 
 * From the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-Application | ihris-manage-Application]] in the package <span style='color:DarkGreen'>iHRIS Manage</span> it is loaded with priority 225.<br/> It is located at  `manage/modules/ManageApplication/templates/en_US/applicant_review_list_entry.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1.7-release/annotate/head:/modules/ManageApplication/templates/en_US/applicant_review_list_entry.html>`_
 
@@ -91,13 +79,11 @@ applicant_review_no_results.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
 
-
 * From the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-Application | ihris-manage-Application]] in the package <span style='color:DarkGreen'>iHRIS Manage</span> it is loaded with priority 225.<br/> It is located at  `manage/modules/ManageApplication/templates/en_US/applicant_review_no_results.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1.7-release/annotate/head:/modules/ManageApplication/templates/en_US/applicant_review_no_results.html>`_
 
 applicant_review_results.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
-
 
 * From the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-Application | ihris-manage-Application]] in the package <span style='color:DarkGreen'>iHRIS Manage</span> it is loaded with priority 225.<br/> It is located at  `manage/modules/ManageApplication/templates/en_US/applicant_review_results.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1.7-release/annotate/head:/modules/ManageApplication/templates/en_US/applicant_review_results.html>`_
 
@@ -105,13 +91,11 @@ applicant_review_row.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
 
-
 * From the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-Application | ihris-manage-Application]] in the package <span style='color:DarkGreen'>iHRIS Manage</span> it is loaded with priority 225.<br/> It is located at  `manage/modules/ManageApplication/templates/en_US/applicant_review_row.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1.7-release/annotate/head:/modules/ManageApplication/templates/en_US/applicant_review_row.html>`_
 
 archiveReports_menu.html
 ^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
-
 
 * From the module [[I2CE Module List (4.1.7)#ReportArchiver | ReportArchiver]] in the package <span style='color:FireBrick'>I2CE</span> it is loaded with priority 50.<br/> It is located at  `i2ce/modules/CustomReports/modules/ReportArchiver/templates/en_US/archiveReports_menu.html <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/annotate/head:/modules/CustomReports/modules/ReportArchiver/templates/en_US/archiveReports_menu.html>`_
 
@@ -3660,5 +3644,4 @@ view_user_statistics_person_row.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This  template is loaded with the following priorites:
 *From the module [[iHRIS Common Module List (4.1.7)#UserStatistics | UserStatistics]] in the package <span style='color:SaddleBrown'>iHRIS Common</span> it is loaded with priority 150.<br/> It is located at  `common/modules/UserStatistics/templates/en_US/view_user_statistics_person_row.html <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1.7-release/annotate/head:/modules/UserStatistics/templates/en_US/view_user_statistics_person_row.html>`_ 
-
 

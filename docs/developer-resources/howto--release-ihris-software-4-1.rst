@@ -6,11 +6,9 @@ This page contains installation instructions on releasing iHRIS version 4.1
 
 Warning: To release the software, you will need to be someplace with good bandwidth as you will be uploading a lot to launchpad.net
 
-
 Release Directory Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^
 In your home directory, create a new directory called "ihris-release" with a subdirectory "bzr" which will contain all the bzr branches we wish to include in the release
-
 
 .. code-block:: bash
 
@@ -23,8 +21,6 @@ In your home directory, create a new directory called "ihris-release" with a sub
     bzr checkout lp:textlayout
     
 
-
-
 Preparing For Release
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -32,11 +28,9 @@ Updating translations
 ~~~~~~~~~~~~~~~~~~~~~
 In your usual working branch, just before releasing, you should update all of the translation templates with the [[HowTo: Creating Translations#translate_create_templates.php | translate_create_templates.php]] script.
 
-
 Updating release branches
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 The branches we are using for release should be updated:
-
 
 .. code-block:: bash
 
@@ -48,12 +42,9 @@ The branches we are using for release should be updated:
     bzr update textlayout
     
 
-
-
 Running the Release Program
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We run the release.php script from the ihris-release/bzr directory.  The release script will take care of bumping minor version numbers of changed modules, "bzr tag"ging the branches with a "4.1.X-release" tag, creating tarballs and uploading the tarballs to launchpad. 
-
 
 .. code-block:: bash
 
@@ -64,7 +55,6 @@ We run the release.php script from the ihris-release/bzr directory.  The release
 
 Answers to questions
 ^^^^^^^^^^^^^^^^^^^^
-
 
 * use /Users/litlfred/ihris-release to store release branches and tarballs? (Yes/No): y
 * Work with the following directories I2CE,ihris-common,ihris-manage,ihris-qualify,textlayout? (Yes/No): y
@@ -94,7 +84,6 @@ Answers to questions
 * Milestone 4.1.5 has not been created for ihris-qualify.  Create? (Yes/No): y
 * Milestone 4.1.5 has not been created for ihris-textlayout.  Create? (Yes/No): y
 
-
 Documenting the Release
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -105,20 +94,16 @@ The change log [[iHRIS Suite 4.1 Development]] should be updated with a list of 
 
 Hint: If the current release is 4.1.5, you can easily get the revisions since the last release with:
 
-
 .. code-block:: bash
 
     cd ~/ihris-release/bzr/ihris-common
     bzr log --line -r tag:4.1.4-release..
     
 
-
-
 Release Announcement
 ~~~~~~~~~~~~~~~~~~~~
 A release announcement should be drafted and sent to the core IntraHealth/CapPlus informatics team for review.
 Once the release has been approved by all involved it should be posted under:
-
 
 * the iHRIS Global google group
 * The launchpad announcements for the various projects (i2ce, ihris-common, ihris-manage, etc) as well as the super project  `ihris-suite <https://launchpad.net/ihris-suite>`_  e.g
@@ -128,7 +113,6 @@ API Update
 ~~~~~~~~~~
 The API, module list and translation list on the wiki needs to be updated.  This can be done with
 
-
 .. code-block:: bash
 
     cd ~/ihris-release/bzr
@@ -137,18 +121,15 @@ The API, module list and translation list on the wiki needs to be updated.  This
 
 You will be asked for your launchpad name and password.
 
-
 Wiki Forms and Maps
 ~~~~~~~~~~~~~~~~~~~
 The form maps need to be updated for iHRIS Manage and iHRIS Qualify.  You should make a clean installation of Manage and Qualify and generate the form map according to [[Create a Data Form Map For My Custom Site]].  These maps should be uploaded to the wiki and the link on the pages:
-
 
 * [[iHRIS Manage Form Fields]]
 * [[iHRIS Qualify Form Fields]]
 should be updated.  But see below for more instructions.
 
 You will also need to update the wiki page for the forms and fields.  This can be done similar to the way the map was made with:
-
 
 .. code-block:: bash
 
@@ -157,14 +138,11 @@ You will also need to update the wiki page for the forms and fields.  This can b
 
 The output of this is the text to upload to the wiki.  When we upload to the wiki we want to keep the other versions around.   Here is what you need to do, for example, with release 4.1.5 of iHRIS Manage.
 
-
 * [[iHRIS Manage Form Fields (versions)]] Edit this page by adding a new line for the 4.1.5 release.  When you save the page, there will be a red link for the iHRIS Manage Form Fields 4.1.5 as it has not been created.  Click on this link and upload the output of the --page=/formDocumentor/wiki
 * `iHRIS Manage Form Fields <http://www.ihris.org/mediawiki/index.php?title=IHRIS_Manage_Form_Fields&redirect=no>`_   Edit this page and change it so that it redirects to the version 4.1.5 of the page
 
 For Qualify, the pages you want are:
 
-
 * [[iHRIS Qualify Form Fields (versions)]]
 * `iHRIS Qualify Form Fields <http://www.ihris.org/mediawiki/index.php?title=IHRIS_Qualify_Form_Fields&redirect=no>`_
-
 

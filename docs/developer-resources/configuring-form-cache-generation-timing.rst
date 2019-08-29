@@ -3,7 +3,6 @@ Configuring Form Cache Generation Timing
 
 Cached forms are used to save forms to a consistent format for exporting and for generating custom reports more quickly.  There are a few settings you can override in your site configuration file to change this behavior.  You can also see how to [[Turn Off Background Processes]] if you wish to not have the form caches update automatically.  You can also read more information about [[Form Caches]].
 
-
 Configuration Settings
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -30,19 +29,15 @@ Configuration Settings
 : Default values: **person:3** 
 : This overrides the stale_time and stale_time_by_storage settings based on the individual form.  Some forms may need to be updated more frequently like the person form since it may be used more frequently.
 
-
 Manually Caching Forms
 ^^^^^^^^^^^^^^^^^^^^^^
 You can manually cache a form by going to the Configure System section and clicking on Cached Forms.  From there you can individually try to cache a form, force caching the form or dropping the form cache.  You can also do this for all cached forms at once.  You can also run the following commands from the command line from your site pages directory.  The --nocheck option is to keep it from checking for updated files to save processing time.  Note that when running commands like this from the command line you may need to clear the APC so that configuration variables can be updated from the database. You can also restart Apache to do this. 
-
-
 
 .. code-block:: bash
 
     cd <SiteDirectory>/pages
     php index.php --page=/CachedForms/<CacheCommand> --nocheck=1
     
-
 
 The possible commands you can use are as follows:
 ; cacheAll
@@ -57,7 +52,6 @@ The possible commands you can use are as follows:
 : Create the cache for the given *form*  ignoring staleness.
 ; dropCache/''form''
 : Drop the cache for the given *form* .  You'd probably want to follow this with the command: createCache/''form''.
-
 
 Caching Forms Background Process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -80,7 +74,6 @@ Every time a page is accessed the form cache checks to see if it needs to be run
 
   * If no, then don't run.
 
-
 Caching Forms Process
 ^^^^^^^^^^^^^^^^^^^^^
 When a cache all command is given through either background process, the command line or from the cached forms interface, the following process occurs:
@@ -95,7 +88,6 @@ When a cache all command is given through either background process, the command
   * If no, then run all the caches for each form.
 
 When a cache command is given for an individual form the following process happens.  This can be from a cache all or an individual cache command can be given for a form.
-
 
 * Has stale_time passed since this form was last cached?  (Using any of the stale settings mentioned above: stale_time, stale_time_by_storage or stale_time_by form.)
 
@@ -113,13 +105,10 @@ When a cache command is given for an individual form the following process happe
 
     * If no, then do nothing.
 
-
 Configuration Example
 ^^^^^^^^^^^^^^^^^^^^^
 
 You can add the following to your site config file to override these settings.  You can add in only the settings you wish to change.
-
-
 
 .. code-block:: xml
 
@@ -171,7 +160,4 @@ You can add the following to your site config file to override these settings.  
       </configuration>
     </configurationGroup>
     
-
-
-
 

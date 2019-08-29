@@ -35,7 +35,6 @@ Then finally the function returns the headers we have found from the file.
 
 The getDataRow() (lines 167-169) returns an array of data read from the file based on the separator we found above. ( `fgetcsv() function <php.net/manual/en/function.fgetcsv.php>`_ ). After we have done everything we close the file we opened.
 
-
 ExcelDataFile Class
 -------------------
 We also assume if the data file we are reading is not a CSV then it could be an Excel spreadsheet. This is accomplished using the PHPExcel library which must be installed before this is done lines 187-189.
@@ -43,7 +42,6 @@ We also assume if the data file we are reading is not a CSV then it could be an 
 What this does in the constructor is initialization of the file we are going to work on like creating the reader resource, setting the file to readonly as we process, loading the file and the active sheet from the worksheet, and setting the row iterator in this worksheet.
 
 The other methods perform the same function like in the CSVDataFile class above, except we have added a helper method _readRow, which reads the data from a row into an array and later this is used by the getHeaders() and getDataRow() methods. [This is due to the limited versatility of the PHPExcel library to process stuff more easily). More about PHPExcel library can be read from  `here <phpexcel.codeplex.com/>`_ .
-
 
 Processor Class
 ~~~~~~~~~~~~~~~
@@ -79,7 +77,6 @@ The markProcessed() method marks each row as processed into the logger table.
 
 The getDate() function is a utility function to get the current data and format it, so that we can use it in the name of the bad records that we will create later for storing unsuccessful imports.
 
-
 Extending the Processor Classes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -90,7 +87,6 @@ It is the Processor which is to be extended when importing data from any CSV or 
 You will need to define the getExpectedHeaders() function to say what Actual Fields you have in the Excel/CSV file and what their maps/indices are that will be used in the script.
 
 For this case for example
-
 
 .. code-block::
 
@@ -103,17 +99,14 @@ For this case for example
         }
     
 
-
 Will Only Pick the Headers: SURNAME, NAME and MPF from the Excel/CSV datafile regardless of the number of fields there are in the file. i.e. there could be 13 headers, but we are only interested in the three. So here, SURNAME, NAME and MPF is how they are referred to in the Excel/CSV File and now internally in the script they will be referred to as **surname, name and mpf**  respectively.
 
 The constructor makes sure the file we are loading is readily available before we start processing. And any other initializations you want to make. Here we are making sure (ensureMPFID()) we have the Man Power File Number is available in the Identification Types before we can start processing. So this sets adds the man power File Number as one of the Identification types as described here
 
 You will also need to define the _processRow() function which ideally goes through each row and does the processing of the rows one after another...
 
-
 Details of the Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 * ensureMPFID()
 This starts from line 60 of this file where we define the id for the man power file number Identification Type. And Line 61 we set the Identification Type. 
@@ -121,8 +114,6 @@ This starts from line 60 of this file where we define the id for the man power f
 Line 64 fetches from the database all the id present for the different identification types from the id_type form (table) then in line 65 we are checking to see if the id we defined in line 60 above is in the found values from the database. Lines 68-70 we are asking for confirmation that we didn't find the Identification Type should we create it? Then Lines 71-74 we are trying to load/initialize/set the id_type form so that we can save the new Identification Type to it. We issue an error if that fails and we stop.
 
 Otherwise, line 75, we set the value for the name field in the id_type form which we initilized above to be Manpower File Number and line 76 we are giving it the id and we save on line 77. (Remember the id and the id_type names were set in lines 60 and 61 respectively.
-
-
 
 * _processRow()
 Here we start by making sure that we have all the data we need in order to proceed. We will check that neither of the name, surname and mpf are missing from the CSV/Excel file. If one of these is missing, then we mark this as one of the bad records line 82 and we skip, move to the next.
@@ -141,30 +132,23 @@ Next we are only checking if this person we have found has one or more than one 
 
 When we are done, we then load/initialize the person_id form and echo an error and quit in case we couldn't achieve that, otherwise Lines 171-174 we set the id number (id_num) we have from the CSV/Excel file and we set the id_type value from that in the id_type form and set the parent for this value to be the person we just found.
 
-
 Running the scripts
 ~~~~~~~~~~~~~~~~~~~
 When running the scripts the invocation is
-
 
 .. code-block::
 
     php /path/to/tools/script path/to/data_file_we_are_importing_data_from
     
 
-
 e.g. if we have the script in /var/lib/iHRIS/sites/manage/tools/import_file_numbers.php and the data file in /home/sovello/Desktop/manpowerfilenumbers.csv then we would do
-
 
 .. code-block::
 
     php /var/lib/iHRIS/sites/manage/tools/import_file_numbers.php /home/sovello/Desktop/manpowerfilenumbers.csv
     
 
-
-
 Disclaimer
 ~~~~~~~~~~
 The file paths in this article are based on code at  `revision 20 in Launchpad <http://bazaar.launchpad.net/~ihris+botswana/ihris-botswana/4.1/files/20>`_ .
-
 

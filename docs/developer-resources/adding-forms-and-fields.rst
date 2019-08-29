@@ -3,13 +3,10 @@ Adding Forms and Fields
 
 This will describe how to add a new module to iHRIS Manage to add in two new forms for tracking Professional Development for an employee.  These instructions could be modified for iHRIS Qualify with a few minor changes.  There will be one form for Professional Development for courses to be logged for employees.  Any number of these forms can be associated with an employee.  There will also be a link to Add Continuous Professional Development.  Only one of these forms will be associated with an employee.  It can be used to save the current training needs requested by the employee for professional and personal development.
 
-
 Step 1: Create the module
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Change into your site's modules directory and create a new directory called ProfDevelopment and change into this directory.  Create lib and templates directory in the ProfDevelopment directory.  Create and edit a new file called ProfDevelopment.xml (in the ProfDevelopment directory) with the following contents:
-
-
 
 .. code-block:: xml
 
@@ -372,13 +369,10 @@ Change into your site's modules directory and create a new directory called Prof
     
     
 
-
-
 Step 2: Create the Module Class
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We need to create a new class in the lib directory called iHRIS_Module_ProfDevelopment.php with the following content.  This is so the new forms will show up on the view person page.
-
 
 .. code-block:: php
 
@@ -408,10 +402,7 @@ We need to create a new class in the lib directory called iHRIS_Module_ProfDevel
     ?>
     
 
-
 Copy the view.html template file from the ihris-manage templates directory to the site templates directory.  Make the following changes.  The changes are surround by comments.  This should be in the site in case multiple modules update the view.html template.
-
-
 
 .. code-block:: html4strict
 
@@ -422,9 +413,6 @@ Copy the view.html template file from the ihris-manage templates directory to th
         </span>
       <!-- End of Professional Development additions -->
     
-
-
-
 
 .. code-block:: html4strict
 
@@ -465,10 +453,7 @@ Copy the view.html template file from the ihris-manage templates directory to th
       <!-- End of Professional Development additions -->
     
 
-
 Copy the menu_view_person.html template file from the ihris-manage templates directory to the site templates directory.  Make the following changes:
-
-
 
 .. code-block:: html4strict
 
@@ -480,18 +465,13 @@ Copy the menu_view_person.html template file from the ihris-manage templates dir
     <!-- End of additions -->
     
 
-
-
 Step 3: Add in the Professional Development templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the templates directory create the following files and contents:
 
-
 view_person_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. code-block:: html4strict
 
@@ -517,12 +497,8 @@ view_person_profdev.html
     </div>
     
 
-
-
 form_person_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. code-block:: html4strict
 
@@ -542,12 +518,8 @@ form_person_profdev.html
     </tbody>
     
 
-
-
 view_person_continuous_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. code-block:: html4strict
 
@@ -581,12 +553,8 @@ view_person_continuous_profdev.html
     </div>
     
 
-
-
 form_person_continuous_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. code-block:: html4strict
 
@@ -610,20 +578,13 @@ form_person_continuous_profdev.html
     </tbody>
     
 
-
-
 Step 4: Enable the module in the site config file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Edit your site configuration file and add in the following line below any requirements and above the paths:
 
-
-
 .. code-block:: xml
 
     <enable name="ProfDevelopment" />
     
-
-
-
 

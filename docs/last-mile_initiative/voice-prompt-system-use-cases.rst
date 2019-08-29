@@ -9,7 +9,6 @@ Voice Prompt System Use Cases
 
 The voice prompt system will be based on the Asterisk PBX system. Asterisk makes it easy to set up an IVR system allowing voice prompts and user input via touch-tone. The Asterisk system will tie into a Mysql database to store all of the responses. This database should be the same database used for the menu-driven system. Further, the menu system will rely on text messaging which will also be controlled and input by the same Asterisk PBX.
 
-
  **Scenario:** 
 
 When a health volunteer arrives at a person's home to collect data for the Twubakane SISCOM she will place a phone call to the LMI IVR system using a designated (toll free) number. The system, running a PBX, will prompt the volunteer for their ID number. Once entered the system will then run through questions which correspond to the indicators which already exist in the paper-based forms.
@@ -26,12 +25,9 @@ The initial prompt will be a welcome message which identifies the system so that
 
 Welcome to the Twubakane Health Data Collection System. At any time you may skip this message and enter your identification number by pressing the pound key. 
 
-
 Any timely, local messages may be recorded here in the Intial prompt.Identification:The ID prompt is the gateway to all other prompts. There should not be an option to get to the indicator questions without entering a proper identification number. When creating the database, we will have to generate ID numbers for all health workers who will be using the system.&nbsp; This prompt will ask:
 
-
 Please enter your identification number.
-
 
  **Home menu:** 
 
@@ -43,9 +39,7 @@ After the user selects a number the prompt will then inform the user about the o
 
  **Repeating:** 
 
-
 The user should always have the option to press a key to repeat the current prompt. This key should be chosen wisely as to not conflict with any data entry. The * is the most likely candidate.
-
 
  **Household Form:** 
 
@@ -103,7 +97,6 @@ If the user presses 1 they should then be asked:
 
 What date did the person move away from the house? Enter the date as day followed by month followed by 4 digit year.
 
-
 Has anyone else moved away from the house in the last 6 months? Press 1 for Yes or 2 for No.
 
 If the user presses 1 repeat the move date question and continue.'''Number of Mosquito Nets'''
@@ -113,7 +106,6 @@ Please enter the number of mosquito nets in the house.
 If the user enters any number other than zero, follow up with:
 
 Are the nets chemically treated with an insecticide? Press 1 for Yes or 2 for No.
-
 
  **Register of Women Aged 15 and up** '''House ID'''
 
@@ -143,7 +135,6 @@ Please enter the number of children under 5 years old this woman has.
 
 Did this woman nurse immediately after giving birth? Press 1 for Yes and 2 for No.
 
-
  **Date of first food supplements** Please enter the date of the first food supplements. Enter two digit month followed by four digit year. 
 
  **Date of weaning** Please enter the date of weaning. Enter the two digit month followed by the four digit year **Vitamin A date** Please enter the date Vitamin A was taken or administered. Enter the two digit month followed by the four digit year.'''Women's Health Card'''
@@ -154,9 +145,7 @@ Does this woman possess a Women's Health Card? Press 1 for Yes and 2 for No.
 
 Please enter the dates malaria medication was taken the first time during pregnancy. Enter month followed by 4 digit year.
 
-
 Please enter the dates malaria medication was taken the second time during pregnancy. Enter month followed by 4 digit year.
-
 
 Please enter the dates malaria medication was taken the third time during pregnancy. Enter month followed by 4 digit year.
 
@@ -174,132 +163,93 @@ Please enter the date HIV screening took place. Please enter month followed by 4
 
  **Contraceptive methods** *question:*  *this could be tricky - what is the most important information to know here?* 
 
-
 <nowiki>[Optional Voice Record name?]</nowiki>
-
 
  **Register of Children up to 60 MonthsOpen Issues** :Do we want to have the village/cell/sector information separated so that no matter which set of prompts the worker calls up they can add this information. What if someone calls up the Women's register and the household form has not been filled out for that house ID? Do we force them to do the household form?
 
-
 Backend:
-
 
 The child record should be identified through the parent's ID number. The Child's ID number may be arbitrary as long as it does not match that of another child parented by the parents the child is associated with. 
 
-
  **Child identification number** 
-
 
 Please enter the child's ID number. This may be any number you choose as long as it does not match another child's number in this household.
 
-
  **Date of Birth** 
-
 
 Please enter the child's date of birth. Enter the two digit day, followed by the two digit month, followed by the four digit year.
 
  **Sex** 
 
-
 Please enter the sex of the child. Press 1 for male and 2 for female.
-
 
  **Survival of parents** 
 
-
 How many surviving parents does the child have. Press 0, 1, or 2 for the number surviving.
 
-
  **Vaccines:** 
-
 
  **BCG** 
 
 Please enter the date the child received the BCG Vaccination. Enter the two digit day, followed by the two digit month, followed by the four digit year.
 
-
  **Polio** 
 
 Please enter the date the child received the Polio Vaccination. Enter the two digit day, followed by the two digit month, followed by the four digit year.
-
 
  **DTP** 
 
 Please enter the date the child received the DTP Vaccination. Enter the two digit day, followed by the two digit month, followed by the four digit year.
 
-
  **Measles** 
 
 Please enter the date the child received the Measles Vaccination. Enter the two digit day, followed by the two digit month, followed by the four digit year.
 
-
 Weight:
 
-
  **General:** 
-
 
  **Referred to Health Center** 
 
 Press 1 to enter a date the child was referred to a Health Center. Press 2 to skip to the next question.
 
-
 If the user presses 1:
-
 
 Please enter the date the child was referred to a Health Center. Enter the two digit day, followed by the two digit month, followed by the four digit year.
 
-
 Press 1 to enter another Health Center referral date. Press 2 to skip to the next question.
-
 
  **Vitamin A dates** 
 
-
 Press 1 to enter a date the child was given Vitamin A. Press 2 to skip to the next question.
 
-
 If the user presses 1:
-
 
 Please enter the date the child was given Vitamin A. Enter the two digit day, followed by the two digit month, followed by the four digit year.
 
-
 Press 1 to enter another Vitamin A administration date. Press 2 to skip to the next question.
-
 
  **Mebendazole dates** 
 
-
 Press 1 to enter a date the child was given Vitamin A. Press 2 to skip to the next question.
 
-
 If the user presses 1:
-
 
 Please enter the date the child was given Mebendazole. Enter the two digit day, followed by the two digit month, followed by the four digit year.
 
-
 Press 1 to enter another Mebendazole administration date. Press 2 to skip to the next question.
-
 
  **zinc/ORS dates** 
 
-
 Press 1 to enter a date the child was given zinc/ORS Press 2 to skip to the next question.
-
 
 If the user presses 1:
 
-
 Please enter the date the child was given zinc/ORS. Enter the two digit day, followed by the two digit month, followed by the four digit year.
-
 
 Press 1 to enter another zinc/ORS administration date. Press 2 to skip to the next question.
 
-
  **Anti-malaria Medicine** 
-
 
  *question: this could be huge, a lot of medicine can be administered over time. do we care more about how many times a child has taken it as compared to their age or are dates important?* 
 

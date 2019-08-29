@@ -1,8 +1,5 @@
 Mali
 ====
 
-
-
 * [[Mali Installation]]
-
 

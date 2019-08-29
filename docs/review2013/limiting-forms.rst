@@ -9,7 +9,6 @@ Uses
 ^^^^
 The limit data structure is used in, for example:
 
-
 * I2CE_Form::search()
 * I2CE_Form::listFields()
 * Form Relationships
@@ -25,11 +24,9 @@ Recall that every field is has a type, such as INT or INT_LIST, which translates
 
 Most of these limit style, and their attendant code, can be found in the module **form-limits.**  
 
-
 Structure of Limiting Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 We allow, on a per-form basis, logical compounds of limits of any field through a nested array (or magic data) structure.  The structure of a limit *expression node*  is as follows:
-
 
 * operator: Required. Tells us what type of node this expression node is.  Valid values are 'FIELD_LIMIT', 'AND', 'XOR', 'OR', and 'NOT'
 * operand: Used only in the case of 'AND', 'XOR', 'OR' and 'NOT' in which case it is required. It is a sub-array/sub-node consisting of zero or more *limit expression nodes.*   In the case of 'NOT' there is the further limitation that the number is exactly one.
@@ -81,11 +78,9 @@ would be interpreted in SQL as:
  ((`person+surname` LIKE 'N%th') AND ( NOT (( `person+othername` = 'Mike') OR (`person+othername` = 'Michael'))))
 Unfortunately, with such a statement, you would not find  `Mike Nesmith <http://en.wikipedia.org/wiki/Michael_Nesmith#The_Monkees>`_ .
 
-
 Existing Styles
 ^^^^^^^^^^^^^^^
 These are the limit styles provided by *form-limits*  version 3.2.0.  Please see the class itself for more up-to-date information.
-
 
 * I2CE_FormField
 * *null: No data array.
@@ -138,8 +133,6 @@ These are the limit styles provided by *form-limits*  version 3.2.0.  Please see
 * *lessthan: Data array has key 'hour' which is an hour (integer), 'minute' which is a minute (integer), and 'second' (integer), 'year' which is a year (integer), 'month' which is a month (integer), and 'day' which is the day of the month (integer), 'year' which is a year (integer), 'month' which is a month (integer), and 'day' which is the day of the month (integer).
 * *between: Data array has keys 'min' and 'max' each of which is an array which contains the keys 'hour' which is an hour (integer), 'minute' which is a minute (integer), and 'second' (integer), 'year' which is a year (integer), 'month' which is a month (integer), and 'day' which is the day of the month (integer).
 
-
-
 * I2CE_FormField_DB_INT
 * *between. Data array has keys 'min' and 'max.'
 * *equals. Data array has key 'value' which is a scalar.
@@ -174,5 +167,4 @@ These are the limit styles provided by *form-limits*  version 3.2.0.  Please see
 * *yesno: No data array.
 * *yes: No data array.
 * *no: No data array.
-
 

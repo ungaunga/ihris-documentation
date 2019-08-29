@@ -1,9 +1,6 @@
 Rwanda iHRIS FR Interactions
 ============================
 
-
-
-
 Transaction Diagram: With InfoMan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -15,13 +12,10 @@ Transaction Diagram: With InfoMan
    him [label="OpenHIM\n(Access Control)" shape=box]
    infoman [label="InfoManager\n(caching)" shape=box]
 
-
    ihris->him [label="Facility Search"]
    him->infoman [label="pass-thru Facility Search"]
    infoman->fr [label="getModificationsRequest"]
 
 }
 </graphviz>
-
-
 

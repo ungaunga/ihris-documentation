@@ -1,8 +1,6 @@
 Design Documents
 ================
 
-
-
 * [[Custom Forms]]
 * [[Custom Pages]]
 * [[Extending Form Limits]]
@@ -10,5 +8,4 @@ Design Documents
 * [[Linking with OpenMRS]]
 * [[SDMX-HD]]
 * [[Blue Prints|Older Blueprints]]
-
 

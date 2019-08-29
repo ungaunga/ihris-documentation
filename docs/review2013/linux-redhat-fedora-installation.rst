@@ -1,20 +1,15 @@
 Linux (RedHat-Fedora) Installation
 ==================================
 
-
 Getting Ready
 ^^^^^^^^^^^^^
 
 Here are instructions for installing the iHRIS Suite on an Linux (RedHat or Fedora) system.  If you need help installing a RedHat distribution, visit:
 
-
-
 * `Fedora Documentation <http://docs.fedoraproject.org/>`_
 * `RedHat Documentation <http://www.redhat.com/docs/>`_
 
 The following steps assume you have root-level access to your Linux machine. Root-level access is achieved by any of the following steps
-
-
 
 * Login to your server directly as the root user.
 * Use "su" at the command prompt to switch to the root user.
@@ -26,43 +21,34 @@ First, if your Linux installation includes SELinux, disable it using by modifyin
 
 Now, install a  `Lamp <http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29>`_  server.
 
-
 .. code-block::
 
     yum install httpd mysql-server php php-devel php-mysql php-xml
     
 
-
 Please ensure your system can send email properly before continuing. RedHat and Fedora typically will have a configured version of sendmail installed by default.
-
 
 Configuring PHP
 ^^^^^^^^^^^^^^^
 
 Next, you'll need to increase the memory limit for PHP. You can do this by editing the /etc/php.d/php.ini. Change the following line:
 
-
 .. code-block::
 
     memory_limit = 32M
     
 
-
 to:
-
 
 .. code-block::
 
     memory_limit = 128M
     
 
-
-
 Installing Pear and PECL Packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We need to install a few Pear and PECL packages for PHP.  For the Pear packages you can do:
-
 
 .. code-block::
 
@@ -70,24 +56,19 @@ We need to install a few Pear and PECL packages for PHP.  For the Pear packages 
     pear install MDB2 MDB2#mysql text_password console_getopt
     
 
-
 During certain activities like installation and upgrades you may need more memory than APC uses by default. To increase the memory limit, edit /etc/php.d/php.ini and change:
-
 
 .. code-block::
 
     apc.shm_size=32
     
 
-
 to
-
 
 .. code-block::
 
     apc.shm_size=100
     
-
 
 There are two optional packages you may wish to install:
 
@@ -95,7 +76,6 @@ There are two optional packages you may wish to install:
 
     yum install php-gd php-tidy
     
-
 
 These packages are used to for inserting images into PDF output of reports and for exporting XML files in a nicely formatted manner.
 
@@ -114,7 +94,6 @@ Change "America/New_York" to match your locality -- the county and city spelling
 After installing these supplemental packages, be sure to restart apache with the following command:
 
  apachectl restart
-
 
 Database Setup
 ^^^^^^^^^^^^^^
@@ -135,7 +114,6 @@ On Fedora systems, you'll also need to execute these commands to ensure database
 
  ln -s /var/lib/mysql/mysql.sock /var/run/mysqld/mysqld.sock
 
-
 Downloading the Software
 ^^^^^^^^^^^^^^^^^^^^^^^^
 To download the software you enter these commands:
@@ -153,8 +131,6 @@ To download the software you enter these commands:
     tar -xjf ihris-manage-full-4_1_5.tar.bz2
     
 
-
-
 Creating a Site Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -167,7 +143,6 @@ We are going to start by modifying the *BLANK*  site for iHRIS Manage.  If you w
     cp -R /var/lib/iHRIS/current/ihris-manage/sites/blank /var/lib/iHRIS/sites/manage
     mv /var/lib/iHRIS/sites/manage/iHRIS-Manage-BLANK.xml  /var/lib/iHRIS/sites/manage/iHRIS-Manage-Site.xml
     
-
 
 We now need to edit the site configuration file:
 
@@ -221,7 +196,6 @@ to:
     
 
 You may also choose to change *BLANK*  everywhere with your organization's name.  For best results, please choose one word, possilby with a dash, such as *Sample* , *MOH* , or *MOH-Taifeki.*   To make this change, hit the replace icon, fill in *blank*  under *Search for*  and *MOH-Taifeki*  under *Replace With,*  then hit replace all.
-
 
 Making the Site Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -296,7 +270,6 @@ to:
 
 Save and quit.
 
-
 Finishing up
 ^^^^^^^^^^^^
 Let us restart the Apache webserver using:
@@ -311,8 +284,6 @@ Now we are ready to begin the site installation.  Simply browse to:
 http://localhost/manage
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *administrator*  with the default password *administator.* 
-
-
 
 Files
 ^^^^^

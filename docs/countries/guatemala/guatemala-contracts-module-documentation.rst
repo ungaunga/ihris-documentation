@@ -1,7 +1,6 @@
 Guatemala Contracts Module Documentation
 ========================================
 
-
 Use Case/Description Temporary Employees
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 For temporary employees we have the contract+total_amount that we want to calculate from the salary.  The process for assigning a temporary employee a position is three steps.
@@ -32,7 +31,6 @@ Assigning a new position
 
     * the total amount of the selected contract is calculated based on the most recent salary
 
-
 Changing the Salary
 ~~~~~~~~~~~~~~~~~~~
 The current contract should be closed and a new contract should be created.
@@ -45,7 +43,6 @@ The current contract should be closed and a new contract should be created.
   * A new contract is created copying the details of the old contract except dates, and total amount?
   * The new contract's  total_amount is calculated to new salary
   * Old contract end_date is set to new salary start date if it has not already been set (THIS MAY BE AN ISSUE if the contract already has a different end date)
-
 
 Renewing a Contract
 ~~~~~~~~~~~~~~~~~~~
@@ -66,9 +63,6 @@ In the following we want to add a place for contract that is like salary
 
 .. image:: images/guat_pos_salary.png
     :align: center
-
-
-
 
 Use Case/Description Permanent Employees
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -101,7 +95,6 @@ On an (at least) annual basis, a new partida permanent is assigned to the employ
 
   * A new person_position object is created and populated with the existing person_position information except the partida_perm
   * The partida_perm field of the person_position is set to be the selected partida_perm
-
 
 Data Model
 ^^^^^^^^^^

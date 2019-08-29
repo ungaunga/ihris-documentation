@@ -5,7 +5,6 @@ This is a form storage mechanism designed to read data from a CSV file.  It is p
 
 This is a read-only form storage mechansim.  By default it will read in the CSV dump of a *hippo_XXX*  as exported by phpmyadmin according to the following options:
 
-
 * Export: CSV
 * Fields Terminated By: ,
 * Fields Enclosed By: "
@@ -16,16 +15,12 @@ This is a read-only form storage mechansim.  By default it will read in the CSV 
 * Compression: None
 Here is a [[Media:csv_options.png | screen shot]]
 
-
-
 Form Storage Options
 ^^^^^^^^^^^^^^^^^^^^
 
 The options specifying a CSV storage for $form are stored at:
  /modules/forms/forms/$form/storage_options/CSV
 It has the following structure:
-
-
 
 * file:  The CSV file that the data should be read from.  This can either be an absolutely given file path, a relative file path, or the URL of a  stream handled by php.  If it is a relative file path, then it uses the CSV  [[File Search Paths | file search]] category. The file can also be a path to a scalar node in magic data as indicated by 'mdn://path/in/magic/data' .
 * delimiter: The delimited used to split a line (one character only).  Defaults to '''',''''
@@ -46,14 +41,11 @@ It has the following structure:
 * **index: If set, and *use_header*  or *has_header*  is false, it is the numeric index of the column that this data is saved in.
 * **header: Applies if *use_header*  and *has_header*  are true.   If set it is the header name of index of the column that this data is saved in.  By default it is "$field"
 
-
 Global Options
 ^^^^^^^^^^^^^^
 There are global options for CSV form storage. They are specified at:
  /modules/forms/storage_options/CSV
 This has the structure:
 
-
 * closeCSV: defaults to false.  If true, we close the CSV file between access.  Otherwise, we allow PHP to handle closing the file resource at the end of the script's call.
-
 

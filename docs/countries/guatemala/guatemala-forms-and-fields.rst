@@ -8,10 +8,8 @@ access_facility
 The form *access_facility*  is implemented by the class: [[Class: iHRIS_UserAccessFacility |iHRIS_UserAccessFacility]]
 It is a child of the following forms:
 
-
 * [[#user|user]]
 It has the following fields:
-
 
 * location:
 * *Header: Facility or Geographic Location
@@ -24,10 +22,8 @@ accident
 The form *accident*  is implemented by the class: [[Class: iHRIS_Accident |iHRIS_Accident]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * accident_type:
 * *Header: Accident Type
@@ -56,7 +52,6 @@ accident_type
 The form *accident_type*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
 
-
 * remap:
 * *Header: Remapped Value
 * *Type: [[Class: I2CE_FormField_REMAP |REMAP]]
@@ -73,7 +68,6 @@ activity
 ^^^^^^^^
 The form *activity*  is implemented by the class: [[Class: I2CE_SimpleCodedList |I2CE_SimpleCodedList]]
 It has the following fields:
-
 
 * remap:
 * *Header: Remapped Value
@@ -96,10 +90,8 @@ application
 The form *application*  is implemented by the class: [[Class: iHRIS_Applicant |iHRIS_Applicant]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * desired_wage:
 * *Header: Desired Wage
@@ -137,7 +129,6 @@ archived_report
 The form *archived_report*  is implemented by the class: [[Class: I2CE_ArchivedReport |I2CE_ArchivedReport]]
 It has the following fields:
 
-
 * remap:
 * *Header: Remapped Value
 * *Type: [[Class: I2CE_FormField_REMAP |REMAP]]
@@ -166,7 +157,6 @@ areas
 The form *areas*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
 
-
 * remap:
 * *Header: Remapped Value
 * *Type: [[Class: I2CE_FormField_REMAP |REMAP]]
@@ -183,7 +173,6 @@ bancos
 ^^^^^^
 The form *bancos*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
-
 
 * remap:
 * *Header: Remapped Value
@@ -202,10 +191,8 @@ bankaccount
 The form *bankaccount*  is implemented by the class: [[Class: GT_BankAccount |GT_BankAccount]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * account_number:
 * *Header: Numero de Cuenta
@@ -220,10 +207,8 @@ benefit
 The form *benefit*  is implemented by the class: [[Class: iHRIS_Benefit |iHRIS_Benefit]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * amount:
 * *Header: Amount
@@ -257,7 +242,6 @@ benefit_recurrence
 ^^^^^^^^^^^^^^^^^^
 The form *benefit_recurrence*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
-
 
 * remap:
 * *Header: Remapped Value
@@ -2811,5 +2795,4 @@ It has the following fields:
 **Type: [[Class: I2CE_FormField_MAP |MAP]]
 **Restrictions: Required, Unique 
 **Maps To Forms: [[#user|user]]
-
 

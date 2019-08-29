@@ -8,7 +8,6 @@ tcpdf
 ^^^^^
 This describes version 4.1.0 of the module tcpdf (tcpdf) 
 
-
 * Source:  ` textlayout/modules/tcpdf  <http://bazaar.launchpad.net/~intrahealth+informatics/textlayout/4.1.7-release/files/head:/modules/tcpdf>`_
 * Description: This is a wrapper for the tcpdf PDF generation utility
 * Requirements:
@@ -20,7 +19,6 @@ textlayout
 ^^^^^^^^^^
 This describes version 4.1.7.0 of the module Text Layout (textlayout) 
 It is the top module of this package
-
 
 * Source:  ` textlayout/  <http://bazaar.launchpad.net/~intrahealth+informatics/textlayout/4.1.7-release/files/head:/>`_
 * Description: I2CE Text Layout Tool
@@ -34,5 +32,4 @@ It is the top module of this package
 * *Ttf_path: /usr/share/fonts/truetype/** ,/usr/local/share/fonts/truetype/**
 * *Hyphen_path:  `/dicts <http://bazaar.launchpad.net/~intrahealth+informatics/textlayout/4.1.7-release/files/head://dicts>`_  ,/usr/share/myspell/dicts
 * *Modules:  `/modules <http://bazaar.launchpad.net/~intrahealth+informatics/textlayout/4.1.7-release/files/head://modules>`_  <br/>[[#tcpdf |tcpdf]]
-
 

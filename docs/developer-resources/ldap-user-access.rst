@@ -10,11 +10,9 @@ Configuration
 
 To use the default user authentication, you need to enable the module and set an initialization string.
 
-
 Enabling the Module
 ~~~~~~~~~~~~~~~~~~~
 To enable, just make sure you have:
-
 
 .. code-block:: xml
 
@@ -24,13 +22,10 @@ To enable, just make sure you have:
      </requirement>
     
 
-
-
 Initialization String
 ~~~~~~~~~~~~~~~~~~~~~
 
 The initialization string is sent to I2CE::initialize() in the index.php as the fourth argument, *$user_access_init* .  This string must be prefixed with the '''LDAP://''.  What follows take any of the following formats:
-
 
 * null:  The is the default value and means that we use the default DN (distinguished name) for querying and authenticating users
 * a JSON encoded string: The data to  is a JSON enocode string of optional configuration value for the user access.  The JSON encoded data has the following keys:
@@ -84,7 +79,6 @@ For example:
 would be a minimal initialization string needed to authenticate against.  For the examples below, you would use:
   LDAP://{"dn": "dc=moh,dc=example,dc=org"}
 
-
 LDAP Directory Structure
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -98,10 +92,6 @@ A user could be represented as:
     cn: Carl Leitner
     userPassword: {SSHA}DkMTwBl+a/3DQTxCYEApdUtNXGgdUac3
     email: cleitner@intrahealth.org
-
-
-
-
 
 User roles be unique on the pair (username, software-component)
 and there may be software component specific information to share,
@@ -123,16 +113,13 @@ and there may be software component specific information to share,
     role: guest
     appid: 42
 
-
 Passwords
 ~~~~~~~~~
 We will use SHA and salted SSHA.  For a php implementation  `see this <http://www.php.net/manual/en/function.sha1.php#40226>`_  and  `this <http://www.openldap.org/faq/data/cache/347.html>`_ 
 
-
 openLDAP Server Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This describes how to set up openLDAP for use with openMRS, DHIS and iHIS on an ubuntu machine. First, see  `this <https://help.ubuntu.com/8.04/serverguide/C/openldap-server.html>`_  tutorial.
-
 
 Install slapd
 ~~~~~~~~~~~~~
@@ -140,7 +127,6 @@ Here are the steps I followed:
  sudo apt-get install slapd ldap-utils
 
  sudo dpkg-reconfigure slapd
-
 
 * choose to Omit OpenLDAP server configuration?: No
 * DNS Domain Name: moh.example.gov
@@ -157,12 +143,10 @@ and specify:
 then restart
  sudo /etc/init.d/slapd restart
 
-
 Once Initialized
 ~~~~~~~~~~~~~~~~
 
 In our scenario above initializing the UserAccess_LDAP module we will have:
-
 
 .. code-block:: text
 
@@ -200,10 +184,7 @@ In our scenario above initializing the UserAccess_LDAP module we will have:
     ou: Ids
     
 
-
 Here is a sample user with their role and id.
-
-
 
 .. code-block:: text
 
@@ -228,6 +209,4 @@ Here is a sample user with their role and id.
     cn: 1
     
     
-
-
 

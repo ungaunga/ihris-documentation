@@ -9,16 +9,13 @@ To specify that the form $form has a flat table storage mechanism set by setting
  modules/forms/forms/$form/storage
 to have value **flat.** 
 
-
 Form Storage Options
 ^^^^^^^^^^^^^^^^^^^^
 The flat storage mechanism is defined so that, by default, it can read in the cached "hippo_" tables of form data.  If you situation, is not exactly this, then you can take advantage of the options as described in this section.
 
-
 The options specifying a flat table storage for $form are stored at:
  /modules/forms/forms/$form/storage_options/flat
 It has the following structure:
-
 
 * table: Optional scalar node. The table to use.  E.g. my_table, `my weird_table`, `some_other_database`.`table`.  You are responsible for back-tics if required. If it is not set, it determines the table name from the table_prefix set in the [[Technical Overview: Form Storage -- Flat Table#Global Options|global options]].
 * id: Optional parent node.  The data defining how to associate an id per row of this table.  If it is not set, the the data is populate from the column 'id.'
@@ -40,22 +37,18 @@ It has the following structure:
 * *col: Optional scalar node.  Specifies a "column" of the table to be used as the modified time.  Column should have type datetime. You are responsible for back-tics.
 * *function: Optional scalar node.  Optional scalar node.  Optional scalar node.  Specifies a SQL function  whose result (of type datetime) will as the value for the modified time. 'col' takes precedence.
 
-
 Global Options
 ^^^^^^^^^^^^^^
 There are global options for specifying a the mapping between components and databases
  /modules/forms/storage_options/flat
 This has the structure:
 
-
 * table_prefix: Optional scalar node.  The value pre-pended to a form name to give the table name where the data is stored.  If not set it is 'hippo_', the prefix used for the caching of  form data to flat tables.  For example the person form would use the table 'hippo_person'.
-
 
 Example
 ^^^^^^^
 To read in the cached *hippo_person*  tables for the person forms from a cached table we would set:
  /modules/forms/forms/person/storage => 'flat'
-
 
 Writing
 ^^^^^^^
@@ -64,5 +57,4 @@ Only fields which are columns are writable.  If the data specifying the id is no
  **Warning:**  It is assumed that the columns associated to each field (besides the id) is either allowed to be null or has a default value, otherwise the column is not writable.  Basically we need to allow that for a new form, each column can be saved in an independent.
 
  **Warning:**  The id column cannot have 'form_prepended' set to true for the field to be writable
-
 

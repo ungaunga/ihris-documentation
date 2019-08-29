@@ -6,7 +6,6 @@ This page contains installation instructions on installing iHRIS Manage Customiz
 Getting Ready
 ^^^^^^^^^^^^^
 
-
 First you should install Ubuntu and all the supporting software required by iHRIS by following the [[Linux (Ubuntu) Installation - Supporting Software]] instructions.
 
  **Note:**  Installing on ext4 filesystem?  see  `this <http://ubuntuforums.org/showthread.php?t=1313834>`_ 
@@ -17,14 +16,10 @@ First you should install Ubuntu and all the supporting software required by iHRI
 
  **Note:**   Some commands will launch the **gedit**  file editor.  Look at the  `documentation <https://help.ubuntu.com/community/gedit>`_  if you need additional help.
 
-
-
 Download MLSCN Customizations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You just enter these commands on your terminal:
-
-
 
 .. code-block:: bash
 
@@ -33,12 +28,8 @@ You just enter these commands on your terminal:
     bzr branch lp:~ihris-nigeria/ihris+nmc+nigeria/MLSCN-4.1 4.1
     
 
-
-
 Create Database
 ^^^^^^^^^^^^^^^
-
-
 
 .. code-block:: bash
 
@@ -47,12 +38,9 @@ Create Database
 
 When prompted, you will have to type your MySQL password
 
-
 Edit config.values.php
 ^^^^^^^^^^^^^^^^^^^^^^
 Before editing this file, you have to create a directory under pages, where your local site configuration values will be set. And then you will copy both the config.values.php and the htaccess.TEMPLATE files there.
-
-
 
 .. code-block:: bash
 
@@ -63,7 +51,6 @@ Before editing this file, you have to create a directory under pages, where your
     
 
 Then you go edit the file in local
-
 
 .. code-block:: bash
 
@@ -78,17 +65,14 @@ You save and quit.
 
 Finally, make MLSCN site you just installed available via the webserver:
 
-
 .. code-block:: bash
 
     sudo ln -s /var/lib/iHRIS/MLSCN/4.1/pages /var/www/MLSCN
     
-
 
 To install the system you simply browse to:
 <center>
 http://localhost/MLSCN
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database.
-
 

@@ -3,11 +3,9 @@ Exporting Standardized Data
 
 Having standardized data lists is useful for managing multiple systems.  This could be for:
 
-
 * development, testing and production servers of iHRIS
 * district and national iHRIS systems in a decentralized iHRIS installation
 * use by other systems that want to know what data lists are being used in iHRIS.
-
 
 In this tutorial, learn how to export standardized *cadre*  data from a central site to be shared among regional and district installations.
 
@@ -15,17 +13,14 @@ In this tutorial, learn how to export standardized *cadre*  data from a central 
 
  *You can also [[Media:Creating_Standard_List_Modules.odp |download this presentation]] which has further details on how to create standardized data lists into modules by exporting them from the Magic Data Browser of iHRIS Manage.* 
 
-
 Overview
 ^^^^^^^^
 We will create a module called **standard-data-cadre**  that will contain all of the cadre's defined in the system.  We will use the Magic Data Browser to automatically generate a [[Module Structure#Module Configuration File| configuration .xml]] file which we will save as **standard-data-cadre.xml** .
 Once we have created this module, we should make it available and required to  each of the regional and district installations.
 
-
 First Steps -- Enabling the Magic Data Browser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We will export the cadre list using the "Magic Data Browser" module.  If it is not available under the "Configure System" menu, then follow these steps to enable it:
-
 
 * Browse to "Configure System"
 * Click the "Configure Modules" link
@@ -33,14 +28,12 @@ We will export the cadre list using the "Magic Data Browser" module.  If it is n
 * Check the check box next to "Magic Data Browser"
 * Click the "Enable" button at the bottom of the page
 
-
 Creating the module
 ^^^^^^^^^^^^^^^^^^^
 
 Browsing in Magic Data
 ~~~~~~~~~~~~~~~~~~~~~~
 Creating the module is very easy.  Go to:
-
 
 * Browse to "Configure System"
 * Click the "Browse Magic Data" link
@@ -51,11 +44,9 @@ Creating the module is very easy.  Go to:
 You should now see a page that looks like:
 [[image:export_cadre1.png|thumb|center|Magic Data Browser]]
 
-
 Setting Export Options
 ~~~~~~~~~~~~~~~~~~~~~~
 Now that we have browser in magic data to **/I2CE/formsData/forms/cadre**  we are ready to export the module:
-
 
 * Click on the "(options)" link under the "Export" button
 * Set the following data:
@@ -68,10 +59,8 @@ Your page should look like:
 
 Now click the "Export" button and your web-browser should ask you where to save the .xml file.  We will save it as the file *standard-data-cadre.xml* .  See the next section for some hints about where to save this file.
 
-
  **Note:**  The module in general should have version *4.0.* 'YYYY.MM.DD''''' where we replace *YYYY*  with the year, *MM*  with the numeric month and *DD*  with the numeric day.  For example the version would be *4.0.2010.08.17*  if the data was exported on August 17, 2010.  
 If we update the cadre list, at a later date (August 20, 2010), then we can re-export the list into the same module *standard-data-cadre*  but this time with version *4.0.2010.08.20.* 
-
 
 Managing Decentralized iHRIS with Launchpad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -83,14 +72,11 @@ Please also read [[Managing A Site In Launchpad]] for some background informatio
 
 Let us assume that we are working with a national site (''National''), and four regional sites (''North'',''South'',''East'' and *West* ) in the fictional country *Taifeki* 
 
-
 For example create a launchpad team, called *ihris+taifeki,*  which you and all members of your development team will join.  You should also create a project *ihris-manage-taifeki*  with the code hosted on Launchpad.
-
 
 Code Layout
 ~~~~~~~~~~~
 Here is a template for the directory layout for Taifeki's customizations which contains both the national and regional sites.  Directories are indicated in blue.
-
 
 * <span style="color:blue">modules</span>: the main modules directory which will contain all of the modules required by each of the sites.
 * *<span style="color:blue">ihris-taifeki</span>: a sub-directory of the modules folder which will contain the ihris-taikeki module
@@ -111,14 +97,12 @@ Here is a template for the directory layout for Taifeki's customizations which c
 * *<span style="color:blue">west</span>: contains the western region site.
 * **'''western-site.xml''':  The site configuration file for the western site. Xincludes the data-policy-regional.xml and requires the module ihris-tafeki
 
-
 Sample .XML Configuration Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ihris-taifeki.xml
 ~~~~~~~~~~~~~~~~~
 The is the module that contains all of the requirements, html templates, etc. which are common to the national and regional sites.  In particular, it requires the module standard-data-cadre:
-
 
 .. code-block:: xml
 
@@ -150,12 +134,9 @@ The is the module that contains all of the requirements, html templates, etc. wh
      </I2CEConfiguration>
     
 
-
-
 national-site.xml
 ~~~~~~~~~~~~~~~~~
 The is the site module for the nataional/central office site
-
 
 .. code-block:: xml
 
@@ -212,12 +193,9 @@ The is the site module for the nataional/central office site
      </I2CEConfiguration>
     
 
-
-
 northern-site.xml
 ~~~~~~~~~~~~~~~~~
 The is the site module for the northern site
-
 
 .. code-block:: xml
 
@@ -274,8 +252,6 @@ The is the site module for the northern site
      </I2CEConfiguration>
     
 
-
-
 data-policy-national.xml
 ~~~~~~~~~~~~~~~~~~~~~~~~
 In the data-policy-national.xml will be xincluded in our national site's configuration file.  We want to set it so that the national site has the cadre list stored in magic data and is read-write. 
@@ -283,7 +259,6 @@ In the data-policy-national.xml will be xincluded in our national site's configu
 We will also need to specify that we are aggregating data from each of the regional sites.  This is done via the [[Form Storage -- Multi-Flat Table |multi-flat]] form storage mechanism.
 
 It should look like this:
-
 
 .. code-block:: xml
 
@@ -329,12 +304,9 @@ It should look like this:
       </configurationGroup>  
     
 
-
-
 data-policy-regional.xml
 ~~~~~~~~~~~~~~~~~~~~~~~~
 In the data-policy-regional.xml will be xincluded in our regional site's configuration files.  We want to set it so that the regional sites have the cadre list stored in magic data and is read-only. It should look like this:
-
 
 .. code-block:: xml
 
@@ -352,6 +324,4 @@ In the data-policy-regional.xml will be xincluded in our regional site's configu
     
       </configurationGroup>
     
-
-
 

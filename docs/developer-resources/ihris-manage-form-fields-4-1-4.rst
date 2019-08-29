@@ -7,21 +7,16 @@ These are the forms and fields in iHRIS Manage version 4.0.9
 There is also a  `graphic visualization <http://open.intrahealth.org/visualizations/forms-ihris-manage-site-demo_4_1_1_0.gif>`_  of this data. 
  **Warning:**  this is a very large file and you may wish to save it to your desktop instead of viewing it in your browser.
 
-
-
 Here is a description of the [[Defining Forms#Field Types|Field types]].
 iHRIS Manage - 4.1.4
-
 
 access_facility
 ^^^^^^^^^^^^^^^
 The form *access_facility*  is implemented by the class: [[Class: iHRIS_UserAccessFacility |iHRIS_UserAccessFacility]]
 It is a child of the following forms:
 
-
 * [[#user|user]]
 It has the following fields:
-
 
 * location:
 * *Header: Facility or Geographic Location
@@ -34,10 +29,8 @@ accident
 The form *accident*  is implemented by the class: [[Class: iHRIS_Accident |iHRIS_Accident]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * accident_type:
 * *Header: Accident Type
@@ -66,7 +59,6 @@ accident_type
 The form *accident_type*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -80,10 +72,8 @@ application
 The form *application*  is implemented by the class: [[Class: iHRIS_Applicant |iHRIS_Applicant]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * desired_wage:
 * *Header: Desired Wage
@@ -121,10 +111,8 @@ benefit
 The form *benefit*  is implemented by the class: [[Class: iHRIS_Benefit |iHRIS_Benefit]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * amount:
 * *Header: Amount
@@ -159,7 +147,6 @@ benefit_recurrence
 The form *benefit_recurrence*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -172,7 +159,6 @@ benefit_type
 ^^^^^^^^^^^^
 The form *benefit_type*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -187,7 +173,6 @@ cadre
 The form *cadre*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -200,7 +185,6 @@ classification
 ^^^^^^^^^^^^^^
 The form *classification*  is implemented by the class: [[Class: iHRIS_Classification |iHRIS_Classification]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -220,7 +204,6 @@ competency
 ^^^^^^^^^^
 The form *competency*  is implemented by the class: [[Class: iHRIS_Competency |iHRIS_Competency]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -243,7 +226,6 @@ competency_evaluation
 The form *competency_evaluation*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -256,7 +238,6 @@ competency_type
 ^^^^^^^^^^^^^^^
 The form *competency_type*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -2023,5 +2004,4 @@ It has the following fields:
 **Type: [[Class: I2CE_FormField_MAP |MAP]]
 **Restrictions: Required, Unique 
 **Maps To Forms: [[#user|user]]
-
 

@@ -3,12 +3,10 @@ IHRIS Train Installation - 4.3.3
 
 Once you have downloaded iHRIS, follow these instructions to install the blank site.  This assumes you have downloaded the software to /var/lib/iHRIS/lib/4.3.3/.  For instructions on installing Ubuntu and downloading the software see the [[Linux (Ubuntu) Installation - 4.3.3]] instructions.
 
-
 Database Setup
 ^^^^^^^^^^^^^^
 
 To create the needed database you can do:
-
 
 .. code-block:: bash
 
@@ -16,7 +14,6 @@ To create the needed database you can do:
     
 
 Enter the password you set above (XXXXX) for MySQL.  You will now be able to send commands to MySQL and the prompt should always begin with 'mysql> '.  Type these commands:
-
 
 .. code-block:: mysql
 
@@ -30,7 +27,6 @@ Substitute PASS with something appropriate.  We'll refer to this password as YYY
 In version 4.3.3 of iHRIS we create mysql functions.  If you are having trouble creating routines see  `this <http://www.ispirer.com/wiki/sqlways/troubleshooting-guide/mysql/import/binary-logging>`_ .
 
 Alternatively, you may choose to install phpmyadmin to administer database through the web
-
 
 .. code-block:: bash
 
@@ -49,16 +45,12 @@ do this, click on  the 'Privileges' link and select 'Add a new User'. Then fill 
 .. image:: images/Phpmyadmin_create_user_Qualify.gif
     :align: center
 
-
-
 For security, make sure the password you choose is different than the root password for MySQL.  Let us refer to this password as YYYYY.
-
 
 Creating a Site Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We are going to start by modifying the *BLANK*  site for iHRIS Train.  To copy the *BLANK*  site:
-
 
 .. code-block:: bash
 
@@ -66,12 +58,9 @@ We are going to start by modifying the *BLANK*  site for iHRIS Train.  To copy t
     sudo cp -R /var/lib/iHRIS/lib/4.3.3/ihris-train/sites/blank /var/lib/iHRIS/sites/train
     
 
-
-
 Set Email Address (Optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You may optionally choose to  change the email address feedback is sent to by editting the site configuration file:
-
 
 .. code-block:: bash
 
@@ -79,7 +68,6 @@ You may optionally choose to  change the email address feedback is sent to by ed
     
 
 changing:
-
 
 .. code-block:: xml
 
@@ -91,7 +79,6 @@ changing:
 
 to:
 
-
 .. code-block:: xml
 
     <configuration name='email' path='to' values='single'>
@@ -100,13 +87,10 @@ to:
     </configuration>
     
 
-
-
 Making the Site Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We will now edit the configuration to let the site know about the database user and options:
-
 
 .. code-block:: bash
 
@@ -129,17 +113,14 @@ Save and quit.
 
 Finally, we make iHRIS Train site we just created available via the webserver:
 
-
 .. code-block:: bash
 
     sudo ln -s /var/lib/iHRIS/sites/train/pages /var/www/html/train
     
 
-
 Pretty URLs
 ~~~~~~~~~~~
 This is an optional step to make URLs cleaner by removing the index.php.
-
 
 .. code-block:: bash
 
@@ -147,11 +128,9 @@ This is an optional step to make URLs cleaner by removing the index.php.
     sudo gedit /var/www/html/train/.htaccess
     
 
-
 We need to look for the line RewriteBase and change it to the web directory we want to use we are using,  */train* .
 
 Change the line that looks like:
-
 
 .. code-block:: apache
 
@@ -160,14 +139,12 @@ Change the line that looks like:
 
 to:
 
-
 .. code-block:: apache
 
         RewriteBase /train
     
 
 You may now save and quit.
-
 
 Finishing Up
 ^^^^^^^^^^^^
@@ -176,5 +153,4 @@ Now we are ready to begin the site installation.  Simply browse to:
 http://localhost/train
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database (YYYYY that you set above).
-
 

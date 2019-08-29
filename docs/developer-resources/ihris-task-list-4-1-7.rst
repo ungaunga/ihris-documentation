@@ -8,13 +8,11 @@ cached_forms_can_administer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *cached_forms_can_administer*  is defined in the module [[I2CE Module List (4.1.7)#CachedForms | CachedForms]] of the package I2CE.
 
-
 * Description:Allows administering of cached forms
 
 can_change_own_password
 ^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_change_own_password*  is defined in the module [[I2CE Module List (4.1.7)#LoginPage | LoginPage]] of the package I2CE.
-
 
 * Description:Can change their own password
 
@@ -22,13 +20,11 @@ can_configure_modules
 ^^^^^^^^^^^^^^^^^^^^^
 The task *can_configure_modules*  is defined in the module [[I2CE Module List (4.1.7)#admin | admin]] of the package I2CE.
 
-
 * Description:Can configure modules
 
 can_configure_system
 ^^^^^^^^^^^^^^^^^^^^
 The task *can_configure_system*  is defined in the module [[iHRIS Common Module List (4.1.7)#ihris-common | ihris-common]] of the package iHRIS Common.
-
 
 * Description:Can access the general configure system menu
 
@@ -36,13 +32,11 @@ can_create_or_edit_users
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_create_or_edit_users*  is defined in the module [[I2CE Module List (4.1.7)#UserForm | UserForm]] of the package I2CE.
 
-
 * Description:Can create or edit the users in the system.
 
 can_edit_all_database_lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_all_database_lists*  is defined in the module [[I2CE Module List (4.1.7)#Lists | Lists]] of the package I2CE.
-
 
 * Description:Can edit all the lists stored in the database
 * Can perform the following sub-tasks: [[#can_edit_database_list_continuing_education_course | can_edit_database_list_continuing_education_course]], [[#can_edit_database_list_dhis_orgunit | can_edit_database_list_dhis_orgunit]], [[#can_edit_database_list_dhis_data_element | can_edit_database_list_dhis_data_element]], [[#can_edit_all_geographic_database_lists | can_edit_all_geographic_database_lists]], [[#can_edit_database_lists | can_edit_database_lists]], [[#can_view_all_database_lists | can_view_all_database_lists]], [[#can_edit_database_list_cadre | can_edit_database_list_cadre]], [[#can_edit_all_job_structure_database_lists | can_edit_all_job_structure_database_lists]], [[#can_edit_all_organization_database_lists | can_edit_all_organization_database_lists]], [[#can_edit_all_employee_database_lists | can_edit_all_employee_database_lists]], [[#can_edit_position_database_lists | can_edit_position_database_lists]], [[#can_edit_all_manage_positions_database_lists | can_edit_all_manage_positions_database_lists]], [[#can_edit_all_training_course_database_lists | can_edit_all_training_course_database_lists]]
@@ -51,14 +45,12 @@ can_edit_all_employee_database_lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_all_employee_database_lists*  is defined in the module [[iHRIS Manage Module List (4.1.7)#ihris-manage | ihris-manage]] of the package iHRIS Manage.
 
-
 * Description:Can edit all employee database lists
 * Can perform the following sub-tasks: [[#can_edit_database_list_marital_status | can_edit_database_list_marital_status]], [[#can_edit_database_list_edu_type | can_edit_database_list_edu_type]], [[#can_edit_database_list_degree | can_edit_database_list_degree]], [[#can_edit_database_list_id_type | can_edit_database_list_id_type]], [[#can_edit_database_list_language | can_edit_database_list_language]], [[#can_edit_database_list_accident_type | can_edit_database_list_accident_type]], [[#can_edit_database_list_disciplinary_action_type | can_edit_database_list_disciplinary_action_type]], [[#can_edit_database_list_disciplinary_action_reason | can_edit_database_list_disciplinary_action_reason]], [[#can_edit_employee_database_lists | can_edit_employee_database_lists]], [[#can_view_all_employee_database_lists | can_view_all_employee_database_lists]], [[#can_edit_database_list_benefit_type | can_edit_database_list_benefit_type]], [[#can_edit_database_list_pos_change_reason | can_edit_database_list_pos_change_reason]], [[#can_edit_database_list_confirmation_type | can_edit_database_list_confirmation_type]], [[#can_edit_database_list_competency_evaluation | can_edit_database_list_competency_evaluation]], [[#can_edit_database_lists_competency | can_edit_database_lists_competency]]
 
 can_edit_all_geographic_database_lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_all_geographic_database_lists*  is defined in the module [[iHRIS Common Module List (4.1.7)#Geography | Geography]] of the package iHRIS Common.
-
 
 * Description:Can edit all geography data
 * Can perform the following sub-tasks: [[#can_edit_database_list_currency | can_edit_database_list_currency]], [[#can_edit_database_list_country | can_edit_database_list_country]], [[#can_edit_database_list_region | can_edit_database_list_region]], [[#can_edit_database_list_district | can_edit_database_list_district]], [[#can_edit_database_list_county | can_edit_database_list_county]], [[#can_edit_geographic_database_lists | can_edit_geographic_database_lists]], [[#can_view_all_geographic_database_lists | can_view_all_geographic_database_lists]]
@@ -67,14 +59,12 @@ can_edit_all_job_structure_database_lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_all_job_structure_database_lists*  is defined in the module [[iHRIS Common Module List (4.1.7)#ihris-common-Job | ihris-common-Job]] of the package iHRIS Common.
 
-
 * Description:Can edit all job structure database lists
 * Can perform the following sub-tasks: [[#can_view_all_job_structure_database_lists | can_view_all_job_structure_database_lists]], [[#can_edit_database_list_cadre | can_edit_database_list_cadre]], [[#can_edit_database_list_classification | can_edit_database_list_classification]], [[#can_edit_database_list_job | can_edit_database_list_job]], [[#can_edit_database_list_salary_grade | can_edit_database_list_salary_grade]]
 
 can_edit_all_manage_positions_database_lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_all_manage_positions_database_lists*  is defined in the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-PersonPosition | ihris-manage-PersonPosition]] of the package iHRIS Manage.
-
 
 * Description:Can edit all information about positions
 * Can perform the following sub-tasks: [[#can_view_all_manage_positions_database_lists | can_view_all_manage_positions_database_lists]], [[#can_edit_database_list_position_type | can_edit_database_list_position_type]], [[#can_edit_database_list_position | can_edit_database_list_position]], [[#can_edit_manage_positions_database_lists | can_edit_manage_positions_database_lists]], [[#can_edit_database_list_salary_source | can_edit_database_list_salary_source]]
@@ -83,14 +73,12 @@ can_edit_all_organization_database_lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_all_organization_database_lists*  is defined in the module [[iHRIS Manage Module List (4.1.7)#ihris-manage | ihris-manage]] of the package iHRIS Manage.
 
-
 * Description:Can edit all organizational database lists
 * Can perform the following sub-tasks: [[#can_edit_database_list_facility | can_edit_database_list_facility]], [[#can_edit_database_list_facility_type | can_edit_database_list_facility_type]], [[#can_edit_database_list_council | can_edit_database_list_council]], [[#can_edit_organization_database_lists | can_edit_organization_database_lists]], [[#can_view_all_organization_database_lists | can_view_all_organization_database_lists]], [[#can_edit_database_list_department | can_edit_database_list_department]]
 
 can_edit_all_planning_database_lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_all_planning_database_lists*  is defined in the module [[iHRIS Manage Module List (4.1.7)#ihris-manage | ihris-manage]] of the package iHRIS Manage.
-
 
 * Description:Can edit all planning database lists
 * Can perform the following sub-tasks: [[#can_edit_database_list_establishment_type | can_edit_database_list_establishment_type]], [[#can_edit_database_list_establishment_period | can_edit_database_list_establishment_period]], [[#can_edit_database_list_establishment | can_edit_database_list_establishment]]
@@ -99,14 +87,12 @@ can_edit_all_training_course_database_lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_all_training_course_database_lists*  is defined in the module [[iHRIS Common Module List (4.1.7)#training-course | training-course]] of the package iHRIS Common.
 
-
 * Description:Edit all lists assoicated with the training module
 * Can perform the following sub-tasks: [[#can_edit_database_list_continuing_education_course | can_edit_database_list_continuing_education_course]], [[#can_view_all_training_course_database_lists | can_view_all_training_course_database_lists]], [[#can_edit_database_lists | can_edit_database_lists]], [[#can_view_database_list_continuing_education_course | can_view_database_list_continuing_education_course]], [[#can_edit_database_list_training_course | can_edit_database_list_training_course]], [[#can_edit_database_list_training_course_mod | can_edit_database_list_training_course_mod]], [[#can_edit_database_list_scheduled_training_course | can_edit_database_list_scheduled_training_course]], [[#can_edit_database_list_training_course_status | can_edit_database_list_training_course_status]], [[#can_edit_database_list_training_course_requestor | can_edit_database_list_training_course_requestor]], [[#can_edit_database_list_training_course_evaluation | can_edit_database_list_training_course_evaluation]], [[#can_edit_database_list_training_course_category | can_edit_database_list_training_course_category]], [[#can_edit_database_list_training_institution | can_edit_database_list_training_institution]], [[#can_edit_database_list_training_funder | can_edit_database_list_training_funder]], [[#person_can_edit_child_form_scheduled_training_course | person_can_edit_child_form_scheduled_training_course]]
 
 can_edit_database_list_accident_type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_database_list_accident_type*  is defined in the module [[iHRIS Manage Module List (4.1.7)#accident | accident]] of the package iHRIS Manage.
-
 
 * Description:Edit the workplace accident type list
 * Can perform the following sub-tasks: [[#can_edit_database_lists | can_edit_database_lists]], [[#can_edit_employee_database_lists | can_edit_employee_database_lists]], [[#can_view_database_list_accident_type | can_view_database_list_accident_type]]
@@ -115,14 +101,12 @@ can_edit_database_list_benefit_type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_database_list_benefit_type*  is defined in the module [[iHRIS Manage Module List (4.1.7)#ihris-manage-Benefit | ihris-manage-Benefit]] of the package iHRIS Manage.
 
-
 * Description:Can edit the benefit type database list
 * Can perform the following sub-tasks: [[#can_edit_employee_database_lists | can_edit_employee_database_lists]], [[#can_view_database_list_benefit_type | can_view_database_list_benefit_type]]
 
 can_edit_database_list_cadre
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The task *can_edit_database_list_cadre*  is defined in the module [[iHRIS Common Module List (4.1.7)#ihris-common-Cadre | ihris-common-Cadre]] of the package iHRIS Common.
-
 
 * Description:Edit the cadre list
 * Can perform the following sub-tasks: [[#can_view_database_list_cadre | can_view_database_list_cadre]]
@@ -1906,5 +1890,4 @@ users_can_edit_all
 The task *users_can_edit_all*  is defined in the module [[I2CE Module List (4.1.7)#UserForm | UserForm]] of the package I2CE.
 *Description:Can edit all the users in the system.
 *Can perform the following sub-tasks: [[#users_can_edit | users_can_edit]]
-
 

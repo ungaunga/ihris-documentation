@@ -10,7 +10,6 @@ Los Datos Magic son una estructura de árbol con raíz con beneficios. Si usted 
 
 Los datos magic tienen dos partes. La clase del nodo de magic data, definido en *I2CE/lib/I2CE_MagicDataNode*  y los mecanismos de almacenamiento para los datos magic. Usted puede utilizar los datos magic sin utilizar un mecanismo de almacenamiento, en tal caso los datos magic guardados no persisten a lo largo de todas las sesiones. Por defecto utiliza los siguientes mecanismos de almacenamiento para los datos Magic:
 
-
 * Base de datos: Los datos se guardan en una table en la base de datos. En I2CE, esta se establece como la table *config*  .
 * APC: Los datos se almacenan en un caché de memoria proporcionado por  http://pecl.php.net/package/APC apc] que persiste a lo largo de las sesiones apache.
 
@@ -27,7 +26,6 @@ Un nodo primario puede tener tantos nodos secundarios como quiera. Cada nodo sec
 Con la excepción del nodo raíz, cada nodo de datos magic tiene un nombre. Para el nombre se permite cualquier valor numérico. Cualquier cadena que no esté vacía es válida siempre y cuando no empiece con '=' no contenga una  '/' y no sea '.' o '..'.  Sin embargo, es mejor limitarse a que las cadenas contengan solamente los siguientes caracteres:
  _-+.0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-
 Rutas absolutas
 ^^^^^^^^^^^^^^^
 Los nodos de los Datos Magic pueden referenciarse por su ruta, la que es una concatenación de sus nombres por '/.'
@@ -38,11 +36,9 @@ Si el nodo raíz tiene un secundario con el nombre 'some', se referencia por la 
 
 Si alguna es un nodo primario con un secundario de nombre 'thing', entonces ese secundario se referencia por la ruta  '/some/thing'
 
-
 Rutas Relativas
 ^^^^^^^^^^^^^^^
 Las rutas también pueden ser relativas. en el ejemplo anterior, si estuviera en el nodo '/some' entonces podría referenciar a los otros nodos con:
-
 
 * './' referencia '/some'
 * '../' referencia '/'
@@ -55,13 +51,11 @@ El nodo de <configurationGroup> es opcional. Si está presente debe tener el nom
 
 Todos los datos magic son relativos a la ruta definida por este configurationGroup. Hay tres opciones:
 
-
 * La ruta del atributo no está presente. en el siguiente ejemplo, los datos magic se guardan bajo /modules/mercury_javascript_path.
  Ejemplo:
   <configurationGroup name='mercury_javascript_popup'>
     <span style='color:red'>SOME STUFF GOES HERE</span>
  </configurationGroup>
-
 
 * La ruta del atributo está presente. En el siguiente ejemplo, los datos magic se guardan en  /algún/otro/lugar.
  Ejemplo:
@@ -69,16 +63,13 @@ Todos los datos magic son relativos a la ruta definida por este configurationGro
    <span style='color:red'>SOME STUFF GOES HERE</span>
  </configurationGroup> 
 
-
 * El módulo es 'I2CE'. Los datos magic se guardan relativos a /I2CE
 
 En el resto de esta sección describiremos <span style='color:red'>WHAT STUFF GOES THERE</span> que son [[#<configurationGroup>|<configurationGroup>]] y [[#<configuration>|<configurations>]] etiquetas.
 
-
 <configurationGroup>
 ^^^^^^^^^^^^^^^^^^^^
 Una <configurationGroup> puede tener varias subetiquetas en este orden:
-
 
 * Un <displayName> opcional. Un nombre mostrado en la configuración del módulo para esta agrupación de datos
 * Una <description> opcional. Una descripción de la funcionalidad de la agrupación.
@@ -86,22 +77,18 @@ Una <configurationGroup> puede tener varias subetiquetas en este orden:
 * Cualquier número (incluyendo al cero) de etiquetas de [[#<status>|<status>]].
 * Cualquier número (incluyendo al cero)de <configurationGroup> o etiquetas de [[#<configuration>|<configuration>]].
 
-
 <configuration>
 ^^^^^^^^^^^^^^^
 Una <configuration> puede tener varias subetiquetas en este orden:
-
 
 * Un <displayName> opcional. Un nombre mostrado en la configuración de este módulo para esa agrupación de datos
 * Una <description> opcional. Una descripción de la funcionalidad de la agrupación.
 * Una etiqueta de [#<version>|<version>]] opcional.
 * Cualquier número (incluyendo al cero) de etiquetas de [[#<value>|<value>]].
 
-
 Atributos
 ^^^^^^^^^
 Hay varios atributos que pueden tener una[[#<configuration>|<configuration>]] y una [[#<configurationGroup>|<configurationGroup>]]:
-
 
 * name: Este es un atributo requerido. Cada <configuration> o <configurationGroup> secundaria de un <configurationGroup> debe tener un nombre distinto. Si la ruta del atributo no se ha establecido, también dice que este nodo de configuración no debe aplicarse al nodo de los datos magic con el nombre dado y que es un nodo secundario de datos magic del nodo primario de configurationGroup.
 * path: Esto es opcional Puede ser una ruta absoluta o relativa en los datos magic y describe los datos magic en los cuales se debe guardar este valor. Si esta es una ruta relativa, es relativa a la ruta de datos magic de su nodo primario.
@@ -109,10 +96,8 @@ Hay varios atributos que pueden tener una[[#<configuration>|<configuration>]] y 
 * config: Esto es opcional.  Si está establecido, establece el objeto de I2CE_Swiss que se utiliza para mostrar los datos en el menú para configurar los módulos.
 Una <configuration> puede también tener los siguientes atributos:
 
-
 * type: Por defecto es establece como 'string' y describe el tipo de datos establecidos por las etiquetas de <value> de este nodo.
 * values: Por defecto se establece como 'single' y describe si los datos establecidos por este nodo Deben ser un arreglo de valores o un único valor establecido en lo que se almacena en el nodo de <values>
-
 
 <value>
 ^^^^^^^
@@ -120,13 +105,10 @@ La etiqueta de <value> es una subetiqueta de una etiqueta de [[#<configuration>|
 
 Algunos tipos y valores comunes son:
 
-
 * type='string' values='single':  El nodo de datos magic es de tipo escalar con valor de los contenidos de la etiqueta de <value> única.
 * type='string' values='many':  El nodo de datos magic es de tipo primario. Tiene un nodo secundario de tipo escalar para cada etiqueta de <value>.
 * type='delimited': El nodo de datos magic es de tipo primario. Se espera que las etiquetas de valor sean de la forma <value>'key':'value'</value> en cual caso se crea un nodo secundario de datos magic de tipo escalar de nombre 'key' y valor 'value'
 * type='boolean':  Los valores en la etiqueta de <value> se interpretan como booleans:  F,f,False,false,0, etc. que se guardan en datos magic es 0.  De lo contrario, el valor que se guarda es 1.
-
-
 
 <version>
 ^^^^^^^^^
@@ -150,7 +132,6 @@ Se puede tener acceso a los mismos datos magic desde múltiples archivos de conf
   </configuration>
  </configurationGroup>
 
-
 Durante la inicialización del sitio, ya que el moduleA requiere al moduleB, el valor primero se establece a valB se establece primero por el moduleB.  Luego se sobrescribe para que sea el valor valA por el moduleA.   De manera similar, después de la inicialización, el valor de '/some/data2' es 'valA2'
 
 Suponga que la versión del moduleB se aumenta a la version 1.1 pero no hay otros cambios al archivo de configuración. Esto causará que el archivo de configuración se reprocese. El *configurator*  recordará que ya ha procesado todos los datos hasta la versión 1.01. Por lo tanto, no volverá a leer la sobrescrita que ya está guardada en los datos magic.
@@ -171,13 +152,11 @@ Suponga ahora que moduleB quiere cambiar el valor que guarda en /some/data a new
  </configurationGroup>
 Ahora el valor de /some/data se actualizará a 'newValB' y agregaremos en el valor 'The new stuff' en '/some/other_data.'  El valor en '/some/data2' se mantiene igual y es 'valA2.'
 
-
 <status>
 ^^^^^^^^
 Una etiqueta de estado consiste en pares de valores clave:
  <status>key:value</status>
 Aunque se puede utilizar cualquier cosa para la clave (siempre y cuando no contenga ':'), las claves que tienen significado son:
-
 
 * version: Funciones como la [[#<version>|<version>]]
 * overwrite: El valor puede ser verdadero o falso. Por defecto se establece como falso. Si es verdadero los datos magic se sobrescribirán aun cuando la version no lo haya hecho.
@@ -189,12 +168,10 @@ Aunque se puede utilizar cualquier cosa para la clave (siempre y cuando no conte
 * required: El valor puede ser verdadero o falso. Por defecto se establece como verdadero. Dice que los valores resultantes en el nodo de <configuration> deben establecerse
 * showIndex: El valor puede ser verdadero o falso. Por defecto se establece como verdadero.  En tal caso mostramos el índice en el menú de configuración del módulo
 
-
 Los valores de las claves de estado se heredan a medida que se baja de nodo.
 
 =Uso de Datos Magic en PHP=
 Cada nodo de datos magic es una instancia de la clase **I2CE_MagicDataNode** .  Las "public variables" de un nodo son sus nodos secundarios que se realiza utilizando el método *__get()*  .  El I2CE_MagicDataNode implementa las Interfaces RecusriveIterator, ArrayAccess, SeekableIterator, y Countable.
-
 
 I2CE tiene una instancia de datos magic de raíz que se pueden recuperar utilizando:
  $config=I2CE::getConfig();
@@ -235,7 +212,6 @@ Suponga que $data es un nodo de datos magic con un nodo secundario llamado 'my_l
 |-
 |}
 </center>
-
 
 Acceso Refinado
 ^^^^^^^^^^^^^^^
@@ -284,11 +260,9 @@ Si un nodo es de tipo escalar, se puede obtener su valor con *getValue()* .  Si 
 
 Si un nodo tiene un tipo primario o indeterminado, llamar *getValue()*  regresa el nodo en sí. Si llama *getAsArray()*  en el nodo regresará un arreglo anidado. Las claves de cada profundidad son los nombres de los nodos secundarios. Los valores pueden ser un arreglo o una cadena, en dependencia de si el secundario es escalar o no.
 
-
 Revisar la Existencia y el Tipo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Puede utilizar el siguiente método para ver si un nodo de datos magic existe y de qué tipo es:
-
 
 * '''pathExists('''$path''')'''
 * '''is_scalar('''$path=null''')'''
@@ -318,10 +292,8 @@ function set_node_to_scalar($node) {
  }
 Otras dos funciones útiles son:
 
-
 * **getAsArray(** $path=null''')''' que regresa el nodo y todos sus secundarios (recursivamente) como un arreglo
 * **setIfIsSet(** &$var,$path,$as_array=false''')''' revisará si $path existe.  Si no existe, regresa falso. Si existe, regresa verdadero y puede que llame a getValue() o a getAsArray() en el nodo referido por la ruta.
-
 
 Nombres de nodos secundarios e Iteradores
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -374,7 +346,6 @@ lo que resultaría en :
  The node named modules under / is a parent node.  It has children modA,modB.
  The node named color under / is a scalar node with value red.
 
-
 Ya que un nodo de datos magic es un iterador, podemos hacer cosas como:
  foreach ($config as $key=>$node) {  if ($node instanceof I2CE_MagicDataNode) {
     echo "The node named $key under at " . $config->getPath(false) .                                                                                             " is a parent node.          It has children " . implode(',', $node->getKeys()) . ".\n";
@@ -397,10 +368,8 @@ resultaría en:
 
 =Cambios de 3.1=
 
-
 * Eliminamos los __ de los métodos de llamada.
 * Relajamos las reglas de los nombres de los nodos de los datos magic.
 * Implementamos las varias interfaces
 * Agregamos soporte para localización de valores
-
 

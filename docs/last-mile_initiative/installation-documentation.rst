@@ -9,7 +9,6 @@ If you would like to install OpenMRS as an appliance (meaning, an instance that 
 
 If you would rather install the system on a clean Linux box, refer to the  `Installing An OpenMRS Server On Linux <http://openmrs.org/wiki/Installing_An_OpenMRS_Server_On_Linux>`_  Document.
 
-
 Installing the web application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -115,7 +114,6 @@ The following commands install the form entry module which, even though it is es
  $ sudo /etc/init.d/tomcat5.5 restart
 
 Navigate to http://example.com/openmrs/admin/modules/module.list and make sure the formentry module is enabled.
-
 
 Debian
 ~~~~~~

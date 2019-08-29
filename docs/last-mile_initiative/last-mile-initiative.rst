@@ -5,8 +5,6 @@ Welcome to IntraHealth Informatics Last Mile Initiative / Community Health Data 
 
 This page will have updates on all of the ongoing work being done for the SRA/IntraHealth Last Mile Initiative (hereinafter LMI) / Community Health Data Collection System (hereinafter CHDCS).
 
-
-
 What is the Last Mile Initiative / Community Health Data Collection System ?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -40,46 +38,31 @@ The implementation plan included below contemplates a one year timeline for syst
 
 Implementation also will be supported via a partnership with Qualcomm who will provide financial support to cover all hardware and software costs as well as training and documentation.
 
-
 Partners
 ^^^^^^^^
-
-
 
 * IntraHealth International
 * SRA
 * Qualcomm - partnership has ended
 
-
 Contact Information
 ^^^^^^^^^^^^^^^^^^^
 
-
-
 * David Mason – Health Informatics Advisor - dmason@intrahealth.org – 919.313.3555
-
-
 
 * Vanessa Spann – Informatics Team Lead
 
-
-
 * Mark A. Hershberger – Informatics Team Member – mhershberger@intrahealth.org – 717.271.1084
-
-
 
 * Laure Almairac and Jana Scislowicz – Program Support – lalmairac@intrahealth.org - 919.313.229
 
-
 Activity Plan, Reports, and Updates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * [[Activity Plan]] [ `PDF Format <http://www.ihris.org/w//upload/LMI_Activity_Timeline_Rwanda_0608.pdf>`_ ]
 * [[Weekly Updates]]
 * [[Monthly Updates]]
 * [[Quarterly Reports]]
-
 
 Technical Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -92,7 +75,6 @@ Technical Documentation
 
 [[Community Health Worker User Documentation]] [ `pdf <http://www.ihris.org/w//upload/CHW.pdf>`_ ]
 
-
 Implementation
 ^^^^^^^^^^^^^^
 
@@ -101,7 +83,6 @@ We will store data and forms in  `OpenMRS <http://www.openmrs.org/>`_ .  OpenMRS
 We will develop form presentation on capable handhelds.  This would enable health care workers to collect data via the fairly pervasive mobile network in Rwanda. Identifying and developing for specific handhelds with Qualcomm's help will be a high priority but a system which will work on a wide range of handhelds will be developed if time does not permit the acquisition of specific devices.
 
 (Diagrams of this possible pilot implementation:  `PDF format <http://wiki.ihris.org/wiki/index.php/Image:Lmi-platform.pdf>`_  and  `Inkscape SVG source <http://wiki.ihris.org/wiki/index.php/Image:Lmi-platform.svg>`_ 
-
 
 Translation for Forms and Menus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -114,23 +95,17 @@ If you edit the translations offline, you'll need to upload the <tt>.po</tt> fil
 
 For context, you can walk through the  `current screens <http://open.intrahealth.org/lmi/>`_  online.
 
-
 Original Paper Data Collection Forms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * [ `Children Register PDF Format <http://wiki.ihris.org/wiki/index.php/Image:Child_Register.pdf>`_ ]
 * [ `Women Register PDF Format <http://wiki.ihris.org/wiki/index.php/Image:Register_for_Women.pdf>`_ ]
 * [ `Household Form PDF Format <http://wiki.ihris.org/wiki/index.php/Image:Household_Form.pdf>`_ ]
 
-
 Use Cases
 ^^^^^^^^^
 
-
-
 * [[System Use Cases]] [ `PDF Format <http://www.ihris.org/w//upload/LMI_Use_Cases_071808.pdf>`_ ]
-
 
 Official Health Indicators
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -165,7 +140,6 @@ Official Health Indicators
 
 15.	Total number of deaths in the last month
 
-
 Sustainability and Pilot Plan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -175,7 +149,6 @@ Sustainability and Pilot Plan
 
 [[Media:LMI_Sustainability.pdf|Sustainability & Pilot Plan (PDF version)]]
 
-
 Press Plan
 ^^^^^^^^^^
 
@@ -183,13 +156,9 @@ Last Mile Initiative Rwanda
 IntraHealth International, SRA, Qualcomm
 DRAFT Media Plan as of 12 May 2008
 
-
-
 * Goal
 
 Utilize local and international media attention to support the project. Especially to increase access to community support resources including open source developers and user groups and potential local partners in the areas of health and telecommunications.
-
-
 
 * Stakeholders
 
@@ -200,8 +169,6 @@ SRA and USAID
 IntraHealth (IH)
 
 Rwanda Ministry of Health (MOH)
-
-
 
 * Activities
 
@@ -225,11 +192,8 @@ Provide success stories and articles for newsletters including Wireless Reach’
 
 Include this project in brochures, video submissions and speaking points for executives.
 
-
 Pictures
 ^^^^^^^^
-
-
 
 * Ikigo Community Health Center [http://www.ihris.org/w//upload/CHW_0308.jpg]
 * Ikigo Community Health Workers [http://www.ihris.org/w//upload/Ikigo_Health_Center_0308.jpg]

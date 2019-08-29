@@ -12,15 +12,12 @@ The iHRIS core modules will be assumed to be:
 =Create a Module=
 First we need to create a new module in the site modules directory.
 
-
 .. code-block:: bash
 
     mkdir /var/lib/iHRIS/sites/4.1/sn-manage/modules/Senegal-demographic
     
 
-
 Now we need to create the basic information for the module configuration file.
-
 
 .. code-block:: bash
 
@@ -28,10 +25,7 @@ Now we need to create the basic information for the module configuration file.
     gedit Senegal-demographic.xml
     
 
-
 We will need to set up the standard meta information for the module like this:
-
-
 
 .. code-block:: xml
 
@@ -62,11 +56,8 @@ We will need to set up the standard meta information for the module like this:
     </I2CEConfiguration>
     
 
-
 =Add a New Field=
 Now we need to modify the configuration file to include the changes for the Demographic form.  Place this inside the main configurationGroup in the site configuration file (Senegal-demographic.xml).  This is for an English version of the field, you can change the locale to be "fr_FR" and set the value to be in French if desired.
-
-
 
 .. code-block:: xml
 
@@ -89,11 +80,8 @@ Now we need to modify the configuration file to include the changes for the Demo
         </configurationGroup>
     
 
-
 =Update the Templates=
 Now we need to copy the existing template files to the module to add the new field.  The template we want to modify is in the iHRIS Manage source code in the ManagePersonDemographic module.  We will create the templates directory and then copy the files to be modified.  To copy the French version of the page you can replace en_US with fr in the following commands.
-
-
 
 .. code-block:: bash
 
@@ -102,18 +90,14 @@ Now we need to copy the existing template files to the module to add the new fie
     cp /var/lib/iHRIS/lib/4.1/ihris-manage/modules/ManagePersonDemographic/templates/en_US/form_demographic.html templates/en_US/
     
 
-
 Now we edit the view page to add the new field.
-
 
 .. code-block:: bash
 
     gedit templates/en_US/view_demographic.html
     
 
-
 Make the file appear as below:
-
 
 .. code-block:: html4strict
 
@@ -146,19 +130,14 @@ Make the file appear as below:
     </div>
     
 
-
 Save this file and now edit the form template:
-
 
 .. code-block:: bash
 
     gedit templates/en_US/form_demographic.html
     
 
-
 Add the num_spouses field here as well:
-
-
 
 .. code-block:: html4strict
 
@@ -181,13 +160,10 @@ Add the num_spouses field here as well:
     
     
 
-
 Now save this file.  The module is now complete.
 
 =Enable the New Module=
 Now we need to enable the module in the site configuration file.  Edit the site configuration file with this command.
-
-
 
 .. code-block:: bash
 
@@ -195,17 +171,12 @@ Now we need to enable the module in the site configuration file.  Edit the site 
     gedit iHRIS-Manage-Senegal.xml
     
 
-
 In the section where modules are enabled, add the following line:
-
-
 
 .. code-block:: xml
 
       <enable name="Senegal-demographic" />
     
 
-
 Now when you access the site it should update and your new field will now appear on the demographic form.
-
 

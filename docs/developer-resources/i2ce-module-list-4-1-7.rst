@@ -8,7 +8,6 @@ BackgroundProcess
 ^^^^^^^^^^^^^^^^^
 This describes version 4.1.4.0 of the module Background Processes (BackgroundProcess) 
 
-
 * Source:  ` i2ce/modules/BackgroundProcess  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/BackgroundProcess>`_
 * Module Class: The module class is implemented by [[Class: I2CE_BackgroundProcess (4.1.7)| I2CE_BackgroundProcess]]
 * Fuzzy Methods:
@@ -34,7 +33,6 @@ BinField
 ^^^^^^^^
 This describes version 4.1.7.0 of the module Binary Fields (BinField) 
 
-
 * Source:  ` i2ce/modules/Forms/modules/Binary_Files  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/Forms/modules/Binary_Files>`_
 * Module Class: The module class is implemented by [[Class: I2CE_Module_BinaryFiles (4.1.7)| I2CE_Module_BinaryFiles]]
 * Description: A module that allows binary files for form fields
@@ -50,7 +48,6 @@ This describes version 4.1.7.0 of the module Binary Fields (BinField)
 CachedForms
 ^^^^^^^^^^^
 This describes version 4.1.7.0 of the module Cached Forms (CachedForms) 
-
 
 * Source:  ` i2ce/modules/Forms/modules/CachedForms  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/Forms/modules/CachedForms>`_
 * Module Class: The module class is implemented by [[Class: I2CE_Module_CachedForms (4.1.7)| I2CE_Module_CachedForms]]
@@ -71,7 +68,6 @@ This describes version 4.1.7.0 of the module Cached Forms (CachedForms)
 ColorPicker
 ^^^^^^^^^^^
 This describes version 4.1.2.0 of the module Color Picker (ColorPicker) 
-
 
 * Source:  ` i2ce/modules/MooTools/modules/ColorPicker  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/MooTools/modules/ColorPicker>`_
 * Module Class: The module class is implemented by [[Class: I2CE_Module_ColorPicker (4.1.7)| I2CE_Module_ColorPicker]]
@@ -97,7 +93,6 @@ This describes version 4.1.2.0 of the module Color Picker (ColorPicker)
 CustomReports
 ^^^^^^^^^^^^^
 This describes version 4.1.7.0 of the module Custom Reports (CustomReports) 
-
 
 * Source:  ` i2ce/modules/CustomReports  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/CustomReports>`_
 * Module Class: The module class is implemented by [[Class: I2CE_Module_CustomReports (4.1.7)| I2CE_Module_CustomReports]]
@@ -125,7 +120,6 @@ CustomReports-PrintedReportsODT
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This describes version 4.1.7.0 of the module ODT Reports (CustomReports-PrintedReportsODT) 
 
-
 * Source:  ` i2ce/modules/CustomReports/modules/PrintedReportsODT  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/CustomReports/modules/PrintedReportsODT>`_
 * Description: Configuration options for reports that use ODT
 * Requirements:
@@ -140,7 +134,6 @@ This describes version 4.1.7.0 of the module ODT Reports (CustomReports-PrintedR
 CustomReports-Selector
 ^^^^^^^^^^^^^^^^^^^^^^
 This describes version 4.1.7.0 of the module Report Selector (CustomReports-Selector) 
-
 
 * Source:  ` i2ce/modules/CustomReports/modules/CustomReportSelector  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/CustomReports/modules/CustomReportSelector>`_
 * Module Class: The module class is implemented by [[Class: I2CE_Module_ReportSelector (4.1.7)| I2CE_Module_ReportSelector]]
@@ -161,7 +154,6 @@ CustomReports_CrossTab
 ^^^^^^^^^^^^^^^^^^^^^^
 This describes version 4.1.7.0 of the module Crosstab reports (CustomReports_CrossTab) 
 
-
 * Source:  ` i2ce/modules/CustomReports/modules/CrossTab  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/CustomReports/modules/CrossTab>`_
 * Description: Configuration options for reports that use Crosstab reports
 * Requirements:
@@ -179,7 +171,6 @@ CustomReports_Export
 ^^^^^^^^^^^^^^^^^^^^
 This describes version 4.1.7.0 of the module Export Reports (CustomReports_Export) 
 
-
 * Source:  ` i2ce/modules/CustomReports/modules/Export  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/CustomReports/modules/Export>`_
 * Description: Configuration options for exported reports
 * Requirements:
@@ -191,7 +182,6 @@ This describes version 4.1.7.0 of the module Export Reports (CustomReports_Expor
 CustomReports_PDF
 ^^^^^^^^^^^^^^^^^
 This describes version 4.1.7.0 of the module PDF Reports (CustomReports_PDF) 
-
 
 * Source:  ` i2ce/modules/CustomReports/modules/PDF  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/CustomReports/modules/PDF>`_
 * Description: Configuration options for reports that use PDF
@@ -206,7 +196,6 @@ This describes version 4.1.7.0 of the module PDF Reports (CustomReports_PDF)
 CustomReports_PieChart
 ^^^^^^^^^^^^^^^^^^^^^^
 This describes version 4.1.5.0 of the module Pie and Chart (CustomReports_PieChart) 
-
 
 * Source:  ` i2ce/modules/CustomReports/modules/PieChart  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/CustomReports/modules/PieChart>`_
 * Description: Configuration options for reports that use Pie and Charts
@@ -223,7 +212,6 @@ This describes version 4.1.5.0 of the module Pie and Chart (CustomReports_PieCha
 DatePicker
 ^^^^^^^^^^
 This describes version 1.17.5 of the module Date Picker (DatePicker) 
-
 
 * Source:  ` i2ce/modules/MooTools/modules/DatePicker  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/MooTools/modules/DatePicker>`_
 * Module Class: The module class is implemented by [[Class: I2CE_Module_DatePicker (4.1.7)| I2CE_Module_DatePicker]]
@@ -243,7 +231,6 @@ This describes version 1.17.5 of the module Date Picker (DatePicker)
 DisplayData
 ^^^^^^^^^^^
 This describes version 4.1.4.0 of the module I2CE Display Data (DisplayData) 
-
 
 * Source:  ` i2ce/modules/TemplateData/modules/DisplayData  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/TemplateData/modules/DisplayData>`_
 * Module Class: The module class is implemented by [[Class: I2CE_DisplayData (4.1.7)| I2CE_DisplayData]]
@@ -265,7 +252,6 @@ Fields
 ^^^^^^
 This describes version 4.1.7.0 of the module I2CE Fields (Fields) 
 
-
 * Source:  ` i2ce/modules/Forms/modules/Fields  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/Forms/modules/Fields>`_
 * Module Class: The module class is implemented by [[Class: I2CE_Module_Fields (4.1.7)| I2CE_Module_Fields]]
 * Description: Adds a few basic form field types to the system as well as some field container functionality
@@ -286,7 +272,6 @@ FileDump
 ^^^^^^^^
 This describes version 4.1.0 of the module File Dump (FileDump) 
 
-
 * Source:  ` i2ce/modules/Pages/modules/FileDump  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/Pages/modules/FileDump>`_
 * Description: File Download Utility
 * Requirements:
@@ -299,7 +284,6 @@ This describes version 4.1.0 of the module File Dump (FileDump)
 Float
 ^^^^^
 This describes version 4.1.7.0 of the module Float (Float) 
-
 
 * Source:  ` i2ce/modules/Forms/modules/Float  <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/Forms/modules/Float>`_
 * Module Class: The module class is implemented by [[Class: I2CE_Module_Float (4.1.7)| I2CE_Module_Float]]
@@ -1925,5 +1909,4 @@ This describes version 4.1.6.0 of the module User (user)
 *Paths:
 **Classes:  `modules/User/lib <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/User/lib>`_  <br/>[[Class: I2CE_Module_User (4.1.7) | I2CE_Module_User]], [[Class: I2CE_User (4.1.7) | I2CE_User]]
 **Modules:  `modules/User/modules <http://bazaar.launchpad.net/~intrahealth+informatics/i2ce/4.1.7-release/files/head:/modules/User/modules>`_  <br/>[[#RequestAccount-VerifyEmail |RequestAccount-VerifyEmail]], [[#UserAccess |UserAccess]], [[#UserAccess_DHIS |UserAccess_DHIS]], [[#UserAccess_LDAP |UserAccess_LDAP]], [[#UserAccess_LDAP_Hybrid |UserAccess_LDAP_Hybrid]], [[#UserAccess_Single |UserAccess_Single]]
-
 

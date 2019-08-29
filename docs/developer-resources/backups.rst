@@ -3,37 +3,27 @@ Backups
 
 Once you've installed iHRIS, you will need to run backups to make sure you don't lose any data if something happens to your hardware.  Backups should be moved to a separate machine ideally at another location in case a disaster occurs where the server is located.
 
-
 Backup User
 ^^^^^^^^^^^
 You can use the same database user that you use to connect to the database for iHRIS, but you may also just want to create a read only user to use for backups.  You can do this in PHPMyAdmin by creating a new user (we'll call it **backup**  for this, but you can name it anything you'd like).  You can generate a password in PHPMyAdmin or set one you'd like to use.  You should restrict access to localhost in most cases.  The backup user will need SELECT and LOCK TABLES privileges.  You can do this per database or on every database on your server depending on your security needs.  You can also create the user using mysql from the terminal.  Just run the following command in the terminal:
-
-
 
 .. code-block:: bash
 
     mysql -u root -p
     
 
-
 You'll need to enter the root password for the MySQL server and then you can run this command:
-
-
 
 .. code-block:: sql
 
     GRANT LOCK TABLES,SELECT ON *.* TO 'backup'@'localhost' IDENTIFIED BY 'PASSWORD';
     
 
-
 Just replace PASSWORD with the password you want to use for the backup user.
-
 
 Full Backup Script
 ^^^^^^^^^^^^^^^^^^
 You can now create a shell script to run the database backup and alternatively clean up any old backups so you don't run out of disk space.  This will backup every table in the given database so it will be larger since it will back up the form and report caches.  This will make restoration faster though as you won't need to recreate these caches.  Here is an example script:
-
-
 
 .. code-block:: bash
 
@@ -56,28 +46,21 @@ You can now create a shell script to run the database backup and alternatively c
     #find $BACKUP_DIR -name "backup_${DATABASE}*.sql.bz2" -mtime +7 -not -name "backup_${DATABASE}*-01.sql.bz2" -exec rm {} \;
     
 
-
 You will need to replace **YOUR_DB**  with the database you'd like to backup.  You will need to set the DB_USER and DB_PASS based on how you created your backup user.  You will also need to create the BACKUP_DIR and set it to where you'd like your backups to go.  From a terminal you can create the directory with this command (replacing the directory with the one you've chosen):
-
-
 
 .. code-block:: bash
 
     mkdir -p /var/lib/iHRIS/sites/backups
     
 
-
 You can create this script in your site in a cron directory.  To avoid having this file be added to launchpad, you can place it in a local directory, for example:  SITE_DIR/cron/local/do_backups.sh
 
 You will also need to be sure your script is executable by running this from a terminal:
-
 
 .. code-block:: bash
 
     chmod a+x SITE_DIR/cron/local/do_backups.sh
     
-
-
 
 Setting Up the Cron
 ^^^^^^^^^^^^^^^^^^^
@@ -85,16 +68,12 @@ For more information on using the cron system, see the  `Ubuntu Cron HowTo <http
 
 Now you'll need to set up the cron to run your backup script nightly.  From the previous example the script will be at SITE_DIR/cron/local/do_backups.sh.  To edit your cron you can type the following in a terminal:
 
-
 .. code-block:: bash
 
     crontab -e
     
 
-
 You will see a file to edit similar to this.
-
-
 
 .. code-block:: text
 
@@ -122,17 +101,12 @@ You will see a file to edit similar to this.
     # m h  dom mon dow   command
     
 
-
 You will need to add a new line to the bottom of this file.  For example to run your script at 1AM every morning:
-
-
 
 .. code-block:: text
 
     0 1 * * * SITE_DIR/cron/local/do_backups.sh
     
-
-
 
 Backup Without Caches
 ^^^^^^^^^^^^^^^^^^^^^
@@ -142,12 +116,8 @@ This script doesn't do any automatic deletion of backup files so you may need to
 
 You can copy this script to your SITE_DIR/cron/local directory as well and make your customizations.  To add this to the cron you would need to include the PHP executable to run the script:
 
-
-
 .. code-block:: text
 
     0 1 * * * php SITE_DIR/cron/local/backup_exclude_caches.php
     
-
-
 

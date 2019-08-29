@@ -1,7 +1,6 @@
 Guatemala Contracts Module Documentation Alt2
 =============================================
 
-
 Data Model
 ^^^^^^^^^^
 
@@ -24,7 +23,6 @@ Data Model
    partida [shape=box label="partida\nyear"]
    partida_perm [shape=box label="partida_perm\nincremental counter"]
 
-
    person->person_position
    person_position->salary [color=red]
    person_position->position
@@ -44,5 +42,4 @@ Data Model
    phase_status->phase_status_decision
 }
 </graphviz>
-
 

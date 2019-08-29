@@ -5,16 +5,13 @@ The ISCO 88 Job Codes can be found [http://BLAH here] and represent an internati
 
 We will create a module for each of the major groups, all of which will sit under a meta-module.
 
-
 Getting The Data
 ^^^^^^^^^^^^^^^^
 The data file with all of the codes compiled can be found in the launchpad [http://BLAH bzr] repository for I2CE. All of the codes, names, and descriptions were downloaded from the International Labor Organization's  `website <http://www.ilo.org/public/english/bureau/stat/isco/isco88/index.htm>`_ .
 
-
 Creating The XML Magic(Configuration) Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The ISCO 88 codes are going to be separated into 10 different xml files, each representing a major group. Each xml file will contain the number and description of the major number followed by all the sub-major, minor, and then unit. The php code is provided  `here <http://bazaar.launchpad.net/~intrahealth%2Binformatics/ihris-manage/3.2-dev/files/head%3A/modules/ManageJob/modules/isco_88/tools/>`_  and needs to be in the same directory as the isco88 codes file to run.
-
 
 Creating The Modules
 ^^^^^^^^^^^^^^^^^^^^
@@ -25,7 +22,6 @@ All instructions below assume that you are in this directory.
 The first thing we will need to do is to enable sub-modules for *ihris-manage-Job *  (you may wish to read the [[Module Structure | module structure]] overview before proceeding).  To do this
  gedit Job.xml
 and make sure the following lines are in the appropriate place in the metadata section:
-
 
 .. code-block:: xml
 
@@ -46,7 +42,6 @@ We will create a meta-module to contain general information about the ISCO Codes
  mkdir modules
  gedit ISCO_88.xml
 Add the following contents and save:
-
 
 .. code-block:: xml
 
@@ -322,14 +317,11 @@ Add the following contents and save:
     </I2CEConfiguration>
     
 
-
-
 Creating The Sub-Modules
 ~~~~~~~~~~~~~~~~~~~~~~~~
 We are going to create a sub-module for each of the Major Groups.  
 
 The template for the configuration file is:
-
 
 .. code-block:: xml
 
@@ -356,5 +348,4 @@ where **XX**  is the Major Group number.
 For each Major Group number *XX* , we will do:
  mkdir [BASE INSTALLATION PATH]/ihris-manage/modules/ManageJob/modules/isco_88/modules/isco_88_major_XX
 and put the generated configuration file in this directory.
-
 

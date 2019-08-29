@@ -7,19 +7,15 @@ This page contains a brief overview of how to build Debian packages from the sou
 
 The <tt>PackageUtils</tt> module was designed with a few goals in mind.  These are
 
-
-
 * One module, one package
 * Minimize configuration information
 * Ease of invocation
 * Compatibility with Launchpad's PPA service
 
-
 One Module, One Package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 There is a one-to-one correspondence between modules and debian packages.  The package name corresponds to the name attribute of the I2CEConfiguration element in the XML file.  An “i2ce-” prefix is given to each generated package to reduce the changes of naming conflicts.  (The only exception to this is the I2CE package itself which is named simply “i2ce”.)   In this way, dependencies between packages mirror the dependencies between modules.
-
 
 Minimize configuration information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -28,12 +24,10 @@ Another goal of the current design was to eliminate the need to maintain dozens 
 
 For this reason, <tt>PackageUtils</tt> relies on a module's configuration for all of its information.  This information is put into some templates (which are found in the <tt>templates/</tt> subdirectory of the <tt>PackageUtils</tt> module) to produce a <tt>debian/</tt> directory that is used to build the entire package.  Source packages are also produced during the build process.  The source packages are needed so that Launchpad can build the packages using standard Debian tools.
 
-
 Ease of invocation
 ^^^^^^^^^^^^^^^^^^
 
 The <tt>PackageUtils</tt> module (<tt>i2ce-package-utils</tt>) is set up so that it could be run from the root of a checkout of I2CE code (e.g. the results of <tt>bzr co lp:i2ce</tt> or <tt>bzr co lp:ihris-manage</tt>) and, from a single command, create packages for all modules in that source tree.
-
 
 Compatibility with Launchpad's PPA service
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -79,5 +73,4 @@ The <tt>getExternalPackageName</tt> takes care of mapping external requirements 
 = Deployment Configuration =
 
 <tt>PackageUtils</tt>’ contains two scripts: <tt>build-i2ce</tt> and <tt>deploy-i2ce</tt>.  <tt>build-i2ce</tt> handles the actual build process (described above) and then checks for the <tt>deploy-i2ce</tt> script and runs it.  As of this writing, the included <tt>deploy-i2ce</tt> is a shell script to publish the documentation produced by PHPDocumentor and the Debian packages.  See [[Managing the Debian Repository]] for more information.
-
 

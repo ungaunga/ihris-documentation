@@ -6,35 +6,26 @@ While most of the administrative functions take place within OpenMRS, it is good
 
 = Adding CHWs with the GUI =
 
-
 .. image:: images/To_administrator.png
     :align: center
 
-
 .. image:: images/Manage_users.png
     :align: center
-
 
 OpenMRS uses the same "Person" object to hold information for both patients and users. Users are granted access depending on what roles and privilages they have (see below).  If you have your patients already in OpenMRS, then it is likely that your Community Health Workers are among them.
 
 In any case, you can add the CHW role to your existing patients or create entirely new users using the following process.
 
-
 .. image:: images/Add_user.png
     :align: center
-
-
 
 .. image:: images/Create_user.png
     :align: center
 
-
 To add a Community Health Worker, log into OpenMRS as an administrator and click on the "Administration" menu.
-
 
 .. image:: images/Manage_user.png
     :align: center
-
 
 From there, you will see see a list of options.  One of these will be "Manage Users".  Click it.
 
@@ -46,14 +37,9 @@ OpenMRS displays a form where you can fill in a username and password.  In addit
 
 After submitting this form, the new user will be ble to log in to the LMI form and start interviewing villagers.
 
-
-
-
 = Adding CHWs via the PHP library =
 
 When you need to add CHWs in bulk, it is easier to use the PHP library.  If you know your CHWs are not already in the system, then all that needs to be done is to create a person, assign a username and password and the CHW role:
-
-
 
 .. code-block:: php
 
@@ -69,7 +55,6 @@ When you need to add CHWs in bulk, it is easier to use the PHP library.  If you 
     $user->commit();
     
 
-
 Using a method like this and input from a spreadsheet, large numbers of users could be created rapidly.
 
 = Viewing Results =
@@ -77,7 +62,6 @@ Using a method like this and input from a spreadsheet, large numbers of users co
 Individual patients can be found and their encounters displayed easily.
 
 Ad-hoc reports can be built using the Cohort builder.
-
 
 Individual Patients
 ^^^^^^^^^^^^^^^^^^^
@@ -89,7 +73,6 @@ The navbar for OpenMRS contains a link titled "Find/Create Patients".  Clicking 
 Selecting a patient from the list brings up the patient dashboard where all the information about the patient can be found.
 
 Of particular interest to the LMI project is the "Encounters" tab which will display each instance a form was filled out for the patient.
-
 
 Ad-hoc Reports
 ^^^^^^^^^^^^^^
@@ -150,7 +133,6 @@ This looks very similar to the first case, except we are now assigning privilege
 
 Now, by defining the main roles for users of your system and assigning users to those roles, you have a much easier system to manage and users will automatically inherit all privileges given to their role(s).  Of course, some users will have multiple roles.  You can also assign specific privileges to users in special cases.   Now, let's take this process one step further.  While it may not seem necessary in this simple example, as your system grows, you will likely end up with a large number of different roles.  Very often, certain roles can be defined as a combination of other roles.  In our example, a Data Manager oversees the Data Assistants and, therefore, should have all of their privileges *plus*  some additional privileges.  So, let's redesign our roles slightly to show how this might work.
 
-
 {| cellspacing=0 cellpadding=5
 ! Role !! Inherit Privileges<br>from Role(s) !! Privilege(s)
 |- valign=top style="background:#EEE"
@@ -173,10 +155,8 @@ Super users (system administrators) are automatically granted all privileges in 
 
 ----
 
-
 What privileges are required for various actions?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * View Patients
 * *Manage Relationships {{info | Manage Relationships privilege is *not* required after  `build 5050 <http://dev.openmrs.org/changeset/5050>`_ .}}
@@ -204,26 +184,19 @@ What privileges are required for various actions?
 * *View Relationship Types
 * *View Relationships
 
-
-
 * Do Data Exports
 * *View Data Exports
 * *Add Data Exports
 * *Edit Data Exports
 * *Delete Data Exports
 
-
-
 * Work with Programs
 * *Manage Programs - Required to add a new program, work flow, etc.
 * *Edit Patient Programs - Required to allow a user to change the program that a patient is in.
 
-
-
 * Tribes
 * *Manage Tribes
 * *Edit Person Tribe - Assign a patient to a tribe.  Only required if global property restrict_patient_attribute.tribe is set to true
-
 
 This section covered under the [ `OpenMRS Public License <http://openmrs.org/wiki/License>`_ ]
 

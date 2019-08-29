@@ -7,4 +7,3 @@ Technical Chats are held on a bi-weekly basis and led by an iHRIS senior develop
 
  `Making standardized PDF, OpenOffice and Mincrosoft Word letters and forms from a template <http://notes.ihris.org/p/UsingTemplates>`_  (14 Feb 2014)
 
-

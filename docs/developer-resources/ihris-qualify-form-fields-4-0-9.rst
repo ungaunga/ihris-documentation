@@ -7,8 +7,6 @@ These are the forms and fields in iHRIS Qualify version 4.0.9
 There is also a  `graphical visualization <http://open.intrahealth.org/visualizations/forms-ihris-qualify-site-demo_4_0_9_0.gif>`_  of this data. 
  **Warning:**  this is a very large file and you may wish to save it to your desktop instead of viewing it in your browser.
 
-
-
 Here is a description of the [[Defining Forms#Field Types|Field types]].
 
 iHRIS Qualify - 4.0.9.0
@@ -17,7 +15,6 @@ academic_level
 ^^^^^^^^^^^^^^
 The form *academic_level*  is implemented by the class: [[Class: I2CE_SimpleList |I2CE_SimpleList]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -31,7 +28,6 @@ archived_report
 ^^^^^^^^^^^^^^^
 The form *archived_report*  is implemented by the class: [[Class: I2CE_ArchivedReport |I2CE_ArchivedReport]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -57,7 +53,6 @@ cadre
 The form *cadre*  is implemented by the class: [[Class: iHRIS_Cadre |iHRIS_Cadre]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -79,7 +74,6 @@ certificate
 The form *certificate*  is implemented by the class: [[Class: iHRIS_Certificate |iHRIS_Certificate]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -97,7 +91,6 @@ contact
 ^^^^^^^
 The form *contact*  is implemented by the class: [[Class: iHRIS_Contact |iHRIS_Contact]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -126,10 +119,8 @@ continuing_education
 The form *continuing_education*  is implemented by the class: [[Class: iHRIS_ContinuingEducation |iHRIS_ContinuingEducation]]
 It is a child of the following forms:
 
-
 * [[#training|training]]
 It has the following fields:
-
 
 * continuing_education_course:
 * *Header: Continuing Education Course
@@ -154,7 +145,6 @@ continuing_education_course
 The form *continuing_education_course*  is implemented by the class: [[Class: iHRIS_ContinuingEducationCourse |iHRIS_ContinuingEducationCourse]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -171,7 +161,6 @@ country
 ^^^^^^^
 The form *country*  is implemented by the class: [[Class: iHRIS_Country |iHRIS_Country]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -199,7 +188,6 @@ county
 The form *county*  is implemented by the class: [[Class: iHRIS_County |iHRIS_County]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -217,7 +205,6 @@ currency
 ^^^^^^^^
 The form *currency*  is implemented by the class: [[Class: iHRIS_Currency |iHRIS_Currency]]
 It has the following fields:
-
 
 * i2ce_hidden:
 * *Header: Hide
@@ -242,7 +229,6 @@ degree
 The form *degree*  is implemented by the class: [[Class: iHRIS_Degree |iHRIS_Degree]]
 It has the following fields:
 
-
 * i2ce_hidden:
 * *Header: Hide
 * *Type: [[Class: I2CE_FormField_YESNO |YESNO]]
@@ -261,10 +247,8 @@ demographic
 The form *demographic*  is implemented by the class: [[Class: iHRIS_QualifyDemographic |iHRIS_QualifyDemographic]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * birth_date:
 * *Header: Date of Birth
@@ -287,10 +271,8 @@ deployment
 The form *deployment*  is implemented by the class: [[Class: iHRIS_Deployment |iHRIS_Deployment]]
 It is a child of the following forms:
 
-
 * [[#person|person]]
 It has the following fields:
-
 
 * health_facility:
 * *Header: Health Facility
@@ -1437,5 +1419,4 @@ It has the following fields:
 **Header: Name
 **Type: [[Class: I2CE_FormField_STRING_LINE |STRING_LINE]]
 **Restrictions: Required, Unique
-
 

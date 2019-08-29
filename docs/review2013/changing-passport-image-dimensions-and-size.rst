@@ -3,8 +3,6 @@ Changing Passport Image Dimensions and Size
 
 In this tutorial we show how to resize the dimensions of the images you are uploading to iHRIS Manage or iHRIS Qualify. Take note that resizing the dimensions (width and length) goes further to reducing the image size.
 
-
-
 Defining the form field
 ^^^^^^^^^^^^^^^^^^^^^^^
 In order to be able to resize the image, we need to define the form field to be of type PASSPORT like here
@@ -46,9 +44,7 @@ Now change the lines:
     <!--
 -->
 
-
 Changing the dimensions
 ^^^^^^^^^^^^^^^^^^^^^^^
 In order to change the dimensions, you need to include a meta tag when defining the field. In it you specify the maximum width and maximum height for the passport photo. However if you don't need to affect the dimensions i.e. height and width you set the values for max_height and max_width equal to zero. Setting these values to zero only affects the size of the image and keeps the dimensions from the original image.
-
 

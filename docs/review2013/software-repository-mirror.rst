@@ -7,14 +7,12 @@ This has been adapted from  `these instructions <https://help.ubuntu.com/communi
 
  **WARNING:**  This has not been fully tested.  Please correct or send feedback to "litlfred@ibiblio.org"
 
-
 Preparing the Hard Drive
 ^^^^^^^^^^^^^^^^^^^^^^^^
 In the directions below we will assume that you have a brand new hard drive.  We will be formatting the hard drive (partition) which means that all of the data on the hard drive will be lost.
  **PLEASE MAKE SURE YOU KNOW EXACTLY WHAT YOU ARE DOING IN EACH STEP** 
 
 To format the partition, we will first need to set the partition type 
-
 
 Determining the Hard Drive Paritition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -25,7 +23,6 @@ Running this on my machine, I see output
 Which means the **/dev/sdb1**  is the partition we will need to use.
 
 If you see more than one line in the output then **STOP**  as these directions may not be correct.  If you see more than one line here, you probably have more than one external hard drive or flash disk connected.  Remove all extra hard drive and rerun the "grep" command.  If you still see more than one line, **Please**  contact one of the of the iHRIS developers for more help.
-
 
 Change The Hard Drive Partition Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,19 +67,15 @@ We will need to run the "fdisk" command interactively on the hard drive device. 
  information.
  Syncing disks.
 
-
 Formatting The Hard Drive as ext3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Simply do:
  sudo mkfs.ext3  /dev/sdb1
 
-
-
 Labelling the hard drive
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Now we want to make a lablel for our newly formatted hard drive so that we can refer to it easily later:
  sudo tune2fs -L ihris /dev/sdb1
-
 
 Testing
 ~~~~~~~
@@ -91,7 +84,6 @@ Unplug the hard drive and plug it back in.  There should be a USB disk icon on y
 you should see somethine like:
  /dev/sdc1 on /media/ihris type ext3 (rw,nosuid,nodev,uhelper=udisks)
 Don't worry if your partition has changed from /dev/sdb1 to something else like /dev/sdc1
-
 
 Creating the Software Repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -106,13 +98,11 @@ We will be mirroring (which means to create an identical copy of) the online Ubu
 We will also need to install the debmirror software:
  sudo apt-get install debmirror
 
-
 mirrorbuild.sh
 ~~~~~~~~~~~~~~
 Save the script below to /media/ihris/ubuntuMirror/mirrorbuild.sh by copying and pasting with gedit:
  sudo gedit  /media/ihris/ubuntuMirror/mirrorbuild.sh
 This is what you should copy and paste
-
 
 .. code-block:: bash
 
@@ -146,7 +136,6 @@ This is what you should copy and paste
 
  **Note** , when Ubuntu 12.04 (LTS Precise) is soon released, you should comment out the line about the release in the above section.
 
-
 Trusting the Ubuntu Archives
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We need to create a directory for our key ring and up our mirroring software to trust all of Ubuntu's software archives.  This can be done with:
@@ -155,7 +144,6 @@ We need to create a directory for our key ring and up our mirroring software to 
  sudo  gpg --keyring /usr/share/keyrings/ubuntu-archive-keyring.gpg --export --homedir /media/ihris/ubuntuMirror/keyring/ \
  | sudo gpg --no-default-keyring --keyring trustedkeys.gpg --import --homedir /media/ihris/ubuntuMirror/keyring/
 
-
 Trusting the iHRIS Launchpad PPA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To trust the iHRIS PPA on Launchpad we do:
@@ -163,14 +151,12 @@ To trust the iHRIS PPA on Launchpad we do:
  sudo  gpg --keyring  /etc/apt/trusted.gpg  --export  6EC21546 --homedir /media/ihris/ubuntuMirror/keyring/ \
  | sudo gpg --no-default-keyring --keyring trustedkeys.gpg --import --homedir /media/ihris/ubuntuMirror/keyring/
 
-
 Downloading the Software Repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To create your own mirror you can now simply use the command
  sudo sh /media/ihris/ubuntuMirror/mirrorbuild.sh
 
 This is the same command that you can use to update your mirror.
-
 
 Installing Software From The Mirrors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -180,5 +166,4 @@ First we refresh the list of available packages that apt-get knows about
  sudo apt-get -o Dir::Etc::sourceparts=nonexistent -o Dir::Etc::sourcelist=/media/ihris/ubuntuMirror/sources.list update
 Now we can install package **XXXXX**  from our hard drive by:
  sudo apt-get -o Dir::Etc::sourceparts=nonexistent -o Dir::Etc::sourcelist=/media/ihris/ubuntuMirror/sources.list install **XXXXX** 
-
 

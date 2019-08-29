@@ -3,7 +3,6 @@ IHRIS Task List (versions)
 
 The page [[iHRIS Task List]] has multiple versions:
 
-
 * [[ IHRIS Task List (4.1.7) | Version 4.1.7]]
 * [[ IHRIS Task List (4.1.6) | Version 4.1.6]]
 * [[ IHRIS Task List (4.1.4) | Version 4.1.4]]
@@ -19,7 +18,6 @@ The page [[iHRIS Task List]] has multiple versions:
 * [[ IHRIS Task List (4.0.14) | Version 4.0.14]]
 * [[ IHRIS Task List (4.0.12) | Version 4.0.12]]
 * [[ iHRIS Task List (Development) | Development Version]]
-
 
 {{DEFAULTSORT:iHRIS Task List (versions)}}
 

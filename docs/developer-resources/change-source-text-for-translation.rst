@@ -5,7 +5,6 @@ With revision number 2503 of I2CE/4.0-dev we have added a new tool to assist in 
 
 It will do the following things:
 
-
 * Ask you from which module you want to change a source text
 * It will ask you which source text you wish to change
 * It will ask you for the new version of the source text
@@ -16,10 +15,8 @@ It will do the following things:
 * *It will change the source text in the module to the new value
 * *Any values that have been changed will have a version tag added/updated with the new bumped version of the module
 
-
 Sample Run
 ^^^^^^^^^^
-
 
 .. code-block:: text
 
@@ -95,12 +92,9 @@ Sample Run
     (Yes/No): n
     
 
-
-
 Result of Sample Run
 ^^^^^^^^^^^^^^^^^^^^
 The results of running this operation are as follows:
-
 
 .. code-block:: text
 
@@ -1207,8 +1201,5 @@ The results of running this operation are as follows:
     
     
 
-
 http://pastebin.com/3Afd7sNK
-
-
 

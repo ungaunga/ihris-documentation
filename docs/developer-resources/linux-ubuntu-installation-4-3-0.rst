@@ -6,7 +6,6 @@ This page contains installation instructions on installing iHRIS version 4.3.0 m
 
 <center>'''Need help?'''  Try our [[Project Communication]]</center>
 
-
 Supporting Software
 ^^^^^^^^^^^^^^^^^^^
 
@@ -20,11 +19,9 @@ First you should install Ubuntu and all the supporting software required by iHRI
 
  **Note:**   Some commands will launch the **gedit**  file editor.  Look at the  `documentation <https://help.ubuntu.com/community/gedit>`_  if you need additional help.
 
-
 Downloading the Full iHRIS Suite
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Before proceeding with iHRIS Manage or iHRIS Qualify installation, we will want to download the most recent version of the full iHRIS Suite.  To download the software you enter these commands:
-
 
 .. code-block:: bash
 
@@ -34,8 +31,6 @@ Before proceeding with iHRIS Manage or iHRIS Qualify installation, we will want 
     sudo wget http://launchpad.net/i2ce/4.3/4.3.0/+download/ihris-suite-4.3.0.tar.bz2
     sudo tar -xjf ihris-suite-4.3.0.tar.bz2
     
-
-
 
 Installing the Software
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -47,5 +42,4 @@ Follow the [[iHRIS Qualify Installation - 4.3.0|iHRIS Qualify Installation]] ins
 Follow the [[iHRIS Train Installation - 4.3.0|iHRIS Train Installation]] instructions for iHRIS Train.
 
 Follow the [[IHRIS Plan Installation - 1.0.4|iHRIS Plan Installation]] instructions for iHRIS Plan.  (You do not need to download the full iHRIS Suite above)
-
 

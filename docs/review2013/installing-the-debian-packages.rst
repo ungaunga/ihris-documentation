@@ -4,27 +4,19 @@ Installing the Debian Packages
  **DEPRECATED** ' This page is out of date.  Please see
    http://wiki.ihris.org/wiki/Installing_iHRIS_4.2
 
-
-
  **EXPERIMENTAL**  Directions for debian installation.  
 
 Caveats:
 
-
 * Tested on Ubuntu Lucid (10.04) and  Meerkat (10.10)
-
 
 Special Instructions for Ubuntu Lucid (10.04) and Maverick (10.10)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 .. code-block:: bash
 
     sudo add-apt-repository ppa:chris-lea/php-pecl-extras 
     
-
-
-
 
 Installing The Standard iHRIS Sites
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -35,11 +27,9 @@ When you install your site you will be asked to enter the administrative passwor
 
 Once you are done the site administrator has username i2ce_admin with password the one chose when you installed the site.
 
-
 iHRIS Manage
 ~~~~~~~~~~~~
 The standard iHRIS Manage site.
-
 
 .. code-block:: bash
 
@@ -55,7 +45,6 @@ iHRIS Manage Demo
 ~~~~~~~~~~~~~~~~~
 The standard iHRIS Manage site with demo data.
 
-
 .. code-block:: bash
 
     echo "deb http://ppa.launchpad.net/intrahealth+informatics/ihris/ubuntu " `lsb_release -cs` " main"  | sudo tee  /etc/apt/sources.list.d/ihris.list
@@ -69,7 +58,6 @@ will install to http://localhost/iHRIS/manage-demo
 iHRIS Qualify
 ~~~~~~~~~~~~~
 The standard iHRIS Qualify site.
-
 
 .. code-block:: bash
 
@@ -85,7 +73,6 @@ iHRIS Qualify Demo
 ~~~~~~~~~~~~~~~~~~
 The standard iHRIS Qualify site with demonstration data.
 
-
 .. code-block:: bash
 
     echo "deb http://ppa.launchpad.net/intrahealth+informatics/ihris/ubuntu " `lsb_release -cs` " main"  | sudo tee  /etc/apt/sources.list.d/ihris.list
@@ -96,13 +83,11 @@ The standard iHRIS Qualify site with demonstration data.
 
 will install to http://localhost/iHRIS/qualify-demo
 
-
 Installing Other Sites
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Qualify for Nursing and Midwifery Council of Nigeria
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 .. code-block:: bash
 
@@ -115,11 +100,9 @@ Qualify for Nursing and Midwifery Council of Nigeria
 
 Now browse to http://localhost/NMCN
 
-
 Manage for MOH Mali
 ~~~~~~~~~~~~~~~~~~~
 (Not tested)
-
 
 .. code-block:: bash
 
@@ -131,13 +114,10 @@ Manage for MOH Mali
     sudo apt-get install --install-recommends ihris+ihris-manage-mali-site
     
 
-
 Now browse to http://localhost/mali-manage
-
 
 Manage for MOH Zanzibar
 ~~~~~~~~~~~~~~~~~~~~~~~
-
 
 .. code-block:: bash
 
@@ -151,13 +131,10 @@ Manage for MOH Zanzibar
 
 Now browse to http://localhost/iHRIS/zanzibar
 
-
 Details
 ^^^^^^^
-
 
 * The i2ce/ihris library is installed under /usr/lib/iHRIS/lib/4.0
 * All sites are installed under /var/lib/iHRIS/sites/4.0, for example /var/lib/iRHIS/sites/4.0/ihris-manage-site-demo
 * There is no link (ln -s) under /var/www to the pages directory, instead the site is made available by /etc/apache2/conf.d/ihris-manage-site-demo.conf
-
 

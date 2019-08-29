@@ -3,14 +3,11 @@ Form Fields
 
 This article describes the main data types, or form fields, used by iHRIS. These fields are defined in Magic Data; this page describes the details of how they should be defined.  
 
-
-
 Magic Data for Defining Fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Each form class $formClass contains a list of fields.  A field $field in $formClass is defined at:
  /modules/forms/formClasses/$formClass/fields/$field
 which has the following sub-nodes
-
 
 * formfield: Required. Needs should be on of the field [[#Field Types|type]] such as INT
 * in_db: Optional.  It should be either 0 or 1. If not set, defaults to 1.  If 1, then this field should be saved into the database
@@ -26,7 +23,6 @@ Field Types
 ~~~~~~~~~~~
 Each field has a type.  The types define how they are displayed to the end user in both an edit and view only context. It also contains information about the type of column the data should be saved in a database.
 The available types are:
-
 
 * [[Class: I2CE_FormField_BOOL |BOOL]] is implemented by the class I2CE_FormField_BOOL is a choice between true and false
 * [[Class: iHRIS_FormField_CURRENCY | CURRENCY]] is implemented by the class iHRIS_FormField_CURRENCY and is a currency type and an amount
@@ -48,11 +44,9 @@ The available types are:
 * [[Class: I2CE_FormField_STRING_TEXT | STRING_TEXT]] is implemented by the class I2CE_FormField_STRING_TEXT is a large multi-line string
 * [[Class: I2CE_FormField_YESNO | YESNO]] is implemented by the class I2CE_FormField_YESNO and is a choice between Yes and No
 
-
 Map Fields
 ^^^^^^^^^^
 A MAP or MAP_MULT takes values in a list, which is any form whose implementing class subclasses I2CE_List.  There are some special options for how these lists are displayed.
-
 
 Meta Magic Data for MAP Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +54,6 @@ A field of type MAP or MAP_MULT can specify the following 'default'  sub-node.
 Under the magic data node:
  /modules/forms/formClasses/$formClass/fields/$field/meta
 We can specify some further information which affects how a field is used as follows:
-
 
 * form: an optional parent node.  The child nodes are all scalar nodes which specify the forms that this field can take values in.  If not set, the name of the form is assumed to be the name of the field, $field.
 * display: An optional parent node.  Each child node is a "named" display for that field which can be referenced in .html templale files.
@@ -81,15 +74,11 @@ We can specify some further information which affects how a field is used as fol
 * *$display1: Optional parent node.  Limits that apply to the display $display1.  Same structure as 'default'
 * *...
 
-
-
 See also:  [[Defining Forms#Lists | Defining List Forms]]
-
 
 Meta Magic Data Example
 ~~~~~~~~~~~~~~~~~~~~~~~
 For example, iHRIS_Person has a mapped field, 'residence'.  It's meta node contains the following sub-nodes:
-
 
 .. code-block:: php
 
@@ -123,7 +112,6 @@ or
  County, Country District
 depending if you have selected the district or county.
 
-
 Automatically Generated Integers (INT_GENERATE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -132,7 +120,4 @@ Automatically generated integers (or INT_GENERATE) are used when a form needs an
 In the field_sequence table there will be an entry with the form field id and the highest value that has been used.  The system checks two possibilities for determining the next available number.  It looks at the field_sequence table if a row exists there for the form field and in the last_entry table for the highest assigned value.  Whichever is higher is then incremented by one and saved to the field_sequence table so it can be accessed the next time a record is added.
 
 If you want to start at 1000 you can just add the form field id and 1000 to field_sequence.  You only need to add something to the field_sequence table if you want it to start higher than the currently saved values.  For example, if you imported data that ranges from 100-400 but you want the generated numbers to start at 1000 then you’ll need to add a row to the field_sequence table.  But if you just want the next number to be 401 then you don’t need to do anything.
-
-
-
 
