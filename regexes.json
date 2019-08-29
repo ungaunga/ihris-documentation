@@ -1,0 +1,10 @@
+[
+    {
+        "replace all categories": "\[\[Category.*?$",
+        "replacement": ""
+    },
+    {
+        "triple_line_breaks": "\n{3,}",
+        "replacement": "\n\n"
+    }
+]
