@@ -11,7 +11,7 @@ Archived Technical Documentation
 * [[Data Dictionary - iHRIS 4.1]]
 * Older Installation Instructions: [[HowTo: Installing the Debian Packages]]; [[HowTo: Installing on Mini-Box]]
 * [[Linux (RedHat-Fedora) Installation]]
-* `Set Positions (PDF of PowerPoint presentation) <http://www.ihris.org/mediawiki/upload/SettingPosition.pdf>`_  -- to possibly be revised/updated
+* `Set Positions (PDF of PowerPoint presentation) <https://wiki.ihris.org/mediawiki/upload/SettingPosition.pdf>`_  -- to possibly be revised/updated
 * [[Data Interoperability]]
 * [[Upgrading From 3.1]]
 * [[Design Documents]]

@@ -17,7 +17,7 @@ This is a list of documentation needs submitted by members of the iHRIS Global C
 
  **General iHRIS PowerPoint**  -- Develop a PowerPoint that can be shared and modified for introducing iHRIS.
 
- ** `General iHIRS Takeaway Sheet <http://www.ihris.org/mediawiki/upload/IHRISoverview-_two_pager.pdf>`_ **  -- Revise.
+ ** `General iHIRS Takeaway Sheet <https://wiki.ihris.org/mediawiki/upload/IHRISoverview-_two_pager.pdf>`_ **  -- Revise.
 
  **Forms and Fields Map**  -- Provide a link through which users can request a large printed copy of the map.
 

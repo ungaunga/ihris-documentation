@@ -1,5 +1,5 @@
-Botswana Installation Instructions
-==================================
+Installation Instructions
+=========================
 
 Bazaar
 ^^^^^^

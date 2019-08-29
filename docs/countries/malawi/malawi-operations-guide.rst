@@ -1,5 +1,5 @@
 Malawi Operations Guide
 =======================
 
- `iHRIS Operations Guide <http://www.ihris.org/mediawiki/upload/IHRIS-Operations-Guide.pdf>`_ 
+ `iHRIS Operations Guide <https://wiki.ihris.org/mediawiki/upload/IHRIS-Operations-Guide.pdf>`_ 
 

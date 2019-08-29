@@ -3,9 +3,9 @@ IHRIS and HRIS Marketing Resources
 
  ** `iHRIS Website <http://www.ihris.org>`_ ** 
 
- ** `iHRIS Open Source Health Information Software Takeaway Sheet <http://www.ihris.org/mediawiki/upload/IHRISoverview-_two_pager.pdf>`_ **  -- to be revised (PDF)
+ ** `iHRIS Open Source Health Information Software Takeaway Sheet <https://wiki.ihris.org/mediawiki/upload/IHRISoverview-_two_pager.pdf>`_ **  -- to be revised (PDF)
 
- ** `USAID's Investment in Open Source HRIS Software Takeaway Sheet <http://www.ihris.org/mediawiki/upload/Cribsheet.pdf>`_ **  (PDF)
+ ** `USAID's Investment in Open Source HRIS Software Takeaway Sheet <https://wiki.ihris.org/mediawiki/upload/Cribsheet.pdf>`_ **  (PDF)
 
 'One-page’ overviews
 ^^^^^^^^^^^^^^^^^^^^

@@ -17,5 +17,5 @@ Please add other Health Workforce Observatory websites to this list.
 Other Resources
 ^^^^^^^^^^^^^^^
 
- ** `Report of the Global Meeting of Human Resources for Health Observatories <http://www.ihris.org/mediawiki/upload/WHO_observatories_meeting_report.pdf>`_ **  - This report summarizes the key conclusions of the Global Meeting of Human Resources for Health (HRH) Observatories: Evidence-informed Human Resources for Health policies – the contribution of HRH Observatories, which was held in Lisbon, Portugal, from 4 to 7 July 2011. It is one of the best and most recent outlines of the Observatory concept and some of the latest thinking from countries about the approach.
+ ** `Report of the Global Meeting of Human Resources for Health Observatories <https://wiki.ihris.org/mediawiki/upload/WHO_observatories_meeting_report.pdf>`_ **  - This report summarizes the key conclusions of the Global Meeting of Human Resources for Health (HRH) Observatories: Evidence-informed Human Resources for Health policies – the contribution of HRH Observatories, which was held in Lisbon, Portugal, from 4 to 7 July 2011. It is one of the best and most recent outlines of the Observatory concept and some of the latest thinking from countries about the approach.
 

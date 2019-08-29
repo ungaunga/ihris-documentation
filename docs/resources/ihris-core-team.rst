@@ -30,7 +30,7 @@ Draft Manuals
 ^^^^^^^^^^^^^
 
 * [[iHRIS Retain User's Manual (Draft)]]
-* `iHRIS Train User's Manual (Draft) <http://www.ihris.org/mediawiki/upload/HRIS_Train_Pre-Service_User_Manual.pdf>`_
+* `iHRIS Train User's Manual (Draft) <https://wiki.ihris.org/mediawiki/upload/HRIS_Train_Pre-Service_User_Manual.pdf>`_
 
 Useful Resources
 ^^^^^^^^^^^^^^^^
@@ -42,6 +42,6 @@ Useful Resources
 Uncategorized Resources
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-* `ISCO Standards <http://www.ihris.org/mediawiki/upload/ISCO_Standards.pdf>`_
+* `ISCO Standards <https://wiki.ihris.org/mediawiki/upload/ISCO_Standards.pdf>`_
 * `iHRIS Manage Workflow Map Problem Areas (JPG) <http://wiki.ihris.org/wiki/File:HRHIS_workflow_map_Problems.jpg>`_
 
