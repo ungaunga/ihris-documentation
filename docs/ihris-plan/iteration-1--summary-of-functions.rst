@@ -5,11 +5,8 @@ We are planning to base the first iteration of iHRIS Plan on John Dewdney's mode
 
 The following is a summary of the functions of Iteration 1 based on the John Dewdney model. This is a summary of the use cases for the software, which are posted on the  `iHRIS Plan Project Page <http://www.capacityproject.org/hris/suite/ihris_plan.php>`_ . Please feel free to clarify any step, comment on these functions and make suggestions for improving them.
 
-
-
 Target and Demographics
 ^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * Enter a **target**  for the projection. *Note: This is just a text field and doesn't affect any calculations.*
 * Enter the **starting year**  for the projection. *Note: This should be the most recent year for which there are known data as to the health workforce and pre-service training supply.*
@@ -17,10 +14,8 @@ Target and Demographics
 * Enter the **population**  at the start of the starting year.
 * Enter the **annual average population growth rate** .
 
-
 Assumptions
 ^^^^^^^^^^^
-
 
 * Select a **cadre**  for projections. *Note: Multiple projections can be created, one for each cadre. All data that follow pertain to the selected cadre for the projection. See [[Questions for Discussion]] #1.*
 * Enter the normal **age of retirement** . *Note: Unless ages of health workers are entered as supply data, projections based on retirement age cannot be made. See [[Questions for Discussion]] #10.*
@@ -30,18 +25,14 @@ Assumptions
 * Enter the expected **average percentage of training intake not expected to be available for service** , e.g., due to failure to complete training, for projecting annual losses of pre-service trainees.
 * Enter the **duration of the pre-service training course in years** . *Note: This determines how many years actual graduate numbers must be entered at the beginning of the projection period.*
 
-
 Requirements
 ^^^^^^^^^^^^
-
 
 * Enter the **target number of positions**  to be filled in the starting year. *See [[Questions for Discussion]] #4.*
 * Calculate the required positions needed for each year in the projection. *Note: It is not clear how this calculation is made. It can be calculated if based on a standard of total population per position. See [[Questions for Discussion]] #5.*
 
-
 Supply: Pre-Service Training
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * Enter the **number of new students and the number of re-enrollments**  for the starting year to calculate the total number of students.
 * Enter the **number of graduates**  for the starting year (i.e., for the first 3 years for a 3-year course).
@@ -50,38 +41,30 @@ Supply: Pre-Service Training
 
  *Note: These calculations for pre-service training, specifically with regard to length of training course, are still unclear to me. Please comment and clarify as needed.* 
 
-
 Supply: Workforce
 ^^^^^^^^^^^^^^^^^
-
 
 * Enter the **number of staff actually employed**  at the start of the year. *See [Questions for Discussion]] #7, 9 and 10.*
 * To determine the year-by-year projected supply, the system calculates the total intake from training and the total exits from staff leaving due to retirement, staff leaving due to illness/death and staff leaving due to other factors. Add the annual intake to and subtract the annual losses from the first-year supply to calculate the next year's supply, and so on for each year in the projection. *Note: However, the model doesn't seem to account for intakes other than from graduating students; see [[Questions for Discussion]] #8 and 11.*
 
 Now the system can produce a base projection model comparing the year-by-year projected supply of health workers to the year-by-year projected requirements, helping workforce planners visualize the gaps between the two.
 
-
 Costs
 ^^^^^
-
 
 * Enter the **annual cost of training**  per student.
 * Enter the **average annual salary**  of a health worker.
 * The system can calculate the total costs of all students and workers for each year in the projection. ''Note: And also for required positions, although this does not seem to be in the original model; see [[Questions for Discussion]] #12.
-
 
 Interventions
 ^^^^^^^^^^^^^
 
 By changing the assumptions entered, the system can graph the effects of various interventions, either individually or aggregated. For example, changing the assumed retirement rate may be due to an intervention in encouring more retirements or raising the retirement age. The more assumptions that are used, the more interventions can be modeled. This wouldn't change the base assumptions entered used to make the projection, which are presumed to be based on actual data, but would rather be used to posit 'what-if' scenarios, such as "What if pre-service training losses were decreased by some sort of incentive program?"
 
-
 Reporting, Planning and Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The system should be able to produce a variety of reports based on the data entered. As more cadre projections are created, reports can be aggregated to create a total picture of the health workforce. Here are some examples of reports that can be created:
-
-
 
 * Total projected supply on a per-year basis by cadre or aggregated for each year in the projection
 * Total projected requirements on a per-year basis by cadre or aggregated for each year in the projection

@@ -5,32 +5,21 @@ IHRIS Regional Rollout
 
 Many countries are interested in decentralizing their HR management system.  Several of the countries where we work are currently rolling out their system. Namibia is rolling out their HR information management system to the regions; 3 regions are now connected and all 13 will be online by the end of 2010. In Tanzania, the country’s largest FBO, Christian Social Services Commission, is installing iHRIS Manage in its 5 zonal offices. Uganda is currently implementing their iHRIS Manage system in nine districts and plans to eventually roll the system out to all of the 83 districts. Expanding an information system requires careful planning and preparation and there are many details to consider. This article will highlight what we’ve learned thus far. As you read this article, please note the following: 
 
-
-
 * Each country is governed differently and health care administration division varies greatly. Countries may be divided into zones, regions, districts, states, etc. For simplicity in this document, we will refer to all of these as regions.
-
-
 
 * Each country also has a group of people making decisions about HRIS strengthening and software deployment. For simplicity in this document, we will refer to the decision makers as the ‘stakeholder leadership group’ or ‘SLG’ for short.
 
-
-
 * Although this article is written for iHRIS Manage expansion, it may be applicable to other HR management systems as well.
-
-
 
 Designating permission to Edit Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The iHRIS Manage data model for regional deployment requires the SLG to develop a policy designating whether data will be edited at the regional offices or at the central head office.  Data cannot be edited at both:
 
-
 * A. Data edited at the regional offices are aggregated at the central office and are read-only at the central office.
 * B. Data edited at the central office are sent to the regional offices and are read-only at the regional offices.
 
 It is important to note that by choosing option B, a regional office will not be able to add a new employee, etc. to the list and will have to wait for the central office to do so.
-
-
 
 Standardizing Lists
 ^^^^^^^^^^^^^^^^^^^
@@ -41,12 +30,10 @@ In general, if a database list contains choices which apply to more than one reg
 
 On the other hand, data/forms such as the personnel data, should be edited at the regional office. For instance, personnel data includes contact, demographic, and education information. This is because the regional offices will be more likely to have accurate data and to be involved in the day to day management of the personnel. Also, any lists that you will not likely be concerned about comparing data on at the central level should be safe to be edited at the regional level.
 
-
 Step Solution
 ^^^^^^^^^^^^^
 
 Although creating standardized lists for all drop-down lists is ideal, the SLG may not be able to do so before rollout begins. Based on zonal deployment in Tanzania, the iHRIS developers and stakeholders suggested the following lists to be edited at the zonal office:
-
 
 * diocese
 * position_type (full time, part time, temporary)
@@ -59,5 +46,4 @@ The **Step Solution**  is to allow the above lists (and a few others) to be edit
 Once a list has been standardized, each of the regional offices’ databases will need to be updated to use these lists, and to update any records pointing to "Maternity and Infant Ward" in the Western region now to "Maternity Ward" as defined by the head office. 
 
 Using this sort of Step Solution will be a bit time consuming, so the more lists that can be defined and standardized before the regional deployment, the better.
-
 

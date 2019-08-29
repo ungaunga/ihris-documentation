@@ -18,10 +18,8 @@ I recommend using a freshly installed Ubuntu LTS system for this.  Using VMWare 
 * Create the ISO. (<tt>aptitude install mkisofs; mkisofs -r -A 'IntraHealth Update' -o intrahealth-update.iso /mirrors/debian/</tt>)
 * Burn the ISO to Disk
 
-
 On the target system
 ^^^^^^^^^^^^^^^^^^^^
-
 
 * Add the disk's key to Apt's keyring.
 * Add the disk to the list of disks available (<tt>apt-cdrom add</tt>)

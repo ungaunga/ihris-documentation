@@ -3,7 +3,6 @@ Software Requirements
 
 The following software is required to be installed before installing iHRIS:
 
-
 * `Apache Webserver 2.2+  <http://www.apache.org>`_
 * `MySQL 5.0+ <http://www.mysql.com>`_
 * `PHP 5.2.6+  <http://www.php.net>`_
@@ -19,8 +18,6 @@ A web browser is required to run the software. `Firefox 2+ <http://www.mozilla.c
 
 Optional:
 
-
 * `Tidy from PECL <http://pecl.php.net/package/tidy>`_  (included by default for Ubuntu but not Windows)
 * `GD Php Library  <http://www.libgd.org>`_
-
 

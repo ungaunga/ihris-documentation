@@ -4,33 +4,21 @@ Module Structure
 This tutorial describes the iHRIS Module Structure.  An iHRIS module is a collection of various types of "code" by the features that they provide to the system.  These modules can be part of the core I2CE system and handle things like user 
 authentication or database access, or they can provide new functionality to iHRIS, such as leave management.
 
-
-
 What is a Module?
 ^^^^^^^^^^^^^^^^^
 The iHRIS Suite is based on the Intrahealth Informatics Core Engine (I2CE) which use a module structure to encapsulate and maintain "code" into manageable pieces organized by the functionality provided.  By "code" we mean the entire collection of php, html, javascript, xml, image files, css, flash, etc that provide the functionality of a web-based application.
-
 
 A module is versioned to keep track of the changes to functionality and API that a module has.
 
 =Why Modules?=
 
-
 * The main reason to use a module system is to increase code manageability.  The various components of the iHRIS Suite (Qualify, Manage, and Plan) are used in a variety of settings each requiring their own customizations.
-
-
 
 * Each of the iHRIS Suite's components (Qualify, Manage, Plan) share some common functionality and the module system ensures proper code re-use.
 
-
-
 * The module system lets many customizations to be encapsulated without having to change the underlying code base.   This allow a local developer to make their changes without worrying about about having to redo those changes anytime the core system is updated.
 
-
-
 * As modules are organized by the functionality that they provide to the system, a developer can quickly find the relevant code to change by looking at the relevant modules.
-
-
 
 * Customizations to the software encapsulated in a module can be easily shared among developers.
 
@@ -38,7 +26,6 @@ A module is versioned to keep track of the changes to functionality and API that
 The is the "top"-most module.  Every module implicitly has this a requirement.  It is the core module which provides the minimal functionality including magic data, file search, the templating system, and the module factory.   It has no requirements.
 
  *I2CE*  provides many optional sub-modules.  For example:
-
 
 * Admin -- Provides a module management system.
 * Background Process -- Provides a platform independent means to launch and monitor background processes
@@ -54,7 +41,6 @@ The "bottom"-most module is the **Site Module.**   This module is the one that i
 =Module Configuration File=
 A module exists by defining its configuration files.  There is one top-level node <I2CEConfiguration> under which there are two possible nodes:
 
-
 * The [[#metadata|<metadata>]] tag is required.
 * The [[#Configuration (Magic) Data|<configurationGroup>]] tag is optional.
 The <I2CEConfiguration> tag has a required attribute **name**  whose values should be a unique short name to describe this module such as *I2CE* , *ihris-manage*  or *mercury_javascript_popup.*   
@@ -69,7 +55,6 @@ The DTD which describes the format of the configuration file is located in *I2CE
      <span style='color:tomato'>Some stuff defined [[#Configuration (Magic) Data|below]] </span>
    </configurationGroup>
  </I2CEConfiguration>
-
 
 metadata
 ^^^^^^^^
@@ -117,7 +102,6 @@ requirement
 ~~~~~~~~~~~
 This is an optional tag, of which you can have as many as you want.  Each tag needs to have the attribute **name**  whose the value is the name of a module required by this module.  This tag can have up to four possible sub-tags:
 
-
 * atLeast
 * atMost
 * lessThan
@@ -131,7 +115,6 @@ says that our module requires that I2CE have version at least 3.1 and less than 
 
 In order for a module to be loaded, it must successfully meet all of its requirements.
 
-
 conflict
 ~~~~~~~~
 This is an optional tag of which you can have as many as you wish.  This is opposite of the [[#requirement|<requirement>]] tag and lists all the modules that this module conflicts with.  As an example:
@@ -144,18 +127,15 @@ Says that our module conflicts's with all versions of  `Robert Plant <http://en.
 
 A module will fail to load if it conflicts with any other modules that are already loaded.
 
-
 enable
 ~~~~~~
 This tag is optional of which you can have as many as you wish.  This tag requires the attribute **name**  with the value the short name of a module. This tag is weaker than the [[#requirement|<requirement>]] tag in that it will try to enable the named module, but it will not cause the cause this module to fail to load if it can't.  It also differs from the <requirement> and <conflict> tags as there is no version information (under the subtags atLeast,atMost, lessThan, greaterThan). As an example:
  <enable name='alex_patterson_javascript_paginator'/>
 Says that if the  `Alex Patterson <http://en.wikipedia.org/wiki/Alex_Patterson>`_ 's javascript paginator module is able to loaded, then load it.  Otherwise don't worry about it.
 
-
 path
 ~~~~
 This is an optional tag of which there can be as many as you wish. Each <path> tag requires the attribute **name**  and can have as many sub-tags **<value>**  as you wish.   The <path> tag enables a module to specify directories to be added to the file search utility group by category.  The categories are specified by the name attribute and some commonly used names are:
-
 
 * templates These are the directories to search for html template files
 * images These are the directories to search for image files
@@ -165,13 +145,11 @@ This is an optional tag of which there can be as many as you wish. Each <path> t
 * modules These are the directories to look for (sub-)modules of the current module.
 For more information about the paths allowed, see [[File Search Paths]]
 
-
 priority
 ~~~~~~~~
 This tag is optional.  If not set, the priority of a module is 50.
  Example: <priority>50</priority>
 Here are some standard priorities:
-
 
 * I2CE 0
 * sub-modules of I2CE 50
@@ -181,13 +159,11 @@ Here are some standard priorities:
 * sub-modules ihris-manage, ihris-qualify, ihris-plan 250
 * a site module 400
 
-
 Configuration (Magic) Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 The <configurationGroup> node is optional.  If it is present it has to have the attribute **name**  which has the same value as the attribute **name**  in the containing <I2CEConfiguration> tag.  
 
 All magic data is relative to the path defined by the this configurationGroup.  There are three options:
-
 
 * The attribute path is not present.  In the following example, the magic data is stored under */modules/mercury_javascript_path.*
  Example:
@@ -195,20 +171,17 @@ All magic data is relative to the path defined by the this configurationGroup.  
     <span style='color:red'>SOME STUFF GOES HERE</span>
  </configurationGroup>
 
-
 * The attribute path is present.  In the following example, the magic data is stored under */some/other/place.*
  Example:
   <configurationGroup name='mercury_javascript_popup' path='/some/other/place'>
     <span style='color:red'>SOME STUFF GOES HERE</span>
   </configurationGroup> 
 
-
 * The module is 'I2CE'.  The magic data is stored relative to */I2CE*
 
 This <configurationGroup> node does double duty.  It provides the configuration data that is stored into magic data.  It also provides, via the *Admin*  module,  a treed menu system to edit the magic data set by this system.  This allows for dynamic customizations of your site.
 
 See [[Configuration (Magic) Data]] for more detailed information.
-
 
 The Module Class
 ^^^^^^^^^^^^^^^^
@@ -220,7 +193,6 @@ Enabling/Disabling a Module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 There are several methods used to initialize, enable, disable  and upgrade a module which are called by the module factory.  All of these methods expect that the module returns true to indicate success.
 
-
 * When a module is enabled the method **action_enable()**  is called.
 * Before a module is enabled for the first time **action_initialize()**  is called.  <br/> This is the appropriate place to do things like ensure that any tables in the database the module expects to have are created.  <br/> For example, the module 'I2CE' has its own class 'I2CE_Module_Core' which does the following:
 * *Checks that the user database table is there, if not it creates it.
@@ -228,7 +200,6 @@ There are several methods used to initialize, enable, disable  and upgrade a mod
 * *Checks that the config table for magic data is present, if not it creates it.
 * When a module is disabled the method **action_disabled()**  is called.
 * When the version in the configuration file changes **upgrade($old_vers,$new_vers)**  is called.
-
 
 Hooked Methods
 ~~~~~~~~~~~~~~
@@ -242,11 +213,9 @@ I2CE_ModuleFactory will take care of calling all modules that register hooks for
 
 A module registers the methods to call via its getHooks() method which returns an array with keys the hook name and value the method name in the module's class.
 
-
 Fuzzy Methods
 ~~~~~~~~~~~~~
 A fuzzy method is a method that a module provides to some other PHP class extended I2CE_Fuzzy via the __call() method. There are three reasons to use fuzzy methods:
-
 
 * PHP cannot do multiple-inheritance for classes which makes it difficult to combine functionality of two classes into one.  One can always do an interface, but then one has to rewrite a lot of code.
 * The second is to provide modular functionality that can be turned on and off.

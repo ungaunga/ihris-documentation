@@ -5,11 +5,9 @@ Los datos magic proporcionan un mecanismo central para configurar iHRIS.  Estos 
 
 Usted puede agregar mecanismos de almacenamiento de bases de datos a I2CE_MagicData.  El último que se agrega es el método "permanent" de almacenamiento. Todos los demás que se agregan se utilizan para realizar caché a los datos almacenados en el mecanismo permanente de almacenamiento.
 
-
 Base de Datos
 ^^^^^^^^^^^^^
 Este mecanismo de almacenamiento de datos magic se diseñó para utilizarse como el mecanismo "permanent" de almacenamiento. Se almacena en la table 'config' de la base de datos por defecto.
-
 
 APC
 ^^^
@@ -17,11 +15,9 @@ Hay un mecanismo de almacenamiento de datos magic en el módulo Pear APC e imple
 
 Para limpiar el caché manualmente puede utilizar la interfaz de red de php-apc.
 
-
 Memcached
 ^^^^^^^^^
 Este es un caché en memoria de los pares de valores clave con límites de 1MB por tamaño de valor.
-
 
 SysV
 ^^^^

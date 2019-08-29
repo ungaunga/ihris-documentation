@@ -7,14 +7,11 @@ You can limit displaying a report (a report view) to certain users by assigning 
 
 In the example below, we go through the three steps where we want to limit viewing the facility list to the "Executive Manager" role.  
 
-
-
 Step 1: Create A New Task
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 The first step is to create a new task which requires the [[#Enabling the Tasks and Roles Module | Task and Roles module to be enabled]].
 
 One the Tasks and Roles module is enabled do the following:
-
 
 * Click "Configure System"
 * Click "Tasks Roles"
@@ -22,22 +19,17 @@ One the Tasks and Roles module is enabled do the following:
 * Scroll down to the bottom of the page
 Once you have scrolled down to the bottom of the page, you can create a new task.  Here we create a task with:
 
-
 * The Name set to  "view_facility_list_report"
 * The description set to "Task to restrict access to the facility list report"
 
 .. image:: images/create_report_task.png
     :align: center
 
-
-
  *Note:*  You can also use an existing task rather than create a new one.
-
 
 Step 2: Assign The Task To A Role
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Now that we have created a new task for the report, we need to assign it to the use roles that we are interested in.
-
 
 * Click "Configure System"
 * Click "Tasks Roles"
@@ -58,13 +50,9 @@ Repeat this for each role you want to allow to view the report.
 .. image:: images/add_task_to_role.png
     :align: center
 
-
-
-
 Step 3: Assign The Task To The Report View
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We can now assign the task to the report view we are interested in restricting access to.
-
 
 * *Click "Configure System"
 * *Click "Report Views" under "Manage Reports"
@@ -76,18 +64,13 @@ Now, only the users with the role "Executive Manager" can see the facility list 
 .. image:: images/limit_report_to_task.png
     :align: center
 
-
-
-
 Enabling the Tasks and Roles Module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To enable the tasks and roles module, which allows you to edit tasks and roles via the web interface, follow the following steps:
-
 
 * Click "Configure System"
 * Click "Configure Modules"
 * Click on "Sub-Modules" to the right of "Pages"
 * Select the "Roles and Tasks" module
 * Click "Update"
-
 

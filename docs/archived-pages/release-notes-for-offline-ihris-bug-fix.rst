@@ -23,7 +23,6 @@ CONTENTS
 
 8. License
 
-
 1. CONTACT INFORMATION
 
 HRIS Strengthening team of the Capacity Project
@@ -40,7 +39,6 @@ IntraHealth International
 
 Chapel Hill NC 27517 USA
 
-
 2. ABOUT THIS SOFTWARE
 
 The Capacity Project develops in the iHRIS Suite core solutions addressing specific issues in human resources for health (HRH) leadership. The iHRIS Suite is free and Open Source software distributed under the GPL.
@@ -53,7 +51,6 @@ iHRIS Plan is planning and modeling software developed to improve how health sec
 
 Offline iHRIS provides a way to use all of these tools without a server. Offline iHRIS is intended to be installed on a single desktop and used by a single user. It is designed to be used in locations where there is no or limited Internet access.
 
-
 3. NEW IN THIS RELEASE
 
 This release is an offline companion to the iHRIS suite of human resource information systems. This is the first release to include an Offline release of iHRIS Plan. This release also includes all the new features in the core iHRIS Manage and iHRIS Qualify 3.1 release:
@@ -63,7 +60,6 @@ This release is an offline companion to the iHRIS suite of human resource inform
 - In-service training management module (iHRIS Manage only)
 
 - Evaluate competencies including competencies earned in in-service training (iHRIS Manage only) 
-
 
 In addition, Offline iHRIS 3.1 has these new features and fixes:
 
@@ -79,7 +75,6 @@ In addition, Offline iHRIS 3.1 has these new features and fixes:
 
 - From version 3.1 on, upgrades will be handled by the Offline iHRIS installer. However, this version will *not* upgrade from Version 3.0 of Offline iHRIS.
 
-
 4. REQUIREMENTS AND INSTALLATION
 
 Offline iHRIS requires Windows XP, 500MB hard disk space and 1GB RAM. A web browser is required to run the software. Firefox 2+ (http://www.mozilla.com/en-US/firefox/) or Internet Explorer 7+ (http://www.microsoft.com/windows/downloads/ie/getitnow.mspx) is highly recommended.
@@ -87,7 +82,6 @@ Offline iHRIS requires Windows XP, 500MB hard disk space and 1GB RAM. A web brow
 For best results, uninstall any previously installed versions of Offline iHRIS before proceeding.
 
 Double-click the self-executing installer and follow the installation instructions to install and setup Offline iHRIS. Do not install version 3.1 in the same directory as a previous version of Offline iHRIS. Choose the default directory for fastest loading. Specify a MySQL password when prompted. If Windows Firewall is running, select the option to unblock the firewall when prompted.
-
 
 5. GETTING STARTED
 
@@ -113,13 +107,11 @@ To navigate among the systems, left-click the iHRIS taskbar icon in the lower ri
 
 If you have questions or need support, please visit the iHRIS Website by clicking that button on any screen and use the Contact Us form to send us your question. 
 
-
 6. KNOWN ISSUES
 
 Offline iHRIS 3.1 has the following known issues:
 
 - This version does not upgrade from version 3.0 and must be installed in a different directory than Offline iHRIS 3.0. All subsequent versions will upgrade seamlessly.
-
 
 7. ABOUT THE CAPACITY PROJECT
 
@@ -128,7 +120,6 @@ The Capacity Project is developing free, Open Source HRIS solutions, distributed
 The Capacity Project helps developing countries strengthen human resources for health to better respond to the challenges of implementing and sustaining quality health programs. The Project is funded by the U.S. Agency for International Development (USAID) and implemented by IntraHealth International and partners IMA World Health, JHPIEGO, Liverpool Associates in Tropical Health (LATH), Management Sciences for Health (MSH), PATH and Training Resources Group, Inc. (TRG). Find out more at www.capacityproject.org
 
 Development of this software was made possible by the support of the American people through USAID. The contents are the responsibility of the user and do not reflect the views of USAID, the United States Government or IntraHealth International. 
-
 
 8. LICENSE
 

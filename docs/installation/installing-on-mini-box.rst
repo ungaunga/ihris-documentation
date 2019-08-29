@@ -5,15 +5,10 @@ These are installation notes for getting the  ` mini-box <http://www.mini-box.co
 
 This document covers installation of Ubuntu and the bits of software to control the LCD Panel on the iHRIS Appliance.  For information on installing the iHRIS Suite itself (including a full LAMP stack) see [[Installing the Debian Packages]]
 
-
 .. image:: images/Mini-box-ihris-suite.jpg
     :align: center
 
-
-
 <center><videoflash>6h79JeTiSQg</videoflash></center>
-
-
 
 LCD Keypad
 ^^^^^^^^^^
@@ -46,7 +41,6 @@ Download and build the  `SDK <http://resources.mini-box.com/online/picoLCD%2020x
 Now we want to change the splash the screen at boot-up
 
  sudo usblcd splash ~lcdmenu/bin/splash.txt
-
 
 LCD Menu
 ~~~~~~~~
@@ -104,7 +98,6 @@ Now do:
  sudo chmod +x /etc/init.d/local
  sudo update-rc.d local defaults 99
 
-
 Automount
 ~~~~~~~~~
 The LCD Menuing system has a "backup MySQL database to a flash drive" feature.  Since we will not be using GNOME, we will need a USB automounter:
@@ -119,15 +112,12 @@ then make sure the FS_MOUNTOPTIONS line has at least:
 
     FS_MOUNTOPTIONS="-fstype=vfat,gid=lcdmenu,dmask=0007,fmask=0117"
 
-
 Power Button
 ~~~~~~~~~~~~
 Make sure acpid is installed and running and change /etc/acpi/powerbtn.sh to suit your needs. I suggest you just make it the following:
 
  test -f /var/lock/acpisleep && exit 0
  /sbin/shutdown -h now "Power button pressed"
-
-
 
 Checking Network Status
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -143,7 +133,6 @@ Similarly, if you have plugged the server into a network with DHCP, you can get 
  >F2:Network Status
  >F3:MAC Address
 
-
 Other Configuration
 ^^^^^^^^^^^^^^^^^^^
 
@@ -152,12 +141,10 @@ GDM
 In case you have GDM installed, let us have it not boot on startup.  Note, you can now turn gdm on/off via the LCD Menu.
  sudo update-rc.d -f gdm remove
 
-
 UPS
 ~~~
 
 Install nut and  `follow these directions <http://www.crn.com/white-box/199000818>`_  as well as whatever is available on the  `home page <http://www.networkupstools.org/>`_  of the nut package.  nut is built for network access to a UPS but seems to be the most up-to-date package available.
-
 
 Webmin
 ~~~~~~
@@ -193,8 +180,6 @@ You will probably need to set Postfix up for  `SMTP Auth <http://postfix.state-o
 
 As an *alternative*  here are some  instructions for forwarding to a  `gmail accout <http://ubuntu-tutorials.com/tag/relayhost/>`_ .
 
-
-
 RAID
 ^^^^
 Although we will intend to run this box without a monitor for the moment we will plug in the monitor to install Ubuntu from a USB-CDROM. Make sure the BIOS is configured to boot from the CD-ROM.  Also, under Peripheral Devices you will need to enable all legacy support (or it will hang on installation).
@@ -213,5 +198,4 @@ Please enter the following:
   Yes: MD monitoring daemon
   someone@somwhere.org:  Email address for monitoring
   Yes: Start with degraded array
-
 

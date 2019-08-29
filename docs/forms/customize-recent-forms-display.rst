@@ -7,12 +7,9 @@ You can customize the output of the recent changes display by creating a hook in
 
  **Warning:** Changes to child forms aren't reflected in this page.
 
-
 Creating the Hook
 ^^^^^^^^^^^^^^^^^
 Any form you are displaying in recent changes will call the hook "recent_form_'''$form'''_display" and append that to the output on the page.  This will allow you to display additional information as needed.  To create the hook you need to modify or add the getHooks method to your module.  Then create the method in the module.  The hook will be passed the data for the current record being displayed including all fields that are displayed in the page.  See below for setting up a hook for the person form and adding the date of birth to the output.  By default, the person form displays the first name and last name.
-
-
 
 .. code-block:: php
 
@@ -42,7 +39,5 @@ Any form you are displaying in recent changes will call the hook "recent_form_''
     }
     
 
-
 You can query any information from the database to add to the display, but be aware that additional processing will slow down the display as your method will be called for each record being displayed.
-
 

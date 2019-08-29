@@ -1,7 +1,6 @@
 Dual Data Entry Procedure
 =========================
 
-
 Vision
 ^^^^^^
 
@@ -11,10 +10,8 @@ The purpose of dual data entry is to ensure that each record (specifically, obje
 
 Dual data entry should be an optional function that can easily be turned on or off via a configuration screen by the System Administrator. This will actually disable the links to verify the data. If turned on, then all objects will be marked "unverified" and require dual data entry.
 
-
 Dual Data Entry Process
 ^^^^^^^^^^^^^^^^^^^^^^^
-
 
 Step 1: Entering a New Record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,7 +26,6 @@ Note that updated or corrected data would not be subject to dual data entry.
 
 The system also logs the date of entry and the username of the person who entered the record. This information will be used for error reporting.
 
-
 Step 2: Processing an Unverified Record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -43,7 +39,6 @@ Note that if an object is changed after verification, it should be flagged as "u
 
 There is a second way for data to be corrected in the system. Usually, only the HR Manager/Data Operations Manager or System Administrator can correct data that have been entered previously via the "Correct this information" option. When any data (objects) are corrected in this manner, the system also flags that data as "corrected" for error reporting. The Manager can correct either verified or unverified objects.
 
-
 Step 3: Spot-Checking Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -53,13 +48,10 @@ The system provides a Spot-Check Records option that is only visible to the Data
 
 The system displays a random sample of records entered or changed during that date range (see UC-PT18 for details on how many records are displayed under different conditions). The Manager can select any one to review it and correct any errors. The system flags any corrected objects as "corrected". Once each record has been checked, the system removes it from the list of records to spot-check. The Manager may spot-check as many records as s/he likes; the system will provide the option to redisplay a random sample until all records in the date range have been checked.
 
-
 Step 4: Error Reporting
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The system should be able to produce several reports based on this information. These reports should only be accessible by the Data Operations Manager/HR Manager and System Administrator. All reports can be filtered by date range.
-
-
 
 * Total number of records that have been spot-checked and percentage of all records that have been spot-checked
 * Total number of spot-checked records that had errors and percentage of all spot-checked records that had errors
@@ -68,25 +60,20 @@ The system should be able to produce several reports based on this information. 
 * For each data entry person, report on the total number of records that person entered compared to the total number of records entered overall
 * For each data entry person, report on the total number of errors the person made that were corrected compared to the total number of objects the person entered
 
-
 Issues
 ^^^^^^
 
 The procedure outlined above is how dual data entry is conceived to work within these systems, but some adjustments may have to be made for the design or limitations of the system. These are the issues we've identified:
-
 
 * How is a record defined? Is it the total amount of information related to one person entered in the system? Or is it limited to one data entry screen (such as entering a training program in iHRIS Qualify or changing a position in iHRIS Manage)? Or can it only be limited to individual objects?
 * Can the username be linked to the form or record that the user is updating? Is the link to the entire form or to a specific object only, if it can be made at all?
 
 Of course, there will be a way for any smart user to defeat any dual data entry system. For the system to work properly, it relies heavily on enforcement by a "data manager" role (the Data Operations Manager or HR Manager). Without this role systematically checking for incorrect data and reviewing reports on errors rates to identify where more data entry training or discipline might be needed, the system has no value.
 
-
 Documentation
 ^^^^^^^^^^^^^
 
 The dual data entry procedure is identical for iHRIS Manage and iHRIS Qualify. The procedure is documented more fully in the iHRIS Common Use Cases (included in each system's full use case model) in the package titled "Dual Data Entry."
-
-
 
 * `Full Use Case Model - iHRIS Manage <http://www.capacityproject.org/hris/suite/UseCaseReport-iHRISManage.htm>`_
 * `Full Use Case Model - iHRIS Qualify <http://www.capacityproject.org/hris/suite/UseCaseReport_iHRISQualify.htm>`_

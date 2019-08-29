@@ -7,16 +7,13 @@ En este tutorial, veremos cómo agregar campos nuevos al formulario person a iHR
 
  **<span style='color:red'>Advertencia:</span>**   En este tutorial modificaremos el sitio Demo de *ihris-manage*  directamente.  Este no es el método recomendado para hacer este en un ambiente productivo.  Por favor lea [[Creating a Site]] para detales sobre cómo crear un sitio.
 
-
 Pre-Requisitos
 ^^^^^^^^^^^^^^
 Es recomendado leer los siguientes artículos y referirse a ellos conforme va leyendo este tutorial:
 
-
 * [[Module Structure]]
 * [[Configuration (Magic) Data ]]
 * [[Forms and Fields ]]
-
 
 Directorios
 ^^^^^^^^^^^
@@ -27,11 +24,9 @@ Si tiene instalado Windows iHRIS Manage trabajará bajo los directorios:
 ;<Base Dir>:C:\Program Files\ihris-suite
 ;<Site Dir>:C:\Program Files\ihris-suite\sites\ihris-manage
 
-
 Crear un Módulo Nuevo
 ^^^^^^^^^^^^^^^^^^^^^
 Observando:
-
 
 * **<SITE DIR>** /iHRIS-Manage-Demo.xml for Linux
 * **<SITE DIR>** /iHRIS-Manage-Demo.xml for Windows
@@ -60,7 +55,6 @@ Los siguientes contenidos:
  </I2CEConfiguration>
 Esto es (casi) la mínima cantidad de cosas que necesitamos hacer para crear un módulo nuevo.  En este momento, no hay funcionalidad, pero ya dijimos que el módulo *DemoPerson*  requiere el módulo *Person,*  que incidentalmente es un sub-module de ihris-common.  También fijamos la prioridad del módulo, para saber que los archivos plantilla que crearemos tomarán precedencia sobre cualquier cosa en los módulos ihris-manage o ihris-common.
 
-
 Formularios y Clases de Formularios y Herencia
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 En realidad hay dos partes para definir un "form", un formulario y una clase del formulario.  A los formularios se les refiere por sur *shortname,*  por ejemplo *person.*  Al segundo se le refiere por el nombre de una clase de PHP, por ejemplo, *iHRIS_Person* .  
@@ -77,7 +71,6 @@ El segundo define algunos de los campos asociados con la clase iHRIS_Person, y e
 Ahora si observamos el archivo de configuración **<BASE DIR>** /ihris-manage/iHRIS-Manage-Configuration.xml veremos dos cosas: que ihris-manage requiere el módulo *Person* ,  y también veremos un nodo *<configurationGroup name='person'>*  similar.  Esta vez el formulario *person*  utiliza la clase *iHRIS_ManagePerson.*   Ya que *ihris-manage*  requiere *Person* , la clase asociada al formulario person se carga desde iHRIS-Manage-Configuration.xml y no desde Person.xml
 
 Si observamos más allá en este archivo, veremos el nodo *<configurationGroup name='iHRIS_ManagePerson'>*  que define la clase *iHRIS_ManagePerson* .   Aquí verá dos cosas:
-
 
 * iHRIS_ManagePerson extiende iHRIS_Person, así que tiene los mismos campos que iHRIS_Person
 * iHRIS_ManagePerson agrega el campo llamado *password*  con tipo 'STRING_PASS' pero que este campo no se guarda a la base de datos
@@ -148,16 +141,13 @@ El texto color <span style='color:tomato'>tomate</span> son comentarios que pued
 
 El texto color <span style='color:olive'>verde olivo</span> puede quitarse antes de la liberación, pero es útil para propósitos de desarrollo.  Se asegura que cualquier cambio que haga al archivo de configuración sea actualizado.
 
-
 Personalizar los Archivos Plantilla
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 En el paso anterior, habilitamos que dos campos se guardaran en la base de datos.  Ahora tenemos que editar el ínter faz del usuario para que muestre los campos donde sea apropiado.  Hay tres áreas que necesitamos para agregar estos campos:
 
-
 * [[#Displaying the Favorites|Mostrar]] el expediente de una persona muestra su animal y color favorito
 * [[#Editing the Favorites|Editar]] el expediente de una persona permite actualizar el animal y color favorito
 * [[#Add to the Database Lists|Agregar]] un lugar en la página *Administer Database*  para agregar los colores permitidos
-
 
 Mostrar los Favoritos
 ~~~~~~~~~~~~~~~~~~~~~
@@ -173,7 +163,6 @@ Para mostrar el animal y color favorito de una persona después de su nacionalid
 y agregue lo siguiente unas líneas después:
  <nowiki><span type="form" name="person:fav_color" showhead="default" ></span></nowiki>
  <nowiki><span type="form" name="person:fav_animal" showhead="default" class="even"></span></nowiki>
-
 
 Editar los Favoritos
 ~~~~~~~~~~~~~~~~~~~~
@@ -191,7 +180,6 @@ y agregamos:
  <nowiki><span type="form" name="fav_color" showhead="default"></span></nowiki>
  <nowiki><span type="form" name="fav_animal" showhead="default"></span></nowiki>
 Justo después de ella.
-
 
 Agregar a las Listas de la Base de Datos
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -214,7 +202,6 @@ Notará, que tenemos un atributo *task*  en la etiqueta <nowiki><li></nowiki>.  
 Crear la Plantilla Editar Color Favorito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Tenemos que crear un plantilla llamada  'view_list_fav_color.html' en nuestro directorio de plantillas que contendrá:
-
 
 .. code-block:: xml
 
@@ -240,8 +227,6 @@ Tenemos que crear un plantilla llamada  'view_list_fav_color.html' en nuestro di
             
     </div> <!-- list_display -->
     
-
-
 
 Fijando la Tarea Editar Lista de Base de Datos Color Favorito (Opcional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -292,7 +277,6 @@ Inserte el código siguiente en  **<SITE DIR>** /modules/DemoPerson/DemoPerson.x
    </configuration>
  </configurationGroup>
 
-
 Habilitar el Módulo
 ^^^^^^^^^^^^^^^^^^^
 Ahora que tenemos todo listo, solo necesitamos habilitar el módulo 'DemoPerson' en el sitio.  Abra el archivo
@@ -305,16 +289,12 @@ y agregue lo siguiente:
 
 en la <metadata> sección después del requerimiento de *ihris-manage.*  También, asegúrese de tener:
 
-
 .. code-block:: xml
 
        <path name='modules'>
           <value>./modules</value>
        </path>
     
-
-
-
 
 Cambiar el Encabezado de Animal Favorito
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -339,8 +319,5 @@ y en la definición del campo 'fav_animal' tenemos:
          <value>default:Favorite Mammal</value>              </span>
       </configuration>
 
-
-
 <center>'''Happy Debbuging'''</center>
-
 

@@ -5,7 +5,6 @@ What is a business rule? It is a simple, declarative statement that describes an
 
 Check all of the following when determining what business rules exist that may affect the system:
 
-
 * Givens (whether implicit or explicit)
 * Marketing strategies (branding and identity)
 * Organizational mission, vision, purpose

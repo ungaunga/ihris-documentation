@@ -3,14 +3,11 @@ Form Fields - ES
 
 Este artículo define los tipos de datos principales o campos de formularios utilizados por iHRIS. Estos campos se definen en Datos Magic y a continuación se describen los detalles de cómo deben definirse.  
 
-
-
 Datos Magic para Definir Campos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Cada clase de formulario $formClass contiene una lista de campos.  Un campo $field en $formClass se define en:
  /modules/forms/formClasses/$formClass/fields/$field
 que tiene los siguientes sub-nodos
-
 
 * formfield: Requerido. Las necesidades Deben estar en el campo [[#Field Types|type]] como los  INT
 * in_db: Opcional.  Debe ser 0 o 1. Si no está establecido, por defecto es 1.  Si es 1, entonces este campo debe guardarse en la base de datos
@@ -26,7 +23,6 @@ Tipos de Campo
 ~~~~~~~~~~~~~~
 Cada campo tiene un tipo.  Los tipos definen como se muestran al usuario en las vistas de edición y sólo lectura. También contiene información acerca del tipo de columna en la que se deben guardar los datos en una base de datos.
 Los tipos disponibles son:
-
 
 * [[Class: I2CE_FormField_BOOL |BOOL]] es implementado por la clase I2CE_FormField_BOOL es una elección entre falso y verdadero
 * [[Class: iHRIS_FormField_CURRENCY | CURRENCY]] es implementado por la clase iHRIS_FormField_CURRENCY y es un tipo de moneda y una cantidad
@@ -48,11 +44,9 @@ Los tipos disponibles son:
 * [[Class: I2CE_FormField_STRING_TEXT | STRING_TEXT]] es implementado por la clase I2CE_FormField_STRING_TEXT y es una cadena grande de multi-líneas
 * [[Class: I2CE_FormField_YESNO | YESNO]] es implementado por la clase I2CE_FormField_YESNO y es una elección entre Si y No
 
-
 Campos Map
 ^^^^^^^^^^
 Un MAP o MAP_MULT toma valor en una lista, que es cualquier formulario cuya clase que implementa es una sub-clase de I2CE_List.  Hay algunas opciones especiales para la forma en que se muestran estas listas.
-
 
 Datos Magic Meta para Campos Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +54,6 @@ Un campo de tipo MAP o MAP_MULT puede especificar el siguiente sub-nodo 'por def
 Bajo el nodo de datos magic:
  /modules/forms/formClasses/$formClass/fields/$field/meta
 Podemos especificar más información que afecta como se utiliza un campo de la siguiente manera:
-
 
 * form: un nodo primario opcional.  Los nodos secundarios son todos escalares que especifican los formularios en los que este campo puede tomar valores. Si no se establece, el nombre del formulario se asume como el nombre del campo, $field.
 * display: un nodo primario opcional.  Cada nodo secundario es "named" mostrado para ese campo que puede referenciarse en archivos de plantillas .html .
@@ -81,15 +74,11 @@ Podemos especificar más información que afecta como se utiliza un campo de la 
 * *$display1: Nodo primario opcional.  Límites que aplican al display $display1.  Misma estructura que 'default'
 * *...
 
-
-
 Vea también:  [[Defining Forms#Lists | Defining List Forms]]
-
 
 Ejemplo de Datos Magic Meta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Por ejemplo, iHRIS_Person tiene un campo mapeado, 'residence'.  Su nodo meta contiene los siguientes sub-nodos:
-
 
 .. code-block:: php
 
@@ -123,7 +112,6 @@ o
  County, Country District
 dependiendo de si seleccionó el distrito o condado.
 
-
 Enteros Generados Automáticamente INT_GENERATE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -132,5 +120,4 @@ Los enteros generados automáticamente (o INT_GENERATE) se utilizan cuando un fo
 En la tabla field_sequence habrá una entrada con la id del campo del formulario y el valor más alto que se ha utilizado. El sistema revisa dos posibilidades para determinar el siguiente número disponible. Ve en la tabla de field_sequence si existe una fila para el campo del formulario y en la tabla de last_entry el valor más alto asignado. El más alto de los dos se incrementa en uno y se guarda en la tabla de field_sequence para que sea accesible la próxima vez que se añade un registro.
 
 Si quiere empezar en 1000 puede solamente agregar la id de campo de formulario y 1000 a field_sequence.  Solamente debe añadir algo a la tabla field_sequence si quiere estar en un valor más alto que los valores guardados actualmente. Por ejemplo, si ha importado datos que van en un rango de 100-400 pero quiere que los números generados empiecen en 1000 entonces necesita agregar una fila a la tabla de field_sequence .  Pero si solamente quiere que el próximo número sea 401 entonces no debe hacer nada.
-
 

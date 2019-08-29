@@ -5,8 +5,6 @@ Three additional roles have been proposed for iHRIS Manage: Employee, Supervisor
 
 The purpose of these roles is as follows:
 
-
-
 * **Employee** : Enables a person to log in to the system and update his/her own record (a "self-service" option). This will be useful for recording contact information changes or requesting trainings, for example.
 * **Supervisor** : Enables a person to log in to the system and view or update the records of any employee s/he supervises, as well as produce reports showing only data about that person's supervisees. This will be useful for recording performance assessments, for example.
 * **Manager** : Enables a person to log in to the system and view or update the records of any employee working in a department, office or facility that s/he manages, as well as producing reports showing only data about that department, office or facility. This will be useful for providing limited access to data to middle-level managers. **NOTE: The Manager role has been tabled.**
@@ -14,7 +12,6 @@ The purpose of these roles is as follows:
  *While some information and notes have been added to the use cases to support these roles and the actors have been defined in the use case model, the documentation has not been completed.* 
 
  **This feature request is a priority for IntraHealth's implementation of iHRIS Manage and should be completed by June 30, 2008.** 
-
 
 The Guest or Applicant Role
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -25,14 +22,12 @@ Log in will generally be through a public website. For example, on the Jobs page
 
 When the guest logs in, s/he may select one or more positions to apply for and complete an application form. The application form consists of the job applicant questions plus educational history, employment history, languages and skills. The applicant will also need to provide demographic information and contact information. At that time, s/he may enter a password to access the system at a later time and update the application information only. However, the user will not have access to any other functions or information unless s/he is assigned to a position and thus converted to an Employee.
 
-
 Logging In
 ^^^^^^^^^^
 
 It is proposed that users with these roles would first log in as a **Guest** . Then, if they have an employee record in the system, they can authenticate against the First Name, Surname and Password stored with the employee record (the Password feature has not been implemented in the current version of iHRIS Manage). Their role in the system is determined from data stored in the employee or position record. 
 
  *This is a proposal only and may be changed if necessary. This login procedure has not yet been documented but would be added to the Log In use case (UC-PT48).* 
-
 
 Employee Role
 ^^^^^^^^^^^^^
@@ -42,7 +37,6 @@ Next to Guest/Applicant, the Employee role is the most limited of all roles. The
 The Employee will be able to complete a job application and, so long as the position is open, add new skills and educatonal and employment history in order to apply for open jobs in the organization. The Employee cannot view other staff records or reports.
 
 The Employee is considered to have left the organization's employment when a position change is recorded but no new position is set for the Employee. The Employee then becomes an Old Employee and should be denied access to the system except as a Guest/Applicant.
-
 
 Supervisor Role
 ^^^^^^^^^^^^^^^
@@ -54,7 +48,6 @@ The Supervisor may review applicants for open positions that s/he supervises.
 The Supervisor may have access to some reports, such as the Position List, but those reports should be limited only to data about the Employees s/he supervises. (Viewing reports is a lower priority for development.)
 
 The Supervisor role will be important for any Performance Management module to be developed, and may also be useful for assessing employee competencies (see the Competency Model module). 
-
 
 Manager Role
 ^^^^^^^^^^^^

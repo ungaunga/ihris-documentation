@@ -9,8 +9,6 @@ This page collects the various articles that describe how to use the Custom Repo
 Custom Reporting Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-
 * [[Custom Reporting -- An Overview]]
 * *[[Custom Reporting -- Creating Form Relationships]]
 * *[[Custom Reporting -- Creating Reports]]
@@ -21,16 +19,12 @@ Custom Reporting Documentation
 * *[[Custom Reporting -- Exporting Reports From the Command Line]]
 * * [[Printed Forms with Reports (ODT)| Reports and Printed Forms, Open Office (Word) Document]]
 
-
 Custom Reporting Tutorials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 
 * [[Custom Reporting -- Add Images to a Report | Add Images to a Report]]
 * [[Custom Reporting -- Creating a Staff List Example | Create a Staff List Custom Report]]
 * [[Custom Reporting -- Creating an Establishment Report | Create an Establishment Custom Report]]
 * [[Configuring Report Generation Timing|Configure Report Generation Timing]]
 * [[Configuring iHRIS Dashboards]]
-
 

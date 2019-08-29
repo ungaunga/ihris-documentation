@@ -5,11 +5,8 @@ Background processes are run at configured intervals as users access the site.  
 
 Here is a sample cron-job entry to generate all reports every night at 2:00am.
 
-
 .. code-block:: text
 
      0 2 * * * /usr/bin/php **/var/www/manage** /index.php --page=/CustomReports/generate --nocheck=1 > /dev/null 2>&1
     
-
-
 

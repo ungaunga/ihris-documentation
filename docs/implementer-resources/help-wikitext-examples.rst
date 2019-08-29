@@ -103,12 +103,10 @@ date/time alone: ~~~~~
 </pre>
 |}
 
-
 HTML tags
 ^^^^^^^^^
 {{main|Help:HTML in wikitext}}
 You can use some HTML tags, too. However, you should avoid HTML in favor of Wiki markup whenever possible.
-
 
 {| border="1" cellpadding="1"
 !width="1000"|What it looks like
@@ -151,11 +149,9 @@ X<sup>2</sup>, H<sub>2</sub>O
 |
 <center>Centered text</center>
 
-
 * Please note the American spelling of "center".
 |<pre>
 <center>Centered text</center>
-
 
 * Please note the American spelling of "center".
 </pre>
@@ -179,8 +175,6 @@ Invisible comments to editors (&lt;!-- --&gt;)
 appear only while editing the page.
 <!-- Note to editors: blah blah blah. -->
 
-
-
 * If you wish to make comments to the public, you should usually use the [[talk page]].
 |<pre>
 Invisible comments to editors (<!-- -->)
@@ -188,7 +182,6 @@ appear only while editing the page.
 <!-- Note to editors: blah blah blah. -->
 </pre>
 |}
-
 
 Organizing your writing
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -221,15 +214,12 @@ Section headings
 sections. 
 The *Wiki*  <u>ab</u> 
 
-
   * software can automatically
 generate a [[table of contents]] from them.
-
 
 Subsection
 ~~~~~~~~~~
 Using more "equals" (=) signs creates a subsection.
-
 
 A smaller subsection
 --------------------
@@ -244,7 +234,6 @@ which should be reserved for page title.
 |- id="lists"
 |
 
-
 * *Unordered [[Help:List|list]]s*  are easy to do:
 * * Start every line with a star.
 * ** More stars indicate a deeper level.
@@ -253,10 +242,8 @@ which should be reserved for page title.
 * in a list
 marks the end of the list.
 
-
 * Of course you can start again.
 |<pre>
-
 
 * *Unordered lists*  are easy to do:
 * * Start every line with a star.
@@ -265,7 +252,6 @@ marks the end of the list.
 * * A newline
 * in a list
 marks the end of the list.
-
 
 * Of course you can start again.
 </pre>
@@ -321,7 +307,6 @@ parsing.
 |-
 |
 
-
 * You can even do mixed lists
 * # and nest them
 * # inside each other
@@ -330,7 +315,6 @@ parsing.
 * #: can be
 * #:; nested : too
 |<pre>
-
 
 * You can even do mixed lists
 * # and nest them
@@ -400,7 +384,6 @@ For details, see [[Wikipedia:Footnotes]] and [[Help:Footnotes]].
 
 |}
 
-
 Links
 ^^^^^
 {{main|Help:Link}}
@@ -452,8 +435,6 @@ yet. You could create it by clicking on the link.
 |
 You can link to a page section by its title:
 
-
-
 * [[List of cities by country#Morocco]].
 
 If multiple sections have the same title, add
@@ -461,8 +442,6 @@ a number. [[#Example section 3]] goes to the
 third section named "Example section".
 |<pre>
 You can link to a page section by its title:
-
-
 
 * [[List of cities by country#Morocco]].
 
@@ -588,7 +567,6 @@ same if you choose a format in your
 </pre>
 |}
 
-
 Just show what I typed
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -671,14 +649,12 @@ to preserve formatting.
 </pre>
 |}
 
-
 Source code
 ~~~~~~~~~~~
 {{main|mw:Extension:SyntaxHighlight GeSHi}}
 If the syntax highlighting extension is installed, you can display programming language [[w:source code|source code]] in a manner very similar to the HTML <code><nowiki><pre></nowiki></code> tag, except with the type of [[w:syntax highlighting|syntax highlighting]] commonly found in advanced text editing software.
 
 Here's an example of how to display some [[w:C Sharp (programming language)|C#]] source code:
-
 
 .. code-block::
 
@@ -703,10 +679,7 @@ Here's an example of how to display some [[w:C Sharp (programming language)|C#]]
 
     </nowiki>
 
-
 Results in:
-
-
 
 .. code-block:: csharp
 
@@ -723,8 +696,6 @@ Results in:
         }
     }
     
-
-
 
 Images, tables, video, and sounds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -748,32 +719,24 @@ This will produce the syntax for uploading a file **<nowiki>
 |
 A picture, including alternate text:
 
-
 .. image:: images/Wiki.png
     :align: center
-
-
 
 You can put the image in a frame with a caption:
 
 .. image:: images/Wiki.png
     :align: center
-
 
 |<pre>
 A picture, including alternate text:
 
-
 .. image:: images/Wiki.png
     :align: center
-
-
 
 You can put the image in a frame with a caption:
 
 .. image:: images/Wiki.png
     :align: center
-
 
 </pre>
 |-
@@ -834,7 +797,6 @@ Provide a spoken rendition of some text in a template:
 </pre>
 |}
 
-
 Galleries
 ~~~~~~~~~
 {{main|w:Gallery tag}}
@@ -849,7 +811,6 @@ Image:Wiki.png|Captioned
 Image:Wiki.png
 Image:Wiki.png|[[Wikipedia|Links]] can be put in captions.
 </gallery>
-
 
 Mathematical formulas
 ^^^^^^^^^^^^^^^^^^^^^
@@ -866,7 +827,6 @@ You can format mathematical formulas with [[w:TeX|TeX]] markup.
 <math>\sum_{n=0}^\infty \frac{x^n}{n!}</math>
 </nowiki></pre>
 |}
-
 
 Templates
 ^^^^^^^^^
@@ -916,6 +876,5 @@ Go to this page to see the H:title template
 itself: {{tl|H:title}}
 </pre>
 |}
-
 
 {{h:f|enname=Wikitext examples}}

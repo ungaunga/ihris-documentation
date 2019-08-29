@@ -1,7 +1,6 @@
 Using mHero
 ===========
 
-
 Sending Messages
 ^^^^^^^^^^^^^^^^
 
@@ -9,7 +8,6 @@ Introduction
 ~~~~~~~~~~~~
 With mHero,sending messages requires creating a workflow from an Interactive Messaging Application like  `Rapidpro <http://docs.rapidpro.io/#article_775401>`_  and this workflow will then be accessible in  `iHRIS <http://www.ihris.org/>`_  or any Human Resource Health Information System (HRHIS) which is  `CSD <http://wiki.ihe.net/index.php?title=Care_Services_Discovery>`_  compliant for sending to a health worker. This article will be based on iHRIS as an example of a Human Resource Health Information System which is compliant to CSD and Rapidpro as an example of an Interactive Messaging Application.
 There are two ways for starting a workflow through iHRIS,one is called Bulk Workflows (starting a workflow to multiple participants) and the other one is individual workflow (starting a workflow to one participant).
-
 
 Starting A Workflow in iHRIS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -23,14 +21,12 @@ To send a workflow to multiple participants follow these steps:
 .. image:: images/MHero_Bulk_link.png
     :align: center
 
-
 </li>
 <li>
 A window will open that has a section to start Bulk Workflows. Select any report under Bulk Workflows section and then click the "Select Participants" button to load all health workers.<br>
 
 .. image:: images/Select_report_mHero.png
     :align: center
-
 
 </li>
 <li>
@@ -39,7 +35,6 @@ Select a workflow that should be started (located at the very bottom) and then c
 
 .. image:: images/Start_Workflow_mHero.png
     :align: center
-
 
 </li>
 </ul>
@@ -54,7 +49,6 @@ Click on the Search Records link which is located at the left hand panel,then cl
 .. image:: images/Search-mHero.png
     :align: center
 
-
 </li>
 <br>
 <li>
@@ -62,7 +56,6 @@ Under the health Worker profile,click the mHero logo which is located at the top
 
 .. image:: images/MHero-individual.png
     :align: center
-
 
 </li>
 <br>
@@ -72,12 +65,10 @@ Select a workflow to be started to this health worker and then click the Start W
 .. image:: images/Start-individual-flow.png
     :align: center
 
-
 </li>
 </ul>
 </li>
 </ol>
-
 
 Workflow Results Pulling And Results Reporting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -85,7 +76,6 @@ Workflow Results Pulling And Results Reporting
 Introduction
 ~~~~~~~~~~~~
 When a workflow is started in iHRIS, all the SMS communication exchanged between a Health Worker and Rapidpro are stored inside Rapidpro.These SMS need to be pulled into iHRIS for reporting.
-
 
 Pulling Workflows Results From Rapidpro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,7 +85,6 @@ The following steps outlines how Workflow results can be pulled from Rapidpro in
 <li>Under the Generate Workflows Results section,select a workflow to generate its results or select the "All Workflows" option to generate results of all workflows for all health workers involved</li>
 <li>Click the Generate Results button to start the process</li>
 </ol>
-
 
 mHero Reports in iHRIS
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -110,15 +99,12 @@ These reports belong to the mHero Reports section which can be accessed by click
 .. image:: images/MHero_Reports.png
     :align: center
 
-
-
 Workflow Response Data
 ----------------------
 This report shows a series of messages that were sent to health workers (grouped in a workflow) and responses to those messages by health workers. Below is a sample of a Workflow Response Data Report;
 
 .. image:: images/Workflow_Response_Data.png
     :align: center
-
 
 <ul>
 <li>First Name: Is the initial name of the health worker.</li>
@@ -138,18 +124,15 @@ This report shows a series of messages that were sent to health workers (grouped
 .. image:: images/Steps.png
     :align: center
 
-
 <br>
 As can be seen in the image above, each part of a work flow is given a unique step number. , which can be you can use step number to get messages that corresponds to a particular step for all health workers. For example, if you are interested in knowing how health workers responded in a particular step, you can filter the report by that particular step number. From the screenshot above,Below are the responses to the message "Hi. This is a message from the Human Resources Unit at the Ministry of Health.   We are confirming personnel data forms. All SMS questions and responses are free of charge to you. Do you work for the Ministry of Health? pls txt yes or no"<br>
 
 .. image:: images/Workflow_Response_Data_Step_Number.png
     :align: center
 
-
 <br>
 </li>
 </ul>
-
 
 Workflow Overview Report
 ------------------------
@@ -157,7 +140,6 @@ This report shows an overview of various workflows started to health workers. Th
 
 .. image:: images/Workflow_Overview_Report.png
     :align: center
-
 
 <ol>
 <li>The column titled "Responded" has 'Yes' or 'No' values which indicate whether or not a health worker responded to a workflow. The value will be Yes if a health worker responded to at least one message,regardless of whether or not the health worker has completed the workflow.</li>
@@ -167,7 +149,6 @@ This report shows an overview of various workflows started to health workers. Th
 <i>There are workflow which do not require a health worker to give any response, such as single message notifications, which are sent to provide health workers with information. These type of workflows will be displayed in the report with Completed='Yes' but Responded='No' because the workflow was complete but the health worker didn't respond, as the nature of the workflow does not require any response.</i>
 Analysis of the report can be done by using the filters which are found at the bottom of the report. If the name of the workflow is selected from the Workflow filter and then select 'Yes' to Responded filter and 'No' to Completed filter then the report will display a list of health workers who gave response(s) to a selected workflow but didn't complete the workflow.
 
-
 Health Worker Initial Response Report
 -------------------------------------
 This report shows a list of health workers who has responded to at least one workflow which was started to them. Below is a sample of this report<br>
@@ -175,11 +156,7 @@ This report shows a list of health workers who has responded to at least one wor
 .. image:: images/Health_Worker_Initial_Response_Report.png
     :align: center
 
-
-
-
 Related Pages
 ~~~~~~~~~~~~~
 [[MHero Installation and Configuration]]
-
 

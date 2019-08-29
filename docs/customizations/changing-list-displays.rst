@@ -11,7 +11,6 @@ The default position list display is set in the configuration .xml file for the 
  /modules/forms/formClasses/iHRIS_Position/meta/list/default
 The three important parts here are:
 
-
 * The "display_string" which is "%s: %s (%s, %s)".   Whenever you see a '%s' you in the display string we expect to substitute a field of the form into the string.  For more details, see the explanation of the  `printf format <http://www.php.net/manual/en/function.sprintf.php>`_ .
 * The "display_args" which are the fields that are passed to the display string.  These are substituted in order into the display string.
 * *0:code
@@ -22,8 +21,6 @@ The three important parts here are:
 * *0:code
 * *1:title
 
-
-
 Displaying Drop-Downs in a Tree
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We often deal with hierarchical data, for example you have have a collection of facility and each facility contains a set of positions.   When choosing a position it would be nice if we could first select the facility and then the position.  
@@ -33,8 +30,6 @@ For example the person-position form, which is used to record a person holding a
 has the value
  facility:position
 The means that we first display the facilities and then then positions that are under that facility.
-
-
 
 Limiting the Displayed Positions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -48,7 +43,6 @@ Since the position list is a tree view, there are two forms that we need to use 
    /modules/forms/formClasses/iHRIS_PersonPosition/fields/meta/limits/default/position
 to be the limit:
 
-
 .. code-block:: php
 
     array(  
@@ -61,12 +55,9 @@ to be the limit:
     )
     
 
-
-
 Creating a module
 ^^^^^^^^^^^^^^^^^
 Suppose that you wanted to customized the position list so that it no longer displays the position code.   We could create a module containing our "position" customizations that would require the "ihris-manage-PersonPosition" module and define a new display as in the following:
-
 
 .. code-block:: xml
 
@@ -136,11 +127,9 @@ Suppose that you wanted to customized the position list so that it no longer dis
 
 Note:  we have set the versions based on 4.1 of the software, this may be different for you if you are using version 4.0.
 
-
 Customized Templates
 ^^^^^^^^^^^^^^^^^^^^
 There are two files under "templates/en_US" of the "ihris-manage-PersonPosition" module that reference the "code" field which we are not using anymore.  These are "lists_form_postion.html" and "view_position.html."   We will need to create the "templates/en_US" sub-directories of our modules, copy these two files into it and  modify them by removing the reference to the code field.  Here is the result for "list_form_position.html:"
-
 
 .. code-block:: xml
 
@@ -171,6 +160,4 @@ There are two files under "templates/en_US" of the "ihris-manage-PersonPosition"
     </tbody>
     
     
-
-
 

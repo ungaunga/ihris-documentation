@@ -1,14 +1,12 @@
 ISCO Classification Mapping
 ===========================
 
-
 The Issue
 ^^^^^^^^^
 
 There is a need to support standard ISCO classification codes and descriptions in the iHRIS Manage software, and to provide a way to map them to existing country classifications. This will enable countries to standardize their classifications and provide a standard way of looking at HR data across countries.
 
  **Done!**  This has been release with version 4.0.2 of the software.
-
 
 The Process
 ^^^^^^^^^^^
@@ -21,11 +19,9 @@ In this situation, the user is not using the ISCO standards, but instead prefers
 
 With the new functionality, the user will be able to link the custom classifications to the ISCO standards at some later point.
 
-
  **2. The user can select an ISCO standard job classification name and code from a separate dropdown menu.** 
 
 In this situation, the user is already using the ISCO standards for the job classifications. This will populate the ISCO classification name, code and description for the selection. The user will not have to enter any additional information. (See the end of this document for a reference of all ISCO codes.) 
-
 
  **3. The user enters a custom job classification and then links it to the corresponding ISCO standard.** 
 
@@ -33,15 +29,12 @@ In this situation, the user is using their own job classifications but has ident
 
 This links the custom job classification to the ISCO standard so that either may be used in reports for the same job classification and corresponding jobs.
 
-
-
 Documentation and Resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These changes are documented in use case UC-PT18, Add or update a job classification. 
 
 ISCO website with full list of job classifications: http://www.ilo.org/public/english/bureau/stat/isco/index.htm
-
 
 An Example Definition
 ~~~~~~~~~~~~~~~~~~~~~

@@ -3,33 +3,21 @@ Module Structure - ES
 
 Este tutorial describe la Estructura del Módulo de iHRIS. Un módulo de iHRIS es una colección de varios tipos de "code" por las características que proporcionan al sistema. Estos módulos pueden ser parte del sistema core I2CE y manejar cosas como la autenticación de usuarios o el acceso a bases de datos, también pueden brindar nueva funcionalidad a iHRIS como por ejemplo el manejo de permisos.
 
-
-
 ¿Qué es un Módulo?
 ^^^^^^^^^^^^^^^^^^
 La Suite iHRIS está basada en el Intrahealth Informatics Core Engine (I2CE) que utiliza una estructura de modulo para encapsular y mantener el "code" en piezas manejables organizadas de acuerdo a la funcionalidad que proporcionan. Al decir "code" nos referimos a la colección entera de php, html, javascript, xml, archivos de imagen, css, flash, etc, que proporcionan la funcionalidad de una aplicación de red.
-
 
 Un módulo está versionado para llevar un registro de los cambios a la funcionalidad y el API que tiene un módulo.
 
 =¿Por qué los módulos?=
 
-
 * La razón más importante para utilizar un sistema de módulos es la de aumentar la facilidad de manejo del código. Los muchos componentes de la Suite iHRIS (Qualify, Manage, y Plan) se utilizan en una variedad de escenarios que requieren sus propias personalizaciones.
-
-
 
 * Cada uno de los componentes de la Suite iHRIS (Qualify, Manage, Plan) comparten algunas funciones comunes y el sistema de módulos asegura la reutilización de códigos de manera adecuada.
 
-
-
 * El sistema de módulos permite encapsular varias personalizaciones sin tener que cambiar el código base subyacente. Esto permite que un desarrollador local pueda realizar sus cambios sin preocuparse por tener que rehacer esos cambios cada vez que se actualice el sistema core.
 
-
-
 * Ya que los módulos están organizados de acuerdo a la funcionalidad que brindan al sistema, un desarrollador puede encontrar rápidamente los códigos relevantes que deben cambiarse solo con ver los módulos relevantes.
-
-
 
 * Las personalizaciones al software encapsuladas en un módulo pueden compartirse fácilmente entre desarrolladores.
 
@@ -37,7 +25,6 @@ Un módulo está versionado para llevar un registro de los cambios a la funciona
 Este es el modulo "top"-most. Cada módulo tiene esto como requisito de manera implícita. El módulo central es el que brinda la funcionalidad mínima incluyendo datos magic, búsqueda de archivos, el sistema de plantillas y la fábrica de módulos. No tiene requisitos.
 
  *I2CE*  proporciona varios sub-módulos opcionales. Por ejemplo:
-
 
 * Admin -- Proporciona un sistema de manejo de módulos.
 * Proceso de Fondo -- Proporciona una plataforma independiente con los medios para lanzar y monitorear procesos de fondo
@@ -52,7 +39,6 @@ El módulo "bottom"-most es el **Módulo del Sitio.**   Este módulo es el que s
 
 =Archivo de Configuración del Módulo=
 Un módulo existe al definir sus archivos de configuración. Hay un nodo de top-level <I2CEConfiguration> bajo el cual hay dos posibles nodos:
-
 
 * Se requiere la etiqueta de [[#metadata|<metadata>]].
 * La etiqueta de [[#Configuration (Magic) Data|<configurationGroup>]] es opcional.
@@ -69,7 +55,6 @@ El DTD que describe el formato del archivo de configuración está ubicado en *I
    </configurationGroup>
  </I2CEConfiguration>
 
-
 metadata
 ^^^^^^^^
 La etiqueta de DTD para <metadata> permite los siguientes nodos:
@@ -81,7 +66,6 @@ displayName
 ~~~~~~~~~~~
 Esta etiqueta se requiere que sea el nombre de este módulo humanamente legible que se muestra, por ejemplo, en el *Configure Modules* 
  Ejemplo: <displayName>Popup Box</displayName>
-
 
 className
 ~~~~~~~~~
@@ -117,7 +101,6 @@ requirement
 ~~~~~~~~~~~
 Esta es una etiqueta opcional, de la cual puede tener cuantas quiera. Cada etiqueta debe tener el **name**  del atributo cuyo valor es el nombre de un módulo requerido por este módulo.  Esta etiqueta puede tener hasta cuatro sub-etiquetas posibles:
 
-
 * atLeast
 * atMost
 * lessThan
@@ -131,7 +114,6 @@ dice que nuestro módulo requiere que I2CE tenga la versión al menos 3.1 y una 
 
 Para que el módulo cargue, debe cumplir con todos los requerimientos satisfactoriamente.
 
-
 conflict
 ~~~~~~~~
 Esta es una etiqueta opcional de la cual se puede tener cuantas desee. Esto es opuesto a la etiqueta [[#requirement|<requirement>]] y enumera todos los módulos con los que este módulo tiene conflictos. Por ejemplo:
@@ -144,18 +126,15 @@ Dice que nuestro módulo tiene un conflict con todas las versiones de la ventana
 
 Un módulo no cargará si tiene un conflicto con cualquier otro módulo que ya este cargado.
 
-
 enable
 ~~~~~~
 Esta etiqueta es opcional, de la cual puede tener tantas como quiera. Esta etiqueta requiere el atributo **name**  con el valor del nombre corto de un módulo. Esta etiqueta es más débil que la etiqueta de [[#requirement|<requirement>]] en que tratará de permitir el módulo nombrado, pero no causará que este módulo no cargue si no puede. También se diferencia de las etiquetas <requirement> y <conflict> ya que no hay información sobre la versión (bajo las sub-etiquetas atLeast,atMost, lessThan, greaterThan). Por ejemplo:
  <enable name='alex_patterson_javascript_paginator'/>
 Dice que si el módulo paginador javascript de  `Alex Patterson <http://en.wikipedia.org/wiki/Alex_Patterson>`_  puede cargarse, entonces que lo cargue. De lo contrario, no se preocupe por eso.
 
-
 path
 ~~~~
 Esta es una etiqueta opcional de la cual pueden haber las que desee. Cada etiqueta de <path> requiere el atributo **name**  y puede tener tantas sub-etiquetas de **<value>**  como lo desee. La etiqueta de <path> permite que el módulo especifique los directorios que se agregarán al grupo de utilidad de búsqueda de archivos por categoría. Las categorías se especifican por el nombre del atributo y algunos nombres comúnmente utilizados son:
-
 
 * templates Estos son los directorios para buscar archivos de plantillas html
 * images Estos son los directorios para buscar archivos de imágenes
@@ -165,13 +144,11 @@ Esta es una etiqueta opcional de la cual pueden haber las que desee. Cada etique
 * modules Estos son los directorios para buscar (sub-)módulos del módulo actual.
 Para mayor información acerca de las rutas permitidas, vea [[File Search Paths]]
 
-
 priority
 ~~~~~~~~
 Esta etiqueta es opcional, la prioridad de un módulo es 50.
  Ejemplo: <priority>50</priority>
 Estas son algunas prioridades estándar:
-
 
 * I2CE 0
 * sub-módulos de I2CE 50
@@ -181,13 +158,11 @@ Estas son algunas prioridades estándar:
 * sub-módulos ihris-manage, ihris-qualify, ihris-plan 250
 * un módulo de sitio 400
 
-
 Configuración Datos (Magic)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 El nodo de <configurationGroup> es opcional.  Si está presente tiene que tener el atributo **name**  que tiene el mismo valor que el atributo **name**  en la etiqueta que contiene <I2CEConfiguration> .  
 
 Todos los datos magic son relativos a la ruta definida por este configurationGroup.  Hay tres opciones:
-
 
 * La ruta del atributo no está presente. En el siguiente ejemplo, los datos magic se guardan bajo */modules/mercury_javascript_path.*
  Ejemplo:
@@ -195,20 +170,17 @@ Todos los datos magic son relativos a la ruta definida por este configurationGro
     <span style='color:red'>SOME STUFF GOES HERE</span>
  </configurationGroup>
 
-
 * La ruta del atributo está presente. En el siguiente ejemplo, los datos magic se guardan bajo */some/other/place.*
  Ejemplo:
   <configurationGroup name='mercury_javascript_popup' path='/some/other/place'>
     <span style='color:red'>SOME STUFF GOES HERE</span>
   </configurationGroup> 
 
-
 * El módulo es 'I2CE'.  Los datos magic se guardan con relación a */I2CE*
 
 Este nodo <configurationGroup> realiza una doble función. Proporciona los datos de configuración que se guardan en los datos magic. También proporciona, por medio del módulo *Admin* , un sistema de menú de árbol para editar los datos magic establecidos por este sistema. Esto permite las personalizaciones dinámicas de su sitio.
 
 Vea [[Configuration (Magic) Data]] para mayor información.
-
 
 La Clase del Módulo
 ^^^^^^^^^^^^^^^^^^^
@@ -220,7 +192,6 @@ Activar/Desactivar un Módulo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Hay varios métodos que se utilizan para iniciar, activar, desactivar y actualizar un módulo que se llaman por medio de la fábrica de módulos. Todos estos métodos esperan que el módulo regrese verdadero para indicar éxito.
 
-
 * Cuando un módulo se activa, se llama el método **action_enable()** .
 * Antes de activar un módulo por primera vez se llama **action_initialize()** .  <br/> Este es el lugar adecuado para hacer cosas como asegurar que todas las tablas en la base de datos que se espera que tenga el módulo, hayan sido creadas.  <br/> Por ejemplo, el módulo 'I2CE' tiene su propia clase 'I2CE_Module_Core' que hace lo siguiente:
 * *Revisa que la base de datos del usuario está ahí, si no, la crea.
@@ -228,7 +199,6 @@ Hay varios métodos que se utilizan para iniciar, activar, desactivar y actualiz
 * *Revisa que la table config para los datos magic esté presente, si no, la crea.
 * Cuando un módulo esta desactivado, se llama al método **action_disabled()**  .
 * Cuando la versión del archivo de configuración cambia, se llama **upgrade($old_vers,$new_vers)** .
-
 
 Métodos Enganchados
 ~~~~~~~~~~~~~~~~~~~
@@ -241,11 +211,9 @@ I2CE_ModuleFactory se encargará de llamar a todos los módulos que registren ga
 
 Un módulo registra los métodos a llamar vía el método getHooks() que regresa un arreglo con claves el nombre del gancho y valor el nombre del método en la clase del módulo.
 
-
 Métodos Fuzzy
 ~~~~~~~~~~~~~
 Un método fuzzy es uno que un módulo proporciona a otras clases PHP extendidas I2CE_Fuzzy por medio del método the __call(). Hay tres razones para utilizar los métodos fuzzy:
-
 
 * PHP no puede hacer herencia múltiple para las clases, lo que dificulta combinar la funcionalidad de dos clases en una. Siempre se puede hacer una interfaz, pero se tiene que reescribir gran cantidad de código.
 * La segunda es para proporcionar funcionalidad modular que pueda activarse y desactivarse.

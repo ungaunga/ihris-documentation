@@ -10,12 +10,10 @@ Get The Source Code
 ~~~~~~~~~~~~~~~~~~~
 You can either get the [[Linux (Ubuntu) Installation#Downloading the Software | released]] or the [[Using Bazaar to Contribute Code#Getting The Code | development code]].  Suppose that **[base_path]**  is the directory which contains i2ce, common, manage etc.
 
-
 Backup Database
 ~~~~~~~~~~~~~~~
 We should back up the database.  Go into phpmyadmin, select your database, click on operations, and copy the 
 database to a new name **[database_name]** .
-
 
 Logging
 ~~~~~~~
@@ -23,18 +21,15 @@ Open up a new terminal on the machine.
  cd [base_path]/i2ce/tools
  php apache_tail.php 0
 
-
 Main Configuration
 ^^^^^^^^^^^^^^^^^^
 Copy the existing site directory over to a new directory and update the **config.values.php**  to:
-
 
 * set the *$i2ce_site_database*  to **[database_name]** , the name of the new database
 * set  *$i2ce_site_i2ce_path*  to **[base_path]/i2ce** , the directory where the new version of I2CE is located
 
 If you have URL Rewriting turned on, you will want to update your **.htaccess**  file.  Look for the line RewriteBase and change it 
 to the web directory you are using.
-
 
 Site Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -66,7 +61,6 @@ or:
  <version>4.0.0</version>
 as appropriate.
 
-
 Modules
 ~~~~~~~
 There were new modules created in the 3.2/4.0 code base for iHRIS Manage.  Here are modules that did not exist in 3.1 which you probably want to enable in 3.2 or 4.0:
@@ -91,12 +85,10 @@ There have been some changes to template files to better support localization.
 
 Some of these changes may be in the *main.html*  and the *welcome.html*  files in the site templates folder.
 
-
 Welcome Role
 ~~~~~~~~~~~~
 
 Change things like:
-
 
 .. code-block:: xml
 
@@ -105,18 +97,14 @@ Change things like:
 
 to:
 
-
 .. code-block:: xml
 
      <span printf="'Log out as %s',ihris-common->getUserRole()" />
     
 
-
-
 Welcome Name
 ~~~~~~~~~~~~
 Change things like:
-
 
 .. code-block:: xml
 
@@ -125,10 +113,8 @@ Change things like:
 
 to:
 
-
 .. code-block:: xml
 
      <span printf="'Welcome, %s',ihris-common->getUserNames()" />
     
-
 

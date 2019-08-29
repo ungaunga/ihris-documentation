@@ -9,14 +9,11 @@ ApacheDS needs a java environment and the version 2 of ApacheDS requires at leas
 
 To confirm the version of java installed run 
 
-
 .. code-block::
 
      java -version 
 
-
 You'll get an output that looks like:
-
 
 .. code-block::
 
@@ -36,10 +33,7 @@ If Java environment is not installed, we will need to install it by running this
 
      sudo apt-get install openjdk-7-jdk 
 
-
-
 =Installing and Configuring ApacheDS on Ubuntu 12.04=
-
 
 Installation
 ^^^^^^^^^^^^
@@ -53,7 +47,6 @@ Choose to download the Debian (.deb) installer and it should take you to the dow
 
 After the file is downloaded, go to your downloads folder. If you dowloaded to the default Downloads directory run from terminal the following command:
 
-
 .. code-block::
 
     cd /home/`whoami`/Downloads
@@ -61,14 +54,12 @@ After the file is downloaded, go to your downloads folder. If you dowloaded to t
 
 To install ApacheDS issue the following command:
 
-
 .. code-block::
 
     sudo dpkg -i apacheds-2.0.0-M11-i386.deb
  (typing the apacheds and pressing the tab should complete the file name)
 
 Answer the prompts to install ApacheDS.
-
 
 Starting ApacheDS
 ^^^^^^^^^^^^^^^^^
@@ -81,9 +72,7 @@ To start ApacheDS server run the following command from terminal
 
 and it should respond with the message <code>Starting ApacheDS - default...</code>
 
-
 To check for its status run <code>sudo /etc/init.d/apacheds-2.0.0-M11-default status</code>
-
 
 Configuring ApacheDS
 ^^^^^^^^^^^^^^^^^^^^
@@ -93,5 +82,4 @@ In case we need to change any configuration parameters, we can edit all from one
 .. code-block::
 
      sudo pico /var/lib/apacheds-2.0.0-M11/default/conf/config.ldif
-
 

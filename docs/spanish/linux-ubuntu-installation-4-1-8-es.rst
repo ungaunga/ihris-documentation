@@ -8,7 +8,6 @@ Esta página contiene instrucciones para instalar la version 4.1.8 de iHRIS manu
 
 Usted podría necesitar las instrucciones para instalar [[Installing the Debian Packages |debian packages]] con un proceso de instalación más simple.
 
-
 Software de Soporte
 ^^^^^^^^^^^^^^^^^^^
 
@@ -22,11 +21,9 @@ Primero debe instalar Ubuntu y todos los software de soporte requeridos por iHRI
 
  **Nota:**   Algunos comandos ejecutarán el editor de archivos **gedit**  . Revise los documentos de  `documentation <https://help.ubuntu.com/community/gedit>`_  si necesita ayuda adicional.
 
-
 Descargar la Suite iHRIS Completa
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Antes de proceder con la instalación de iHRIS Manage o iHRIS Qualify, debemos descargar la versión mas reciente de la Suite iHRIS completa. Para descargar el software debe utilizar estos comandos:
-
 
 .. code-block:: bash
 
@@ -37,8 +34,6 @@ Antes de proceder con la instalación de iHRIS Manage o iHRIS Qualify, debemos d
     sudo tar -xjf ihris-suite-4.1.8.tar.bz2
     
 
-
-
 Instalar el Software
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -47,5 +42,4 @@ Siga las instrucciones [[iHRIS Manage Installation - 4.1.8|iHRIS Manage Installa
 Siga las instrucciones [[iHRIS Qualify Installation - 4.1.8|iHRIS Qualify Installation]] para iHRIS Qualify.
 
 Siga las instrucciones [[IHRIS Plan Installation - 1.0.4|iHRIS Plan Installation]] para iHRIS Plan.  (No es necesario que descargue la Suite iHRIS que está arriba)
-
 

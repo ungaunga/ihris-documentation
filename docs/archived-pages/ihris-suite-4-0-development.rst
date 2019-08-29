@@ -1,12 +1,9 @@
 IHRIS Suite 4.0 Development
 ===========================
 
-
-
 Version 4.0.0
 ^^^^^^^^^^^^^
 Released week of July 13, 2009.
-
 
 Version 4.0.2
 ^^^^^^^^^^^^^
@@ -14,7 +11,6 @@ Released November 13, 2009.
 
 Completed
 ~~~~~~~~~
-
 
 * Custom reports/Form Limits -- allow you to sprecify the values that a limit can take in the getLimitMenu() and int he custom reports
 * added fancy updater
@@ -66,14 +62,12 @@ Completed
 * Fix sort order of headers on report views
 * Migrate iHRIS Qualify
 
-
 Version 4.0.3
 ^^^^^^^^^^^^^
 Release in Friday March 5, 2010.
 
 Completed
 ~~~~~~~~~
-
 
 * when editing a database list with a select field, not choosing a select field should display everything (e.g. not choosing the location to limit the facilities shows all the facilities)
 * allow list members to be disabled so that they don't appear in the default drop-down menu.
@@ -130,13 +124,11 @@ Completed
 * marked all translatable nodes in configuration .xml files.
 * fixed up translation of .html and config .xml files from .mo files
 
-
 Version 4.0.4
 ^^^^^^^^^^^^^
 
 Completed
 ~~~~~~~~~
-
 
 * Added memcached magic data storage to sit between APC and DB.  Reduces load on DB and speeds up start-up time for background processes.
 * Fixed issues with magic data storage and initialization not setting everything in DB storage.
@@ -163,13 +155,11 @@ Completed
 * fixup width of passport photos
 * I2CE_FormField_Binary_File -- filename and modtime are now stored.
 
-
 Version 4.0.5
 ^^^^^^^^^^^^^
 
 Completed
 ~~~~~~~~~
-
 
 * Reports:  When joining in a specific form on a mapped field which can take values in multiple forms, all values of the joined form are populated.  E.g. joining district to facility on the location field will populate the district data if either the location maps to a district or a county
 * Reports: speed improvements -- the parent form in a relationship is no longer joined in.  Rather necessary data are read directly from the reports
@@ -195,14 +185,12 @@ Completed
 * Added [[Technical Overview: Form Storage -- SDMX-HD| SDMX-HD]] form storage to view SDMX-HD code lists as iHRIS forms.
 * Added default link forms to be used to link lists to other lists as well as to string (for IDs) to map to other data standards if necessary.
 
-
 Version 4.0.6
 ^^^^^^^^^^^^^
 Plan for release in August 2010
 
 Completed
 ~~~~~~~~~
-
 
 * Add in "ancestral form" join condition on form relationships
 * modification times are stored (and indexed) in the hippo_XXXX tables (Done to support smaller size updates of databases to remote aggregating database)
@@ -243,7 +231,6 @@ Plan for release in September 2010
 Completed
 ~~~~~~~~~
 
-
 * Added in logging to the UserAccess method since this wasn't included when the module was created.
 * fixed bug in editing form cache profile
 * page form lists -- view button now works again when no value is set
@@ -259,7 +246,6 @@ Plan for release in November 2010
 
 Completed
 ~~~~~~~~~
-
 
 * Fixed binary files so if no file is chosen it will look for the tmp_key when a file is confirmed and then edited.  Added an invalid error message when the file fails to upload.
 * Added some helper methods to I2CE_List to find matches for a field based on the displayed fields for a form and add a within limit option for MAPs.  This allows you to perform a limit on report results (or other limits) that will match on a location field that can be either district or county so if you choose a district it will match any counties that are in that district as well as the district.
@@ -289,14 +275,12 @@ Completed
 * Modified the display string for positions to include the facility and department.  This is in case any customized sites want to have the position code not be required.
 * 
 
-
 4.0.9
 ^^^^^
 Released Dec 21, 2010
 
 Completed
 ~~~~~~~~~
-
 
 * major reporting changes including:
 * *added (left|right) joins to form relationship
@@ -332,7 +316,6 @@ Released Dec 21, 2010
 Completed
 ~~~~~~~~~
 
-
 * Fix javascript typo for submit buttons
 
 4.0.11
@@ -341,7 +324,6 @@ Released March 1, 2011
 
 Completed
 ~~~~~~~~~
-
 
 * added ability to remap form ids easily
 * added enhancements to delete records safely and store them in deleted_record table
@@ -379,14 +361,12 @@ Completed
 * Fixed typo in FormRelationship_Join.
 * added  password check on update
 
-
 4.0.12
 ^^^^^^
 Released March 9, 2011
 
 Completed
 ~~~~~~~~~
-
 
 * improved the packaging and release tools
 * Added the C page size for printed forms
@@ -399,7 +379,6 @@ Released April 26, 2011
 
 Completed
 ~~~~~~~~~
-
 
 * form documentor now allows you to select the forms you want to document on
 * Made some speed improvements to the report caching process.
@@ -415,7 +394,6 @@ Released May 23, 2011
 
 Completed
 ~~~~~~~~~
-
 
 * added hidden elements for bad form fields inside of the error message div
 * added tool to quickly change the english source text for a translation  (translatewiki.net)
@@ -436,7 +414,6 @@ Released May 27, 2011
 Completed
 ~~~~~~~~~
 
-
 * changed branding from capacity to capacityplus
 * fixed issues with sample data and small text changes
 * removed debugging statments in scheduled trainig course
@@ -451,7 +428,6 @@ Released June 29, 2011
 
 Completed
 ~~~~~~~~~
-
 
 * if a submit the button has class button_disabled, then the submit does not work.  also made it so that clicking once on the button will disable it (and add the button_disabled class) to prevent double submissions
 * added natty packgin for user-ldap modules
@@ -483,7 +459,6 @@ Released Sept 14, 2011
 
 Completed
 ~~~~~~~~~
-
 
 * fixed year drop-down lists being off by a year. Fixes bug  `846640 <https://bugs.launchpad.net/pmoralg/+bug/846640>`_
 * fixed processing of module dependencies for optional modules.  Fixes bug  `846645 <https://bugs.launchpad.net/pmoralg/+bug/846645>`_
@@ -534,7 +509,6 @@ Released Sept 15, 2011
 *fixed issue in packaging that caused the mootools version to bumped
 *fixed issue with sample data not loading -- entries in the form table were being created unnecessarily
 
-
 4.0.19
 ^^^^^^
 
@@ -546,7 +520,6 @@ Released Oct 19, 2011
 *modified display for report view so that you can select 'none' as sort order.  removing all sort orders will also go to none 
 *pass all arguements to parent class search method in a db-form storage if it fails to get the query. fixes bug  `867493 <https://launchpad.net/bugs/867493>`_ 
 *fixed fatal error when updating causes a module to be removed
-
 
 4.0.21
 ^^^^^^
@@ -591,7 +564,6 @@ Released March 9, 2012. Changes from 4.0.21 include:
 **post delete hook cleans up the form, rather than the whole factory
 **Added in option for 'linked' report fields to display as an image instead of just a link for IMAGE type formfields
 
-
 Outstanding
 ^^^^^^^^^^^
 *Form Relationship:
@@ -602,7 +574,6 @@ Outstanding
 **Add tests to determine platforms, e.g. ie7, firefox, safari, chrome, mobile (which ones?)
 **platform should be saved in a session variable
 **Add support to the file search for platform specific files (e.g. for css).  For example:  <p>
-
 
 .. code-block:: xml
 

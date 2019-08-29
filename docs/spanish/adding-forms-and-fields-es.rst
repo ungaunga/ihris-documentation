@@ -8,8 +8,6 @@ Paso 1: Crear el Módulo
 
 Vaya al directorio de módulos de su sitio y cree un nuevo directorio llamado ProfDevelopment y vaya a este directorio. Cree un directorio de plantillas y un directorio lib en el directorio ProfDevelopment.  Cree y edite un nuevo archivo llamado ProfDevelopment.xml (en el directorio ProfDevelopment) con el siguiente contenido:
 
-
-
 .. code-block:: xml
 
     <?xml version="1.0"?>
@@ -371,13 +369,10 @@ Vaya al directorio de módulos de su sitio y cree un nuevo directorio llamado Pr
     
     
 
-
-
 Paso 2: Crear la Clase del Módulo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Necesitamos crear una nueva clase en el directorio lib llamado iHRIS_Module_ProfDevelopment.php con el siguiente contenido.  Esto es para que los formularios nuevos aparezcan en la página de visualización de persona.
-
 
 .. code-block:: php
 
@@ -407,10 +402,7 @@ Necesitamos crear una nueva clase en el directorio lib llamado iHRIS_Module_Prof
     ?>
     
 
-
 Copie el archivo plantilla view.html del directorio de plantillas de ihris-manage al directorio de plantillas del sitio.  Haga los cambios siguientes. Los cambios están rodeados de comentarios. Esto debería estar en el sitio por si acaso módulos múltiples actualizan la plantilla view.html.
-
-
 
 .. code-block:: html4strict
 
@@ -421,9 +413,6 @@ Copie el archivo plantilla view.html del directorio de plantillas de ihris-manag
         </span>
       <!-- End of Professional Development additions -->
     
-
-
-
 
 .. code-block:: html4strict
 
@@ -464,10 +453,7 @@ Copie el archivo plantilla view.html del directorio de plantillas de ihris-manag
       <!-- End of Professional Development additions -->
     
 
-
 Copie el archivo plantilla menu_view_person.html del directorio de plantillas de ihris-manage templates al directorio de plantillas del sitio.  Haga los cambios siguientes:
-
-
 
 .. code-block:: html4strict
 
@@ -479,18 +465,13 @@ Copie el archivo plantilla menu_view_person.html del directorio de plantillas de
     <!-- End of additions -->
     
 
-
-
 Paso 3: Agregar las plantillas de Desarrollo Profesional
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En el directorio de plantillas cree los archivos y contenido siguientes:
 
-
 view_person_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. code-block:: html4strict
 
@@ -516,12 +497,8 @@ view_person_profdev.html
     </div>
     
 
-
-
 form_person_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. code-block:: html4strict
 
@@ -541,12 +518,8 @@ form_person_profdev.html
     </tbody>
     
 
-
-
 view_person_continuous_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. code-block:: html4strict
 
@@ -580,12 +553,8 @@ view_person_continuous_profdev.html
     </div>
     
 
-
-
 form_person_continuous_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. code-block:: html4strict
 
@@ -609,20 +578,13 @@ form_person_continuous_profdev.html
     </tbody>
     
 
-
-
 Paso 4: Habilitar el módulo en el archivo de configuración del sitio
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Edite su archivo de configuración del sitio y agregue la línea siguiente debajo de cualquier requerimiento y sobre las rutas:
 
-
-
 .. code-block:: xml
 
     <enable name="ProfDevelopment" />
     
-
-
-
 

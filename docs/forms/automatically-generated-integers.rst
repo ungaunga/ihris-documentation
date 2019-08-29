@@ -7,4 +7,3 @@ In the field_sequence table there will be an entry with the form field id and th
 
 If you want to start at 1000 you can just add the form field id and 1000 to field_sequence.  You only need to add something to the field_sequence table if you want it to start higher than the currently saved values.  For example, if you imported data that ranges from 100-400 but you want the generated numbers to start at 1000 then you’ll need to add a row to the field_sequence table.  But if you just want the next number to be 401 then you don’t need to do anything.
 
-

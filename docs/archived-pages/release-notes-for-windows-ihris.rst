@@ -23,7 +23,6 @@ CONTENTS
 
 8. License
 
-
 1. CONTACT INFORMATION
 
 HRIS Strengthening team of the Capacity Project
@@ -40,7 +39,6 @@ IntraHealth International
 
 Chapel Hill NC 27517 USA
 
-
 2. ABOUT THIS SOFTWARE
 
 The Capacity Project develops in the iHRIS Suite core solutions addressing specific issues in human resources for health (HRH) leadership. The iHRIS Suite is free and Open Source software distributed under the GPL.
@@ -53,13 +51,11 @@ iHRIS Plan is planning and modeling software developed to improve how health sec
 
 Windows iHRIS provides a way to use all of these tools on a Windows computer without a Linux server. Windows iHRIS is designed to be used in locations where there is no or limited Internet access, or where it is not practicable to maintain a Linux server, such as in a facility or local government setting. Windows iHRIS may also be accessed on a local area network or over the Internet by multiple users. (Windows iHRIS was formerly titled Offline iHRIS.)
 
-
 3. NEW FEATURES/BUG FIXES IN THIS RELEASE
 
 This release is an offline companion to the iHRIS suite of human resource information systems. This release also includes all the fixes in the core iHRIS Suite 3.1.4 release.
 
 Upgrades are now handled by the Windows iHRIS installer. It is no longer necessary to uninstall old versions of Windows iHRIS, and all data previously entered should be maintained in the upgrade.
-
 
 4. REQUIREMENTS AND INSTALLATION
 
@@ -68,7 +64,6 @@ Windows iHRIS requires Windows XP, 500MB hard disk space and 1GB RAM. A web brow
 For best results, uninstall any previously installed versions of Windows iHRIS before proceeding.
 
 Double-click the self-executing installer and follow the installation instructions to install and set up Windows iHRIS. Do not install version 3.1 in the same directory as a previous version of Windows iHRIS. Choose the default directory for fastest loading. Specify a MySQL password when prompted. If Windows Firewall is running, select the option to unblock the firewall when prompted.
-
 
 5. GETTING STARTED
 
@@ -94,13 +89,11 @@ To navigate among the systems, left-click the iHRIS taskbar icon in the lower ri
 
 If you have questions or need support, please visit the iHRIS Website by clicking that button on any screen and use the Contact Us form to send us your question. 
 
-
 6. KNOWN ISSUES
 
 Windows iHRIS 3.1.3 has the following known issues:
 
 - There may be some conflicts regarding the sample, or demonstration, data. Sample data may be installed when that is not the intention of the user. If you need to work with a clean database -- in other words, you intend to use Windows iHRIS to manage your own data -- we suggest that you uncheck all of the sample data checkboxes and click the Do Not Enable Any button when prompted after the first installation.
-
 
 7. ABOUT THE CAPACITY PROJECT
 
@@ -110,9 +103,7 @@ The Capacity Project helps developing countries strengthen human resources for h
 
 Development of this software was made possible by the support of the American people through USAID. The contents are the responsibility of the user and do not reflect the views of USAID, the United States Government or IntraHealth International. 
 
-
 8. LICENSE
 
 Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the section, "GNU Free Documentation License," of the User's Manual.
-
 

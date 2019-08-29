@@ -5,14 +5,12 @@ Este tutorial aplica para la versión 4.0 de iHRIS Suite.
 
 En este tutorial, crearemos un tipo de dato de formulario de campo nuevo.  Este formulario de campo será una cadena de línea en mayúsculas.  Que esté en mayúsculas servirá en el server-side como en el client-side a través de java-script.  Pondremos todo esto en un módulo, **CapField**  para poder compartirlo fácilmente.
 
-
 Crear el Módulo
 ^^^^^^^^^^^^^^^
 En uno de sus directorios de módulos (e.j. el directorio de módulo de su sitio) haga lo siguiente:
  mkdir CapField
  gedit CapField/CapField.xml
 y agregue las siguientes líneas:
-
 
 .. code-block:: xml
 
@@ -45,15 +43,12 @@ y agregue las siguientes líneas:
     <I2CEConfiguration>
     
 
-
-
 I2CE_FormField_STRING_CAP
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Necesitamos crear una clase PHP para manejar la validación del client-side de nuestro campo en mayúsculas. El campo que queremos tiene una forma de entrada de una cadena de línea, así que haremos una subclase de la existente. Hacemos lo que sigue:
  mkdir CapField/lib
  gedit CapField/lib/I2CE_FormField_STRING_CAP.php
 y agregamos lo siguiente:
-
 
 .. code-block:: php
 
@@ -102,17 +97,11 @@ y agregamos lo siguiente:
     }
     
 
-
-
-
-
 Javascript
 ~~~~~~~~~~
 En la función processDOMEditable() agregamos algo de javascript para el onblur check.  iHRIS utiliza la  versión 1.2 de la biblioteca de  javascript   `mootools <http://mootools.net/>`_ .  Mootools tiene una function muy útil  `capitalization <http://mootools.net/docs/core/Native/String#String:capitalize>`_  que incorporamos a nuestro formulario de campo para que en el caso de un "blur" la información entrada se convierta a mayúsculas.
 
-
 Para Terminar
 ^^^^^^^^^^^^^
 Ya terminó, solo necesita requerir el módulo que creó donde sea apropiado. Ahora puede agregar un formulario de campo con tipo STRING_CAP.
-
 

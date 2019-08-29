@@ -7,17 +7,14 @@ See also [[Generate Reports Automatically]]
 
  **This page is a work in progress** 
 
-
 Configuration Settings
 ^^^^^^^^^^^^^^^^^^^^^^
 ; /modules/CustomReports/times/background
 : Default value: **10** 
 : This determines how much time in minutes that must pass before the background process starts to cache the reports if they are stale.  This just causes the background process to spawn, the process itself determines what needs to be updated based on the other timing settings.  If you set this to 0 then the background process will never start.  When Custom Reports are cached, then any required form caches are also run (if they are stale) before the report.  This doesn't mean that the caches will be run every X minutes, but if X minutes have passed the next time someone access the site the background process will be launched.
 
-
 Configuration Example
 ^^^^^^^^^^^^^^^^^^^^^
-
 
 .. code-block:: xml
 
@@ -52,9 +49,6 @@ Configuration Example
     </configurationGroup>
     
 
-
-
-
 Magic Data Browser
 ^^^^^^^^^^^^^^^^^^
 We can use to the Magic Data Browser to change this.  **WARNING**  this is a dangerous tool as you can really destroy your system -- think of RegEdit under Windows.
@@ -64,7 +58,6 @@ Suppose we want to change
 to be 60 minutes.
 
 Go to
-
 
 * Configure System
 * Browse Magic Data
@@ -78,7 +71,5 @@ Your screen should look like this:
 .. image:: images/background_time.png
     :align: center
 
-
 Now, change the line where it says "background" from "10" to "60" and click the "Set" button next to it.
-
 

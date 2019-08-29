@@ -3,8 +3,6 @@ IHRIS Qualify Development
 
  *Development Update – iHRIS Qualify - As of February 2009* 
 
-
-
 iHRIS Qualify Core
 ^^^^^^^^^^^^^^^^^^
 
@@ -14,20 +12,15 @@ iHRIS Qualify Core
 
  **Next milestone** : ???
 
-
 High-priority Tasks
 ~~~~~~~~~~~~~~~~~~~
-
 
 * Add check for duplicate records (Carl)
 * Lock standard data lists from editing to support synchronization (Carl)
 * Add import/export data functions and synchronization with offline version (Carl/Luke)
 
-
-
 Lower priority tasks
 ~~~~~~~~~~~~~~~~~~~~
-
 
 * Add support for customizing roles (Carl)
 * Enable customization of field names such as district (state/province) or county (sector) (Carl)
@@ -41,5 +34,4 @@ Lower priority tasks
 * Create a brown bag presentation/demo and video demo as for Manage (Carol)
 
 See other items on wishlist for lower-priority tasks ( `see bug tracker in Launchpad <https://bugs.launchpad.net/ihris-qualify/>`_ )
-
 

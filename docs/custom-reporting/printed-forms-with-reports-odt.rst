@@ -5,24 +5,19 @@ The printed forms module is used to print "standardized" or "official" forms bas
 
 Depending on your needs, you may wish to look at these other methods for standardized form generation:
 
-
 * [[Printed Forms]]
 * [[Printed Forms form Relationships (ODT)]]
 * [[Standardized Letters (ODT)]]
-
-
 
 What are Printed Forms?
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Printed forms allow you to create an OpenDocument Text (ODT) template that can be filled in with your report data.  This is based on the [[Standardized Letters (ODT)|Standardized Letters]] that can be used for an individual record.
 
-
 Adding a Printed Form to a Report View
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are two steps to adding a printed form to a report view.  First you need to create the template file, then create a module with the template file and the configuration for the report view.  For an example, you can look in the iHRIS Manage demo site modules directory for SampleStaffPrintedForm.
-
 
 Creating an ODT Template
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -83,7 +78,6 @@ Here are the placeholders you can use in your file.  Special placeholders being 
 
 This is the example from the sample module.  You can download the  `source file <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1-dev/download/head:/staffform.odt-20120126055155-qjun6vhyfw79qnhf-4/StaffForm.odt>`_  for this to see the formatting.
 
-
 .. code-block::
 
     {{{++report_title}}}
@@ -99,7 +93,6 @@ This is the example from the sample module.  You can download the  `source file 
     [!-- END report_row --]
     
 
-
 When you want to repeat a row in a table for the rows in your report, you need to change the BEGIN and END statements to be **[!-- BEGIN row.report_row --]**  and **[!-- END row.report_row --]** .  See the  `table example <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1-dev/download/head:/stafftableform.odt-20120126055155-qjun6vhyfw79qnhf-5/StaffTableForm.odt>`_  from the sample module for an actual file.  The example below has been truncated for space.
 
 {| border="1" cellspacing="0" cellpadding="5" align="center"
@@ -114,15 +107,12 @@ When you want to repeat a row in a table for the rows in your report, you need t
 | {{{work+email}}}[!-- END row.report_row --]
 |}
 
-
 Creating the Module
 ~~~~~~~~~~~~~~~~~~~
 
 Once you have created the ODT template file, you'll need to create a module to place the file and configure the printed forms for your report.  The module needs an odt_templates directory where you can place your ODT file as well as the module configuration file.  You should require the CustomReports-PrintedReportsODT module so the *Forms Print*  button will appear on your report view.
 
 For your configuration file, you will need to create a node under the report view this template applies to.  All the fields you use in the template must be enabled in the report view.  The **printed_forms**  node should be in the top level of your report view and then a unique name for this printed form template.  Below that you need to define the **template**  which is the name of the template file in the odt_templates directory and **displayName**  for what appears when the user wants to view this template.  The configuration for the sample module is below with two printed forms defined.  This sample also requires the ihris-manage-CustomReports-staff-reports module since that's where the staff_directory report view is defined.
-
-
 
 .. code-block:: xml
 
@@ -165,6 +155,4 @@ For your configuration file, you will need to create a node under the report vie
       </configurationGroup>
     </I2CEConfiguration>
     
-
-
 

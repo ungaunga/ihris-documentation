@@ -5,8 +5,6 @@ Hay varias páginas que describen cómo añadir nuevos formularios y campos a iH
 
  **Nota: Actualmente estamos revisando estos documentos para eliminar redundancias y garantizar que sean correctos.** 
 
-
-
 * [[Adding Fields to the Person Form - 4.0 - ES]]
 * [[Adding Forms and Fields]]
 * [[Creating a New Form Field]]
@@ -14,5 +12,4 @@ Hay varias páginas que describen cómo añadir nuevos formularios y campos a iH
 * [[Modifying Form and Field Headers]]
 
 [[Adding Fields]]--English version of this page.
-
 

@@ -27,7 +27,6 @@ This is a list of peer-reviewed journals that are likely to accept research/arti
 
 Also consider:
 
-
 * The Lancet
 * BMJ
 * American Journal of Medicine

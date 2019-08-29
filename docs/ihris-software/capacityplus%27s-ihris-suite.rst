@@ -7,8 +7,6 @@ If you have questions or want to contact iHRIS developers directly, please join 
 
 Select the type of documentation you need:
 
-
-
 * [[Developer Resources|Developer]] -- You are adding new features, writing new modules, modifying the source code, or creating software releases.
 * [[Implementer Resources|Implementer]] -- You are installing, customizing, maintaining, or writing reports for an implementation of the iHRIS software.
 * [[User Resources|User]] -- You are entering data or running reports in an iHRIS installation.
@@ -19,17 +17,12 @@ Select the type of documentation you need:
 * [[Frequently Asked Questions]]
 * [[Important Topics]]
 
-
-
 Administrative Information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * [[Project Communication]] -- How to get help or ask questions about the iHRIS software.
 * [[Documentation Wishlist]] -- This is a prioritized list of documentation needs, to which all users can contribute.
 * [[iHRIS Core Team]] -- Resources for IntraHealth/Capacity<i>Plus</i> team members and consultants.
 * [[Documentacion_Guatemala]] -- Documentación de instalación y configuración de iHRIS para el Ministerio de Salud Pública de Guatemala.
 * [[iHRIS Foundation]] -- Information on the iHRIS Foundation
-
-
 

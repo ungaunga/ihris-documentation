@@ -1,8 +1,6 @@
 IHRIS Plan Goals and Features
 =============================
 
-
-
 * [[Goals]]
 * [[Planned Features -- Software]]
 * [[Planned Features -- Workforce Projection Model]]

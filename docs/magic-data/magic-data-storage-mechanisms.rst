@@ -5,11 +5,9 @@ Magic data provides a central mechanism for configuring iHRIS.  This magic data 
 
 You can add database storage mechanisms to I2CE_MagicData.  The last one that is added is the "permanent" storage mechanism methods.  All others that are added are used to cache the data stored in the permanent storage mechansim.
 
-
 Database
 ^^^^^^^^
 This magic data storage mechanism is intended to be used as the "permanent" storage mechanism.  By default it is stored into the database table 'config'
-
 
 APC
 ^^^
@@ -17,11 +15,9 @@ There is magic data storage mechanism based on the Pear APC module and implement
 
 To clear the cache manually you can use php-apc web interface.
 
-
 Memcached
 ^^^^^^^^^
 This is an in-memory cache of key-value pairs with limits of 1MB for value size.
-
 
 SysV
 ^^^^

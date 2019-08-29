@@ -8,7 +8,6 @@ Web Service:PR-WS-7
  |url=/ws/rest/v2/details/post
  |params=The following query parameters are allowed:
 
-
 * ${id} The id of the post
 * {format}The response format.  One of 'json', ?'hl7'?
  |example=?id=12312321312
@@ -26,7 +25,6 @@ Example:
      }
 }
  |error=*HTTP 500 - Server Error - If the server encountered an error.
-
 
 * HTTP 400 - Bad Request - If the parameters are malformed.
  |notes=Need to good way for limiting response length.  See **A collection: the list of bugs**  in the  `Launchpad API <https://help.launchpad.net/API/Hacking>`_ 

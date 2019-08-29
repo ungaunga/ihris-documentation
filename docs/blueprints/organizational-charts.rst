@@ -7,11 +7,8 @@ This is a type of report for iHRIS Manage that visually shows supervisory relati
 
 This feature is documented in UC-PT18 ( `Use Case Model <http://www.capacityproject.org/hris/suite/UseCaseReport-iHRISManage.htm>`_ ).
 
-
 Proposed Requirements
 ^^^^^^^^^^^^^^^^^^^^^
-
-
 
 * The chart can be filtered by geographical location, department, or office/facility.
 * Any position without an assigned supervisor would appear at the uppermost level of the chart.

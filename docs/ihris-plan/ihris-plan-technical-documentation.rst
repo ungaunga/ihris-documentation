@@ -11,8 +11,6 @@ The site files for this installation are in /var/lib/iHRIS/sites/{site_name}. An
 
 If you have any problems with the iHRIS application or the server, email the ihris-developers list at ihris-developers@lists.intrahealth.org. Subscribe to the list or view the archives at http://lists.intrahealth.org/mailman/listinfo/ihris-developers/.
 
-
-
 Backups
 ^^^^^^^
 
@@ -22,18 +20,14 @@ Every night the database is dumped to a file called /var/lib/iHRIS/backup/{Datab
 
 The backup directories should be checked regularly to make sure recent archive files are being created.
 
-
-
 Restoring the Database
 ^^^^^^^^^^^^^^^^^^^^^^
 
 To restore the database from the backup, find the {DatabaseName}.sql file in the sync directory or one of the archives on the /external or /backup directories. It will be in the backup subdirectory of the archives or /backup/ihris-plan/sync/backup. Open a terminal, change to the directory with the .sql file you wish to restore and run the following command:
 
-
 .. code-block::
 
     mysql -u root -p {DatabaseName} < {DatabaseName}.sql
-
 
 This will then ask for a password, which is given above in the MySQL section unless it has been changed. This will completely overwrite everything in the {DatabaseName} database, so make sure this is what you want to do. 
 
@@ -42,6 +36,4 @@ To be sure, make a manual backup of the database using PHP MyAdmin. Go to http:/
 To restore from a manually copied database, go to the Operations tab for the {DatabaseName} database and rename it. Then go to the Operations tab for the copied database and rename it to {DatabaseName}.
 
 You can also restore from the {DatabaseName}.sql file using PHP MyAdmin. If you have the file on your machine, go to the Import tab, browse to the file and click Go. This won't work if the file is very large, though. You can also create a manual backup to save to your local computer using the Export tab. There are many options for the format there, but you'll need to choose SQL if you wish to export the table structure. The file exported here can also be used to import to the database.
-
-
 

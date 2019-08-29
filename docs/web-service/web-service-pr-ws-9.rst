@@ -8,7 +8,6 @@ Web Service:PR-WS-9
  |url=/ws/rest/v2/edit/post
  |params=The following webservice should accept the following parameters:
 
-
 * ${type} The type of the post.  One of 'PPS' for Paid-Public Sector or 'CHW' for Community Health Worker. Required.
 * ${category} The category/cadre of the providerm e.g. Nurse, Doctor. Optional.
 * ${foasid} The facility code for this posting. Optional.
@@ -18,7 +17,6 @@ Web Service:PR-WS-9
 * ${respformat}  Describes response format. Optional. Default is 'http', can also be 'json.'
  |example=?category=NURSE&type=PPS&fosaid=12312&orgunit=2133
  |response=HTTP 200 - OK
-
 
 * If ${repsformat} is 'http' the HTTP response body will contain the id as plain text of the editied posting
 * If ${respformat} is 'json' it will contain a JSON object with the field 'id' of the editedpost as well as the URLs to access for further web-service actions to perform on the post.
@@ -31,7 +29,6 @@ Web Service:PR-WS-9
      } 
 }
  |error=*HTTP 500 - Server Error - If the server encountered an error.
-
 
 * HTTP 400 - Bad Request - If the parameters are malformed.
  |notes= 

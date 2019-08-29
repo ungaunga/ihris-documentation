@@ -1,10 +1,8 @@
 Installation and Setup Instructions
 ===================================
 
-
 Linux (Ubuntu)
 ~~~~~~~~~~~~~~
-
 
 * [[Linux (Ubuntu) Installation]]
 * [[Installing the Debian Packages]]
@@ -14,13 +12,8 @@ Installing on ext4 filesystem?  see  `this <http://ubuntuforums.org/showthread.p
 
 Poor internet connect?  See creating a [[Software Reporsitory Mirror|Software Repository Mirror]] for offline use.
 
-
 Linux (RedHat-Fedora)
 ~~~~~~~~~~~~~~~~~~~~~
 
-
 * [[Linux (RedHat-Fedora) Installation]]
-
-
-
 

@@ -1,11 +1,9 @@
 IHRIS Plan Installation - 1.0.4
 ===============================
 
-
 Supporting Software
 ^^^^^^^^^^^^^^^^^^^
 Please install the [[Linux (Ubuntu) Installation - Supporting Software | supporting software]] before proceeding.
-
 
 Downloading
 ^^^^^^^^^^^
@@ -15,7 +13,6 @@ You can download the most recent 3.1 version of the iHRIS Suite and iHRIS Plan a
   https://launchpad.net/ihris-plan/1.0/1.0.4/+download/ihris-plan-full-1_0_4.tar.bz2
 You should downloaded the software to /var/lib/iHRIS/lib/3.1/.  You can do this by the following commands:
 
-
 .. code-block:: bash
 
     sudo mkdir -p /var/lib/iHRIS/lib/3.1
@@ -24,13 +21,10 @@ You should downloaded the software to /var/lib/iHRIS/lib/3.1/.  You can do this 
     sudo tar -xjf ihris-plan-full-1_0_4.tar.bz2
     
 
-
-
 Database Setup
 ^^^^^^^^^^^^^^
 
 To create the needed database you can do:
-
 
 .. code-block:: bash
 
@@ -38,7 +32,6 @@ To create the needed database you can do:
     
 
 Enter the password you set above (XXXXX) for MySQL.  You will now be able to send commands to MySQL and the prompt should always begin with 'mysql> '.  Type these commands:
-
 
 .. code-block:: mysql
 
@@ -49,13 +42,10 @@ Enter the password you set above (XXXXX) for MySQL.  You will now be able to sen
 
 Substitute PASS with something appropriate.  We'll refer to this password as YYYYY.
 
-
-
 Creating a Site Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We are going to start by modifying the *BLANK*  site for iHRIS Plan.  To copy the *BLANK*  site:
-
 
 .. code-block:: bash
 
@@ -63,12 +53,9 @@ We are going to start by modifying the *BLANK*  site for iHRIS Plan.  To copy th
     sudo cp -R /var/lib/iHRIS/lib/3.1/ihris-plan/sites/blank /var/lib/iHRIS/sites/plan
     
 
-
-
 Update the Path to Modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 You need to tell the site where to find all the core modules.  You can do this by editing the site configuration file:
-
 
 .. code-block:: bash
 
@@ -77,7 +64,6 @@ You need to tell the site where to find all the core modules.  You can do this b
 
 changing:
 changing:
-
 
 .. code-block:: xml
 
@@ -89,7 +75,6 @@ changing:
 
 to:
 
-
 .. code-block:: xml
 
         <path name='modules'>
@@ -98,13 +83,9 @@ to:
         </path>
     
 
-
-
-
 Set Email Address (Optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You may optionally choose to  change the email address feedback is sent to by editting the site configuration file:
-
 
 .. code-block:: bash
 
@@ -112,7 +93,6 @@ You may optionally choose to  change the email address feedback is sent to by ed
     
 
 changing:
-
 
 .. code-block:: xml
 
@@ -124,7 +104,6 @@ changing:
 
 to:
 
-
 .. code-block:: xml
 
     <configuration name='email' path='to' values='single'>
@@ -133,13 +112,10 @@ to:
     </configuration>
     
 
-
-
 Making the Site Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We will now edit the configuration to let the site know about the database user and options:
-
 
 .. code-block:: bash
 
@@ -163,26 +139,21 @@ Save and quit.
 
 Finally, we make iHRIS Plan site we just created available via the webserver:
 
-
 .. code-block:: bash
 
     sudo ln -s /var/lib/iHRIS/sites/plan/pages /var/www/plan
     
 
-
 If you are running Ubuntu 14.04 LTS you need to run this command instead
-
 
 .. code-block:: bash
 
     sudo ln -s /var/lib/iHRIS/sites/plan/pages /var/www/html/plan
     
 
-
 Pretty URLs
 ~~~~~~~~~~~
 This is an optional step to make URLs cleaner by removing the index.php.
-
 
 .. code-block:: bash
 
@@ -190,9 +161,7 @@ This is an optional step to make URLs cleaner by removing the index.php.
     sudo gedit /var/www/plan/.htaccess
     
 
-
  **For Ubuntu 14.04 LTS** 
-
 
 .. code-block:: bash
 
@@ -200,11 +169,9 @@ This is an optional step to make URLs cleaner by removing the index.php.
     sudo gedit /var/www/html/plan/.htaccess
     
 
-
 We need to look for the line RewriteBase and change it to the web directory we want to use we are using,  */plan* .  
 
 Change the line that looks like:
-
 
 .. code-block:: apache
 
@@ -217,7 +184,6 @@ to:
 </source>
 You may now save and quit.
 
-
 Finishing Up
 ^^^^^^^^^^^^
 Now we are ready to begin the site installation.  Simply browse to:
@@ -225,5 +191,4 @@ Now we are ready to begin the site installation.  Simply browse to:
 http://localhost/plan
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *i2ce_admin*  with the password you used to connect to the database (YYYYY that you set above).
-
 

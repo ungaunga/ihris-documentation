@@ -3,13 +3,10 @@ LiveCD Notes
 
 See  `the Ubuntu LiveCD page <https://help.ubuntu.com/community/LiveCDCustomization>`_  for details.  This page just outlines the steps particular to the iHRIS LiveCD
 
-
 New Notes -- Sierra Leone
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 * install php-xsl gstreamer0.10-ffmpeg gstreamer0.10-plugins-bad php5-uuid
-
 
 Source
 ^^^^^^
@@ -18,7 +15,6 @@ The image used to create this CD is stored on ihrisdev under <tt>/home/mah/ihris
 
    sudo env SSH_AUTH_SOCK=$SSH_AUTH_SOCK rsync -a --numeric-ids \
             --progress hrisdev.intrahealth.org:/home/mah/ihris-live/ ihris-live/
-
 
 Scripts
 ^^^^^^^
@@ -34,12 +30,10 @@ I've written a few simple scripts to automate some of the tedious steps.  These 
 
 The other scripts should not be necessary for regular use.
 
-
 Of Note
 ^^^^^^^
 
 A user is created from the contents of <tt>/etc/skel</tt> when the LiveCD begins running.  Anything you put in here will be in the LiveCD user's environment.  Here is a list of notable modifications to this environment:
-
 
 Mark's Image
 ~~~~~~~~~~~~
@@ -49,11 +43,8 @@ Mark's Image
 <tt>.xsession</tt> file
 ::Firefox is started without a window manager running.  When it exits, the user is (currently) returned to the GDM login screen.
 
-
 Steps for how Mark made the image
 ---------------------------------
-
-
 
 * Source: http://mirrors.kernel.org/ubuntu-releases/jaunty/ubuntu-9.04-desktop-i386.iso
  # mkdir tmp
@@ -76,7 +67,6 @@ Steps for how Mark made the image
  # echo deb http://archive.ubuntu.com/ubuntu jaunty multiverse >> /etc/apt/sources.list.d/ihris.list 
  # apt-key adv --recv-keys --keyserver pgp.mit.edu AD9110AD7B0B5CB8EA7004C62380F43F6EC21546 
 
-
 * policy-rc.d is used to tell init scripts not to run (See  `the spec <http://people.debian.org/~hmh/invokerc.d-policyrc.d-specification.txt>`_ )
  # cat > /usr/sbin/policy-rc.d
   #!/bin/sh
@@ -87,27 +77,22 @@ Steps for how Mark made the image
  # aptitude dist-upgrade
  # aptitude install flashplugin-installer
 
-
 * if kernel was upgraded (look under chroot's /boot)
 * * aptitude purge old version
 * * outside of chroot:
  # cp edit/boot/vmlinuz* extract-cd/casper/vmlinuz
  # cp edit/boot/initrd* extract-cd/casper/initrd.gz
 
-
 * If proc or sys won't umount from the chroot, try turning off klog
 * `Download <http://www.capacityproject.org/hris/hris-toolkit/hris-toolkit.zip>`_  and extract toolkit to extract-cd/ihris-live/toolkit
 * `Download <http://www.ibiblio.org/litlfred/ihris/ihris_demo.zip>`_  and extract touch demo to extract-cd/ihris-live/demo
 * Get the updated Resources PDFs from Carol and extract to extract-cd/ihris-live/resources
-
-
 
 EOP Image
 ~~~~~~~~~
 It is on hrisdev:~/litlfred/eop_live_dvd.tar.gz  (gzipped w/ --rsyncable)
 It is based on mark's image with the changes as detailed below.
 I updated make-iso to clean out the log and temporary files.
-
 
 * under chroot:
 * *uncomment all the #deb lines in /etc/apt/sources.list
@@ -148,7 +133,6 @@ I updated make-iso to clean out the log and temporary files.
  URL=http://localhost
  Icon=/var/www/ihris_logo.png
 
-
 * *var/www has:
 * **index.html which links the demo, toolkit, resources and the iHRIS software
 * **supporting image files for index.html
@@ -177,19 +161,14 @@ I updated make-iso to clean out the log and temporary files.
 * *dpkg-reconfigure gdm (gdm was spitting us out to busybox)
 * *mkinitramfs -o /initrd.img 2.6.28-15-generic (don't know if this was needed but probably was)
 
-
-
 EOP label
 ~~~~~~~~~
 http://www.ihris.org/w/upload/IHRIS_Live_CD_402.pdf
 
-
 Always update the Illustrator file with the current version info. Carol has the Illustrator file as it cannot be uploaded to this wiki.
-
 
 To Do
 ^^^^^
-
 
 * fixup the desktop icon to launch the ihris suite (done by carl).
 * Change the progress bar boot branding ( `usplash <http://news.softpedia.com/news/Change-Ubuntu-Bootsplash-Theme-55237.shtml>`_ )

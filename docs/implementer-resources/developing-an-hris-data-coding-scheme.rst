@@ -7,8 +7,6 @@ To prevent problems during data entry, the data should be categorized in a consi
 
 If existing workforce data are available for immediate entry, taking the time to develop a data-coding scheme may be perceived as an obstacle to forward momentum. However, an initial investment in organizing a system of data entry requires fewer resources and less time than does retrospectively correcting data-entry errors. In addition, data entered according to a standardized coding scheme are more likely to be immediately useful for creating reports and drawing comparisons at the facility and district level. 
 
-
-
 Using Drop-Down Menus to Prevent Data Entry Errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -16,13 +14,10 @@ Information management programs (like the iHRIS Suite) and spreadsheet programs 
 
 Using drop-down menus has two noteworthy benefits. First, they reduce the time required to enter data from a paper personnel record or data collection form since they allow data entry clerks to select items from a list rather than type each response into a cell. Second, drop-down menus restrict the information that can be entered into each cell to only the choices provided, reducing the likelihood that errors will be introduced. The drop-down menus should only include the values, or codes, that conform to the pre-determined data-coding scheme. 
 
-
-
 Why Is a Standard Data-Coding Scheme Necessary?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To understand why creating an HRIS data-coding scheme is such a high priority, picture what the HRH database would look like if all of the information for two categories, such as Job Title and Department, were typed directly into a spreadsheet. Imagine that three people who hold the same job in a single healthcare facility (Nursing Officer in the Obstetrics and Gynecology Department) are asked to record their job titles and department names on a data collection form. It is possible that they would write down this information in three different ways, as in the example below.
-
 
 .. code-block::
 
@@ -32,11 +27,9 @@ To understand why creating an HRIS data-coding scheme is such a high priority, p
     103	        Nurse C           Registered Nurse Officer     Obstetrics and Gynecology
     
 
-
 Now suppose that all the health workers at the facility, even those who hold the same job, enter their information using different versions of the same job titles and department names. Perhaps some of the data entries are misspelled as well, while others are entered using unclear abbreviations. Technically, the data in the spreadsheet would be accurate, since each of the health workers wrote down a job title or department name that represented his or her job at the facility. However, because the data entry clerks did not have a standard way to code the data, the information in the dataset is difficult to analyze. For example, it would not be possible for a healthcare decision maker run a report to quickly find the number of Nursing Officers at the facility. 
 
 Creating a standard way to organize health workforce data allows users of the system to easily aggregate data about a specific variable. For example, after the implementation of an HRIS data-coding scheme, the information about the Nursing Officers at the facility would be entered into the spreadsheet as follows: 
-
 
 .. code-block::
 
@@ -46,12 +39,9 @@ Creating a standard way to organize health workforce data allows users of the sy
     103             Nurse C           Nursing Officer     Obstetrics and Gynecology
     
 
-
 Use of a standardized data-coding scheme enables the system to automatically find how many Nursing Officers work in the Obstetrics and Gynecology Department at this facility and display that information in a report.
 
 In addition, a standard classification system enables HRIS users to more easily compare information between facilities and districts. Classification systems that conform to international standards even allow for comparisons between different countries. 
-
-
 
 Creating a Data Dictionary
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,23 +52,18 @@ Log all of the different data points that correspond in the data dictionary, inc
 
 For instance, the data dictionary entry for the Nursing Officer example may read as follows:
 
-
 .. code-block::
 
     Category/Field      Value               Alternatives
     Job Title	    Nursing Officer     Nursing Off. – OBGYN, Registered Nurse Officer
     
 
-
 The data dictionary may also include information about the different levels of a job. For example, is a Nurse Assistant I a more senior job than a Nurse Assistant II, or are these jobs at the same level but with different responsibilities? Any clarifications that may be important for data entry or useful during data analysis should be included in the data dictionary.
-
-
 
 Eliminating Common Problems in Drop-Down Menus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This section describes common problems that are found in the lists of values used for drop-down menus in data entry tools. For reasons of simplicity, each problem is illustrated using examples from the Job Title field, but these problems can be found in any field in the dataset.
-
 
 Unnecessary Variations
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -86,22 +71,17 @@ Sometimes, healthcare facilities or health workers use different titles to descr
 
 Pre-existing lists of job titles often contain both the name of the job and the name of the department where the job is located. For example, a list of titles may include values such as “Physician (HIV/AIDS)” or “Manager – Finance.” In these cases, a decision must be made about how to categorize the job. If the skills and functions of a job in one department vary significantly from the same job in another department, retaining the name of the department in the Job Title list may be important for later data analysis. For instance, a manager in the Finance department may have a very different role than managers in other areas of a healthcare facility. However, the underlying skills and functions are frequently the same for jobs across departments. One can imagine that a physician in the HIV/AIDS department would have a similar role as a physician in another department, such as seeing patients, monitoring their care and prescribing treatments. In these cases, eliminating the department information from the Job Title field decreases the redundancies in the database, since this information is tracked in the Department Name field.
 
-
 Duplicates
 ~~~~~~~~~~
 Duplicate entries can appear in a database for a number of reasons, including additional spaces, misspellings and abbreviations. Eliminating duplicates from drop-down menus is essential for maintaining data quality. If a field contains two values that represent the same information, such as Chief Nursing Officer and CNO, choose one of the values and eliminate the other, noting the eliminated value in the data dictionary. Ensuring that there is only one job title to describe each job reduces confusion during data entry and eliminates the need to re-code jobs after data are collected.
-
 
 Abbreviations
 ~~~~~~~~~~~~~
 Some abbreviations are well known and can be used to conserve space in the data entry form. For example, most people would probably guess that the abbreviation “Admin. Officer” stands for “Administration Officer.” However, abbreviations should only be used when their meaning is likely to be clear to someone who is seeing the abbreviation for the first time. An abbreviation like “Med. Res.” could stand for more than one logical value in the list, such as Medical Resident or Medical Researcher—two very different jobs. Any abbreviation that could cause confusion during data entry should not be used. In addition, abbreviations should be tracked in the data dictionary, where both the abbreviation and the complete spelling of the word should be listed. 
 
-
 Omissions
 ~~~~~~~~~
 It is also important to include enough values in the job list to categorize all health jobs. To make sure jobs are not missed, it may be wise to pilot the tool in a few different types of healthcare facilities. Are health administrators accounted for? Are all part-time jobs listed? What about necessary jobs that are not directly related to healthcare, such as drivers, security guards and cleaning staff? The final data entry tool should include enough values to ensure that jobs are represented with sufficient detail to be useful for data analysis, but should not contain so many values that aggregating data during analysis becomes difficult.
-
-
 
 How Do We Create a Data-Coding Scheme Without  Prior HRH Information?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -118,13 +98,10 @@ For a few of the categories, such as Employee Surname or Employee Address, so ma
 
 The third and largest group of categories, such as Job Title and Department Name, will require a list of values for the drop-down menu in order to maintain data quality and consistency. However, creating a complete list of these values for a drop-down menu requires a strong knowledge of the healthcare system and input from HRIS stakeholders. To generate lists of values for these fields, it may be useful to refer to the resources listed at the end of this brief. While these resources may be valuable in the beginning stages of creating a coding system, determining country-specific values will require some research. A survey of all of the jobs in chosen local health facilities should provide a clearer picture of the types of job titles, department names, etc. that need to be included in the data-coding scheme. Input from key HRIS stakeholders is essential during this stage of coding scheme development.
 
-
-
 Resources
 ^^^^^^^^^
 
 The following resources may be useful when creating an HRIS coding scheme:
-
 
 * `African Health Workforce Observatory (AHWO)/ World Health Organization (WHO) Definitions of the 23 Health Workforce Categories <http://www.who.int/globalatlas/docs/HRH_HWO/HTML/Dftn.htm>`_
 * `International Standard Classification of Occupations (ISCO) Website <http://www.ilo.org/public/english/bureau/stat/isco/index.htm>`_

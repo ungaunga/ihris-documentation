@@ -13,8 +13,6 @@ IHRIS Demos
 
 A possible basic format:
 
-
-
 * Tell me what I am going to learn
 * What's in it for me
 * Tell me (the info)
@@ -27,7 +25,6 @@ Length: 4-5 minutes each
 Overlying narrative or goal to accomplish that ties all demos together...
 
 Possible features to be showcased in interactive videos:
-
 
 * Search for a person's record and maybe enter a couple of fields
 * Training module - perhaps schedule someone for a training and then assess

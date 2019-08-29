@@ -1,7 +1,6 @@
 Data Export to DHIS in iHRIS F.A.S.T
 ====================================
 
-
 Exporting The Data
 ^^^^^^^^^^^^^^^^^^
 
@@ -23,12 +22,10 @@ Clicking on one of the data exports will take you to a page where the data is po
 
  
 
-
 Linking The Data
 ^^^^^^^^^^^^^^^^
 
 The data in iHRIS F.A.S.T. and DHIS2 need to be linked together in order to successfully share information. 
-
 
 Training Program
 ~~~~~~~~~~~~~~~~
@@ -39,7 +36,6 @@ Each member of the Training Program database list should be linked to the DHIS2 
 
  
 
-
 Student Status
 ~~~~~~~~~~~~~~
 
@@ -48,7 +44,6 @@ Each member of the Student Status database list should be linked to the DHIS2 da
     :align: center
 
  
-
 
 DHIS2 Source Data
 ^^^^^^^^^^^^^^^^^
@@ -71,12 +66,10 @@ Looking at the Data Elements you will have something like:
 
  
 
-
 Data Relationship
 ^^^^^^^^^^^^^^^^^
 
 The data used to generate the report (# of students by student status and program) is based on a relationship built on the forms illustrated here: Note that the primary form in the relationship is student_app and that the person form is only included in the diagram for illustrative purposes as it is not needed in the actual relationship. 
-
 
 .. image:: images/Fast student app.gif
     :align: center
@@ -84,7 +77,6 @@ The data used to generate the report (# of students by student status and progra
  
 
 <br>
-
 
 iHRIS Programming Details
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -98,5 +90,4 @@ The report which contains the data (# of students disaggregated by application s
 The needed .dxf file with the dataValueSets is produced using an xslt. This XSLT is contained in the report view itself (see starting on line 274 of the CustomReports-full-student_status.xml) above. A  `copy of the XSL is here <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-student-tracking/trunk/view/head:/modules/DHIS2_StudentStatus/sources/student_status.xsl>`_  so we can view/copy it easier, 
 
 <br> There is also a page that I setup that will handle multiple exports of iHRIS to DHIS. Here you can see where curl is used to connect to dhis2 and submit the data. The response from DHIS2 is processed and displayed on the web page. The PHP code is  `here <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-student-tracking/trunk/view/head:/modules/OrgUnits/lib/iHRIS_DHIS_DashboardSubmit.php>`_ . It reads in magic data to get the connection details to DHIS2 as well as define the report view and transform to use. You can see the magic data defined on lines 33-63 in the OrgUnits.xml file referenced above. A link to the page has been added to the  `index.html page <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-student-tracking/trunk/view/head:/templates/en_US/index.html>`_ .
-
 

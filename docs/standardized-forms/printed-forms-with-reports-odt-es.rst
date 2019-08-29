@@ -5,18 +5,14 @@ El módulo de formularios impresos se utiliza para imprimir formularios "standar
 
 Dependiendo de lo que necesite, puede que desee ver estos otros métodos para la creación de formularios estandarizados:
 
-
 * [[Printed Forms]]
 * [[Printed Forms form Relationships (ODT)]]
 * [[Standardized Letters (ODT)]]
-
-
 
 ¿Qué son los Formularios Impresos?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Los Formularios Impresos permiten crear una plantilla de OpenDocument Text (ODT) que pude llenarse con los datos del informe.  Esto está basado en [[Standardized Letters (ODT)|Standardized Letters]] que pueden utilizarse para un registro individual.
-
 
 Agregar un Formulario Impreso a una Visualización de Informe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -82,7 +78,6 @@ Aquí se encuentran los datos temporales que se pueden utilizar en el informe. D
 
 Este es el ejemplo para el mismo módulo. Puede descargar el  `source file <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1-dev/download/head:/staffform.odt-20120126055155-qjun6vhyfw79qnhf-4/StaffForm.odt>`_  de esto para ver el formato.
 
-
 .. code-block::
 
     {{{++report_title}}}
@@ -98,7 +93,6 @@ Este es el ejemplo para el mismo módulo. Puede descargar el  `source file <http
     [!-- END report_row --]
     
 
-
 Cuando desee repetir una fila de una tabla para las filas de su informe, deberá cambiar las oraciones de BEGIN y END a **[!-- BEGIN row.report_row --]**  y **[!-- END row.report_row --]** .  Vea el  `table example <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-manage/4.1-dev/download/head:/stafftableform.odt-20120126055155-qjun6vhyfw79qnhf-5/StaffTableForm.odt>`_  del módulo de muestra.  El ejemplo siguiente ha sido recortado debido al espacio.
 
 {| border="1" cellspacing="0" cellpadding="5" align="center"
@@ -113,15 +107,12 @@ Cuando desee repetir una fila de una tabla para las filas de su informe, deberá
 | {{{work+email}}}[!-- END row.report_row --]
 |}
 
-
 Creando el Módulo
 ~~~~~~~~~~~~~~~~~
 
 Una vez que haya creado el archivo de plantilla ODT, necesitará crear un módulo para poner en la fila y configurar los formularios impresos para su informe.  El módulo necesita un directorio odt_templates donde se pone el archivo ODT al igual que el archivo de configuración del módulo.  Debería requerir el módulo CustomReports-PrintedReportsODT para que el botón *Forms Print*  aparezca en la visualización de su informe.
 
 Para su archivo de configuración, necesitará crear un nodo bajo la visualización del informe al que aplica esta plantilla.  Todos los campos que utilice en la plantilla deben estar habilitados en la visualización de informe. Los nodos **printed_forms**  deberán estar en el nivel superior de su visualización de informe y luego un nombre único para le plantilla de formulario impreso.  Abajo de eso necesita definir el **template**  que es el nombre del archivo de plantilla en el directorio odt_templates y **displayName**  para lo que aparece cuando el usuario desee ver esta plantilla.  La configuración para el módulo de muestra está más adelante con dos formularios impresos definidos.  Esta muestra también requiere el módulo ihris-manage-CustomReports-staff-reports ya que ahí está definida la visualización del informe staff_directory.
-
-
 
 .. code-block:: xml
 
@@ -164,6 +155,4 @@ Para su archivo de configuración, necesitará crear un nodo bajo la visualizaci
       </configurationGroup>
     </I2CEConfiguration>
     
-
-
 

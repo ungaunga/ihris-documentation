@@ -23,8 +23,6 @@ CONTENTS
 
 7. About Capacity''Plus''
 
-
-
 1. CONTACT INFORMATION
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -41,8 +39,6 @@ IntraHealth International
 6340 Quadrangle Drive, Suite 200
 
 Chapel Hill NC 27517 USA
-
-
 
 2. ABOUT THIS SOFTWARE
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -63,21 +59,15 @@ Capacity''Plus'' develops the iHRIS Suite of core software solutions addressing 
 
  **TexLayout**  is tools to handle text layout designed to create nicely formatted PDF files. This is used to generate PDF versions of reports.
 
-
-
 3. NEW FEATURES/BUG FIXES IN THIS RELEASE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 View a full list of new features and bug fixes here: http://wiki.ihris.org/wiki/IHRIS_Suite_4.1_Development
 
-
-
 4. HARDWARE AND SOFTWARE REQUIREMENTS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following software is required to be installed before installing iHRIS:
-
-
 
 * Apache Webserver 2.2+: http://www.apache.org
 * MySQL 5.0+: http://www.mysql.com
@@ -94,12 +84,8 @@ A web browser is required to run the software. Firefox 2+ (http://www.mozilla.co
 
 Optional:
 
-
-
 * Tidy from PECL: http://pecl.php.net/package/tidy (included by default for Ubuntu but not Windows)
 * GD Php Library: http://www.libgd.org
-
-
 
 5. INSTALLATION INSTRUCTIONS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,24 +94,18 @@ Linux (Ubuntu) installation instructions are available on our wiki: http://wiki.
 
 If you have questions or need support, please visit our website (http://www.ihris.org) and use the Contact Us form to send us your question.
 
-
-
 6. KNOWN ISSUES
 ^^^^^^^^^^^^^^^
 
 The following are known bugs in this release of iHRIS. These bugs will be corrected as soon as possible in a subsequent minor release. Please report any bugs to hris@capacityproject.org or by submitting a bug report at https://bugs.launchpad.net/ihris-suite/.
 
-
 iHRIS Manage
 ~~~~~~~~~~~~
 There are no known issues.
 
-
 iHRIS Qualify
 ~~~~~~~~~~~~~
 There are no known issues.
-
-
 
 7. ABOUT Capacity''Plus''
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -135,5 +115,4 @@ Capacity''Plus'' develops free, Open Source HRIS solutions, distributed under th
 Capacity''Plus'' is a USAID-funded global project focused on the health workforce needed to achieve the Millennium Development Goals. Capacity''Plus'' is led by IntraHealth International, Inc. Find out more at www.capacityplus.org
 
 Development of this software was made possible by the support of the American people through USAID. The contents are the responsibility of the user and do not reflect the views of USAID, the United States Government or IntraHealth International.
-
 

@@ -1,7 +1,6 @@
 Installing Software Raid (MDAMD) on the Appliance
 =================================================
 
-
 Create a Bootable USB Drive
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 First, you will need to download
@@ -99,14 +98,12 @@ and the partitions should be identical:
  /dev/sdb2 start 9243 end 9728 id 5 (extended)
  /dev/sdb5 start 9243 end 9728 id 82 (swap)
 
-
 Assembling the Raid Array
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Now assemble the software raid array
  sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sda1 /dev/sdb1
  sudo mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sda5 /dev/sdb5
 on success it should say "mdadm: array /dev/md0 started"
-
 
 Selecting to Install on the RAID array
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -128,7 +125,6 @@ When you get to the "Ready to Install" Screen select:
  Make sure install boot loader is checked
  Choose '/dev/md0' under "Device for bot loader installation"
 
-
 Installing the Boot loader on the Raid Array
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Just before the installation is finished, it tries to install grub, the boot loader, onto the /dev/md0 our raid disk.  It may fail by saying:
@@ -139,13 +135,10 @@ There is a  `bug report <https://bugs.edge.launchpad.net/ubuntu/+source/grub2/+b
  grub-install --modules=raid --no-floppy /dev/sda
  [Alt]-[F7]
 
-
-
 Known Issue for Karmic
 ^^^^^^^^^^^^^^^^^^^^^^
 http://www.ubuntu.com/testing/karmic/beta?info=EXLINK
 with possible workaround http://www.brandonchecketts.com/archives/booting-from-a-software-raid-device-on-ubunto-karmic-910
-
 
 Automatic boot on failure
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -153,16 +146,12 @@ Optionally, and not recommended, you can have the Appliance continue to boot if 
 
 The reason that this is recommended is that we will have no way of knowing that one of the hard drives failed and then the second one may fail.
 
-
 LCD Menu
 ^^^^^^^^
  sudo usblcd spash /home/lcdmenu/bin/splash.txt
 
-
-
 After rebooting, maybe modify /etc/fstab and set
   /dev/md0 to "relatime" instead of defaults
-
 
 Background
 ^^^^^^^^^^

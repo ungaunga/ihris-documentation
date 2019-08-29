@@ -1,12 +1,10 @@
 Rapidpro Installation
 =====================
 
-
 Introduction and Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 RapidPro is an Open Source platform that allows anyone to build interactive messaging systems using an easy visual interface. A video is worth a thousand words and this brief video introduction will give you an idea of what is possible.
-
 
 Installation
 ~~~~~~~~~~~~
@@ -18,7 +16,6 @@ To install Rapidpro,follow the following steps
 <ul>
 <li>
 Postgresql and postgis installation
-
 
 .. code-block:: bash
 
@@ -38,7 +35,6 @@ Postgresql and postgis installation
  or by downloading it on  `redis website <http://redis.io/>`_ </li>
 <li> `lessc <http://lesscss.org/>`_ , the Less compiler.
 
-
 .. code-block:: bash
 
     $ apt-get install npm
@@ -47,7 +43,6 @@ Postgresql and postgis installation
 
 </li>
 <li> `coffee <http://coffeescript.org/>`_ , the Coffee script compiler. You may also install this with 
-
 
 .. code-block:: bash
 
@@ -60,7 +55,6 @@ Postgresql and postgis installation
 <li>
 <b>Create Temba User For PostgreSQL</b>
 
-
 .. code-block:: bash
 
     $ sudo -u postgres createuser temba --superuser --pwprompt -d
@@ -69,7 +63,6 @@ Postgresql and postgis installation
 
 </li>
 <li><b>Create temba database, add PostGIS</b>
-
 
 .. code-block:: bash
 
@@ -81,7 +74,6 @@ Postgresql and postgis installation
     
 
 Now connect as superuser that can install extensions
-
 
 .. code-block:: bash
 
@@ -102,7 +94,6 @@ Now connect as superuser that can install extensions
 <b>Clone Rapidpro</b><br>
 Now clone the RapidPro repository and link up the development settings:
 
-
 .. code-block:: bash
 
     $ git clone git@github.com:rapidpro/rapidpro.git
@@ -112,14 +103,12 @@ Now clone the RapidPro repository and link up the development settings:
 
 NB:open the file temba/settings.py to make sure that it was created,if its missing or empty,do this
 
-
 .. code-block:: bash
 
     $ cp temba/settings.py.dev temba/settings.py
     
 
 NB:You will need to confirm if the database name,user and password in the settings.py matches the one created during postgresql installation,the following is the default database name,database user and password inside temba/settings.py
-
 
 .. code-block:: bash
 
@@ -142,7 +131,6 @@ NB:You will need to confirm if the database name,user and password in the settin
 <li><b>Build Virtual Environment</b><br>
 You should always use a virtual environment to run your RapidPro installation. The pinned dependencies for RapidPro can be found in pip-freeze.txt. You can build the needed environment as follows (from the root rapidpro directory):
 
-
 .. code-block:: bash
 
     $ sudo apt-get install python-virtualenv postgresql-server-dev-9.3 python-dev ncurses-dev
@@ -157,7 +145,6 @@ You should always use a virtual environment to run your RapidPro installation. T
 <b>Sync your database</b><br>
 You should now be able to run all the migrations and initialize your development server. This takes a little while on RapidPro as syncdb also creates and initializes all the user groups and permissions.
 
-
 .. code-block:: bash
 
     (env)$ python manage.py syncdb
@@ -166,7 +153,6 @@ You should now be able to run all the migrations and initialize your development
 </li>
 <li>
 <b>If you want to create a super user,run this command while the env is still activated</b>
-
 
 .. code-block:: bash
 
@@ -177,7 +163,6 @@ You should now be able to run all the migrations and initialize your development
 <li>
 <b>Run development server</b><br>
 At this point you’ll be able to run the development server and run RapidPro. It will be available at http://localhost:8000 or you may specify a different port number if you wish to change the default port number.
-
 
 .. code-block:: bash
 
@@ -193,18 +178,13 @@ To allocate credits to an account login to Rapidpro as an administrator,you will
 .. image:: images/RapidPro_Organization_Management.png
     :align: center
 
-
 <br><br>Then Click the TopUps button as in the picture below:
 
 .. image:: images/RapidPro_Topup_Button.png
     :align: center
 
-
 <br><br>Click the Add TopUps button as in the picture below:
 
 .. image:: images/RapidPro_topup2.png
     :align: center
-
-
-
 

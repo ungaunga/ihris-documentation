@@ -3,17 +3,14 @@ Installing OpenDJ On Ubuntu
 
 =Installation=
 
-
 Prerequisites
 ^^^^^^^^^^^^^
 We are going to install OpenDJ on Ubuntu 12.04 from a command line.
 Like ApacheDS, OpenDJ also requires a Java environment to run. OpenDJ requires at least Java version 6.0 installed on the machine that it is going to run.
 
-
 Downloading OpenDJ software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The software can be downloaded from the  `OpenDJ download page <http://www.forgerock.org/opendj.html>`_ . We are going to download the most recent version 2.5.
-
 
 Installing OpenDJ
 ^^^^^^^^^^^^^^^^^
@@ -26,7 +23,6 @@ We are going to install OpenDJ in the **/opt**  directory of our system. So we w
     sudo chown -R `whoami`:`whoami` /opt/OpenDJ
     
 
-
 Download and unzip OpenDJ by running the following commands from the terminal
 
 .. code-block::
@@ -37,7 +33,6 @@ Download and unzip OpenDJ by running the following commands from the terminal
     mv OpenDJ-2.5.0-Xpress1 2.5.0
     cd 2.5.0
     
-
 
 To install OpenDJ in interactive mode, run the setup --cli from the terminal 
 
@@ -116,7 +111,6 @@ To install OpenDJ in interactive mode, run the setup --cli from the terminal
     To see basic server configuration status and configuration you can launch /opt/OpenDJ/2.5.0/bin/status
     
 
-
 =Loading HPD schema and Provider schema to OpenDJ=
 
 We are going to load the provider schema for RHEA and the schema for the HPD Profile.
@@ -131,7 +125,6 @@ We need to download the code for the Provider registry for Rwanda and then we wi
     cp /var/lib/iHRIS/rhea-pr/ldap/openldap/* /opt/OpenDJ/2.5.0/config/schema
     ./start-ds
     
-
 
 =Loading Provider sample data=
 You need to move to the bin directory of OpenDJ and execute these commands from the terminal
@@ -236,7 +229,6 @@ and when stopped, the output looks like this one:
     
     
 
-
 For help on any command in the bin directory you can run 
 
 .. code-block::
@@ -245,9 +237,7 @@ For help on any command in the bin directory you can run
     ./import-ldif --help
     
 
-
 =Installing OpenDJ DSML gateway=
-
 
 Prerequisites
 ^^^^^^^^^^^^^
@@ -265,7 +255,6 @@ After it finishes you can access the Tomcat server from this url [http://localho
 
 If the installation was successful you should see a **It Works**  with some other details.
 
-
 Downloading OpenDJ DSML gateway
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This OpenDJ DSML gateway runs independently of OpenDJ Directory server. It can be downloaded from the  `Archive of stable community releases page <http://www.forgerock.org/opendj-archive.html>`_ 
@@ -276,8 +265,6 @@ You can also download it from the command line.
 
     wget http://download.forgerock.org/downloads/opendj/2.5.0-Xpress1/OpenDJ-2.5.0-Xpress1-DSML.war
     
-
-
 
 Installing and Configuring
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -297,12 +284,10 @@ If it worked correctly, a folder **dsml**  will be created in /var/lib/tomcat7/w
 
 For the DSML Gateway to work, the file WEB-INF/web.xml has to be edited. At minimum, the LDAP port number is to be the one you set during installation. (If need be, for HTTP Basic Auth and have the user IDs mapped to entries in the directory, for example, this has to be set to ldap.authzidtypeisid=true.) 
 
-
 .. code-block::
 
     sudo pico /var/lib/tomcat7/webapps/WEB-INF/web.xml
     
-
 
 Then edit this part
 
@@ -315,9 +300,7 @@ Then edit this part
       </context-param>
     
 
-
 to
-
 
 .. code-block::
 
@@ -328,15 +311,12 @@ to
       </context-param>
     
 
-
 Restart tomcat to take your changes into account.
 
 .. code-block::
 
     sudo service tomcat7 restart
     
-
-
 
 Testing OpenDJ DSML Gateway
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -355,5 +335,4 @@ After it finishes open it and then go to *File -> Connect*  or simply click the 
 
 If it works OK, we should see this screen.
 [[image:Logged_in.png|center|Sample Data loaded on server]]
-
 

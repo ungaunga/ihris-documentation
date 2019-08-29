@@ -9,8 +9,6 @@ A simple way to document functional requirements is to write use cases. A **use 
 
 Note that use cases will not hold all the requirements, but only describe the behavioral portion, the required functions of the system.
 
-
-
 Benefits of Use Cases
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -22,7 +20,6 @@ Several related use cases may be organized into modules, called *packages* . Dev
 
 Use cases should be living documents. Stakeholders, users and developers should constantly review, revise and expand the use cases during the development or customization of a system. At different stages, use cases can be used to: 
 
-
 * describe a work process
 * focus discussion about system actions
 * be the functional requirements for a system
@@ -31,8 +28,6 @@ Use cases should be living documents. Stakeholders, users and developers should 
 * write instructions, help and training materials for end users.
 
 Not all requirements have to be known before starting development. Use cases may be edited during development to capture additional functions, and new use cases may be written as needs for the system arise.
-
-
 
 Stages of Use Case Development
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -49,13 +44,9 @@ Like software development itself, writing use cases is an iterative process. The
 
  **Tips** 
 
-
-
 * Once the Full version has been complete, document and date any changes in the Notes field, creating a revision history for the use case. Remember that new features of use cases that are already under development should be added to the Project Control List to keep track of them.
 * Record any issues with a particular use case in its Issues section. The  `Case Complete use case software <http://www.casecomplete.com/>`_  can generate an Issues Report, which is useful when discussing issues with developers or stakeholders, and eliminates the need to keep a master issues list separately.
 * Organize use cases into packages initially to group modules for prioritizing and scheduling development activities. As you near release, you may want to reorganize packages or create "parent" packages to mimic the user flow of the finished product. Use the package description to record standard text that may be reproduced in help, user interface designs, product descriptions, etc.
-
-
 
 The Parts of a Use Case
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,15 +55,12 @@ The use case enumerates all of the steps describing the interaction of one userâ
 
 At minimum, each use case should contain the following information:
 
-
 * a goal to achieve
 * the primary actor who is attempting to achieve the goal; the actor should be identified by a role in interacting with the system, not by a name or the name of a group
 * a condition under which the scenario runs; this may include any preconditions that must be true before the scenario can start and a triggering event that starts the scenario
 * an end condition that must be true after the use case is finished if the goal is successfully achieved, called the *success guarantee*
 * a set of action steps, forming the body of the scenario; these are called the *main success scenario*
 * a possible set of *extensions* , or alternate scenarios, leading toward either the success or failure of the goal
-
-
 
 Writing Use Cases
 ^^^^^^^^^^^^^^^^^
@@ -99,7 +87,6 @@ Use these guidelines to write your own use cases. You should write a use case fo
 
  **9. Notes/Issues/Reviewer Comments:**  Add any comments on the use case or explanatory notes needed. This is also a good place to note any issues that have arisen regarding the use case or its implementation in the system. 
  
-
 
 Example Use Case
 ^^^^^^^^^^^^^^^^
@@ -129,7 +116,6 @@ Example Use Case
 
  **8. Extensions:** 
 
-
 .. code-block::
 
     3a. The system determines that the password is incorrect for the username entered.
@@ -144,7 +130,6 @@ Example Use Case
         1. The system does not allow the user to access the system.
     
 
-
  **9. Notes/ Issues/ Reviewer Comments:**  This use case is the same for iHRIS Manage, Qualify and Plan.
 
  **Completed by:**  Use case writer
@@ -153,11 +138,8 @@ Example Use Case
  **Reviewed by:**  Use case reviewer
  **Date:**  November 4, 2008
 
-
-
 Guidelines for Finding Actors and Goals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * List every possible human and non-human primary actor, over the life of the system.
 * Brainstorm and exhaustively list all possible user goals for each actor.
@@ -169,13 +151,10 @@ Guidelines for Finding Actors and Goals
 
 You may find it helpful to use the  `Actors and Goals Template <http://spreadsheets.google.com/pub?key=rq3k2zguXd68aJYwfpEv7gA&output=xls>`_  to organize all actors and goals before writing full use cases.
 
-
-
 Writing Summary-Level Use Cases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Summary-level goals involve multiple user goals. The purpose of summary-level use cases is to:
-
 
 * Show the context in which the user goals operate
 * Show life-cycle sequencing of related goals
@@ -187,8 +166,6 @@ To find a summary-level use case, ask "what does the primary actor really want?"
 I prefer to write summary-level use cases in narrative rather than numbered step format. I also find it helpful to write an example scenario for each summary-level use case telling a story about how the users will interact with the system.
 
 Written this way, summary-level use cases provide a helpful tool for quickly communicating with executives, stakeholders and customers the broad scope of what the system will do.
-
-
 
 Definitions
 ^^^^^^^^^^^
@@ -244,23 +221,17 @@ Scenario: description of one set of circumstances with one outcome in a use case
 
  **White box** : use case that shows internal processes.
 
-
-
 Recommended Resources
 ^^^^^^^^^^^^^^^^^^^^^
-
 
 Books
 ~~~~~
 
-
 * *Writing Effective Use Cases*  by Alistair Cockburn
 * *Use Cases: Requirements in Context*  by Daryl Kulak and Eamonn Guiney
 
-
 Websites
 ~~~~~~~~
-
 
 * Understanding Use Case Modeling: http://www.methodsandtools.com/archive/archive.php?id=24
 * Use Case Fundamentals: http://alistair.cockburn.us/index.php/Use_case_fundamentals

@@ -1,18 +1,14 @@
 Migrating from MDB2 to PDO
 ==========================
 
-
 Server Changes
 ^^^^^^^^^^^^^^
 For Ubuntu 14.04, you must replace the default PHP MySQL driver:
-
 
 .. code-block:: bash
 
     sudo apt install php5-mysqlnd
     
-
-
 
 PHP Code Changes
 ^^^^^^^^^^^^^^^^
@@ -32,12 +28,9 @@ Change:
 
     I2CE::PDO()
 
-
-
 Update Error Checks (for all database queries)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Change pearError blocks to try catch:
-
 
 .. code-block:: php
 
@@ -48,7 +41,6 @@ Change pearError blocks to try catch:
     
 
 becomes:
-
 
 .. code-block:: php
 
@@ -65,14 +57,11 @@ becomes:
     }
     
 
-
-
 Prepared Statements
 ~~~~~~~~~~~~~~~~~~~
 Remove extra arguments for field types from the call to prepare().  
 
 Prepared statements also act as the result.  Note that in many cases the prepare statement will be in a different place than the execute and fetch calls.
-
 
 .. code-block:: php
 
@@ -94,7 +83,6 @@ Prepared statements also act as the result.  Note that in many cases the prepare
     
 
 becomes:
-
 
 .. code-block:: php
 
@@ -119,12 +107,9 @@ becomes:
     }
     
 
-
-
 execParam method
 ~~~~~~~~~~~~~~~~
 Change:
-
 
 .. code-block:: php
 
@@ -132,7 +117,6 @@ Change:
     
 
 to:
-
 
 .. code-block:: php
 
@@ -143,12 +127,9 @@ to:
     }
     
 
-
-
 getRow method
 ~~~~~~~~~~~~~
 Change:
-
 
 .. code-block:: php
 
@@ -160,7 +141,6 @@ Change:
 
 To:
 
-
 .. code-block:: php
 
     try {
@@ -171,13 +151,10 @@ To:
     }
     
 
-
-
 getBeforeID/getAfterID (sequence) methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Change:
-
 
 .. code-block:: php
 
@@ -188,19 +165,15 @@ Change:
 
 To:
 
-
 .. code-block:: php
 
     $this->db->exec( $stmt );
     $new_id = $this->db->lastInsertId();
     
 
-
-
 queryCol method
 ~~~~~~~~~~~~~~~
 Change: 
-
 
 .. code-block:: php
 
@@ -209,19 +182,15 @@ Change:
 
 to: 
 
-
 .. code-block:: php
 
     $result = $pdo->query( $qry );
     $var = $result->fetchAll( PDO::FETCH_COLUMN, # );
     
 
-
-
 queryAll method
 ~~~~~~~~~~~~~~~
 Change: 
-
 
 .. code-block:: php
 
@@ -234,7 +203,6 @@ $result = $pdo->query( $qry );
 $var = $result->fetchAll();
 </source>
 
-
 getOne method
 ~~~~~~~~~~~~~
 Change: 
@@ -246,7 +214,6 @@ to:
 $result = $pdo->query( $qry );
 $res = $result->fetchColumn();
 </source>
-
 
 mysql_real_escape_string function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -267,7 +234,6 @@ to:
 <source lang="php">
 I2CE_PDO::escape_string()
 </source>
-
 
 Method and Field changes
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -296,5 +262,4 @@ Method and Field changes
 | <code>$db->getOption('result_buffering')</code>
 | <code>$db->getAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY)</code>
 |}
-
 

@@ -6,7 +6,6 @@ iHRIS Collect is intended as a one-time data collection survey tool built on the
 Motivation
 ^^^^^^^^^^
 
-
 * See the following  `HRIS Blog Entry <http://www.capacityproject.org/hris/blog/index.php/2009/09/ihris-collect/>`_  for a general overview
 * Moving from a paper based system directly to iHRIS Qualify or iHRIS Manage often involves difficulty as the data is not cleaned.  So this is really a three step process:
 * *collect the data
@@ -17,7 +16,6 @@ Motivation
 * If data entry clerks are maintained between the one-time data collection process and the routine data collection, they will have a similar system which reduces training.  This is the process for the iHRIS Manage implementation in Zanzibar,
 * we have lot of similar functionality and design architecture already built into the system via the custom reporting tool.
 
-
 Staged Implementation
 ^^^^^^^^^^^^^^^^^^^^^
 There are several possibilities for a staged implementation.  The stages do not necessarily need to be completed in order.  They more reflect a break down into functional units that will ultimately benefit iHRIS Manage, Qualify and Plan.
@@ -25,7 +23,6 @@ There are several possibilities for a staged implementation.  The stages do not 
 Stage 1:Branding/Single Form
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In this stage, we develop the branding and provided a minimial implementation for iHRIS Collect:
-
 
 * Settle on the name (iHRIS Collect)
 * Choose color scheme and update CSS.  I vote for beige.
@@ -35,7 +32,6 @@ In this stage, we develop the branding and provided a minimial implementation fo
 * A survey page: is a form and its associated template file.  Each such page should be packaged as a module and assigned a task to view/edit the data.
 * To enable custom reporting,  for each form one needs to define the relationship which contains just the form as a primary form.
 * perhaps we can write a script to automate this once the fields (and their types) for a survey are defined.
-
 
 Stage 2:Custom Pages
 ~~~~~~~~~~~~~~~~~~~~
@@ -49,7 +45,6 @@ Stage 4:Custom Page Displays
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As the custom pages will general follow a similar architecture to the custom reporting tools, we can extend the functionality of the custom pages by adding in custom displays.  Here are some possible displays:
 
-
 * create a PDF version of the survey for paper-based collection.  Is this the priority here?  Should not be too difficult to do.  A few potential pitfalls:
 * *what to do with long lists of data, should we display them all and have a check box? or should we leave it as free text and let the data entry people deal with it?
 * *what about tiered data lists such as geography (district, region, country)?
@@ -59,12 +54,9 @@ As the custom pages will general follow a similar architecture to the custom rep
 * * ` openxdata <http://www.openxdata.org/>`_
 * * `  epihandy <http://www.epihandy.com/index.php/Main_Page>`_  and and  `omevac <http://code.zegeba.org/EpiHandy/wiki/OmevacDevelopers>`_
 
-
 Other Documents
 ^^^^^^^^^^^^^^^
 
-
 * [[File:IHRIS_Collect.pdf]]
 * `HRIS Blog Entry <http://www.capacityproject.org/hris/blog/index.php/2009/09/ihris-collect/>`_
-
 

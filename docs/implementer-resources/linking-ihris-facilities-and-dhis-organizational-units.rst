@@ -3,7 +3,6 @@ Linking iHRIS Facilities and DHIS Organizational Units
 
 The 4.1 series development code now has the ability to rapidly link iHRIS facilities with the DHIS2 organizational units.  This functionality will be a part of the next release, 4.1.7.  This is accomplished with the "DHIS Facility Map" modules.
 
-
 Reporting to DHIS2
 ^^^^^^^^^^^^^^^^^^
 This module is intended to facilitate reporting of aggregate data, such as the number of health workers at a clinic, from iHRIS to DHIS2.  
@@ -12,20 +11,16 @@ Once the facilities in iHRIS are linked with the DHIS2 metadata, the DHIS2 facil
 
 You may want to develop and XSLT to transform the iHRIS report into the DHIS2 DXF format.  Discussion on how to do this is out of scope for this document, however you may wish to view this  `related example <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-student-tracking/trunk/view/head:/modules/DHIS2_StudentStatus/sources/student_status.xsl>`_ 
 
-
 Enabling the Module
 ^^^^^^^^^^^^^^^^^^^
 You have two ways to enable the module.  Either through the web interface or by adding the following line to your site customization XML file.
-
 
 .. code-block:: xml
 
      <enable name="DHIS_FacilityMap" />
     
 
-
 To enable this module in the web interface, do the following:
-
 
 * Click on "Configure System"
 * Click on "Configure Modules"
@@ -34,12 +29,9 @@ To enable this module in the web interface, do the following:
 * Check the box to the left of "DHIS Facility Map"
 * Click on the "Enable" button
 
-
-
 Exporting DHIS Metadata
 ^^^^^^^^^^^^^^^^^^^^^^^
 To obtain the DHIS2 metadata export, see the  `DHIS2 documentation <http://www.dhis2.org/doc/snapshot/en/user/html/ch19.html#d5e2772>`_ .  You will want to select the "XML" format and "Uncompressed" and you should obtain a file "Export.xml."
-
 
 Uploading DHIS2 Metadata
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -63,15 +55,11 @@ Once you have uploaded the DHIS2 Metadata, clicking on the "Organizational Units
 
  
 
-
-
 Notes:
-
 
 * it may take a short amount of time for the caches of the DHIS metadata to be rebuilt after an upload.
 * the maximum file upload size in php.ini as well as max post size need to be at least as big as the size of the Export.xml
 * the max_allowed_packet in mysql's my.cnf needs to be at least as big as the size of Export.xml
-
 
 DXF 2.0 File Format
 ^^^^^^^^^^^^^^^^^^^
@@ -92,12 +80,9 @@ And for Org Units
 * /modules/forms/forms/dhis_orgunit/storage_options/XML/fields/code = attribute::code
 * /modules/forms/forms/dhis_orgunit/storage_options/XML/fields/dhis_uid = attribute::id
 
-
-
 Linking Facilities
 ^^^^^^^^^^^^^^^^^^
 Once you have uploaded the DHIS2 metadata, you can link this facilities in iHRIS. 
-
 
 * Click the "Administer Database" section
 * Click on "Office/Facility"
@@ -110,13 +95,9 @@ Once you have uploaded the DHIS2 metadata, you can link this facilities in iHRIS
 .. image:: images/dhis_link_facility.png
     :align: center
 
-
-
-
 HTML Templates
 ^^^^^^^^^^^^^^
 If your site customizations include either of the files "view_list_faciltiy.html" or "lists_form_facility.html"  you should add the following lines:
-
 
 .. code-block:: xml
 
@@ -130,6 +111,4 @@ which will display the field which links the DHIS2 Organizational Unit to the iH
 You can see an example of this  `here <http://bazaar.launchpad.net/~intrahealth+informatics/ihris-common/4.1-dev/view/head:/modules/Facility/templates/en_US/lists_form_facility.html>`_  on lines 9-11. 
 
 If your site does not include either of these html templates, you should not need to make any changes.
-
-
 

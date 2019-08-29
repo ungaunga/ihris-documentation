@@ -7,12 +7,9 @@ Got questions? Check our [[Frequently Asked Questions]] list or [[Project Commun
 
 Found a bug? Want to request a new feature?  `Use this form <http://www.ihris.org/developers/bug-reports-and-feature-requests/>`_ .
 
-
-
 Software Applications
 ^^^^^^^^^^^^^^^^^^^^^
  `iHRIS <https://launchpad.net/ihris-suite>`_  is a set of health workforce information solutions. Our source code is hosted at Launchpad and is available free to download, use, and modify under the GPL V3 license. The following applications and supporting software are available:
-
 
 * `iHRIS Manage <https://launchpad.net/ihris-manage>`_ , a human resources management tool that enables an organization to design and manage a comprehensive human resources strategy
 * `iHRIS Qualify <https://launchpad.net/ihris-qualify>`_ , a health worker training, licensing, and certification tracking system
@@ -26,7 +23,6 @@ Software Applications
 * [[Upgrade and Testing Instructions for iHRIS 4.3]]
 * [[Code Downloads|Source Code Downloads]] for iHRIS software
 
-
 Technical Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^
 The [[Technical Documentation|Technical Overview of iHRIS]] is the place to start with understanding how iHRIS is structured. Please read the [[Introduction and Overview]] first if you are new to working with iHRIS.
@@ -34,7 +30,6 @@ The [[Technical Documentation|Technical Overview of iHRIS]] is the place to star
 [[Technical Chats]] are led by a senior iHRIS developer each week on a different topic and archived here.
 
 Documentation and tutorials are also available on:
-
 
 * [[Security]] procedures included in iHRIS software.
 * [[Interoperability|Exporting data]] for decentralized environments or sharing with other HIS
@@ -45,8 +40,6 @@ We also have several tutorials for [[Implementer Resources|implementers who are 
 
 Most of this documentation has been translated into [[Spanish-language Resources|Spanish]].
 
-
-
 Contributing to the Project
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Check [[Design Documents]] for descriptions of new features and applications currently under consideration for development. 
@@ -56,5 +49,4 @@ To understand our priority development needs, including core system improvements
 For developers who are creating software releases or packages, we are currently revising our [[Software Release Procedure]]. 
 
 [[Translations]] describes the process for translating the iHRIS software and enabling translations.
-
 

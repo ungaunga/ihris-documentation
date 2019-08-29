@@ -14,7 +14,6 @@ Will be associated (via the I2CE_Page_SwissMagic) to the /modules/forms/formClas
 
 Functionality:
 
-
 * lists all the available form classes
 * * i2xe_swiss is an itereator so you can do a foreach ($this as $name=>$swissChild)
 * allow the creation of a new form class by specifying:
@@ -23,24 +22,20 @@ Functionality:
 
 All of this children have type I2CE_Swiss_FormClass
 
-
 I2CE_Swiss_FormClass
 ~~~~~~~~~~~~~~~~~~~~
 This is the the swiss node associated to each of the subclasses of I2CE_Form.
 Correponds to the magic data node /modules/forms/formClasses/$formClass
 If has the following functionality:
 
-
 * links to the [[#I2Ce_Swiss_FormClass_Fields|fields]] menu
 The child 'fields' has type [[#I2CE_Swiss_FormClass_Fields|FormClass_Fields]]
-
 
 I2CE_Swiss_FormClasss_Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Container swiss node to  hold all of the fields.  
 Corresponds to the magic data node /modules/forms/formClasses/$formClass/fields.
 Functionality:
-
 
 * lists all the fields in this class
 * allow you to add a new field to this class by specifying
@@ -53,13 +48,11 @@ Functionality:
 
 Each child of this node has type FormClass_Field
 
-
 I2CE_Swiss_FormClass_Field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is the swiss node responsible for defining the field in a form class.
 Corresponds to the magic data node /modules/forms/formClasses/$formClass/fields/$field.
 Functionality:
-
 
 * specify the 'formfield' this is (almost) the subclass of I2CE_FormField which this field takes values in.
 * *Really it is the key of the key/value pairs options under /modules/forms/FORMFIELD (e.g. DATE_Y, STRING_LINE)
@@ -71,19 +64,16 @@ Functionality:
 * links to the [[#I2CE_Siwss_FormClass_Field_Headers| headers]] menu
 * allows to specify the default values (either the fields default or default_eval)
 
-
 I2CE_Swiss_FormClass_Field_Headers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Specifies the headers for a form field. 
 Corresponds to the magic data node /modules/forms/formClasses/$formClass/fields/$field/headers.
 Functionality:
 
-
 * specify the 'default' header.
 * *use get/setField() with $field = 'default'
 * specify any other named header named $name.
 * *use I2CE_Swiss->get/setField() with $field = $nam
-
 
 I2CE_Swiss_FormClass_Field_Meta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,23 +82,19 @@ Corresponds to the magic data node /modules/forms/formClasses/$formClass/fields/
 
 Functionality:
 
-
 * If the form field subclass I2CE_FormField_MAPPED then links to the [[#I2CE_Swiss_FormClass_Field_Meta_Displays|displays]] menu
 * If the form field subclass I2CE_FormField_MAPPED then links to the [[#I2CE_Swiss_FormClass_Field_Meta_Limits|limits]] menu
 * If the form field subclass I2CE_FormField_MAPPED then links to the [[#I2CE_Swiss_FormClass_Field_Meta_Form|selectable forms]] menu
-
 
 I2CE_Swiss_FormClass_Field_Meta_SelectableForms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Corresponds to the magic data node /modules/forms/formClasses/$formClass/fields/$fields/meta/form and is the list of the forms that a mapped field can take values in:
 Functionality:
 
-
 * list the existing valid forms (note, if there are none than the valid form is the field name itself)
 * add a valid form (NOT a form class)
 * *The valid forms are those forms whose implementing form class extends I2CE_List
 * *The list of available forms are accessed as keys of  /modules/forms/forms
-
 
 I2CE_Swiss_FormClass_Field_Meta_Displays
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -117,12 +103,10 @@ Corresponds to the magic data node. /modules/forms/formClasses/$formClass/fields
 
 Functionality:
 
-
 * lists any existing displays
 * allows the creation of any new display by specfiying a shortname.  By default it should fill in the shortname to be 'default'
 
 All children have type FormClass_Field_Meta_Display
-
 
 I2CE_Swiss_FormClass_Field_Meta_Display
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -132,9 +116,6 @@ Handles setting the displays for mapped fields.
 
 Corresponds to the magic data node /modules/forms/formClasses/$formClass/fields/$fields/meta/displays/$display.
 
-
-
-
 I2CE_Swiss_FormClass_Field_Meta_Limits
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Container node for the limits on  various displays of mapped fields. 
@@ -142,12 +123,10 @@ Corresponds to the magic data node. /modules/forms/formClasses/$formClass/fields
 
 Functionality:
 
-
 * lists any existing limits
 * allows the creation of any new limit by specfiying a shortname.  By default it should fill in the shortname to be 'default'
 
 All children have type FormClass_Field_Meta_Limit
-
 
 I2CE_Swiss_FormClass_Field_Meta_Limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -159,16 +138,13 @@ Corresponds to the magic data node /modules/forms/formClasses/$formClass/fields/
 
 It is used, for example when displaying the list of valid countries for a the location field of person.
 
-
 I2CE_Swiss_Forms
 ^^^^^^^^^^^^^^^^
  **NEED TO SPEC THIS OUT** 
-
 
 * Define a form
 * *choose the form class
 * *choose a short name
 * *give a description
 * *set the [[Form Storage Mechanisms|data storage mechanism]]
-
 

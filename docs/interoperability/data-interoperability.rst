@@ -13,13 +13,11 @@ The individual data elements of the system are called fields, all of which are a
 
 Individual data elements, or fields, are collected together in forms.   An instance of a form are the values associated with a particular unique ID. You may think of a form as a row in database table, and a field as a column of that table. For example a person form may be defined as:
 
-
 * person
 * *firstname (string)
 * *surname (string)
 * *date_of_birth (date -- month/day/year)
 while an instance would be:
-
 
 * person
 * *id=9234
@@ -30,7 +28,6 @@ while an instance would be:
 Mapped Fields
 ~~~~~~~~~~~~~
 There are special fields, which subclass I2CE_FormField_MAPPED, whose values are references to other forms which subclass I2CE_List.  For example, we could amend the above 'person' form to include a field 'place_of_birth' which take values in any of the following list forms (and their fieldss):
-
 
 * country
 * *name (string)
@@ -44,11 +41,9 @@ There are special fields, which subclass I2CE_FormField_MAPPED, whose values are
 * *name (string)
 * *districy (map, with values in 'district')
 
-
 Parent/Child Relationship
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 A second type of relationship between forms is the parent/child relationship.  You may specify a form has having one or more forms as a child.  For example, suppose we defined the 'salary' form as follows:
-
 
 * salary
 * *start_date (date -- month/day/year)
@@ -56,11 +51,9 @@ A second type of relationship between forms is the parent/child relationship.  Y
 * *amount (currency)
 then an instance of a 'person' form may many instances of the 'salary' form as children which reflects their change in salary over time.
 
-
 Importing Data
 ^^^^^^^^^^^^^^
 One fundamental means available to the system of importing data from other information systems is through defining various [[Form Storage Mechanisms|storage mechanisms]] for the form data.
-
 
 Exporting Data
 ^^^^^^^^^^^^^^
@@ -80,14 +73,11 @@ For any form in a form relationship, you can adjoin an additional form which som
 
 Form relationships can either be defined using [[Configuration (Magic) Data | configuration (XML)]] data, or via the on-line GUI tool.
 
-
 Please take a look at the following [[Custom Reporting -- Creating Form Relationships#Example|example]].
-
 
 Custom Reports
 ~~~~~~~~~~~~~~
 Once a form relationship has been defined, a report can built by selecting the data fields which are relevant to this report.  The system will then create a table in the database which holds the data in the report, the columns of which are the selected fields, and the rows of which are each the collection of forms satisfying the form relationship.
 
 Currently, this data can be view through the web browser, exported to a CSV file, exported to a HTML file,  printed as PDF, and viewed with charting software.  There are plans to make available the data via other formats, such as the Indicator Exchange Format (IXF).  The various exports of the data are defined by subclassing I2CE_CustomReport_Display as appropriate.
-
 

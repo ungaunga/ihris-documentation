@@ -9,7 +9,6 @@ Usos
 ^^^^
 La estructura de límites de datos se utiliza en, por ejemplo:
 
-
 * I2CE_Form::search()
 * I2CE_Form::listFields()
 * Form Relationships
@@ -25,11 +24,9 @@ Recuerde que cada campo tiene un tipo, tal como INT o INT_LIST, que se traduce e
 
 La mayoría de estos estilos de límites y sus códigos auxiliares se pueden encontrar en el módulo **form-limits.**  
 
-
 Estructura de los Límites de Datos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Permitimos formulario por formulario, la existencia de compuestos lógicos de límites de cualquier campo a través de una estructura de arreglo anidado (o datos magic). La estructura del límite de un *expression node*  es de la siguiente manera:
-
 
 * operator: Requerido. Nos dice que tipo de nodo es este nodo de expresión. Los valores válidos son 'FIELD_LIMIT', 'AND', 'XOR', 'OR', y 'NOT'
 * operand: Solamente se utiliza en el caso de 'AND', 'XOR', 'OR' y 'NOT' el cual es requerido. Es un sub-arreglo/sub-nodo que consiste de cero o más *limit expression nodes.*   En el caso de 'NOT' existe la mayor limitación de que el número es exactamente uno.
@@ -81,11 +78,9 @@ sería interpretado en SQL como:
  ((`person+surname` LIKE 'N%th') AND ( NOT (( `person+othername` = 'Mike') OR (`person+othername` = 'Michael'))))
 Desafortunadamente, con tal afirmación no encontraría `Mike Nesmith <http://en.wikipedia.org/wiki/Michael_Nesmith#The_Monkees>`_ .
 
-
 Estilos Existentes
 ^^^^^^^^^^^^^^^^^^
 Estos son los estilos de límites proporcionados por *form-limits*  versión 3.2.0.  Por favor vea la clase misma para obtener información más actualizada.
-
 
 * I2CE_FormField
 * *null: No data array.
@@ -138,8 +133,6 @@ Estos son los estilos de límites proporcionados por *form-limits*  versión 3.2
 * *lessthan: Data array has key 'hour' which is an hour (integer), 'minute' which is a minute (integer), and 'second' (integer), 'year' which is a year (integer), 'month' which is a month (integer), and 'day' which is the day of the month (integer), 'year' which is a year (integer), 'month' which is a month (integer), and 'day' which is the day of the month (integer).
 * *between: Data array has keys 'min' and 'max' each of which is an array which contains the keys 'hour' which is an hour (integer), 'minute' which is a minute (integer), and 'second' (integer), 'year' which is a year (integer), 'month' which is a month (integer), and 'day' which is the day of the month (integer).
 
-
-
 * I2CE_FormField_DB_INT
 * *between. Data array has keys 'min' and 'max.'
 * *equals. Data array has key 'value' which is a scalar.
@@ -174,5 +167,4 @@ Estos son los estilos de límites proporcionados por *form-limits*  versión 3.2
 * *yesno: No data array.
 * *yes: No data array.
 * *no: No data array.
-
 

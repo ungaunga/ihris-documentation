@@ -5,11 +5,8 @@ This describe the magic data structure used for defining a [[Class: I2CE_FormFie
  /modules/forms/formClasses/$formClass/fields/$field
 for the given form class $formClass and field name $field.
 
-
-
 Magic Data Structure
 ^^^^^^^^^^^^^^^^^^^^
-
 
 * meta: required parent node.
 * *form: optional parent node.  subnodes are scalar nodes whose values are the forms that this field can reference.
@@ -25,32 +22,25 @@ Magic Data Structure
 * *****n: requried scalar node the name of the last field whose display value is passed to printf
 * ***$display: optional parent node.  Another named display for this field.  Sub-nodes are exactly the same as those defined for default
 
-
 HTML Template
 ^^^^^^^^^^^^^
 To display the default 
-
 
 .. code-block:: xml
 
        <span type='form' name='$form+$field'/>
     
 
-
 To select another display, $display:
-
 
 .. code-block:: xml
 
        <span type='form' name='$form+$field' show='$display'/>
     
 
-
-
 Editing the Field Value
 ^^^^^^^^^^^^^^^^^^^^^^^
 For the moment, the field is not editable.  Rather its value should be set by a page's logic.
 
 At a later point, we can make the value set via the selection of a primary form (or other?) in from a report.
-
 

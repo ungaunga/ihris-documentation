@@ -7,17 +7,12 @@ IHRIS and HRIS Marketing Resources
 
  ** `USAID's Investment in Open Source HRIS Software Takeaway Sheet <http://www.ihris.org/mediawiki/upload/Cribsheet.pdf>`_ **  (PDF)
 
-
-
-
 'One-page’ overviews
 ^^^^^^^^^^^^^^^^^^^^
 
  `Why Strengthen Human Resources Information Systems? <http://www.capacityplus.org/files/resources/HRIS_overview.pdf>`_  (PDF)
 
  `Issue Brief: Health Worker Information Systems <http://www.capacityplus.org/files/resources/HRIS_overview.pdf>`_  (PDF)
-
-
 
 Product-specific ‘white papers’
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -26,16 +21,12 @@ Product-specific ‘white papers’
 
  `iHRIS QUALIFY: A Tool for Tracking Health Professionals and Their Qualifications <http://www.capacityplus.org/files/resources/iHRIS-Qualify-overview.pdf>`_  (PDF)
 
-
-
 Technical Briefs – in-depth focus on specific technical issues and approaches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  `Technical Brief: “West Africa’s Regional Approach to Strengthening Health Workforce Information” <http://www.capacityplus.org/files/resources/west-africa-regional-approach-strengthening-health-workforce-information.pdf>`_  (PDF)
 
  `Technical Brief: “Holding Health Workers Accountable: Governance Approaches to Reducing Absenteeism” <http://www.capacityplus.org/files/resources/holding-health-workers-accountable-governance-approaches-reducing-absenteeism.pdf>`_  HRIS Strengthening and iHRIS are briefly mentioned in the recommendations as one important cornerstone for generating information on absenteeism. (PDF)
-
-
 
 ‘Voices’ – HRIS Strengthening and iHRIS in the words of our country and regional champions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -48,14 +39,10 @@ Technical Briefs – in-depth focus on specific technical issues and approaches
 
  `"Eliminating Quacks and Improving Health Care in Uganda" <http://www.capacityplus.org/files/resources/Voices-12.pdf>`_  (PDF)
 
-
-
 Other Media
 ^^^^^^^^^^^
 
  `“From Kampala to the Districts” <http://www.intrahealth.org/~intrahea/files/media/health-systems-and-hrh/kampala_to_districts.pdf>`_  (PDF)
-
-
 
 Buzz
 ^^^^
@@ -81,5 +68,4 @@ These are mentions of iHRIS in external media.
  `iHRIS Plan page on Ohloh <https://www.ohloh.net/p/ihris_plan>`_ 
 
  *This page was last updated 2013-01-30.* 
-
 

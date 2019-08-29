@@ -9,7 +9,6 @@ Existing lists of values may be a helpful starting point, but such lists invaria
 
 We recommend the following steps to clean existing health workforce data for use in data collection tool drop-down menus.  We describe this process based on Microsoft Excel software, but these steps can be adapted for use with other spreadsheet software programs.
 
-
 * Format the spreadsheet so that all data categories, or fields, are positioned as ‘headers’ in the first row of the spreadsheet, at the top of each column.  All of the values in each field should be listed below the header to which they correspond.
 * Use the “Remove Duplicates” tool in the Data Tools bar to eliminate all exact duplicates from each list.  Remember that this tool will only remove duplicate values that are exactly the same.  Even an additional space will prevent the tool from recognizing a value as a duplicate. *[Add screenshot]*
 * Use the “Sort” tool in the Sort and Filter bar to sort the list of values in alphabetical order.

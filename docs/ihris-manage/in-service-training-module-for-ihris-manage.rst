@@ -1,7 +1,6 @@
 In-service Training Module for iHRIS Manage
 ===========================================
 
-
 Vision
 ^^^^^^
 
@@ -9,10 +8,8 @@ The In-service Training Module is a solution for managing employees taking in-se
 
 This is not a module to administer a complete training program for employees, however; that is out of scope. It is assumed that training programs will be administered by external organizations, and the organization using iHRIS Manage is only interested in knowing which employees requested and completed trainings.
 
-
 High-Level Goals
 ^^^^^^^^^^^^^^^^
-
 
 * Track training programs.
 * Create employee training plans.
@@ -21,20 +18,15 @@ High-Level Goals
 * Import trainings from other systems and link to competencies *(would be nice).*
 * Link trainings to promotions and raises *(would be nice; probably later).*
 
-
-
 Training Manager Role
 ~~~~~~~~~~~~~~~~~~~~~
 
 A new role has been identified for this module: Training Manager. This person is a member of the HR department or an external unit, such as a training or continuing professional development unit, but is responsible solely for managing employees taking training programs and can complete no other use cases. The Training Manager can, however, create a competency model for the organization and assess employee competencies (see the separate blueprint for the Competency Model module). However, the HR Staff or HR Manager role can also complete any of these use cases, for situations where there is no dedicated Training Manager.
 
-
-
 Specific Use Case Titles (from High-Level Goals)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  *Use cases are currently being written and evaluated. Use cases will be posted once this process is complete.* 
-
 
 * Add or update training program categories. -- *The Training Manager updates the list of training program categories for selection within the system.*
 * Add or update a training funder. -- *The Training Manager adds details about a training funder to the system.*
@@ -45,14 +37,10 @@ Specific Use Case Titles (from High-Level Goals)
 * Assess training results and update competencies. -- *After an employee has completed a training, the Training Manager assesses their performance and updates their qualifications accordingly.*
 * Report on employees trained. -- *The Executive Manager or Training Manager generates a report on employees who have completed training programs.*
 
-
-
 Suggested Reports
 ~~~~~~~~~~~~~~~~~
 
 These are in addition to the reports already listed in the use cases.
-
-
 
 * Are the right people attending the right trainings at the right time?
 * Who requires training?
@@ -70,31 +58,23 @@ These are in addition to the reports already listed in the use cases.
 
 There are lots of report examples in JHPIEGO's TIMS system and in the NSDP system.
 
-
 Out of Scope
 ~~~~~~~~~~~~
 
 The following have been determined to be out of scope for this module:
 
-
-
 * **Adminster a training program**  -- this is most likely a separate system (iHRIS Train).
 * **Manage scholarships awarded to employees**  -- this is a separate module to be developed at a later time (on wishlist).
 
-
 Affected Systems
 ^^^^^^^^^^^^^^^^
-
-
 
 * Pilot is in Tanzania implementation of iHRIS Manage.
 * Implement in IntraHealth iHRIS Manage by **June 30, 2008**
 * Planned for inclusion in version 3.1 release/upgrade of iHRIS Manage
 
-
 Sources
 ^^^^^^^
-
 
 * Bangladesh NSDP HRIS
 * JHPIEGO TIMS

@@ -6,11 +6,8 @@ while  `moodle <http://www.moodle.org>`_  is written in PHP.
 
 In order to have close interaction, we will need to create/modify two plugins.  One for FrontlineSMS and one for moodle.   Primary end-user interaction will be through Moodle.  The aim is to keep these two programs loosely coupled and to expose needed FrontlineSMS functionality via its Web API (HTTP Triggers).  Development should begin with adding in these triggers
 
-
 FrontlineSMS and Triggers
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 
 * Source: http://sourceforge.net/apps/trac/frontlinesms/browser/trunk/src
 * HTTP Trigger plugin: http://sourceforge.net/apps/trac/frontlinesms/browser/trunk/src/main/java/net/frontlinesms/plugins/httptrigger
@@ -25,22 +22,16 @@ FrontlineSMS and Triggers
 * * http://localhost:{port}/send/groupsms/{grouppath}?content={conent}  -- send the indicate content to each member of the indicated group
 * '''Note:''' Groups in FrontlineSMS are hierarchical. If groupB is in groupA its group path is /groupA/groupB.
 
-
 FrontlineSMS Groups and Moodle Courses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 
 * Moodle UI to associate a course in moodle with a group in FrontlineSMS:
 * *groups should already be defined in frontline SMS. also have ability to create new group
 * * list/create groups should added by via an http trigger as indicated above
                 
 
-
 General Moodle Interaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 
 * Moodle UI so a user can associate a contact.id from frontline SMS
 * * uses puts in their mobile number
@@ -52,11 +43,8 @@ General Moodle Interaction
 * Participants in a course can send a SMS to any/all other partipicpants that
 * Administrator in course can send a message to any/all partipants in the course
 
-
 Moodle Forum interaction
 ^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 
 * Concept: Enable announcements and participation in Moodle forums via Frontline SMS
 * Reference:  http://docs.moodle.org/en/Forum_module
@@ -66,10 +54,8 @@ Moodle Forum interaction
 * sending a message on a moodle forum will initiate send the message the group registered for the course via http trigger sms/sendgroup
 * **More Specification pending for posting**  to a forum via FrontlineSMS.
 
-
 Moodle Quiz interaction
 ^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * **More Specification Pending**
 * need to add http triggers to FrontlineSMS to create/edit forms
@@ -80,13 +66,8 @@ Moodle Quiz interaction
 * need to modify moodle so that creating a quiz based on the above questions will put all the pieces of the frontline form together
 * need to add http trigger to FrontlineSMS to get read forms as answer to questions in a quiz for a specific user
 
-
-
-
 Related Moodle Plugins
 ^^^^^^^^^^^^^^^^^^^^^^
-
-
 
 * http://www.moodletxt.co.uk/download.php  **WARNING:**  NOT OPEN SOURCE
 * http://www.pageonejanettxt.com/products/moodlemobile GPL V2

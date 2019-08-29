@@ -3,18 +3,15 @@ Introduction and Overview
 
 iHRIS makes use of multiple tables in a relational database (MySQL) to store its data in. [[Database Structure]] describes several of the tables used by iHRIS, in particular the user table and the tables used for [[Form Storage -- Entry/Last Entry|audited form data changes]].
 
-
 Modules
 ^^^^^^^
 This tutorial describes the iHRIS [[Module Structure]]. An iHRIS module is a collection of various types of "code" by the features that they provide to the system. Modules serve as the building blocks of iHRIS and are grouped according to the functionality they provide. 
 
 [[Modules Lists]] are links to the various [[Module Structure|modules]] used by iHRIS. 
 
-
 File Search Paths
 ~~~~~~~~~~~~~~~~~
 The [[File Search Paths|File Search Utility]] lets you easily categorize different files and make them available to iHRIS. It also allows you to copy a file from the core iHRIS Suite into your site customization to make changes there, without having to modify the core iHRIS software. Most often this is used to customize HTML templates or CSS files.
-
 
 Configuration (Magic) Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -26,25 +23,18 @@ The [[Swiss Magic Data Editor|Swiss Magic editors]] hierarchically edit and view
 
 This tutorial explains how to [[Migrating Forms from Entry to MagicData|how to migrate forms from previous versions that were stored in the entry table]] and move them to magic data storage, as well as update any mapped fields that referenced the values.
 
-
 Tasks and Roles
 ^^^^^^^^^^^^^^^
 iHRIS uses a task- and role-based security mechanism to limit access to various parts of the system. A user is assigned a role, and a role is a collection of tasks that the role can perform. This article describes how [[Tasks and Roles|roles and tasks]] are defined in Magic Data and used by the iHRIS system. 
 
-
-
 * [[IHRIS Task List|List of all tasks available in the iHRIS system]]
 * [[IHRIS Role List|List of all roles available in the iHRIS system]]
-
 
 Pages and Templates
 ^^^^^^^^^^^^^^^^^^^
 This tutorial describes the role of [[Pages and Templates]] in iHRIS. A page handles each URL request. A template is used to access the HTML elements of a page. 
 
-
-
 * [[IHRIS Template List|List of HTML Templates available in the iHRIS system]]
-
 
 Forms and Classes
 ^^^^^^^^^^^^^^^^^
@@ -54,13 +44,10 @@ The [[Form Lists|form lists]] show how data are related in iHRIS. This is a [[IH
 
 The iHRIS system uses a level of abstraction to separate how data is stored in the system versus how it is organized and relates to each other. A form (and its fields) provides the organization. The data storage is handled by various [[Form Storage Mechanisms|form storage mechanisms]]. 
 
-
 Form Fields
 ~~~~~~~~~~~
 
 This article describes the main data types, or [[Form Fields|form fields]], used by iHRIS. These fields are defined in Magic Data; this page describes the details of how they should be defined. 
-
-
 
 * How to [[Adding Fields|add new forms and fields]]
 * How to [[Adding Form and Field Validations|add custom data validations for forms and fields]]
@@ -70,7 +57,6 @@ This page describes how to [[Defining Forms|define and customize forms and field
 
 This article describes the structure of [[Limiting Forms|how various limits are applied to forms]]. 
 
-
 Form Caches
 ~~~~~~~~~~~
 
@@ -79,7 +65,6 @@ The iHRIS software caches data saved in the database (or XML file or LDAP server
 Cached forms are used to save forms to a consistent format for exporting and for generating custom reports more quickly. There are a few settings [[Configuring Form Cache Generation Timing|you can override in your site configuration file]] to change this behavior. You can also see how to [[Turn Off Background Processes|turn off background processes]] if you wish to not have the form caches update automatically.
 
 If you've imported data multiple times, the form cache will include some of that old data. You can completely [[Recreate All Form Caches|recreate all the form caches]].
-
 
 Miscellaneous Tutorials
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,14 +79,11 @@ When you create a custom site, you may be adding new forms and fields, in which 
 
 Here is a note on [[Automatically Generated Integers]].
 
-
 Reports
 ^^^^^^^
 [[Custom Reporting]] -- This page collects the various articles that describe how to use the Custom Reporting system in iHRIS. This includes detailed documentation about the structure of custom reports and their use in advanced iHRIS features, as well as several tutorials on creating particular reports.
 
 [[Cron Jobs]] - Running functions on a regular basis with iHRIS.
 
-
 <br> We also have additional tutorials for [[Developer Resources|Developers]] or [[Implementer Resources|Implementers]].
-
 

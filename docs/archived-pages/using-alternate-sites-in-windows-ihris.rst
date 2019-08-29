@@ -1,7 +1,6 @@
 Using Alternate Sites in Windows iHRIS
 ======================================
 
-
 Overview
 ^^^^^^^^
 
@@ -13,17 +12,14 @@ which will silently install the Windows iHRIS suite to *C:\Program Files\ihris-s
 
 Since you are allowed to get as complicated as they want with your site module, the site can then load whatever data you need, e.g., all the positions, facilities, district information, etc.  However, your site must be *compatible*  with the standard wamp installation.  There is not a strict definition on what this means, rather your site should not very too much from the standard blank installation.  This is because the installer comes with a database pre-configured/pre-installed with what is essentially a blank installation.  Your site module will be an update to this installation.
 
-
 Making a Compatible Module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 We will look at the changes needed to make the [ `Uganda customization  <http://bazaar.launchpad.net/~ihris%2Buganda/ihris-uganda/ug-manage/files/5?start_revid=5>`_ ] of iHRIS Manage compatible for the windows installer.  Let us assume that you already have a copy of these files sitting at *c:\manage_installer\site* .  
-
 
 Adding Database Access
 ~~~~~~~~~~~~~~~~~~~~~~
 Browse to the [ `wamp installer <http://bazaar.launchpad.net/~intrahealth%2Binformatics/offline-ihris/3.1/files>`_ ] on Launchpad, 
 and download the file *source/local_configs/config.values.php_ihris-manage.install* .  This file should be saved to *C:\manage_installer\site\pages\local\config.values.php.install* .  You don't need to worry about editing this file, as the installer will substitute values as appropriate.
-
 
 Changes to the site module file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +54,6 @@ to:
 
         <configurationGroup name='ihris-manage-site-wamp'>
     
-
 
 Adding in paths
 ---------------
@@ -122,13 +117,11 @@ We need to add in the following lines:
 
 The *WAMPPHPROOT*  will be replaced by the installer with the directory ih which the php executable resides, while *WAMPAPACHEROOT*  will be replaced with directory in which the installer put Apache.
 
-
 Testing
 ^^^^^^^
 Verify that your changes worked by running
  C:\manage_installer\iHRIS-3.1.2 /components=ihrismanage /manageSITE=site /log=install.log
 If something failed, please send us a copy of the file *c:\manage_installer\install.log*  as well as the contents of the directory *c:\manage_installer\site*  so that we can trouble-shoot.
-
 
 Making a USB Disk-On-Key
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -150,7 +143,6 @@ Now create a file called *C:\manage_installer\autorun.inf*  with the contents:
     label=Windows iHRIS Manage Installer
     
 
-
 Now create a file called *C:\manage_installer\install.bat*  with the contents:
 
 .. code-block::
@@ -158,9 +150,7 @@ Now create a file called *C:\manage_installer\install.bat*  with the contents:
     iHRIS-3.1.2 /silent /components=ihrismanage /manageSITE=site /mysqlpass=WHATEVER /smtp=smtp.myserver.org /tasks=quicklaunchicon,desktopicon
     
 
-
 When the user pops in the USB-drive (or CD) it will install your customized version of iHRIS Manage.  It will set the root mysql password to *WHATVER*  (see [[Windows Security]]) and set the smtp server to be used to *smtp.myserver.org* .  Additionally, it will add an icon to the desktop and quicklauch bar.
-
 
 Command Line Options
 ^^^^^^^^^^^^^^^^^^^^
@@ -178,13 +168,11 @@ There are also three tasks which can be specified via */tasks*
 
 Some additional options are:
 
-
 * /smtp=XXXX   -- the smtp server used for outgoing mail
 * /mysqlpass=XXXX -- the root password used for mysql
 * /LocalInstall=X -- either 0 or 1.  If set to 1, the defualt, then software is only available on the machine it is installed on (localhost). If set to 0, then the software is available to any computer on the network.
 
 There are some others such as specifying the port that mysql and apache are listening on:
-
 
 * /apacheport  -- Defaults to 8081
 * /mysqlport -- Defaults to 8082

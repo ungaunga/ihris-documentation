@@ -4,7 +4,6 @@ Learning Materials
 =Accra, Ghana - September 2010=
 Here is a collection of learning materials centered around iHRIS and HIS in general presented at the  `KACE <http://www.aiti-kace.com.gh/>`_  in Accra, Ghana in September of 2010 as part of the  ` HIS Unconference <http://www.healthunbound.org/content/his-applications-and-interoperability-west-africa>`_ 
 
-
 * [[Media:ghana_bzr_launchpad.odp | Bazaar and Launchpad]] An introduction to using  `bazaar <http://en.wikipedia.org/wiki/Bazaar_%28software%29>`_   a  `version control system (VCS) <http://en.wikipedia.org/wiki/Revision_control>`_ .  In particular describes how to use bazarr as integerated into  ` launchpad <http://www.launchpad.net>`_  to maintain a software project.  (''Open Office Presentation'').  This is meant to be a hands-on tutorial for students working in teams.
 * [[Media:ghana_Custom_Reports.odp | Custom Reporting]] A hands-on tutorial on using the Custom Reporting system in the iHRIS Software.   (''Open Office Presentation'')
 * [[Media:ghana_decentralized_ihris_date_model.odp | Decentralized iHRIS Data Model]] A explanation of the decentralized data model used in version 4.0 of the iHRIS Software.   (''Open Office Presentation'')
@@ -20,7 +19,6 @@ Here is a collection of learning materials centered around iHRIS and HIS in gene
 
 =Bagamoyo, Tanzania - May 2010=
 Here is a collection of learning materials centered around iHRIS and HIS in general presented at Bagamoyo, TZ in May of 2010.
-
 
 * [[Media:Assessing_info_sys.odp |  Assessing a HIS]] Basics on assessing health information systems and using these assessment to detail system requirements by Use Cases (''Open Office Presentation'')
 * [[Media:bzr_launchpad.odp | Bazaar and Launchpad]] An introduction to using  `bazaar <http://en.wikipedia.org/wiki/Bazaar_%28software%29>`_   a  `version control system (VCS) <http://en.wikipedia.org/wiki/Revision_control>`_ .  In particular describes how to use bazarr as integerated into  ` launchpad <http://www.launchpad.net>`_  to maintain a software project.  (''Open Office Presentation'')

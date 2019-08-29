@@ -32,7 +32,6 @@ Follow the on-screen instructions to set up email on your system.  On Debian sys
 
 If you are using another Linux distribution, make sure your system can send email properly before continuing.
 
-
 Installing Pear and PECL Packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -44,15 +43,12 @@ We need to install a few Pear and PECL packages for PHP.  For the Pear packages 
     sudo pear  install MDB2 MDB2#mysql text_password console_getopt
     
 
-
 During certain activities like installation and upgrades you may need more memory than APC uses by default.  The php-apc package should have installed a file in /etc/php5/conf.d/apc.ini.  Edit this file and add the following line:
-
 
 .. code-block::
 
     apc.shm_size=100
     
-
 
 You'll need to restart Apache after making this change.
 
@@ -64,7 +60,6 @@ There are two optional packages you may wish to install:
     
 
 which are used to for inserting images into PDF output of reports and for exporting XML files in a nicely formatted manner
-
 
 Database Setup
 ^^^^^^^^^^^^^^
@@ -98,7 +93,6 @@ do this, click on  the 'Privileges' link and select 'Add a new User'. Then fill 
 .  For security, make sure the password
 you choose is different than the root password for mysql.  Let us refer to this password as YYYYY.
 
-
 Downloading the Software
 ^^^^^^^^^^^^^^^^^^^^^^^^
 To download the software you enter these commands:
@@ -116,8 +110,6 @@ To download the software you enter these commands:
     sudo tar -xjf ihris-suite-3_1_4.tar.bz2
     
 
-
-
 Creating a Site Configuration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -130,7 +122,6 @@ We are going to start by modifying the *BLANK*  site for iHRIS Manage.  If you w
     sudo cp -R /var/lib/iHRIS/current/ihris-manage/sites/blank /var/lib/iHRIS/sites/manage
     sudo mv /var/lib/iHRIS/sites/manage/iHRIS-Manage-BLANK.xml  /var/lib/iHRIS/sites/manage/iHRIS-Manage-Site.xml
     
-
 
 We now need to edit the site configuration file:
 
@@ -184,7 +175,6 @@ to:
     
 
 You may also choose to change *BLANK*  everywhere with your organization's name.  For best results, please choose one word, possilby with a dash, such as *Sample* , *MOH* , or *MOH-Taifeki.*   To make this change, hit the replace icon, fill in *blank*  under *Search for*  and *MOH-Taifeki*  under *Replace With,*  then hit replace all.
-
 
 Making the Site Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -259,7 +249,6 @@ to:
 
 Save and quit.
 
-
 Finishing up
 ^^^^^^^^^^^^
 Let us restart the Apache webserver using:
@@ -275,8 +264,6 @@ http://localhost/manage
 </center>
 and wait for the site to initalize itself.  Congratulations!  You may log in as the *administrator*  with the default password *administator.* 
 
-
-
 Files
 ^^^^^
 Here are samples of the files we edited above:
@@ -286,5 +273,4 @@ Here are samples of the files we edited above:
 <li> [[Media:htaccess.txt | /var/www/manage/.htaccess ]] </li>
 <li> [[Media:Config_values_php.txt | /var/www/manage/config.values.php]] </li>
 </ul>
-
 

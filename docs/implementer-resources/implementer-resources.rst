@@ -5,11 +5,8 @@ These resources support installing and maintaining the iHRIS software, as well a
 
 Got questions? Check our [[Frequently Asked Questions]] list or [[Project Communication|contact us]].  `Report a Bug <https://bugs.launchpad.net/ihris-suite>`_  for the iHRIS Suite on Launchpad, our hosting site.
 
-
 iHRIS Installation
 ^^^^^^^^^^^^^^^^^^
-
-
 
 * [[Installing iHRIS 4.2]]
 * [[Upgrading to iHRIS 4.2]]
@@ -20,11 +17,8 @@ Poor internet connection?  See creating a [[Software Repository Mirror]] for off
 
 An [[iHRIS Appliance]] is available for a small fee as a standalone solution for settings with limited ICT support.
 
-
 Setting Up iHRIS
 ^^^^^^^^^^^^^^^^
-
-
 
 * [[Map Data and Add New Fields]] -- Learn how data are displayed in iHRIS and add new forms and fields.
 * [[Customizing iHRIS]] -- Customize the display for your iHRIS implementation.
@@ -42,8 +36,6 @@ Configuring Reports
 
 Reporting is one of the most important features of iHRIS. These tutorials will teach you how to generate reports, archive reports, and customize reports to meet the needs of your organization.
 
-
-
 * [[Custom Reporting]]
 * * [[Custom Reporting -- Creating a Staff List Example]]
 * * [[Custom Reporting -- Creating Form Relationships]]
@@ -52,11 +44,8 @@ Reporting is one of the most important features of iHRIS. These tutorials will t
 * [[Display Mapped Field From a Report]]
 * [[Configuring iHRIS Dashboards]]
 
-
 Other Resources
 ^^^^^^^^^^^^^^^
-
-
 
 * [[Technical Documentation|Technical Overview of iHRIS]]
 * [[Decentralized iHRIS|Using iHRIS in a decentralized environment]]
@@ -68,5 +57,4 @@ Other Resources
 * `HRIS Strengthening Implementation Toolkit <http://www.ihris.org/toolkit/index.html>`_  -- a printable package of tools that facilitates implementing the iHRIS software. *To be updated: spring 2014.*
 
 We also provide several tutorials for [[Developer Resources|developers modifying the iHRIS code.]]
-
 

@@ -1,7 +1,6 @@
 Customizing Packaged iHRIS
 ==========================
 
-
 Experimental Packages
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -11,11 +10,7 @@ To install snapshots of the current development — which may or may not work �
 
 If you want to change any of the database parameterso, then modify the file in <tt>/etc/i2ce/Demo/config.values.php</tt>.
 
-
-
-
 * You should have the bare-bones installation running.
-
 
 Trying the iHRIS Manage Demo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,5 +45,4 @@ To create the database, use the following commands:
 4. Point your browser to the URL.  By default, an alias is created at http://YOUR_SERVER/ihris/manage/Demo/. If you're installing this on your local machine, then you would probably use http://127.0.0.1/ihris/manage/Demo/.
 
 5. You will be prompted to update the site.  Click “OK”.
-
 

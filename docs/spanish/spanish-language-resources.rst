@@ -1,14 +1,12 @@
 Spanish-language Resources
 ==========================
 
-
 Recursos en español
 ^^^^^^^^^^^^^^^^^^^
 
  `iHRIS Administrador Nivel 1 <http://www.hrhresourcecenter.org/elearning/>`_  -- Este curso provee instrucciones para obtener las habilidades básicas y poder administrar y personalizar el software de sistema para recursos humanos CapacityPlus, iHRIS Manage e iHRIS Qualify.
 
 Páginas wiki traducidas: 
-
 
 * [[Linux_(Ubuntu)_Installation - ES | Instalación de Ubuntu Linux]]
 * [[Create a Data Form Map For My Custom Site - ES | Crear un Formulario de Datos para Mi Sitio Personalizado]]
@@ -57,5 +55,4 @@ Páginas wiki traducidas:
 * *[[Help:Editing - ES | Ayuda: Edición ]]
 * [[Automatically Generated Integers - ES | Enteros Generados Automáticamente ]]
 * [[Reference Field - ES| Edición del Campo de Referencia]]
-
 

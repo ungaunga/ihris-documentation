@@ -3,7 +3,6 @@ IHRIS Qualify Installation - 4.1.9
 
 Once you have downloaded iHRIS, follow these instructions to install the blank site.  This assumes you have downloaded the software to /var/lib/iHRIS/lib/4.1.9/.  For instructions on installing Ubuntu and downloading the software see the [[Linux (Ubuntu) Installation - 4.1.9]] instructions.
 
-
 Database Setup
 ^^^^^^^^^^^^^^
 

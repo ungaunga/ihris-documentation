@@ -11,6 +11,3 @@ iHRIS Plan is planning and modeling software developed to improve how health sec
 
 [[iHRIS Plan Technical Documentation]]
 
-
-
-

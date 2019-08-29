@@ -7,8 +7,6 @@ Version 1.0.4
 
 Release date: 2008-12-02
 
-
-
 CONTENTS
 ^^^^^^^^
 
@@ -25,8 +23,6 @@ CONTENTS
 6. Known Issues
 
 7. About the Capacity Project
-
-
 
 1. CONTACT INFORMATION
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -45,7 +41,6 @@ IntraHealth International
 
 Chapel Hill NC 27517 USA
 
-
 2. ABOUT THIS SOFTWARE
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -59,12 +54,10 @@ IntraHealth Informatics Core Engine (I2CE) is a set of classes for handling data
 
 TexLayout is tools to handle text layout designed to create nicely formatted PDF files. This is used to generate PDF versions of reports.
 
-
 3. NEW FEATURES/BUG FIXES IN THIS RELEASE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This fixes were made in release 1.0.2:
-
 
 * Added an option to copy a projection, including all cadres and pool changes in the projection, to speed up data entry.
 * A total target number or a health worker-to-population ratio target can be entered for the initial target.
@@ -74,13 +67,10 @@ This fixes were made in release 1.0.2:
 
 Some minor bug fixes were made to version 1.0.2 and released as version 1.0.3. Some minor bug fixes were made to version 1.0.3 and released as version 1.0.4.
 
-
 4. HARDWARE AND SOFTWARE REQUIREMENTS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following software is required to be installed before installing iHRIS:
-
-
 
 * Apache Webserver 2.2+: http://www.apache.org
 * MySQL 5.0+: http://www.mysql.com
@@ -97,12 +87,8 @@ A web browser is required to run the software. Firefox 2+ (http://www.mozilla.co
 
 Optional:
 
-
-
 * Tidy from PECL: http://pecl.php.net/package/tidy (included by default for Ubuntu but not Windows)
 * GD Php Library: http://www.libgd.org
-
-
 
 5. INSTALLATION INSTRUCTIONS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -113,13 +99,10 @@ Before starting, you should read the User's Manual, which can be accessed by cli
 
 If you have questions or need support, please visit the iHRIS Website by clicking that button on any screen and use the Contact Us form to send us your question. 
 
-
-
 6. KNOWN ISSUES
 ^^^^^^^^^^^^^^^
 
 Currently, the Import Data function does not work. This issue will be corrected in an upcoming release.
-
 
 7. ABOUT Capacity''Plus''
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -129,5 +112,4 @@ Capacity''Plus'' is developing free, Open Source HRIS solutions, distributed und
 Capacity''Plus'' is a USAID-funded global project focused on the health workforce needed to achieve the Millennium Development Goals. Capacity''Plus'' is led by IntraHealth International, Inc. Find out more at www.capacityplus.org
 
 Development of this software was made possible by the support of the American people through USAID. The contents are the responsibility of the user and do not reflect the views of USAID, the United States Government or IntraHealth International.
-
 

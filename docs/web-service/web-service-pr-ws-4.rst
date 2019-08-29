@@ -8,7 +8,6 @@ Web Service:PR-WS-4
  |url=/ws/rest/v2/query/posts
  |params=This contains the following parameters to identify the provider whose details we shall return.  The values of epid, foasid and orgunit are "and"ed together:
 
-
 * ${epid} The provider's EPID. Optional.
 * ${fosaid} The facility code.  Optional.
 * ${orgunit} The code for the organizational unit for the posting.  Optional
@@ -18,7 +17,6 @@ Web Service:PR-WS-4
 * ${size} The maximum number number of IDs to return.  Defaults to 50.
 * ${start} The starting offset for listing IDs.  Defaults to 10.
  |response=*HTTP 200 - OK
-
 
 * If the format='hl7' .....
 * If the format='json' we return an array of associative arrays.  The associative arrays have keys for the post attributes.  For example:
@@ -37,7 +35,6 @@ Web Service:PR-WS-4
    }
 }
  |error=*HTTP 500 - Server Error - If the server encountered an error.
-
 
 * HTTP 400 - Bad Request - If the parameters are malformed.
  |resources=[[Use Case:PR-WS-4]]

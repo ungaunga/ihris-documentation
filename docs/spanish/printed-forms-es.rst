@@ -7,16 +7,13 @@ Este módulo primero aparece en la versión 4.0.5 de la Suite iHRIS.
 
 Dependiendo de sus necesidades, podría querer ver estos otros métodos para la generación de formularios estandarizados:
 
-
 * [[Printed Forms form Relationships (ODT)]]
 * [[Standardized Letters (ODT)]]
 * [[Printed Forms with Reports (ODT)]]
 
-
 Datos Fuente
 ^^^^^^^^^^^^
 Los datos fuente para el formulario impreso estarán basados en una [[Custom Reporting -- Creating Form Relationships|Relación de Formularios]].
-
 
 Interacción de Páginas
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -28,13 +25,11 @@ En la primera fase de este módulo, la única interacción es para producir los 
 
 Utilizar este URL causaría lo siguiente:
 
-
 * verificar que existe un formulario estandarizado llamado **registration**
 * verificar que el usuario tiene los permisos apropiados para ver este formulario estandarizado:
 * *Revisar si el usuario tiene la tarea 'printed_forms_all_generate''''
 * *Si no, revisar si la tarea 'printed_forms_generate_'''registration'''' existe y el usuario tiene esta tarea
 * para cada id, *person|12* , *person|14* , *person|22*  llenar los detalles del informe estandarizado utilizando las filas correspondientes en la tabla de informes si existe (ver abajo).
-
 
 Menú
 ~~~~
@@ -45,11 +40,9 @@ mostrará todos los formularios impresos cuyo formulario primario es person.  En
 
 También debe vincular a la página de archivo correspondiente y mostrar cuales formularios en PDF ya se han archivado para esa persona, clasificados por tipo y fecha.
 
-
 Archivo
 ~~~~~~~
 También debe crear un formulario, por ejemplo *generated_doc*  que contenga los siguientes campos:
-
 
 * document: Un campo binario que contendrá el PDF
 * date: la fecha en la que fue generado
@@ -58,10 +51,8 @@ Al llamar a la página de archivo como:
  http://'''<SITE_URL>'''/PrintedForms/archive/'''registration'''?ids[]=person|12&ids[]=person|14&ids=[]person|22
 Se ejecutará lo siguiente:
 
-
 * revisar si 'generated_form' es un formulario secundario de person.  Si no, la ejecución se detiene.
 * para cada id crear el formulario PDF (solo uno en cada página/documento) y guardarlo como un formulario secundario *generated_doc*
-
 
 Detalles de Datos Magic
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,7 +62,6 @@ En el ejemplo anterior los detalles que definen el formulario de registro se gua
  /modules/PrintedForms/forms/registration
 
 Los detalles de un formulario específico son los siguientes (todas las medidas son en mm):
-
 
 * relationship: Nodo escalar requerido. El nombre de la relación de formulario en la que se basa este formulario. Debe ser el nombre de un nodo secundario de */modules/CustomReports/relationships*
 * displayName: Nodo escalar opcional.  El nombre de la carta impresa como se muestra al usuario final.
@@ -100,11 +90,9 @@ Los detalles de un formulario específico son los siguientes (todas las medidas 
 * *type: Nodo escalar requerido.  Debe ser 'text' 'image' o 'value'
 * *definition:  Depende del tipo.  Ver abajo.
 
-
 Definición del tipo: Texto
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 El elemento del texto es determinado texto a ubicarse en el documento. Debe consistir de los siguientes nodos:
-
 
 * printf:  Nodo escalar opcional . La cadena printf debe ubicarse aquí.  Por defecto ''.  Ejemplo: "%s, %s has registration number %s"
 * printf_args:  Nodo primario opcional .  Un arreglo de argumentos a sustituirse en el printf de la siguiente manera
@@ -119,10 +107,8 @@ El elemento del texto es determinado texto a ubicarse en el documento. Debe cons
 * vert_max: Optional numeric scalar node.  La coordenada que está más al fondo para ubicar el texto.
 * vert_min: Valor escalar numérico requerido.   La coordenada de más arriba para ubicar el texto.
 
-
 Definición del Tipo: Imagen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 * image: Nodo standard Requerido. El nombre del archivo de imagen a ubicar. Puede ser:
 * *Un nombre de archivo, en cual caso la ruta de búsqueda utilizada es "PDF_IMAGES"
@@ -132,14 +118,12 @@ Definición del Tipo: Imagen
 * horiz_max:  Nodo escalar numérico opcional. El de más a la derecha coordina para ubicar la imagen.  Si está establecido, la imagen se re-escala si es necesario.
 * vert_max: Nodo escalar numérico opcional.  El de más abajo coordina para ubicar la imagen.   Si está establecido, la imagen se rescala si es necesario.
 
-
 Ejemplo
 ^^^^^^^
 
 Definir las características del Formulario Impreso
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Por ejemplo, para producir una Staff Hire Letter en iHRIS Manage podría definirla como:
-
 
 .. code-block:: xml
 
@@ -235,12 +219,9 @@ Por ejemplo, para producir una Staff Hire Letter en iHRIS Manage podría definir
       </configurationGroup>
     
 
-
-
 Crear un link para imprimir el formulario
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Después de que esto se ha establecido, debe abrir la plantilla de vista del formulario donde quiere ubicar el link a PrinteForm.
-
 
 .. code-block:: xml
 
@@ -254,5 +235,4 @@ Después de que esto se ha establecido, debe abrir la plantilla de vista del for
 Lo descrito arriba significaría que el nombre de PrintedForm es sample_hire_letter y es primario de person.
 
 Esta parte del código debe insertarse favorablemente bajo el link para actualizar la información de un formulario. (view_form_name.html)
-
 

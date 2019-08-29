@@ -49,4 +49,3 @@ This is a list of documentation needs submitted by members of the iHRIS Global C
 
  **Documentation process**  -- To include a general writing, categorizing and review process; a process for translating documentation; a process for capturing, reviewing, and sharing documentation that comes from the field; maintenance assignments to ensure that documentation is kept up-to-date.
 
-

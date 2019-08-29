@@ -9,7 +9,6 @@ Reviewing the [[Technical Documentation]] is a good first step before customizin
 
 For the main iHRIS packages, you can view and download the source code using launchpad where all our code is hosted.
 
-
 * `iHRIS Suite <https://code.launchpad.net/ihris-suite>`_
 * `iHRIS Manage <https://code.launchpad.net/ihris-manage>`_
 * `iHRIS Qualify <https://code.launchpad.net/ihris-qualify>`_
@@ -19,8 +18,6 @@ For the main iHRIS packages, you can view and download the source code using lau
 
 Supporting software can also be found here:
 
-
 * `iHRIS Common <https://code.launchpad.net/ihris-common>`_
 * `I2CE <https://code.launchpad.net/i2ce>`_
-
 

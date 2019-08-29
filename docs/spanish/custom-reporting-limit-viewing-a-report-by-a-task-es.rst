@@ -7,14 +7,11 @@ Puede limitar la visualización de un informe (una visualización de informe) a 
 
 En el ejemplo que sigue, avanzaremos por los tres pasos donde queremos limitar la visualización de la lista de instalaciones para el rol de "Executive Manager".  
 
-
-
 Paso 1: Crear una Tarea Nueva
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 El primer paso es crear una tarea nueva lo cual requiere [[#Enabling the Tasks and Roles Module | Task and Roles module to be enabled]].
 
 Una vez que el módulo Tasks and Roles esté habilitado se hace lo siguiente:
-
 
 * Haga click en "Configure System"
 * Haga click en "Tasks Roles"
@@ -22,22 +19,17 @@ Una vez que el módulo Tasks and Roles esté habilitado se hace lo siguiente:
 * Vaya a la parte de abajo de la página
 Una vez que esté en la parte de abajo de la página, puede crear una tarea nueva. Aquí se crea una tarea con:
 
-
 * El Nombre puesto en  "view_facility_list_report"
 * La descripción puesta en "Task to restrict access to the facility list report"
 
 .. image:: images/create_report_task.png
     :align: center
 
-
-
  *Nota:*  También puede utilizar una tarea existente en lugar de crear una nueva.
-
 
 Paso 2: Asignar la Tarea a un Rol
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Ahora que hemos creado una tarea nueva para el informe, necesitamos asignarla a los roles de uso que nos interesen.
-
 
 * Haga click en "Configure System"
 * Haga click en "Tasks Roles"
@@ -58,13 +50,9 @@ Repita esto con cada rol que desee que pueda visualizar el informe.
 .. image:: images/add_task_to_role.png
     :align: center
 
-
-
-
 Paso 3: Asignar la Tarea a la Visualización del Informe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Ahora podemos asignar la tarea a la visualización del informe a la que nos interesa restringir el acceso.
-
 
 * *Haga click en "Configure System"
 * *Haga click en "Report Views" under "Manage Reports"
@@ -76,18 +64,13 @@ Ahora, solo los usuarios con el rol "Executive Manager" pueden ver el informe de
 .. image:: images/limit_report_to_task.png
     :align: center
 
-
-
-
 Habilitar el Módulo de Tareas y Roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Para habilitar en módulo de tareas y roles, el cual permite editar tareas y roles a través de la interfaz web, siga los pasos siguientes:
-
 
 * Haga click en "Configure System"
 * Haga click en "Configure Modules"
 * Haga click en "Sub-Modules" to the right of "Pages"
 * Seleccione el módulo "Roles and Tasks"
 * Haga click en "Update"
-
 

@@ -1,8 +1,6 @@
 Provider Registry
 =================
 
-
-
 * [[Provider Registry Use Cases]]
 * [[Provider Registry Web Services]]
 * [[Provider Registry Requirements]]
@@ -15,5 +13,4 @@ Provider Registry
 * [[CSD Related Links]]
 
 Note from Carl: Merge with [[Design Documents]]
-
 

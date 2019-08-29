@@ -3,8 +3,6 @@ IHRIS Lessons Learned
 
 This page is for collecting lessons learned from the HRIS Strengthening and iHRIS Software Project, to be used in reporting results, building a knowledge base and other Y5 dissemination efforts. Please add to this page to build the collection. You can add your own thoughts under each subhead or add additional items as subheads.
 
-
-
 National ownership and capacity building must be priorities from the early stages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -18,8 +16,6 @@ There are too few input staff in the Councils to cope with a combination of staf
 
 Training is needed; cannot introduce a new tool and expect people to automatically know how to use it. There is a lack of understanding of the system’s abilities, security, back-up plan and the existence of a Windows version that does not depend on the Internet. (Uganda)
 
-
-
 Comprehensive stakeholder identification and involvement from the beginning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -29,21 +25,15 @@ Stakeholders don't know about each other and available data sources. For example
 
 Data frequently exist in small datasets or paper files that are not necessarily known by all stakeholders. Bringing together HRIS stakeholders, often for the first time in the same room, ensures that information is shared and helps the group quickly reach consensus for making good use of the data that do exist. 
 
-
-
 Key issues for stakeholders to address are data ownership, policies for data sharing and policy questions that the HRIS will answer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 [Need examples.]
 
-
-
 Implementing HRH interventions take a long time to change practices and show results =
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 One major lesson that emerged from this workshop is that people generally know what is wrong with their HR system, they are able to generate a plan and possible solutions – but they tend to get stuck at the implementation stage. Perhaps, this is the stage where we need to focus our attention more and begin to provide direct and sustained assistance with the implementation of specific activities or policy issues. 
-
-
 
 Place priority on ensuring the accuracy and authority of the government system for public service data.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,15 +48,12 @@ In both Namibia and Botswana, the Oracle HCM system will only capture the public
 
 As an administrative system for the public sector, Namibia and Botswana HCM systems do not include the private and FBO sectors. Ministries of Health need a complete picture of the health workforce in order to best plan for the country’s needs. This will eventually require a parallel data warehouse to capture private sector data and analyze it along with data from the public sector HRM system. The HRIS Strengthening activities in both countries are encouraged to consider an iHRIS Manage deployment when the time comes to serve as a data warehouse for this information.
 
-
-
 Standardization of data, within the country and at the international level, is key to increasing use and effectiveness of data.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to integrate certain types of data, inter-ministerial agreement is required on standardization of codes, such as locations. (Uganda)
 
 [[Using Previously Collected HRH Data to Create a Data Coding Scheme]]
-
 
 Capture data at the district level and use it there. Aggregate data at the central level for comprehensive country analysis and support.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,8 +63,6 @@ From the beginning of Capacity’s work in Uganda, the Project has been interest
 Rwanda has recently brought its own iHRIS Manage system online with data entry underway. District pilots are planned for early next year.
 
 The iHRIS Manage system will be rolled out to additional districts this year which will improve the timeliness and accuracy of information and will reduce workload at the Ministry. However, this will require the production of regular reports to senior management that analyze workforce trends and interpret their significance to the delivery of healthcare programmes. District data entry will reduce the flow of forms to the Ministry of Health and its data-entry burden. District staff can be slow at inputting data due to lack of basic computer knowledge and poor typing skills. Too few staff have been trained to accommodate sickness and other absences, which affects the continuity of data entry and sustainability of the system. (Uganda)
-
-
 
 Establish an interoperability plan with systems to reduce redundancy and associated costs and data conflicts.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,16 +79,12 @@ Rwanda’s health system is currently experiencing these ‘stovepipe’ databas
 
 The iHRIS Manage system is not linked to the MOF, and the HRM Department is still doing payroll manually, which leads to delay in salary payment and inaccuracies. (Uganda)
 
-
-
 Free and Open Source software offers best supported and most cost effective model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FOSS offers the best supported, most cost effective model. (Need examples.) *(HRIS Strengthening presentation)* 
 
 Several of the informants felt that because the software is Open Source and therefore requires no licensing fee and is free from viruses, it contributed to sustainability. (Uganda)
-
-
 
 Flexibility and adaptation of software is key
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,16 +95,12 @@ HRIS solutions should be designed around country needs as identified by system s
 
 Human resources information and administration requirements are constantly changing. This therefore requires a continued investment in the form of hardware, maintenance, training and programming, even when the current source of funding from the Capacity Project finally ceases. (Uganda)
 
-
-
 An effective system is one that is used
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order for a system to be effective, it must be used. A key step in strengthening HRIS is the creation of a culture of routinely using data as a basis for decision making.
 
 Data-driven decision making is a journey not a destination: we are talking about a process for making effective collaborative decisions. This process is characterized by three functional areas:
-
-
 
 * collection, integration and dissemination of data to answer policy and management questions;
 * analysis and reporting of data
@@ -135,14 +112,10 @@ Perhaps the most important part of data driven decision making is enabling decis
 
 In Uganda, there is considerable HR data and even “decision-ready information” residing in individual silos – the challenge is to move all these data to relational databases through a secure network to store and access data and present it to decision makers. 
 
-
-
 Importance of backup plans
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As another country sends an emergency message for assistance restoring their data I’m reflecting on the importance of ensuring sustainable back-up plans are in place. Not only must we assist local system administrators with devising an affordable solution we must also automate if possible and check back for status as often as possible. Too often we see back-up plans which are insufficient or exist only on paper, not actually in practice. We have also seen back-up plans which are followed for a period of time and then abandoned due to busy staff or a false sense of security due to a period of time with no system catastrophes. Borrowing from the words of a colleague, back-ups are only useful if they can be used to obtain the required data. And so as we perform regular check-ups to ensure back-ups are conducted in a timely manner we should also inquire as to how often they test the back-up data to ensure it will be useful if needed. *--Angela* 
-
-
 
 Collaboration and sharing of ideas and experiences across countries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -151,8 +124,6 @@ Keeping the team informed of progress in one country and how to use that experie
 
 Inter-country sharing prevents mistakes from being repeated, leverages successes and ensures continuity. *(HRIS Strengthening presentation)* 
 
-
-
 HRIS leadership
 ~~~~~~~~~~~~~~~
 
@@ -160,14 +131,10 @@ I found it challenging to assert leadership in some places perhaps due to being 
 
 Along the same lines, the line of command isn't/wasn't always clear.  I still find it somewhat confusing to know when I go to Dykki for approval vs. when I need the approval of the country point person vs. when I need the Chief of Party to approve.  In some cases Dykki would approve and then the country point person would find out and give me a different answer.  This didn't happen often but I think it was often enough to illustrate that not all of us understand the chain of command and responsibility. *(Angie)* 
 
-
-
 Code management
 ~~~~~~~~~~~~~~~
 
 Code management takes a lot of time. Needs a full-time code manager. All code needs to be reviewed before being incorporated into core released software. More time needs to be allotted for documentation. Also need someone (not a developer) to act in a testing/quality assurance role.
-
-
 
 Documentation of our HRIS strengthening process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

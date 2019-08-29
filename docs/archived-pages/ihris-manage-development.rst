@@ -3,7 +3,6 @@ IHRIS Manage Development
 
  *Development Update – iHRIS Manage - As of February 2009* 
 
-
 iHRIS Manage Core
 ^^^^^^^^^^^^^^^^^
 
@@ -13,23 +12,15 @@ iHRIS Manage Core
 
  **Next milestone** : release version 4.0 in Summer 2009 to include high-priority features and improvements
 
-
-
 High-priority tasks
 ~~~~~~~~~~~~~~~~~~~
-
-
 
 * Add duplicate record checking (Carl)
 * Lock standard data lists from editing to support synchronization (Carl)
 * Add import/export data functions and synchronization with offline version (Carl/Luke)
 
-
-
 Lower-priority tasks
 ^^^^^^^^^^^^^^^^^^^^
-
-
 
 * Bulk data entry page (Luke)
 * Add support for customizing roles (Carl)
@@ -45,11 +36,7 @@ Lower-priority tasks
 * Include new module: Leave tracking (Carl)
 * Update PowerPoint and video demos (Carol)
 
-
-
 * See other items on wishlist for lower priority tasks ( `bug tracker in Launchpad <https://bugs.launchpad.net/ihris-manage/>`_ )
-
-
 
 Competency Model and In-Service Training Modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -58,12 +45,8 @@ Competency Model and In-Service Training Modules
 
  **Status** : module included in version 3.1
 
-
-
 To-do's (would be nice)
 ~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 * Pre-configure training reports
 * Design a more complex competency model

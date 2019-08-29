@@ -5,11 +5,9 @@ iHRIS utiliza varias tablas en una base de datos relacional (MySQL) para guardar
 
  **Nota: Este documento esta desactualizado y se ha marcado para revisión.** 
 
-
 La base de datos de iHRIS se ha abstraído para que la estructura del objeto se pueda manejar con formularios dentro del sitio. Todos los registros que se guardan para un sitio son una instancia de un Formulario I2CE_Form. Esto define todos los campos que se utilizaron para ese formulario.  Los nombres de formularios y campos se guardan en el formulario y los campos de las tablas en la sección de [[#Form Definitions| definiciones de formularios]] a continuación. Estas se combinan en la tabla form_field para mapear los campos asociados con un formulario dado.
 
 Los datos para cada formulario se guardan como un registro (vea [[#Record Tables|Tablas de Registro]]).  Cada campo luego se guarda en las tablas de entry y last_entry.  La tabla entry guarda un historial de todos los cambios y la tabla de last_entry es una búsqueda rápida del valor actual. De modo que si tiene una instancia de un formulario con 2 campos, habrá 1 fila guardada en la tabla de registro y 2 filas en entry y last_entry.  Siempre habrá solamente 3 filas en la tabla last_entry pero las filas de la tabla de entrada aumentarán cada vez que se realice un cambio.
-
 
 Tablas de Usuarios
 ^^^^^^^^^^^^^^^^^^
@@ -60,7 +58,6 @@ CREATE TABLE access (
 </pre>
 |-
 |}
-
 
 Definiciones del Formulario
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -192,7 +189,6 @@ CREATE TABLE deleted_record (
 |-
 |}
 
-
 Tablas de Utilidades
 ^^^^^^^^^^^^^^^^^^^^
 {|border="1" cellspacing="0" cellpadding="5"
@@ -225,12 +221,10 @@ CREATE TABLE report_list (
 |-
 |}
 
-
 Ejemplo de Formulario
 ^^^^^^^^^^^^^^^^^^^^^
 
 Este es un ejemplo de cómo se guardarían dos formularios en la base de datos. El formulario de persona tiene un campo para el surname (apellido) y el formulario demográfico tiene un campo de birth_date. El formulario de persona se guardaría primero ya que es el formulario primario. Asumiendo que nunca se ha guardado ningún formulario en la base de datos, lo siguiente ocurriría al guardarlo.
-
 
 * Cree las entradas para **form** , **field**  y **form_field** .
 

@@ -1,7 +1,6 @@
 Building Windows iHRIS
 ======================
 
-
 Overview
 ^^^^^^^^
 This page describes how to build a customized windows installer.  The installer is built on a windows machine using the  `Cygwin <http://www.cygwin.com>`_  linux like environment for windows.  
@@ -10,19 +9,16 @@ It is *highly recommended*  that you build the installer in the default installa
  C:\Program Files\ihris-suite
 so you should un-install the ihris-suite if you have installed on the computer that wish to build the installer on and remove this directory.  All the files paths/directories below are assuming you made this choice.  This is done so that when the installer is run, it does not have to spend time to reconfigure itself to its new location.
 
-
 Installing Cygwin
 ^^^^^^^^^^^^^^^^^
 In order to build a windows installer, you must have a  `cygwin <http://www.cygwin.com>`_  installed on your computer.  To do this, download and run  `setup.exe <http://www.cygwin.com/setup.exe>`_ .  You can find detailed instructions  `here <http://cygwin.com/cygwin-ug-net/setup-net.html>`_ .  You will
 need to install the following packages:
-
 
 * wget
 * make
 * tar
 * unzip
 You may wish to follow this  `tutorial <http://www.physionet.org/physiotools/cygwin/>`_  for installing cygwin, except you should install the following package instead of the one listed in their Step 9.
-
 
 Getting the installer files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -45,13 +41,11 @@ Assuming all goes well, you should have a windows installer under:
  C:\Program Files\ihris-suite\Output\iHRIS-4.0.X.exe
 The version may be different.
 
-
 Customizing The Installer
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Before you begin customizing the installer, you should see if [[Using Alternate Sites in Windows iHRIS]] will meet your needs.  You will want to build a custom installer if you have large amounts of data that you want shared among multiple installations, if you have customized your site so that is significantly different from the standard wamp installation, or if you want have a custom home page.
 
 All of these customizations are done by adding some files under *C:\Program Files\ihris-suite*  before you enter the command *make*  as above.
-
 
 Running SQL Scripts/Importing Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +54,6 @@ In order that the installer runs fast, each of the sites (Manage, Qualify, Plan)
  C:\Program Files\ihris-suite\databases\ihris-plan
  C:\Program Files\ihris-suite\databases\ihris-qualify
 These scripts are run after the site has been (pre-)initialized.
-
 
 Building a Customized Site Into the Installer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,7 +72,6 @@ You will also need to edit *pages/local/config.values.php*  so that it the *$i2c
 Finally, make sure that you do not have any "pages/.htaccess" files and that the "pages/config.values.php" file does not have any values set.
 
 If you are making an install CD/USB Disk on Key for your custom installer as in [Using Alternate Sites in Offline iHRIS], you will not need to copy your site directory over, nor will you need to specify the command line parameter /manageSITE as it is already built into the installer.
-
 
 Changing the Home Page
 ~~~~~~~~~~~~~~~~~~~~~~

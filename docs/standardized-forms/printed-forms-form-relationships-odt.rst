@@ -9,18 +9,15 @@ At the moment, this cannot use any functions defined in a relationship, or any r
 
 Depending on your needs, you may wish to look at these other methods for standardized form generation:
 
-
 * [[Printed Forms]]
 * [[Standardized Letters (ODT)]]
 * [[Printed Forms with Reports (ODT)]]
-
 
 Magic Data
 ^^^^^^^^^^
 The magic data to define a printed form based on relationship is defined underneath a page called $pageName.  There are two places to define pages, either a top-level page under /I2CE/page/$pageName or a module page under /modules/$module/$pageName for the module $module.
 
 Under you define:
-
 
 * class(required scalar node) Value is "I2CE_PageGenerateRelationshipTemplate"
 * args (required parent node)
@@ -39,22 +36,17 @@ Under you define:
 * *segment_break.  optional scalar node.  what to use a a page/row break for the template.  Defaults to <pre><text:p text:style-name="P1"/></pre> which is for a page break.  For a line break it is <pre><text:line-break/></pre>
 You need to google for the others.  
 
-
 * *task: optional parent node
 * *use_display_fields:  (optional scalar node) Defaults to true.  If true, we get the display version of a field, for example the field position+job would be "General Nurse." it evaluates to false then we get the raw data fields, for example "position+job" is "job|42"
 
-
 To easily create the template_upload node, simply browse under magic data to /I2CE/page/$pageName/args, create a sub node named template_file.  Do not set its type.  Under the "Import" drop-down menu select the to load a binary file.
-
 
 Using multiples ODT templates for the same page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 Unoconv
 ^^^^^^^
 You can install  `unoconv <http://linux.die.net/man/1/unoconv>`_  to convert the ODT files to PDF:
-
 
 .. code-block:: bash
 
@@ -71,14 +63,12 @@ Anybody interested in testing Microsoft word output?  It is the ooxml format.
 
 To start the unconv service:
 
-
 .. code-block:: bash
 
      sudo su -c "nohup unoconv --listener &" www-data
     
 
 Or can create an deamon script:
-
 
 .. code-block:: bash
 
@@ -87,7 +77,6 @@ Or can create an deamon script:
     
 
 And add this to the file /etc/init.d/unoconvd
-
 
 .. code-block:: bash
 
@@ -117,12 +106,10 @@ And add this to the file /etc/init.d/unoconvd
 
 To start the service:
 
-
 .. code-block:: bash
 
      sudo service unoconvd start
     
-
 
 Calling the Page
 ^^^^^^^^^^^^^^^^
@@ -134,7 +121,5 @@ For PDF format, you can you can call the page with:
  $pageName?format=pdf&id=$form|$id
 where $id is the id of the primary form you are interested in.
 
-
 It will loop through all the joined in data for the primary form with the given id and add a certificate/printed form for each.
-
 

@@ -1,18 +1,13 @@
 IHRIS Suite 4.1 Development
 ===========================
 
-
 Version 4.1.10
 ^^^^^^^^^^^^^^
 Released September 5, 2014
 
-
-
 * New Features
 * * Web Services for list drop downs.  This will speed up the display for more complicated displays (like Country -> District -> County -> Facility) so only the needed data to display is downloaded.  This also includes an option for auto completion for these fields.
 * * Added an option to save binary files in the file system to reduce database sizes when many files are saved in the database.  Enabling this option requires an additional backup of the binary files save directory.  For existing data this does require migrating the data which may take some time depending on the amount of binary files used.
-
-
 
 * Technical Features
 * * Option to use alternate templates.
@@ -20,8 +15,6 @@ Released September 5, 2014
 * * Modified magic data translations to set the default value as well as the translated value when changes are made to the default locale.
 * * Added option for ODT templates to save them in a document form field after generation when desired to avoid having to generate many times.
 * * Changes to form storage caching to not force caching on drop down displays.  To avoid cache synchronization issues, also added in an option on saving forms to update the individual record in the cache instead of marking the cache as dirty.
-
-
 
 * Minor Changes
 * * Added ++date, ++user_name and ++time for ODT templates.
@@ -32,8 +25,6 @@ Released September 5, 2014
 * * Minor changes to the display of user statistics including a link the parent form to view more details.
 * * Confirmation message on saving person and person child forms.
 * * Added calendar display page for scheduled training courses.
-
-
 
 * Issues Resolved
 * * Fixed issues with using SSL/HTTPS.
@@ -49,11 +40,9 @@ Released September 5, 2014
 * * Only generate the search report when it is stale when accessing the search page.
 * * Fixed issue related to the created field for multi flat storage for aggregated sites.
 
-
 Version 4.1.9
 ^^^^^^^^^^^^^
 Released January 10, 2014
-
 
 * New Features
 * * You can now set an automatic logout time for the site.  All users will be logged out after this timeframe.  It works in two ways.  The first uses JavaScript so the page will be sent to the logout page after the set amount of time.  If this JavaScript is blocked for any reason, then next page access will send the user to the login page again.  This can be enabled by setting /user_prefs/timeout/user_timeout to a number in seconds.  A message can be customized by setting /user_prefs/timeout/user_timeout_message.
@@ -66,25 +55,19 @@ Released January 10, 2014
 * * Added compact page to training course that allows compact editing of exam results of students for all exams at once.
 * * Show existing students in a scheduled course when adding new students to a scheduled course.
 
-
-
 * Technical Features
 * * You can now highlight and/or add options to the left hand menu without having to create a new page class.  Added active menu hook to set the active menu on any pages without having to create or subclass an I2CE_Page and updated lists page in iHRIS Common to use this hook.
 * * The I2CE_PageViewChildren page can now handle displaying grandchild forms and below.
 * * The callHooks method can take a variable number of arguments instead of passing a single array with all arguments.
 * * Added REFERENCE field links in form relationships so you can link to the referred form in the relationship.
 
-
-
 * Issues Resolved
 * * Many improvements and features to generation of standardized letters and reports (ODT, Word and PDF)
 * * Fixed handling of view and exporting reports when reported fields have upper case letters in the form or field.
 * * Fixed some issues with last modified time in custom reports.
 
-
 Version 4.1.5
 ^^^^^^^^^^^^^
-
 
 * I2CE
 * *Reporting
@@ -112,17 +95,13 @@ Version 4.1.5
 * **Added in default display options for action report displays to allow for pagination.  Also fixed the jumper display to work correctly for action report displays.
 * **Registered validate_formfield and form_cleanup hooks in FormStorage so they also work on the CLI
 
-
-
 * Common and Manage
 * *Added user access information on the user page to show login history and recent data entry
 * *Set role restriction for the mass delete pages
 * *Added in mass delete feature for deleting multiple people at once by the search report and by facility
 
-
 Version 4.1.4
 ^^^^^^^^^^^^^
-
 
 * added a PASSPORT FormField with the option to resize the image dimensions so that the image can be resized to a reasonable size for easy display in view.html and compression of file size (Thanks Sovello!)
 * Translation to Arabic (Thanks for Prof. Adel Khelifi and his team from Alhosn University)
@@ -166,11 +145,9 @@ Version 4.1.4
 * *clarified description for helper forms to link facilities and institutions
 * *improved some english source text for translations (thanks for reporting at http://translatewiki.net)
 
-
 Version 4.1.3
 ^^^^^^^^^^^^^
 Released July 23, 2012
-
 
 * Form Storage:
 * *form storage mechanism default listFields and listDisplayFields did not return the parent field value.
@@ -219,14 +196,9 @@ Released July 23, 2012
 * * make CEUs appear in the training course
 * view position page:  check validity of job and supervisor fields before setting href in order to avoid fatal error
 
-
-
-
 Version 4.1.2
 ^^^^^^^^^^^^^
 Released April 18, 2012
-
-
 
 * Added extra option for field limits to include a manual where clause for a limit when necessary.  This probably can be done in a better way, but this is a quick fix that won't break anything when the extra_where option isn't set.  This also needs to be added to the interface to allow editing of it.  For now it must be done in a module to create the entry in magic data.
 * Removed extra name attribute in template to avoid XML errors when the name and id are the same.
@@ -322,7 +294,6 @@ Released April 18, 2012
 * Added in getLimitsByForm to the ModuleAccess class as an abstract method.  Added in checking for module_limits in a report field to limit by the given module with details passed by a hook in the module to determine what to link by so li
 mited access users only see certain records in a report.
 
-
 * added email request account
 * Added in get_report_module_limit_options for SwissConfig in CustomReports to add the option to link a field in a report to an availble field in the module to use for limiting the reports based on module details.
 * Added in missing template file for displaying images inline in reports.
@@ -336,11 +307,9 @@ mited access users only see certain records in a report.
 * Modified the FormStorage calls to listFields and listDisplayFields to use the cached form storage when an optional argument is passed instead of the default form storage.  Fixed the reference callback check in DB form storage since it w
 ouldn't allow any callbacks.  Updated I2CE_List to make showHiddenLimit a public function.  Updated I2CE_List to use the cached form storage buildDataTree function when it's available.
 
-
 * Added in ModuleAccess abstract class for access type modules so that forms can preprocess the args to add any additional limits needed by the access module.
 * Added form-storage-flat as a required module for CachedForms since there is a new cached form storage based off of flat storage.  Changed the caching messages to use raiseMessage instead of raiseError to reduce log spam since it is info
 rmational and the full trace shouldn't be needed.  Added the cached form storage to be used for getting list data from the cache instead of the source tables.  Any call to this will cache the tables before using them.
-
 
 * added formfield which is associative  list of booleans/checkboxes
 * change the I2CE_List::listOptions so that is uses buildDataTree.  simplified its calling.
@@ -362,13 +331,9 @@ rmational and the full trace shouldn't be needed.  Added the cached form storage
 * added in some additional error messaging and validation for reporting functions
 * configurator: fixed issue when removing module on a system update
 
-
-
 Version 4.1.1
 ^^^^^^^^^^^^^
 Released October 19, 2011
-
-
 
 * Gave different name attributes for the show_i2ce_hidden_link names because libXML was causing an error on loading the lists_type_header.html template.  Bug 877471.
 * Added an option for MAPPED fields to use a given display style from the template (display_style='default') to override the default value if needed.  This is to fix ihris-manage bug 876827.
@@ -455,7 +420,6 @@ Released October 19, 2011
 * PrintedForms ODT library now supports images (with a warning message) and uses the phpodt library http://www.odtphp.com/
 * Image FormField -- get width and height properties added.  also added abiltiy to manipulate as a resource
 
-
 Version 4.1.0
 ^^^^^^^^^^^^^
 Released July 30, 2011.
@@ -479,5 +443,4 @@ Released July 30, 2011.
 ***example: job has getPositins() mehtod which gets the positions associated to a job.
 **get rid of main and secondary display field constants in i2ce_list class
 **cleanup stuff leftover from 3.1 (Such as the listOptions, lookup mehtods and related methods. many of these are no longer references outside the defining class (e.g. getCompentnciesByType)) what about iHRIS_Search?
-
 

@@ -3,19 +3,16 @@ Create a New Software Release
 
 This article has been superseded by [[HowTo: Release iHRIS Software | this]].
 
-
 Create New Release Branches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For each of the packages (I2CE, ihris-common, ihris-manage, etc.) you need to do the following steps.
-
 
 * Tag the release with the version number and release (4.0.0-release)
  bzr tag **<version>** -release
 
 * Push the release to launchpad
  bzr push lp:~intrahealth+informatics/'''<package>'''/'''<version>'''-release
-
 
 Create/Edit the Series on Launchpad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -26,12 +23,10 @@ If the series already exists then edit the series and set the series branch to b
 
 You'll do this for every package that is being released.
 
-
 Create the Tar Files
 ^^^^^^^^^^^^^^^^^^^^
 
 Now we need to get a fresh checkout to make sure no extra files are hanging around and create the tar files from those.
-
 
 * Create a directory for this package release then change into it.
  mkdir **<version>** 
@@ -53,7 +48,6 @@ Now we need to get a fresh checkout to make sure no extra files are hanging arou
 
 * When release Qualify and Plan as well, also create the iHRIS Suite tar file.
  tar cjf ihris-suite-'''<version>'''.tar.bz2 --exclude=.bzr* I2CE textlayout ihris-common ihris-qualify ihris-manage ihris-plan
-
 
 Create a Release
 ^^^^^^^^^^^^^^^^

@@ -7,7 +7,6 @@ All data entry and changes for forms with the "entry" form storage mechanism are
 
 We give some examples below
 
-
 Tables
 ^^^^^^
 The following tables are relevant for making these queries:
@@ -22,10 +21,8 @@ This table contains a list of usernames and ids.  The user's id is what is used 
     4      cleitner 	XXXXX 	        Carl 	        Leitner 	cleitner@intrahealth.org 	2
     
 
-
 Lookup id by user name
 ----------------------
-
 
 .. code-block:: sql
 
@@ -33,7 +30,6 @@ Lookup id by user name
     
 
 which will return '4'.
-
 
 form
 ~~~~
@@ -46,10 +42,8 @@ This table is used to associate a numeric id to every form stored in the entry t
     2 	person 	        0
     
 
-
 Lookup if by form name
 ----------------------
-
 
 .. code-block:: sql
 
@@ -66,14 +60,12 @@ entry
 ~~~~~
 This table is used to record all edits to all forms stored in the entry form storage mechanism.
 
-
 Data Entry Queries
 ^^^^^^^^^^^^^^^^^^
 
 How many new person records added
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Suppose we want to get the number new people (e.g. new person forms)  added since May 22, 2012 we would do something like:
-
 
 .. code-block:: sql
 
@@ -82,7 +74,6 @@ Suppose we want to get the number new people (e.g. new person forms)  added sinc
     AND
     last_modified >= '2012-05-22 00:00:00'
     
-
 
 How many person records have person edited
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,7 +90,6 @@ Suppose we want to get the number person forms haven been modified added since J
 
 Note:  this does not include changes to child forms of the person form , such as the person_position_form.
 
-
 How many records have been edited by a user
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Suppose we want to get the number new people (e.g. new person forms)  added since Jan 1, 2012 by the user cleitner we would do something like:
@@ -112,8 +102,6 @@ Suppose we want to get the number new people (e.g. new person forms)  added sinc
     AND
     who = (select id from user where username='cleitner' )
     
-
-
 
 How many person records have been edited by a user
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,9 +118,7 @@ Suppose we want to get the number new people (e.g. new person forms)  added sinc
     who = (select id from user where username='cleitner' )
     
 
-
 Note:  this does not include changes to child forms of the person form , such as the person_position form.
-
 
 How many person or person_position records have been edited by a user
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,5 +134,4 @@ Suppose we want to get the number person forms haven been modified added since J
     AND
     who = (select id from user where username='cleitner' )
     
-
 

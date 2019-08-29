@@ -5,7 +5,6 @@ In this tutorial, we will install a custom iHRIS Manage 4.0 site hosted on Launc
 
 Our first goal is to install the iHRIS Suite 4.0.  Then we will download the CSSC's iHRIS Manage Customizations.  Next we will create the database and finally we will install the site in our web-server.
 
-
 Launchpad First Steps
 ^^^^^^^^^^^^^^^^^^^^^
 First you should create an account on  `Launchpad <https://launchpad.net/>`_  if you not have already done so.  We will refer to this account as **LAUNCHPAD_USER.** 
@@ -23,15 +22,12 @@ you can now copy the contents of gedit (the public key) into the text box in the
 
 For every computer/account that you use you will need to repeat these steps to create and import a public key.
 
-
 Bazaar First Steps
 ^^^^^^^^^^^^^^^^^^
 First we need to make sure the  `Bazaaar <http://bazaar-vcs.org/en/>`_  (bzr) version control software is installed:
   sudo apt-get install bzr bzrtools
 You may wish to read the  `five minute tutorial <http://doc.bazaar-vcs.org/latest/en/mini-tutorial/index.html>`_  at this point.  You should also let bzr know how you are:
   bzr whoami "'''Your Name <your@email.add.ress>'''"
-
-
 
 Join the iHRIS Team
 ^^^^^^^^^^^^^^^^^^^
@@ -41,23 +37,17 @@ If you wish to make modifications to the CSSC Customizations, you should join th
 
 If you are working on a joint project, but not the CSSC's customizations, you should create a team in Launchpad and add yourself to it as well as the team *intrahealth+informatics.*    For example, you could create the team *ihris+tanzania.* 
 
-
-
-
 Downloading iHRIS
 ^^^^^^^^^^^^^^^^^
 We will now download the iHRIS Suite from Launchpad using bzr (as opposed to the release tar.bz2 files) to get practice using bazaar.
 
 Below, I will assume that there is only one user using the system, or at least only one user that should be modifying files in iHRIS.  This is probably not the "recommended" way of doing things though.
 
-
 Changing Permissions
 ~~~~~~~~~~~~~~~~~~~~
 We want to make sure we can easily modify files under */var/lib/iHRIS*  without having to use sudo all the time.
  sudo mkdir -p /var/lib/iHRIS
  sudo chown -R `whoami`:`whoami`  /var/lib/iHRIS
-
-
 
 Release Code
 ~~~~~~~~~~~~
@@ -71,7 +61,6 @@ Now we want to get the iHRIS Suite 4.0 release code from launchpad.
  bzr branch lp:textlayout/4.0 textlayout
 These branches will always contain the latest release code.
 
-
 Development Code
 ~~~~~~~~~~~~~~~~
 If you wish to work with the development code instead, you should do this:
@@ -84,7 +73,6 @@ If you wish to work with the development code instead, you should do this:
  bzr branch lp:textlayout textlayout
 These branches will always contain the main development code, which may or may be working at a particular time.
 
-
 Downloading CSSC's Customizations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -95,14 +83,12 @@ First we will create a directory that will hold all the sites we have on our sys
  sudo chown -R `whoami`:`whoami` /var/lib/iHRIS/sites
 We have two choices on how to download the CSSC Customizations.  One possibility to download it to *install*  it, but do not want to make any code modifications.  The other possibility is to download the code and have it setup to modify the customizations.
 
-
 Download CSSC Customizations for no Modifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We can download the CSSC customizations to our site directory by doing:
  cd /var/lib/iHRIS/sites
  bzr branch lp:~ihris+cssc/ihris-manage/4.0-central cssc-central-4.0
 You can still make modifications to the code, but they do not automatically get put back to launchpad once you commit.
-
 
 Download CSSC Customizations for Modification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,7 +99,6 @@ To see why we are doing a checkout instead of a branch, read  `this <http://baza
  cd /var/lib/iHRIS/sites/cssc-central-4.0
  bzr commit -m "test commit"  --unchanged
 
-
 Creating the Database
 ^^^^^^^^^^^^^^^^^^^^^
 We will create a database called `cssc_central_4_0` as follows:
@@ -122,19 +107,16 @@ We will create a database called `cssc_central_4_0` as follows:
  mysql> GRANT ALL PRIVILEGES ON `cssc_central_4_0`.* TO cssc@localhost identified by ''''PASSWORD''''; 
 you should change **PASSWORD**  to be the password you want.
 
-
 Installing on the Web Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Let us suppose we want to access the site at the URL:
  http://localhost/iHRIS/cssc-central
-
 
 Linking the Site
 ~~~~~~~~~~~~~~~~
 First we will need to link to our customized site under '/var/www' as follows:
  sudo mkdir -p /var/www/iHRIS
  sudo ln -s /var/lib/iHRIS/sites/cssc-central-4.0/pages /var/www/iHRIS/cssc-central
-
 
 Setting the Database
 ~~~~~~~~~~~~~~~~~~~~
@@ -153,13 +135,11 @@ Look for the the following variables and set their values:
 </table>
 </center>
 
-
 Finishing Up
 ~~~~~~~~~~~~
 Just browse to the site at the URL:
  http://localhost/iHRIS/cssc-central
 to begin the iHRIS installation process.
-
 
 Modifying the Code
 ^^^^^^^^^^^^^^^^^^
@@ -174,14 +154,11 @@ Anything in a directory named *local*  is ignored.
  bzr ignore
 This is why in  the above we copied config.values.php to local/config.values.php and set the database user name and password here.  This way, if we are modifying the CSSC customizations we don't need to worry about the user name and password being uploaded to launchpad.
 
-
-
 Updating files
 ~~~~~~~~~~~~~~
 If you are working with many people on a site customization, you can get the changes that they have made using the 'bzr update' command.  For example:
  cd /var/lib/iHRIS/sites/cssc-central-4.0
  bzr update
-
 
 Changed Files
 ~~~~~~~~~~~~~
@@ -189,27 +166,21 @@ To see which files have changed since the last time someone commited:
  cd /var/lib/iHRIS/sites/cssc-central-4.0
  bzr status
 
-
 Committing Code
 ~~~~~~~~~~~~~~~
 For instructions see:
  bzr help commit.
 
-
-
 Command Line Editors
 ^^^^^^^^^^^^^^^^^^^^
 You may find that you will need to be able to edit a file from the command line, for example if you ssh into an iHRIS Appliance. There are several command line editors available that you can use to edit files and you should be familiar with at least one of them.
-
 
 * emacs: powerful but not userfriendly (Carl's choice)
 * vim: powerful but not userfriendly (Luke's choice)
 * nano: Nano is by the far the easiest one to use, but is not very powerful and you can only work with one file at a time:
 
-
 Nano
 ~~~~
-
 
 * to open a file to edit, type *nano the_file_name.php*  on the command line
 * to determine the line number you hit *[CTRL]-C*
@@ -221,7 +192,6 @@ Nano
 * if you decide to do a lot of editing in nano, you may want  to add syntax highlighting.   you can so as follows:
  nano ~/.nanorc
 and save the following:
-
 
 .. code-block:: text
 
@@ -481,20 +451,15 @@ and save the following:
     color magenta "//.*$"
     
 
-
-
 GUI Editors
 ^^^^^^^^^^^
 We don't use these so I don't have any recommendations.  You may want to look  `here <https://help.ubuntu.com/community/Programming>`_  for some recommendations.
-
 
 * gedit  Not geared to programming.  Installed by default on ubuntu desktop.
 * `scite <http://scintilla.org/SciTE.html>`_  (sudo apt-get install scite)
 Here are some IDEs
 
-
 * geany A small GUI editor geared to programming (sudo apt-get install geany)
 * `bluefish <http://bluefish.openoffice.nl/features.html>`_  (sudo apt-get install bluefish)
 * eclipse
-
 

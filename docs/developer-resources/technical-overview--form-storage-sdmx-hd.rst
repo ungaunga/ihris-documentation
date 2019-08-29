@@ -14,11 +14,8 @@ The options specifying a SDMX-HD storage for $form are stored at:
  /modules/forms/forms/$form/storage_options/SDMXHD
 It has the following structure:
 
-
-
 * file:  The SDMX-HD file that the data should be read from.  This can either be an absolutely given file path, a relative file path, or the URL of a  stream handled by php.  If it is a relative file path, then it uses the SDMXHD [[File Search Paths | file search]] category.The file can also be a path to a scalar node in magic data as indicated by 'mdn://path/in/magic/data'
 * CodeListID: The code list ID to be read.  This is for files that may have more than one code list defined.  This must be set.
-
 
 Global Options
 ^^^^^^^^^^^^^^
@@ -26,14 +23,11 @@ There are global options for SDMX-HD form storage. They are specified at:
  /modules/forms/storage_options/SDMX-HD
 This has the structure:
 
-
 * closeFile: defaults to false.  If true, we close the file between access.  Otherwise, we allow PHP to handle closing the file resource at the end of the script's call.
-
 
 Form Definition
 ^^^^^^^^^^^^^^^
 To use SDMX-HD storage for a form use the following configuration.  Replace $form, $form_name, $file_location and $CL_ID with the appropriate values.
-
 
 .. code-block:: xml
 
@@ -60,10 +54,7 @@ To use SDMX-HD storage for a form use the following configuration.  Replace $for
     </configurationGroup>
     
 
-
 An example for gender may be:
-
-
 
 .. code-block:: xml
 
@@ -89,6 +80,4 @@ An example for gender may be:
       </configurationGroup>
     </configurationGroup>
     
-
-
 
