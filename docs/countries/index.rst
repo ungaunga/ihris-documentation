@@ -1,22 +1,26 @@
-Countries Implementations 
+Countries Implementations
 =========================
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Countries Implementations
+    :maxdepth: 2
+    :caption: Countries Documentation
 
-	botswana/index
-	ghana/index
-	guatemala/index
-	india/index
-	kenya/index
-	lesotho/index
-	malawi/index
-	mali/index
-	namibia/index
-	nigeria/index
-	rwanda/index
-	senegal/index
-	tanzania/index
-	uganda/index
+    botswana/index
+    ghana/index
+    guatemala/index
+    india/index
+    kenya/index
+    lesotho/index
+    india/index
+    kenya/index
+    lesotho/index
+    malawi/index
+    mali/index
+    namibia/index
+    nigeria/index
+    rwanda/index
+    senegal/index
+    sierra-leone/index
+    tanzania/index
+    uganda/index

@@ -1,5 +1,5 @@
 Pluggable Authentication
-================================================
+========================
 
 In iHRIS user information is by default stored in a table called "user."  We also allow different means for authenticating users against, for example, LDAP or to limit to a single user access system. 
 

@@ -1,9 +1,7 @@
 Customizing Packaged iHRIS
-================================================
+==========================
 
-
-Experimental Packages
-^^^^^^^^^^^^^^^^^^^^^
+== Experimental Packages == 
 
 To install snapshots of the current development — which may or may not work — add the following line to <tt>/etc/apt/sources.list.d/ihris.list</tt>:
 
@@ -12,13 +10,9 @@ To install snapshots of the current development — which may or may not work �
 If you want to change any of the database parameterso, then modify the file in <tt>/etc/i2ce/Demo/config.values.php</tt>.
 
 
-
-
 * You should have the bare-bones installation running.
 
-
-Trying the iHRIS Manage Demo
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===Trying the iHRIS Manage Demo===
 
 If you'd like to install the complete demonstration site, you can grab the i2ce-ihris-manage-site-demo from Launchpad:
 

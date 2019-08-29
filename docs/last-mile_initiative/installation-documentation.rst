@@ -1,17 +1,15 @@
 Installation Documentation
-================================================
+==========================
 
 The system was created with the goal of running on a LAMP architecture - that is the Linux operating system, MySQL database, and Apache webserver with PHP coding. Our development took place on the latest release of Ubuntu Linux (8.10) however, the system should work on most Linux distributions as well as some other operating systems in which OpenMRS, Apache, PHP, and Java can run.
 
 OpenMRS is the core of the system and must be installed first. There is a great wealth of documentation on the installation, administration, and use of OpenMRS which is freely available. However, the specific documentation on the installation of the system can be found below.
 
-If you would like to install OpenMRS as an appliance (meaning, an instance that runs in a virtual machine such as VMWare refer to the `OpenMRS Appliance Installation <http://openmrs.org/wiki/OpenMRS_Appliance>`_.
+If you would like to install OpenMRS as an appliance (meaning, an instance that runs in a virtual machine such as VMWare refer to the [http://openmrs.org/wiki/OpenMRS_Appliance OpenMRS Appliance Installation].
 
-If you would rather install the system on a clean Linux box, refer to the `Installing An OpenMRS Server On Linux <http://openmrs.org/wiki/Installing_An_OpenMRS_Server_On_Linux>`_ Document.
+If you would rather install the system on a clean Linux box, refer to the [http://openmrs.org/wiki/Installing_An_OpenMRS_Server_On_Linux Installing An OpenMRS Server On Linux] Document.
 
-
-Installing the web application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+== Installing the web application ==
 
 Step-by-step instructions for installing the application on Ubuntu Hardy.  For purposes of these instructions, we'll assume you're server is installed to respond to http://example.com/
 
@@ -116,9 +114,7 @@ The following commands install the form entry module which, even though it is es
 
 Navigate to http://example.com/openmrs/admin/modules/module.list and make sure the formentry module is enabled.
 
-
-Debian
-~~~~~~
+=== Debian ===
 
 Similar steps work on Debian but some changes may be needed.  The contents of /etc/default/tomcat5.5 differ slightly and tomcat-users.xml is in /var/lib/tomcat.5.5 instead of /etc/tomcat55.  Also, see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=402229
 [[Category:Last Mile Initiative]]

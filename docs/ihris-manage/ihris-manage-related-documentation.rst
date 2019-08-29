@@ -1,9 +1,9 @@
 IHRIS Manage-related Documentation
-================================================
+==================================
 
 iHRIS Manage is a human resources management tool that enables an organization to design and manage a comprehensive human resources strategy.
 
-`Download the iHRIS Manage source code from Launchpad <https://launchpad.net/ihris-manage>`_.
+[https://launchpad.net/ihris-manage Download the iHRIS Manage source code from Launchpad].
 
 [[iHRIS Manage Form Fields]]
 
@@ -11,11 +11,7 @@ iHRIS Manage is a human resources management tool that enables an organization t
 
 [[iHRIS Manage Translation List (Development)]]
 
-
-Tutorials Specific to iHRIS Manage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
+==Tutorials Specific to iHRIS Manage==
 
 * [[Adding Forms and Fields]]
 * [[Adding ISCO 88 Job Codes to iHRIS Manage]]

@@ -1,10 +1,10 @@
-OpenMRS 
-================================================
+OpenMRS
+=======
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: OpenMRS 
+    :maxdepth: 2
+    :caption: OpenMRS
 
-	linking-with-openmrs
-	openmrs-php-library
+    linking-with-openmrs
+    openmrs-php-library

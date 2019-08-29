@@ -1,10 +1,10 @@
-SDMX-HD 
-================================================
+SDMX-HD
+=======
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: SDMX-HD 
+    :maxdepth: 2
+    :caption: SDMX-HD
 
-	sdmx-hd
-	sdmx-hd-data-export-kenya
+    sdmx-hd
+    sdmx-hd-data-export-kenya

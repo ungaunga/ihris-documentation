@@ -1,9 +1,9 @@
-Roles 
-================================================
+Roles
+=====
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Roles 
+    :maxdepth: 2
+    :caption: Roles
 
-	ihris-role-list
+    ihris-role-list

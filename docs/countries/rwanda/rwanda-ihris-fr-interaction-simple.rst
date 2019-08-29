@@ -1,9 +1,7 @@
 Rwanda iHRIS FR Interaction Simple
-================================================
+==================================
 
-
-Transaction Diagram: Simple
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==Transaction Diagram: Simple==
 
 <graphviz border='frame' format='png'>
  digraph "iHRIS + Facility Registry for Rwanda" {

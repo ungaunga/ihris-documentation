@@ -1,7 +1,5 @@
 IHRIS Plan Goals and Features
-================================================
-
-
+=============================
 
 * [[Goals]]
 * [[Planned Features -- Software]]
@@ -9,5 +7,5 @@ IHRIS Plan Goals and Features
 * [[Iteration 1: Summary of Functions]]
 * [[Priority Features for Version 2]]
 * [[Questions for Discussion]]
-* `HRH Workforce Planning Model Workshop Website <http://www.capacityproject.org/workforce_planning_workshop/>`_
+* [http://www.capacityproject.org/workforce_planning_workshop/ HRH Workforce Planning Model Workshop Website]
 [[Category:Archived Pages]]

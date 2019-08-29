@@ -1,10 +1,20 @@
-Lesotho 
-================================================
+Lesotho
+=======
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Lesotho 
+    :maxdepth: 2
+    :caption: Lesotho
 
-	lesotho
-	lesotho-mohsw-installation
+    lesotho
+    lesotho-mohsw-installation
+Lesotho
+=======
+
+.. toctree::
+
+    :maxdepth: 2
+    :caption: Lesotho
+
+    lesotho
+    lesotho-mohsw-installation

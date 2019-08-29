@@ -80,7 +80,7 @@ class WikimediaRSTConventer():
 
     def convert_italics(self, doc):
         regex = r'(^|\s)([\']{2})(?!\')(.*?)\2'
-        return re.sub(regex, r' *\3*', doc)
+        return re.sub(regex, r' *\3* ', doc)
     
     def convert_bold(self, doc):
         '''
@@ -89,11 +89,11 @@ class WikimediaRSTConventer():
         Markup for rst is **
         '''
         regex = r'(^|\s)([\']{3})(?!\')(.*?)\2'
-        return re.sub(regex, r' **\3**', doc)
+        return re.sub(regex, r' **\3** ', doc)
 
     def convert_bold_italics(self, doc):
         regex = r'(^|\s)([\']{5})(?!\')(.*?)\2'
-        return re.sub(regex, r' **\3**', doc)
+        return re.sub(regex, r' **\3** ', doc)
 
     def convert_code_pre_blocks(self, doc):
         '''
@@ -150,7 +150,7 @@ class WikimediaRSTConventer():
         possible wiki external URL matcher: 
         '''
         regex = r"\[((?:http[s]{0,1}://)?(?:www\.)?(?:[\w\-]+\.)+[\w\-_.~!*'();:@&=+$,/?%#[\]]+)\s(.*?)]"
-        return re.sub(regex, r'`\2 <\1>`_', doc)
+        return re.sub(regex, r' `\2 <\1>`_ ', doc)
 
     def convert_media_attachments(self, doc):
         pass

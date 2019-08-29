@@ -1,10 +1,20 @@
-Kenya 
-================================================
+Kenya
+=====
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Kenya 
+    :maxdepth: 2
+    :caption: Kenya
 
-	kenya
-	sdmx-hd-data-export-kenya
+    kenya
+    sdmx-hd-data-export-kenya
+Kenya
+=====
+
+.. toctree::
+
+    :maxdepth: 2
+    :caption: Kenya
+
+    kenya
+    sdmx-hd-data-export-kenya

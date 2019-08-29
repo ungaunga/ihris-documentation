@@ -1,5 +1,5 @@
 Web Service:PR-WS-7
-================================================
+===================
 
 {{WebServicePage|Get Post Details     
  |number=PR-WS-7
@@ -7,10 +7,8 @@ Web Service:PR-WS-7
  |applications=Interoperability Layer, Point-Of-Care?
  |url=/ws/rest/v2/details/post
  |params=The following query parameters are allowed:
-
-
-* ${id} The id of the post
-* {format}The response format.  One of 'json', ?'hl7'?
+*${id} The id of the post
+*{format}The response format.  One of 'json', ?'hl7'?
  |example=?id=12312321312
  |response=HTTP 200 - OK
 Example:
@@ -26,9 +24,7 @@ Example:
      }
 }
  |error=*HTTP 500 - Server Error - If the server encountered an error.
-
-
-* HTTP 400 - Bad Request - If the parameters are malformed.
- |notes=Need to good way for limiting response length.  See **A collection: the list of bugs** in the `Launchpad API <https://help.launchpad.net/API/Hacking>`_
+*HTTP 400 - Bad Request - If the parameters are malformed.
+ |notes=Need to good way for limiting response length.  See '''A collection: the list of bugs''' in the [https://help.launchpad.net/API/Hacking Launchpad API]
  |resources=[[Use Case:PR-WS-7]]
 }}

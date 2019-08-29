@@ -1,11 +1,11 @@
-Botswana 
-================================================
+Botswana
+========
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Botswana 
+    :maxdepth: 2
+    :caption: Botswana
 
-	botswana
-	botswana-installation-instructions
-	importing-data
+    botswana
+    botswana-installation-instructions
+    importing-data

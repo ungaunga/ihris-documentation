@@ -1,5 +1,5 @@
 Release Notes for Offline iHRIS Bug Fix
-================================================
+=======================================
 
 OFFLINE iHRIS version 3.1.1
 

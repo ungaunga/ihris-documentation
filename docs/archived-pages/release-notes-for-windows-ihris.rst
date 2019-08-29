@@ -1,5 +1,5 @@
 Release Notes for Windows iHRIS
-================================================
+===============================
 
 Windows iHRIS version 3.1.3
 

@@ -1,5 +1,5 @@
 Automatically Generated Integers
-================================================
+================================
 
 Automatically generated integers (or INT_GENERATE) are used when a form needs an incremented number to use for an ID but the data entrant may not know what the next available value is.  The user can check a checkbox to increment to the next value or if necessary can type in the number if it is known.  As of version 4.0.2 INT_GENERATE is only supported when the form uses the entry form storage mechanism.  It uses the field_sequence table to keep track of the current maximum value for each form field.
 

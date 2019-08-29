@@ -1,5 +1,5 @@
 Template:UseCasePage
-================================================
+====================
 
 __NOEDITSECTION__
 {{UseCase|{{#ifexist: Use Case:{{{number}}} |  [[Use Case:{{{number}}} | {{StripWhitespace|{{{1}}}}}]] |  {{StripWhitespace|{{{1}}}}} }}

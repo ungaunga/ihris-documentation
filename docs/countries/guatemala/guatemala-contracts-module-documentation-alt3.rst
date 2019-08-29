@@ -1,5 +1,5 @@
 Guatemala Contracts Module Documentation Alt3
-================================================
+=============================================
 
 <graphviz border='frame' format='png'>
  digraph "Contract Module" {

@@ -1,9 +1,7 @@
 Help:Create a New Page - ES
-================================================
+===========================
 
-
-Como Crear una Nueva Página en la Wiki
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+== Como Crear una Nueva Página en la Wiki ==
 
 
 Debe crear una cuenta antes de realizar cualquier acción. Cualquier persona puede crear una cuenta en cualquier momento. Haga click en "Log in/create account" en la esquina superior derecha de la página.

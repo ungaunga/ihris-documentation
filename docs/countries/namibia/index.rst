@@ -1,9 +1,9 @@
-Namibia 
-================================================
+Namibia
+=======
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Namibia 
+    :maxdepth: 2
+    :caption: Namibia
 
-	ams-training-manual-namibia
+    ams-training-manual-namibia

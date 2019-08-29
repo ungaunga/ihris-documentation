@@ -1,11 +1,11 @@
-Modules 
-================================================
+Modules
+=======
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Modules 
+    :maxdepth: 2
+    :caption: Modules
 
-	file-search-paths-es
-	module-structure
-	module-structure-es
+    file-search-paths-es
+    module-structure
+    module-structure-es

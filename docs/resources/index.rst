@@ -1,19 +1,19 @@
-Resources 
-================================================
+Resources
+=========
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Resources 
+    :maxdepth: 2
+    :caption: Resources
 
-	conferences-and-events
-	country-specific-documentation
-	health-workforce-observatories-in-africa
-	ihris-core-team
-	knowledge-base
-	list-of-ict-for-development-blogs
-	peer-reviewed-journals
-	project-communication
-	talks-and-presentations
-	user-resources
-	volunteer-resources
+    conferences-and-events
+    country-specific-documentation
+    health-workforce-observatories-in-africa
+    ihris-core-team
+    knowledge-base
+    list-of-ict-for-development-blogs
+    peer-reviewed-journals
+    project-communication
+    talks-and-presentations
+    user-resources
+    volunteer-resources

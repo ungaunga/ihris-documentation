@@ -1,10 +1,8 @@
 Rwanda iHRIS FR Interaction HIM
-================================================
+===============================
 
 
-
-Transaction Diagram: With OpenHIM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==Transaction Diagram: With OpenHIM==
 
 <graphviz border='frame' format='png'>
  digraph "iHRIS + Facility Registry for Rwanda" {

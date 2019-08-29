@@ -1,29 +1,21 @@
 Installing on Mini-Box
-================================================
+======================
 
-These are installation notes for getting the ` mini-box <http://www.mini-box.com/M200-LCD-Enclosure?sc=8&category=87>`_ LCD appliance up and running with Ubuntu Server 32-bit 9.04 (Jaunty) wth an  processor and making use of the `menuing <https://launchpad.net/lcdmenu>`_ system.
+These are installation notes for getting the [http://www.mini-box.com/M200-LCD-Enclosure?sc=8&category=87  mini-box] LCD appliance up and running with Ubuntu Server 32-bit 9.04 (Jaunty) wth an  processor and making use of the [https://launchpad.net/lcdmenu menuing] system.
 
 This document covers installation of Ubuntu and the bits of software to control the LCD Panel on the iHRIS Appliance.  For information on installing the iHRIS Suite itself (including a full LAMP stack) see [[Installing the Debian Packages]]
 
-
-.. image:: images/Mini-box-ihris-suite.jpg
-    :align: center
-
-
+[[Image:Mini-box-ihris-suite.jpg|center]]
 
 <center><videoflash>6h79JeTiSQg</videoflash></center>
 
 
-
-LCD Keypad
-^^^^^^^^^^
-
-USBLCD Reader
-~~~~~~~~~~~~~
+==LCD Keypad==
+===USBLCD Reader===
 First create a user 'lcdmenu' that can't login:
   sudo adduser --disabled-login --gecos "" lcdmenu 
 
-Download and build the `SDK <http://resources.mini-box.com/online/picoLCD%2020x2%20(OEM)/Software/Linux/SDKSource/picoLCD20x2-SDK-0.1.7.tgz>`_ or at least just what it includes `usblcd-src <http://www.mini-itx.com/store/information/usblcd/usblcd-src-0.1.4.tgz>`_.  Install 'usbread' into the /home/lcdmenu/bin.  To build it you will need to do this:
+Download and build the [http://resources.mini-box.com/online/picoLCD%2020x2%20(OEM)/Software/Linux/SDKSource/picoLCD20x2-SDK-0.1.7.tgz SDK] or at least just what it includes [http://www.mini-itx.com/store/information/usblcd/usblcd-src-0.1.4.tgz usblcd-src].  Install 'usbread' into the /home/lcdmenu/bin.  To build it you will need to do this:
 
  sudo apt-get install autoconf gcc-4.1-base gcc-4.1 gcc make \
       automake binutils binutils-dev libtool libusb-dev \
@@ -47,10 +39,8 @@ Now we want to change the splash the screen at boot-up
 
  sudo usblcd splash ~lcdmenu/bin/splash.txt
 
-
-LCD Menu
-~~~~~~~~
-This applies to `LCD Menu 1.0 <https://code.launchpad.net/~intrahealth+informatics/lcdmenu/dev-1.0>`_ which is not packaged yet. You have already downloaded it via bzr in the step above
+===LCD Menu===
+This applies to [https://code.launchpad.net/~intrahealth+informatics/lcdmenu/dev-1.0 LCD Menu 1.0] which is not packaged yet. You have already downloaded it via bzr in the step above
 
 Now edit the "sudoers" file by running:
 
@@ -73,7 +63,7 @@ Now we want it to setup to run periodically:
  echo '* * * * * /home/lcdmenu/bin/lcdmenu_check.sh >/dev/null 2>&1'|\
       sudo crontab -u lcdmenu -
 
-We can get it up and running as fast as possible and put it a shutdown mesages by putting it in the `local startup <https://help.ubuntu.com/community/RcLocalHowto>`_:
+We can get it up and running as fast as possible and put it a shutdown mesages by putting it in the [https://help.ubuntu.com/community/RcLocalHowto local startup]:
 
  sudo vi /etc/init.d/local
 
@@ -104,9 +94,7 @@ Now do:
  sudo chmod +x /etc/init.d/local
  sudo update-rc.d local defaults 99
 
-
-Automount
-~~~~~~~~~
+===Automount===
 The LCD Menuing system has a "backup MySQL database to a flash drive" feature.  Since we will not be using GNOME, we will need a USB automounter:
 
    sudo apt-get install usbmount
@@ -119,18 +107,14 @@ then make sure the FS_MOUNTOPTIONS line has at least:
 
     FS_MOUNTOPTIONS="-fstype=vfat,gid=lcdmenu,dmask=0007,fmask=0117"
 
-
-Power Button
-~~~~~~~~~~~~
+===Power Button===
 Make sure acpid is installed and running and change /etc/acpi/powerbtn.sh to suit your needs. I suggest you just make it the following:
 
  test -f /var/lock/acpisleep && exit 0
  /sbin/shutdown -h now "Power button pressed"
 
 
-
-Checking Network Status
-~~~~~~~~~~~~~~~~~~~~~~~
+===Checking Network Status===
 The MAC Address, to configure your router, can be obtained from the LCD Menu:
 
  >F1:Server Status
@@ -143,26 +127,18 @@ Similarly, if you have plugged the server into a network with DHCP, you can get 
  >F2:Network Status
  >F3:MAC Address
 
-
-Other Configuration
-^^^^^^^^^^^^^^^^^^^
-
-GDM
-~~~
+==Other Configuration==
+===GDM===
 In case you have GDM installed, let us have it not boot on startup.  Note, you can now turn gdm on/off via the LCD Menu.
  sudo update-rc.d -f gdm remove
 
+===UPS===
 
-UPS
-~~~
+Install nut and [http://www.crn.com/white-box/199000818 follow these directions] as well as whatever is available on the [http://www.networkupstools.org/ home page] of the nut package.  nut is built for network access to a UPS but seems to be the most up-to-date package available.
 
-Install nut and `follow these directions <http://www.crn.com/white-box/199000818>`_ as well as whatever is available on the `home page <http://www.networkupstools.org/>`_ of the nut package.  nut is built for network access to a UPS but seems to be the most up-to-date package available.
+===Webmin===
 
-
-Webmin
-~~~~~~
-
-See `this webmin installation guide <http://www.ubuntugeek.com/ubuntu-serverinstall-gui-and-webmin-in-ubuntu-810-intrepid-ibex-guide.html>`_ or just cut and paste:
+See [http://www.ubuntugeek.com/ubuntu-serverinstall-gui-and-webmin-in-ubuntu-810-intrepid-ibex-guide.html this webmin installation guide] or just cut and paste:
 
  sudo aptitude install perl libnet-ssleay-perl openssl \
       libauthen-pam-perl libpam-runtime libio-pty-perl libmd5-perl
@@ -174,9 +150,7 @@ Browse to:
  https://your-server-ip:10000/
 
 and login as the user you created on Ubuntu installation.
-
-Mail Server
-~~~~~~~~~~~
+===Mail Server===
 We don't want our box to be the general mail server for the network. There is a mail server, postfix, installed by default on Ubuntu  We will want to set the mail server to relay email to some other place.
 
 First we need to do:
@@ -187,23 +161,21 @@ Then select
   somewhere.org        //the name of your organization
   smtp.somewhere.org   //your smtp server to relay mail to
 
-The above assumes that smtp.somewhere.org is an **open** relay which is probably not the case.
+The above assumes that smtp.somewhere.org is an '''open''' relay which is probably not the case.
 
-You will probably need to set Postfix up for `SMTP Auth <http://postfix.state-of-mind.de/patrick.koetter/smtpauth/smtp_auth_mailservers.html>`_
+You will probably need to set Postfix up for [http://postfix.state-of-mind.de/patrick.koetter/smtpauth/smtp_auth_mailservers.html SMTP Auth]
 
-As an *alternative* here are some  instructions for forwarding to a `gmail accout <http://ubuntu-tutorials.com/tag/relayhost/>`_.
+As an ''alternative'' here are some  instructions for forwarding to a [http://ubuntu-tutorials.com/tag/relayhost/ gmail accout].
 
 
-
-RAID
-^^^^
+==RAID==
 Although we will intend to run this box without a monitor for the moment we will plug in the monitor to install Ubuntu from a USB-CDROM. Make sure the BIOS is configured to boot from the CD-ROM.  Also, under Peripheral Devices you will need to enable all legacy support (or it will hang on installation).
 
-For a flash drive, apparently `Josh <http://suereth.blogspot.com/2008/03/my-new-toy-installing-ubuntu.html>`_ has had some success following `these directions <http://edoceo.com/liber/ubuntu-live-usb>`_.
+For a flash drive, apparently [http://suereth.blogspot.com/2008/03/my-new-toy-installing-ubuntu.html Josh] has had some success following [http://edoceo.com/liber/ubuntu-live-usb these directions].
 
-We will do a `Software Raid <http://advosys.ca/viewpoints/2007/04/setting-up-software-raid-in-ubuntu-server/>`_.  
- **Warning:** do not create the filesystem as ext4 as it will hurt mysql `very badly <http://ubuntuforums.org/showthread.php?t=1313834>`_.
-Once it has been setup, we need to `monitor <http://ubuntuforums.org/showthread.php?t=237582>`_ it using mdadm:
+We will do a [http://advosys.ca/viewpoints/2007/04/setting-up-software-raid-in-ubuntu-server/ Software Raid].  
+'''Warning:''' do not create the filesystem as ext4 as it will hurt mysql [http://ubuntuforums.org/showthread.php?t=1313834 very badly].
+Once it has been setup, we need to [http://ubuntuforums.org/showthread.php?t=237582 monitor] it using mdadm:
 
 To do this:
  sudo dpkg-reconfigure mdadm

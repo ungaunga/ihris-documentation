@@ -1,12 +1,12 @@
-Provider Registry 
-================================================
+Provider Registry
+=================
 
 .. toctree::
 
-	:maxdepth: 2
-	:caption: Provider Registry 
+    :maxdepth: 2
+    :caption: Provider Registry
 
-	installing-apacheds-on-ubuntu
-	installing-opendj-on-ubuntu
-	provider-registry
-	provider-registry-use-cases
+    installing-apacheds-on-ubuntu
+    installing-opendj-on-ubuntu
+    provider-registry
+    provider-registry-use-cases
