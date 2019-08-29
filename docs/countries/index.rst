@@ -1,10 +1,10 @@
-Countries Implementations
-=========================
+Country Documentations
+======================
 
 .. toctree::
 
     :maxdepth: 2
-    :caption: Countries Documentation
+    :caption: Country Documentations
 
     botswana/index
     ghana/index
