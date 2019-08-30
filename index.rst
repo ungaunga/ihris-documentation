@@ -41,11 +41,9 @@ iHRIS |version| Documentation
     docs/project-team_resources/index
     docs/reports/index
     docs/resources/index
-    docs/roles/index
     docs/software-development_process/index
     docs/standardized-forms/index
     docs/technical-overview/index
-    docs/translations/index
     docs/use-cases/index
     docs/web-service/index
 
@@ -81,7 +79,6 @@ iHRIS |version| Documentation
     docs/books/index
     docs/needsreview/index
     docs/pages-for_review/index
-    docs/review2013/index
     docs/review-for_redundancy/index
 
 * :ref:`genindex`

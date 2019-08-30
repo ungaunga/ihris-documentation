@@ -90,25 +90,32 @@ to:
 Making the Site Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We will now edit the configuration to let the site know about the database user and options:
+We will now edit the configuration to let the site know about the database
+user and options:
 
 .. code-block:: bash
 
     sudo gedit /var/lib/iHRIS/sites/train/pages/config.values.php
     
 
-We now need to uncomment and set the value of a few variables.  Commented lines will begin with two slashes (//) that you'll need to remove.
+We now need to uncomment and set the value of a few variables.
+Commented lines will begin with two slashes (//) that you'll need to remove.
 
 They are:
-<center>
-<table border='1' padding='2'>
-<tr><th>Variable Name</th><th>Value</th></tr>
-<tr><td>$i2ce_site_i2ce_path</td><td>/var/lib/iHRIS/lib/4.3.3/I2CE</td></tr>
-<tr><td>$i2ce_site_dsn</td><td rowpan='2'>mysql://ihris_train:YYYYY@localhost/ihris_train</td></tr>
-<tr><td>$i2ce_site_module_config</td><td>/var/lib/iHRIS/sites/train/iHRIS-Train-BLANK.xml</td></tr>
-</table>
+
+.. table::
+    :widths: auto
+
+    ======================== ========================
+    Variable                  Name Value
+    ======================== ========================
+    $i2ce_site_i2ce_path     /var/lib/iHRIS/lib/4.3.3/I2CE
+    $i2ce_site_dsn           mysql://ihris_train:YYYYY@localhost/ihris_train
+    $i2ce_site_module_config /var/lib/iHRIS/sites/train/iHRIS-Train-BLANK.xml
+    ======================== ========================
+
 In $i2ce_site_dsn,  YYYYY is the password you set above.
-</center>
+
 Save and quit.
 
 Finally, we make iHRIS Train site we just created available via the webserver:
