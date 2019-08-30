@@ -13,15 +13,7 @@ Spanish
     automatically-generated-integers-es
     create-a-data-form-map-for-my-custom-site-es
     creating-a-new-form-field-es
-    custom-reporting-add-images-to-a-report-es
-    custom-reporting-an-overview-es
-    custom-reporting-creating-a-staff-list-example-es
-    custom-reporting-creating-form-relationships-es
-    custom-reporting-creating-report-views-es
-    custom-reporting-creating-reports-es
-    custom-reporting-exporting-reports-from-the-command-line-es
-    custom-reporting-limit-viewing-a-report-by-a-task-es
-    custom-reporting-search-reports-es
+    custom-reporting/index
     customizing-form-and-field-headers-es
     database-structure-es
     defining-forms-es
@@ -39,6 +31,5 @@ Spanish
     module-structure-es
     modules-lists-es
     printed-forms-es
-    printed-forms-with-reports-odt-es
     spanish-language-resources
     swiss-magic-data-editor-es
