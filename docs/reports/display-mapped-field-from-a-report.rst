@@ -155,14 +155,14 @@ Note that you can define multiple reportSelect reports to be used.  See below fo
 
 To enable the report selection you need to modify the template to tell the form span to use the report selector:
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <span type="form" name="position:facility" showhead="default" display="reportSelect"></span>
     
 
 You can also define a second report to be used if one needs different limits.  Instead of the **default**  report as defined, you can use the report defined as **full** .
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <span type="form" name="position:facility" showhead="default" display="reportSelect" show="full"></span>
     

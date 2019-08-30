@@ -87,7 +87,7 @@ Your template can have any text in it that you would like to display.  The main 
 
 For example:
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <div id="siteContent">
       <h1>MY CALENDAR</h1>

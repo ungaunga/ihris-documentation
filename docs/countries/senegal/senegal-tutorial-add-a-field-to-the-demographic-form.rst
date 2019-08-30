@@ -99,7 +99,7 @@ Now we edit the view page to add the new field.
 
 Make the file appear as below:
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <div task='person_can_view_child_form_demographic'>
       <div class="editRecord">
@@ -139,7 +139,7 @@ Save this file and now edit the form template:
 
 Add the num_spouses field here as well:
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <tbody>
     <tr>

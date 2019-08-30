@@ -404,7 +404,7 @@ We need to create a new class in the lib directory called iHRIS_Module_ProfDevel
 
 Copy the view.html template file from the ihris-manage templates directory to the site templates directory.  Make the following changes.  The changes are surround by comments.  This should be in the site in case multiple modules update the view.html template.
 
-.. code-block:: html4strict
+.. code-block:: html
 
         <span task="person_can_edit_child_form_demographic" type="form" name="person:id" href="demographic?parent=" ifset="!demographic:id">Add Demographic Information</span>
       <!-- New professional development section for the Professional Development module -->    
@@ -414,7 +414,7 @@ Copy the view.html template file from the ihris-manage templates directory to th
       <!-- End of Professional Development additions -->
     
 
-.. code-block:: html4strict
+.. code-block:: html
 
       <div class="recordsData">
         <h3><a name="jump_qualification">Qualifications</a></h3>
@@ -455,7 +455,7 @@ Copy the view.html template file from the ihris-manage templates directory to th
 
 Copy the menu_view_person.html template file from the ihris-manage templates directory to the site templates directory.  Make the following changes:
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <li><a href="#jump_qualification" onclick="if(prevAnchor) prevAnchor.className=''; this.className='active'; prevAnchor=this;">Qualifications</a></li>
     <!-- Additions for the Professional Development module -->
@@ -473,7 +473,7 @@ In the templates directory create the following files and contents:
 view_person_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <div>
     	<div class="editRecord">
@@ -500,7 +500,7 @@ view_person_profdev.html
 form_person_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <tbody id="person_form">
     <tr>
@@ -521,7 +521,7 @@ form_person_profdev.html
 view_person_continuous_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <div>
           <div class="editRecord">
@@ -556,7 +556,7 @@ view_person_continuous_profdev.html
 form_person_continuous_profdev.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <tbody>
     <tr>

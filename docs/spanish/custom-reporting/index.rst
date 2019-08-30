@@ -1,7 +1,7 @@
 Custom Reporting
 ================
 
-.. toc::
+.. toctree::
     :maxdepth: 2
     :caption: Custom Reporting
 

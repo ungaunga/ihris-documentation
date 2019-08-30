@@ -7,14 +7,14 @@ You can customize the headers for a form field by updating the magic data associ
 
 In most cases you'll use the "default" as the **$headerType** .  If you want to have multiple headers, then change the header type and in the template that is displaying your field set the **$headerType**  as the value for the showhead attribute.
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <span type="form" name="$form:$field" showhead="$headerType"></span>
     
 
 Replace $form, $field and $headerType with the appropriate values for your template.  For example:
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <span type="form" name="country:name" showhead="my_header"></span>
     

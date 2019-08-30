@@ -25,14 +25,14 @@ Por ejemplo, para cambiar el encabezado de campo de region en los distritos pued
 
 En la mayoría de los casos utilizará el "default" como el **$headerType** .  Si quiere tener múltiples encabezados, entonces cambie el tipo de encabezado y en la plantilla que muestra su campo ponga el **$headerType**  como el valor para el atributo principal.
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <span type="form" name="$form:$field" showhead="$headerType"></span>
     
 
 Reemplace $form, $field y $headerType con los valores apropiados para su plantilla.  Por ejemplo:
 
-.. code-block:: html4strict
+.. code-block:: html
 
     <span type="form" name="country:name" showhead="my_header"></span>
     
