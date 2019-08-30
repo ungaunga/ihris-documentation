@@ -6,8 +6,7 @@ Forms and Fields
     :maxdepth: 2
     :caption: Forms and Fields
 
-    adding-fields-es
-    adding-fields-to-the-person-form-4-0-es
+    adding-fields-to-the-person-form-es
     adding-form-and-field-validations-es
     adding-forms-and-fields-es
     automatically-generated-integers-es
