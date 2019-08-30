@@ -6,8 +6,7 @@ Archived Pages
     :maxdepth: 2
     :caption: Archived Pages 
 
-    ihris-manage-user-manual
-    ihris-qualify-user-manual
+    archive
     building-debian-packages-from-bzr
     building-windows-ihris
     class--ihris-module-qualify-basedata
@@ -20,6 +19,8 @@ Archived Pages
     customizing-field-headers
     customizing-packaged-ihris
     ihris-data-dictionary
+    ihris-manage-user-manual
+    ihris-qualify-user-manual
     data-entry-statistics
     data-export-to-dhis-in-ihris-f-a-s-t
     development-calendar

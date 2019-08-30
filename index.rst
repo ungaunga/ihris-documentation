@@ -76,10 +76,6 @@ iHRIS |version| Documentation
 
     docs/archived-pages/index
     docs/blueprints/index
-    docs/books/index
-    docs/needsreview/index
-    docs/pages-for_review/index
-    docs/review-for_redundancy/index
 
 * :ref:`genindex`
 * :ref:`modindex`
