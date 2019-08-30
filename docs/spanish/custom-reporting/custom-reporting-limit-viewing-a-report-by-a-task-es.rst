@@ -25,7 +25,7 @@ Una vez que esté en la parte de abajo de la página, puede crear una tarea nuev
 .. image:: images/create_report_task.png
     :align: center
 
- *Nota:*  También puede utilizar una tarea existente en lugar de crear una nueva.
+**Nota:**  También puede utilizar una tarea existente en lugar de crear una nueva.
 
 Paso 2: Asignar la Tarea a un Rol
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
