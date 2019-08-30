@@ -2,7 +2,6 @@ Customizations
 ==============
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Customizations
 

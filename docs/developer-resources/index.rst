@@ -2,7 +2,6 @@ Developer Resources
 ===================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Developer Resources
 

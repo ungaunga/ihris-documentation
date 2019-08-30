@@ -2,7 +2,6 @@ Installing iHRIS
 ================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Installing iHRIS
 

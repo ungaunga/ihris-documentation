@@ -2,7 +2,6 @@ Use Cases
 =========
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Use Cases
 

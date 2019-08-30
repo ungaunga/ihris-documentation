@@ -2,7 +2,6 @@ Nigeria
 =======
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Nigeria
 

@@ -2,7 +2,6 @@ Previous Releases
 =================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Previous Releases
 

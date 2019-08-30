@@ -2,9 +2,8 @@ Archived Pages
 ===============
 
 .. toctree::
-
     :maxdepth: 2
-    :caption: Archived Pages 
+    :caption: Archived Pages
 
     archive
     building-debian-packages-from-bzr

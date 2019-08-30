@@ -2,7 +2,6 @@ Spanish
 =======
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Spanish
 

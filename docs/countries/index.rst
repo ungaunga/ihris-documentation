@@ -2,7 +2,6 @@ Country Documentations
 ======================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Country Documentations
 

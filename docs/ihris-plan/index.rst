@@ -2,7 +2,6 @@ IHRIS Plan
 ==========
 
 .. toctree::
-
     :maxdepth: 2
     :caption: IHRIS Plan
 

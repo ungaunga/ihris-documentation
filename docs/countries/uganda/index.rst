@@ -2,7 +2,6 @@ Uganda
 ======
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Uganda
 

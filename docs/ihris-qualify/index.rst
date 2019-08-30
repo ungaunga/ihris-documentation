@@ -2,7 +2,6 @@ IHRIS Qualify
 =============
 
 .. toctree::
-
     :maxdepth: 2
     :caption: IHRIS Qualify
 

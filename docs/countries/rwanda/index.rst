@@ -2,7 +2,6 @@ Rwanda
 ======
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Rwanda
 

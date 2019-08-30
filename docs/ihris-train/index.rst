@@ -2,7 +2,6 @@ IHRIS Train
 ===========
 
 .. toctree::
-
     :maxdepth: 2
     :caption: IHRIS Train
 

@@ -2,7 +2,6 @@ India
 =====
 
 .. toctree::
-
     :maxdepth: 2
     :caption: India
 

@@ -2,7 +2,6 @@ Software Development Process
 ============================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Software Development Process
 

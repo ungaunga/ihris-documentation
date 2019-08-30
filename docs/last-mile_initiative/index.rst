@@ -2,7 +2,6 @@ Last Mile Initiative
 ====================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Last Mile Initiative
 

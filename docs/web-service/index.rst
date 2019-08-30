@@ -2,7 +2,6 @@ Web Service
 ===========
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Web Service
 

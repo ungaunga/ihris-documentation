@@ -2,7 +2,6 @@ Blueprints
 ==========
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Blueprints
 

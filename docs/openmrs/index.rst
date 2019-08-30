@@ -2,7 +2,6 @@ OpenMRS
 =======
 
 .. toctree::
-
     :maxdepth: 2
     :caption: OpenMRS
 

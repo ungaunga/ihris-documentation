@@ -2,7 +2,6 @@ Provider Registry
 =================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Provider Registry
 

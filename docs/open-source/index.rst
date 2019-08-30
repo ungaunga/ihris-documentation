@@ -2,7 +2,6 @@ Open Source
 ===========
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Open Source
 

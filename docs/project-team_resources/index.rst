@@ -2,7 +2,6 @@ Project Team Resources
 ======================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Project Team Resources
 

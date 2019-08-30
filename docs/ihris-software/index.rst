@@ -2,7 +2,6 @@ IHRIS Software
 ==============
 
 .. toctree::
-
     :maxdepth: 2
     :caption: IHRIS Software
 

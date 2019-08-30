@@ -2,7 +2,6 @@ IHRIS Common
 ============
 
 .. toctree::
-
     :maxdepth: 2
     :caption: IHRIS Common
 

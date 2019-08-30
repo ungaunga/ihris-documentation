@@ -2,7 +2,6 @@ IHRIS Manage
 ============
 
 .. toctree::
-
     :maxdepth: 2
     :caption: IHRIS Manage
 

@@ -2,7 +2,6 @@ Interoperability
 ================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Interoperability
 

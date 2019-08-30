@@ -2,7 +2,6 @@ Magic Data
 ==========
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Magic Data
 

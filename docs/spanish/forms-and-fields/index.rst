@@ -2,7 +2,6 @@ Forms and Fields
 ================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Forms and Fields
 

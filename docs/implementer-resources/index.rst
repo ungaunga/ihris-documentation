@@ -2,7 +2,6 @@ Implementer Resources
 =====================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Implementer Resources
 

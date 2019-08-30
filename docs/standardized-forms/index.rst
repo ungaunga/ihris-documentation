@@ -2,7 +2,6 @@ Standardized Forms
 ==================
 
 .. toctree::
-
     :maxdepth: 2
     :caption: Standardized Forms
 
