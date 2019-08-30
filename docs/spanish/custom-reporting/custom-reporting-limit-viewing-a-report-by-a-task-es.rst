@@ -22,7 +22,7 @@ Una vez que esté en la parte de abajo de la página, puede crear una tarea nuev
 * El Nombre puesto en  "view_facility_list_report"
 * La descripción puesta en "Task to restrict access to the facility list report"
 
-.. image:: images/create_report_task.png
+.. image:: /docs/custom-reporting/images/create_report_task.png
     :align: center
 
 **Nota:**  También puede utilizar una tarea existente en lugar de crear una nueva.
@@ -47,7 +47,7 @@ Ahora que hemos creado una tarea nueva para el informe, necesitamos asignarla a 
 
 Repita esto con cada rol que desee que pueda visualizar el informe.
 
-.. image:: images/add_task_to_role.png
+.. image:: /docs/custom-reporting/images/add_task_to_role.png
     :align: center
 
 Paso 3: Asignar la Tarea a la Visualización del Informe
@@ -61,7 +61,7 @@ Ahora podemos asignar la tarea a la visualización del informe a la que nos inte
 
 Ahora, solo los usuarios con el rol "Executive Manager" pueden ver el informe de listas de instalaciones.
 
-.. image:: images/limit_report_to_task.png
+.. image:: /docs/custom-reporting/images/limit_report_to_task.png
     :align: center
 
 Habilitar el Módulo de Tareas y Roles

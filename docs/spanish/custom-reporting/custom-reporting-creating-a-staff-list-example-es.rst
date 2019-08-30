@@ -25,9 +25,10 @@ Basándose en el requerimiento del Gerente de RH y el formulario y campo vemos q
 * ''facility'':  necesitamos el nombre del local
 * ''job'':  necesitamos saber el puesto que desempeña la persona
 * ''person'': aunque no está dicho de forma explícita como requerimiento, asumamos que el Gerente de RH también quiere saber el nombre de los miembros del personal
+
 Sin embargo, si vemos el mapa de datos, podemos observar que no hay flechas que conecten directamente los formularios *facility* , *job,*  y *person* .  En lugar de eso vemos que necesitamos ir del formulario *person* , hacia el formulario *person_position*  hacia el formulario *position* .  Desde el formulario position, podemos adjuntar el facility y job.  Esta es la parte relevante del formulario mapa de campo:
 
-.. image:: images/Forms-person-position-map.gif
+.. image:: /docs/custom-reporting/images/Forms-person-position-map.gif
     :align: center
 
 Nótese que sólo hay una flecha roja, conectando *person*  y *person_position,*   mientras que el resto de las flechas son negras.
@@ -45,52 +46,40 @@ Cualquiera de las opciones tiene sentido y la elección depende de los requerimi
 Opción A: Informe de Personas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Seleccione **Configure System**  y luego **Form Relationships.**  Creamos un informe de relación llamado 'staff_info' y elegimos "person"  como el formulario primario, escribimos un nombre y descripción. Luego hacemos click en update.
-<center>
 
-.. image:: images/screenshot-create-relationship.gif
+.. image:: /docs/custom-reporting/images/screenshot-create-relationship.gif
     :align: center
 
-</center>
 Ahora que hemos creado la relación 'staff_info' la podemos **editar**  . Ahora necesitamos adjuntar el formulario "person_position" al formulario  "position" .  Para hacer esto haga click en **Joined Forms**  y luego en  **Add a New Form** .  Seleccione ''person_position (child)" como el formulario a adjuntar, y el "short name"  como 'person_position.'   También debería escoger un nombre y descripción para este formulario.
-<center>
 
-.. image:: images/Screenshort-join-person-position.gif
+.. image:: /docs/custom-reporting/images/Screenshort-join-person-position.gif
     :align: center
 
-</center>
 Notará que estamos trazando una fleche roja hacia adelante, de *person*  a *person_position.*   Según lo que dijimos anteriormente pueden haber muchas *person_position*  asociadas a una persona, así que tendremos que limitar los formularios.  Tendremos que limitar el formulario *person_position*  para que:
 
 * La *start_date*  sea máxima entre todos los valores del campo *start_date*  para cualquier *person_position*  que sea secundaria a la actual *person*  .  De esta manera obtenemos el puesto más reciente que la persona haya iniciado.
 * La *end_date*  no es nula, Para que sepamos que la persona aún mantiene su puesto.
+
 Para esto, hacemos click en **Joined Forms**  de Nuevo y seleccionamos **Person Position (person_position),**  que es el formulario que acabamos de agregar.  Ahora podemos elegir  **Limit This Form.**  Ya que tenemos dos límites para este formulario, tendremos que seleccionar el Since "Operator Node" para que sea "And."
-<center>
 
-.. image:: images/Screenshot-limit-person-position-AND.png
+.. image:: /docs/custom-reporting/images/Screenshot-limit-person-position-AND.png
     :align: center
 
-</center>
 Una vez que hacemos click en el botón "Update", podemos elegir **Add A New Operand.**    Haremos esto dos veces, una vez para  'start_date' y una para  'end_date.'  Una vez que los operandos hayan sido agregados, podemos **Editar**  cada uno de ellos y elegir  **Limit  By A Field** :
-<center>
 
-.. image:: images/Screenshot-limit-person-position-FIELDS.png
+.. image:: /docs/custom-reporting/images/Screenshot-limit-person-position-FIELDS.png
     :align: center
 
-</center>
 Ahora haga click en **Update**  una vez más.  Ahora podemos elegir los dos campos con los que queremos limitar y como queremos limitarlos
-<center>
 
-.. image:: images/Screenshot-limit-person-position-FIELDS2.png
+.. image:: /docs/custom-reporting/images/Screenshot-limit-person-position-FIELDS2.png
     :align: center
-
-</center>
 
 A continuación, adjuntamos el formulario *person*  al formulario *person_position*  como un formulario primario.  Hacemos esto al hacer click en **Joined Forms**  y luego **Add A New Child Form**  bajo el formulario *person_position* .  Nótese, no necesitamos especificar ningún límite aquí ya que estamos trazando una flecha negra en la dirección correcta.
-<center>
 
-.. image:: images/Screenshot-join-position.png
+.. image:: /docs/custom-reporting/images/Screenshot-join-position.png
     :align: center
 
-</center>
 Terminamos adjuntando los formularios "facility" y "job" al formulario "position"haciendo click en **Joined Forms**  y luego en **Add A New Child Form**  bajo el formulario *position* .  Nótese, no necesitamos especificar ningún límite aquí ya que estamos trazando una flecha negra en la dirección correcta.
 
 Variaciones de la Opción A
