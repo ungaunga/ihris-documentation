@@ -1,20 +1,22 @@
-Forms
-=====
+Forms and Fields
+================
 
 .. toctree::
 
     :maxdepth: 2
-    :caption: Forms
+    :caption: Forms and Fields
 
+    adding-fields-to-the-person-form
+    adding-fields
+    adding-form-and-field-validations
+    display-mapped-field-from-a-report
     automatically-generated-integers
-    automatically-generated-integers-es
-    create-a-data-form-map-for-my-custom-site-es
     customize-recent-forms-display
     defining-forms
+    form-fields
     form-lists
-    forms-and-form-classes-es
     ihris-manage-form-fields
     ihris-qualify-form-fields
     limiting-forms
-    limiting-forms-es
     linking-facilities-and-departments
+    reference-field

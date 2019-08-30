@@ -22,8 +22,7 @@ iHRIS |version| Documentation
     docs/custom-reporting/index
     docs/customizations/index
     docs/developer-resources/index
-    docs/fields/index
-    docs/forms/index
+    docs/forms-and-fields/index
     docs/ihris-appliance/index
     docs/ihris-collect/index
     docs/ihris-common/index
