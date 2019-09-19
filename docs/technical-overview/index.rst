@@ -6,5 +6,4 @@ Technical Overview
     :caption: Technical Overview
 
     custom-reporting
-    database-structure-es
     introduction-and-overview

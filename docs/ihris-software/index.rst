@@ -13,7 +13,6 @@ IHRIS Software
     ihris-class-list
     ihris-module-list
     ihris-suite-4-1-development
-    ihris-translation-list-development
     readme-file-for-ihris
     setting-up-mail
     technical-chats

@@ -5,8 +5,6 @@ Developer Resources
     :maxdepth: 2
     :caption: Developer Resources
 
-    adding-fields-to-the-person-form-4-0
-    adding-forms-and-fields
     automatically-generated-form-pages
     backups
     building-meta-packages
@@ -18,13 +16,10 @@ Developer Resources
     configuring-form-cache-generation-timing
     configuring-restricted-access-by-facility-or-geography
     controlling-the-package-build-process
-    create-a-data-form-map-for-my-custom-site
-    creating-a-new-form-field
     creating-and-using-modules
     creating-arabic-translations
     creating-translations
     creating-translations-es
-    customizing-form-and-field-headers
     customizing-ihris-manage
     data-dictionary-ihris-4-1
     database-structure
@@ -103,7 +98,6 @@ Developer Resources
     manageaccessfacility-limit-dropdown-list-fields-by-user
     manageaccessfacility-limit-reports-by-user
     migrating-from-mdb2-to-pdo
-    modifying-form-and-field-headers
     pages-and-templates
     pages-and-templates-es
     pluggable-authentication

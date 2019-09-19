@@ -11,8 +11,6 @@ Country Documentations
     india/index
     kenya/index
     lesotho/index
-    kenya/index
-    lesotho/index
     malawi/index
     mali/index
     namibia/index

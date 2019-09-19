@@ -11,12 +11,12 @@ Cualquier campo puede ser mostrado con un link. Los campos de Formularios de tip
 
 Ahora puede editar el informe que está basado en esta relación. Haga click en el formulario con la imagen y luego haga click en <u>Reported Fields</u>.
 
-.. image:: images/Report_Image_1.png
+.. image:: /docs/custom-reporting/images/Report_Image_1.png
     :align: center
 
 Habilite el campo de imagen y haga click en **Link Options** .
 
-.. image:: images/Report_Image_2.png
+.. image:: /docs/custom-reporting/images/Report_Image_2.png
     :align: center
 
 Llene las opciones de link de la siguiente manera:
@@ -27,7 +27,7 @@ Llene las opciones de link de la siguiente manera:
 ;Link Type : Image (img)
 :Si selecciona **Link (a href)**  entonces en el informe se mostrará un link hacia la imagen.
 
-.. image:: images/Report_Image_3.png
+.. image:: /docs/custom-reporting/images/Report_Image_3.png
     :align: center
 
 Haga click en el botón *Update*  en la parte de abajo de la página para guardar los cambios.
